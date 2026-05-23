@@ -1,0 +1,23 @@
+# Local API caches — rebuilt by `python3 main.py`. The protocols/ directory
+# alone is ~1.8 GB at full scope; checking it in would dominate the repo.
+data/
+
+# Pipeline run log (only present if you `tee` stdout to it)
+output/run.log
+
+# macOS / editor noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Claude Code harness state
+.claude/
