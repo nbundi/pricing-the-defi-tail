@@ -1,7 +1,26 @@
-# Per-protocol TVL fetch cache (~1.8 GB at full scope) — rebuilt by
-# `python3 main.py` from DefiLlama. We track data/ itself for
-# reproducibility but exclude this single large subtree.
-data/raw/defillama/protocols/
+# Per-protocol TVL fetch cache (~1.0 GB at full scope) — rebuilt by
+# `python3 main.py` from DefiLlama.
+data/protocols/
+
+# data/raw/kismp_repo and data/raw/defihacklabs_repo are local git
+# clones of upstream catalogs (so `git pull` from upstream works).
+# In the outer pricing-the-defi-tail repo we track only the data
+# files actually consumed by ingest_consolidated.py:
+#   - kismp_repo: per-incident *.md post-mortems (excluding vulns/)
+#   - defihacklabs_repo: per-year past/*/README.md catalogs
+# Everything else (Foundry scaffolding, configs, academy materials,
+# GitHub Actions, the inner .git/ directories) stays local-only.
+data/raw/kismp_repo/**
+!data/raw/kismp_repo/
+!data/raw/kismp_repo/**/
+!data/raw/kismp_repo/**/*.md
+data/raw/kismp_repo/vulns/**
+
+data/raw/defihacklabs_repo/**
+!data/raw/defihacklabs_repo/
+!data/raw/defihacklabs_repo/past/
+!data/raw/defihacklabs_repo/past/*/
+!data/raw/defihacklabs_repo/past/*/README.md
 
 # Pipeline run log (only present if you `tee` stdout to it)
 output/run.log
