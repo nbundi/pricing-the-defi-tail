@@ -7,8 +7,11 @@
 | **Chain** | BNB Smart Chain |
 | **Loss** | ~$228K |
 | **Root Cause** | Business Logic Flaw — deflationary/reflection token fee distribution logic combined with LP pair interaction creates exploitable arbitrage |
-| **Attack Tx** | `0x956e38b8ddb40ba080c8042c685ae52ee5c1b096f1d7f0c4a6c59be3eb4265bd` |
-| **Reference** | [TenArmorAlert on X](https://x.com/TenArmorAlert/status/2048942654281470143) |
+| **Attacker** | [0x5384B34C74024d6563B323351a4bBFA18432161B](https://bscscan.com/address/0x5384B34C74024d6563B323351a4bBFA18432161B) |
+| **Attack Tx** | [0x956e38b8...65bd](https://bscscan.com/tx/0x956e38b8ddb40ba080c8042c685ae52ee5c1b096f1d7f0c4a6c59be3eb4265bd) |
+| **Vulnerable Contract** | [0x5D7b61e91cB59E90f7fAE8d0FE2e73976161592F](https://bscscan.com/address/0x5D7b61e91cB59E90f7fAE8d0FE2e73976161592F) (JUDAO Token) |
+| **Flash Loan Source** | Lista DAO (Moolah) — 2,295,723 USDT |
+| **Reference** | [TenArmorAlert on X](https://x.com/TenArmorAlert/status/2048942654281470143), [Verichains Analysis](https://blog.verichains.io/p/judao-hack-analysic) |
 
 ---
 

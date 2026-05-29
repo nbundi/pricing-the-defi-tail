@@ -2,13 +2,16 @@
 
 | Item | Details |
 |------|------|
-| **Date** | 2026-04-26 |
+| **Date** | 2026-04-26 (drain window 12:51–23:00 UTC; disclosed April 27) |
 | **Protocol** | ZetaChain |
-| **Chain** | Ethereum |
-| **Loss** | ~$334K |
-| **Root Cause** | Access Control — when `isArbitraryCall` flag is set on a cross-chain message, ZetaChain's gateway routes the call with a zero-address sender instead of the authenticated source address, bypassing the caller-authentication guard and allowing any relayer to trigger privileged withdrawals |
-| **Attack Tx** | `0x81fc9b2457b3ea66e2cefe2afe65d083ce358a11520e0f4aa5faad0bfea18a56` |
-| **Reference** | [ZetaChain on X](https://x.com/ZetaChain/status/2048854107633631356) |
+| **Chain** | Ethereum, Arbitrum, Base, BSC (origin exploit on ZetaChain) |
+| **Loss** | ~$333,868 (~$318,977 ETH after consolidation); **only internal team wallets affected — no user funds lost** |
+| **Root Cause** | Three chained bugs: (1) `GatewayZEVM.call()` had no access control; (2) `GatewayEVM.execute()` accepted arbitrary external calls including `transferFrom`; (3) pre-existing ERC20 approvals on team wallets — attacker triggered 9 cross-chain drain calls |
+| **Attacker** | [0x00467f5921f1a343b96b9bf71ae7e9054ae72ea4](https://etherscan.io/address/0x00467f5921f1a343b96b9bf71ae7e9054ae72ea4) |
+| **Attack Tx (USDT drain)** | [0x81fc9b24...18a56](https://etherscan.io/tx/0x81fc9b2457b3ea66e2cefe2afe65d083ce358a11520e0f4aa5faad0bfea18a56) (9,849.91 USDT) |
+| **Attack Tx (USDC drain)** | [0x40bcbd60...83d](https://etherscan.io/tx/0x40bcbd603595c3f27a58b44bbc32bd9cc416c83d94af9c67e537f5a75b789caa) (41,018.20 USDC) |
+| **Consolidation Tx** | [0x34c996cb...70a9](https://etherscan.io/tx/0x34c996cbd39b8e672815bd76fd8a679deaaf859b4c2685ec58535e185dbc70a9) (139.01 ETH to profits wallet) |
+| **Reference** | [ZetaChain on X](https://x.com/ZetaChain/status/2048854107633631356), [CryptoTimes](https://www.cryptotimes.io/2026/04/29/how-a-perfect-storm-of-3-bugs-led-to-zetachains-333k-gatewayevm-exploit/) |
 
 ---
 

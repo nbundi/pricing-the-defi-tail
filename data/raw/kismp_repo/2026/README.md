@@ -2,7 +2,7 @@
 
 Early 2026 saw continued BSC-focused business logic attacks and novel patterns including EIP-7702 exploitation and AMM k-value manipulation.
 
-**Total incidents: 45**
+**Total incidents: 48**
 
 ---
 
@@ -13,6 +13,7 @@ Early 2026 saw continued BSC-focused business logic attacks and novel patterns i
 | BusinessLogic BSC | 6 |
 | ArbitraryCall ARB | 2 |
 | BusinessLogic ETH | 2 |
+| OracleManipulation (SameTx) | 2 |
 | StakingRewardFlaw | 1 |
 | BondingCurveOverflow | 1 |
 | UnitMismatch | 1 |
@@ -20,6 +21,8 @@ Early 2026 saw continued BSC-focused business logic attacks and novel patterns i
 | PriceOracleManipulation | 1 |
 | BusinessLogicFlaw | 1 |
 | UnverifiedInput ETH | 1 |
+| SameTxLiquidationPricing ETH | 1 |
+| SameTxSpotQuoteRedemption ARB | 1 |
 
 ---
 
@@ -28,7 +31,7 @@ Early 2026 saw continued BSC-focused business logic attacks and novel patterns i
 | Date | Protocol | Vulnerability Type | Report |
 |------|----------|--------------------|--------|
 | 2026-01-01 | PRXVT | StakingRewardFlaw | [2026-01-01_PRXVT_StakingRewardFlaw.md](./2026-01-01_PRXVT_StakingRewardFlaw.md) |
-| 2026-01-09 | Truebit | BondingCurveOverflow | [2026-01-09_Truebit_BondingCurveOverflow.md](./2026-01-09_Truebit_BondingCurveOverflow.md) |
+| 2026-01-08 | Truebit | BondingCurveOverflow | [2026-01-08_Truebit_BondingCurveOverflow.md](./2026-01-08_Truebit_BondingCurveOverflow.md) |
 | 2026-01-10 | FutureSwap | UnitMismatch | [2026-01-10_FutureSwap_UnitMismatch.md](./2026-01-10_FutureSwap_UnitMismatch.md) |
 | 2026-01-12 | MTToken | IncorrectFeeLogic | [2026-01-12_MTToken_IncorrectFeeLogic.md](./2026-01-12_MTToken_IncorrectFeeLogic.md) |
 | 2026-01-20 | Makina | PriceOracleManipulation | [2026-01-20_Makina_PriceOracleManipulation.md](./2026-01-20_Makina_PriceOracleManipulation.md) |
@@ -72,6 +75,9 @@ Early 2026 saw continued BSC-focused business logic attacks and novel patterns i
 | 2026-04-29 | AftermathFinance | BusinessLogic Sui | [2026-04-29_AftermathFinance_BusinessLogic_Sui.md](./2026-04-29_AftermathFinance_BusinessLogic_Sui.md) |
 | 2026-05-05 | Ekubo | IPayerCallbackPayerSpoofing ETH | [2026-05-05_Ekubo_IPayerCallbackPayerSpoofing_ETH.md](./2026-05-05_Ekubo_IPayerCallbackPayerSpoofing_ETH.md) |
 | 2026-05-07 | TrustedVolumes | RFQOrderSignerAccessControl ETH | [2026-05-07_TrustedVolumes_RFQOrderSignerAccessControl_ETH.md](./2026-05-07_TrustedVolumes_RFQOrderSignerAccessControl_ETH.md) |
+| 2026-05-16 | LendingHookV3 | SameTxLiquidationPricing ETH | [2026-05-16_LendingHookV3_SameTxLiquidationPricing_ETH.md](./2026-05-16_LendingHookV3_SameTxLiquidationPricing_ETH.md) |
+| 2026-05-18 | VerusBridge | SourceAmountValidationBypass ETH | [2026-05-18_VerusBridge_SourceAmountValidationBypass_ETH.md](./2026-05-18_VerusBridge_SourceAmountValidationBypass_ETH.md) |
+| 2026-05-17 | SEA | SameTxSpotQuoteRedemption ARB | [2026-05-17_SEA_SameTxSpotQuoteRedemption_ARB.md](./2026-05-17_SEA_SameTxSpotQuoteRedemption_ARB.md) |
 
 ---
 

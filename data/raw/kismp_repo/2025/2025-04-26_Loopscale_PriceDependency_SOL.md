@@ -1,4 +1,4 @@
-# Loopscale — Raydium Spot Price Oracle Manipulation (Price Dependency)
+# Loopscale — RateX PT Token Price Oracle Manipulation (Price Dependency)
 
 | Item | Details |
 |------|------|
@@ -6,7 +6,7 @@
 | **Protocol** | Loopscale (formerly Loop Finance) |
 | **Chain** | Solana |
 | **Loss** | ~$5,800,000 |
-| **Root Cause** | Vulnerable Price Dependency — Raydium concentrated liquidity pool spot price used as collateral oracle, manipulable via large trades in a single transaction |
+| **Root Cause** | Vulnerable Price Dependency — RateX PT token pricing function used as collateral oracle, manipulable via spot price of the underlying Raydium concentrated liquidity pool in a single transaction |
 | **Attack Tx** | `2SkCkmX2Q8R7W7RDzgfc6ZFCmYgehmENw72sgTQLfNLHGupNdPDeNkW6S7qCNgYtintFcxhkBCsyf81XA9NSF2RJ` |
 | **Reference** | https://x.com/LoopscaleLabs/status/1916230435291713786 |
 

@@ -7,11 +7,11 @@
 | **Chain** | Linea |
 | **Loss** | ~$166K |
 | **Root Cause** | Business Logic Flaw — incorrect or manipulable share/asset accounting during withdrawal allows attacker to extract more than their proportional entitlement |
-| **Attacker** | Unverified (not independently confirmed) |
-| **Attack Tx** | `0xcb0744a0d453e5556f162608fae8275dabd14292bffbfcd8394af4610c606447` |
-| **Vulnerable Contract** | Unverified (Denaria Finance vault contract on Linea; address not independently confirmed) |
+| **Attacker** | [0x8d6778d7fae00ad2e0bc12194cf03b756fed9db3](https://lineascan.build/address/0x8d6778d7fae00ad2e0bc12194cf03b756fed9db3) |
+| **Attack Tx** | [0xcb0744a0...6447](https://lineascan.build/tx/0xcb0744a0d453e5556f162608fae8275dabd14292bffbfcd8394af4610c606447) |
+| **Vulnerable Contract** | [0xb68396dd4230253d27589e2004ac37389836ae17](https://lineascan.build/address/0xb68396dd4230253d27589e2004ac37389836ae17) (PerpPair on Linea) |
 | **PoC Source** | None on record |
-| **Reference** | [DenariaFinance on X](https://x.com/DenariaFinance/status/2042589690415427933) |
+| **Reference** | [DenariaFinance on X](https://x.com/DenariaFinance/status/2042589690415427933), [Verichains Analysis](https://blog.verichains.io/p/denaria-finance-exploit-when-divceil) |
 
 ---
 

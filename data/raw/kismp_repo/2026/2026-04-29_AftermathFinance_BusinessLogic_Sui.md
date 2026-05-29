@@ -8,8 +8,10 @@
 | **Loss** | ~$1,140,000 |
 | **Root Cause** | Integer Underflow / Business Logic Flaw — `integrator_taker_fees` calculation underflows to `≈ u256::MAX` when an integrator sets `max_taker_fee = 0`, causing the protocol to credit astronomically large fees to the attacker-controlled integrator account |
 | **Perps Package** | `0x21d001e8b07da2e3facb3e2d636bbaef43ba3c978bd84810368840b7d57c5068` |
+| **Attacker** | `0x1a65086c85114c1a3f8dc74140115c6e18438d48d33a21fd112311561112d41e` |
 | **Attack Tx** | [`4pGQdfFG96Ghqj1xqkaeeAgMQCpttivdkgSRUGc6wVD8`](https://suivision.xyz/txblock/4pGQdfFG96Ghqj1xqkaeeAgMQCpttivdkgSRUGc6wVD8) |
-| **Reference** | [Phalcon Alert](https://x.com/Phalcon_xyz/status/2049509576488403365) |
+| **Outcome** | Mysten Labs and Sui Foundation covered all losses; users made whole |
+| **Reference** | [Phalcon Alert](https://x.com/Phalcon_xyz/status/2049509576488403365), [CryptoTimes](https://www.cryptotimes.io/2026/04/29/aftermath-finance-perps-on-sui-exploited-for-1-14m/) |
 
 ---
 
