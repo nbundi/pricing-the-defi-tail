@@ -31,7 +31,7 @@
     <div class="search-box">
         <i class="icon-search"></i>
         <form method="post" action="/search/">
-            <input type="hidden" name="csrfmiddlewaretoken" value="oxIWjsuAksBuDutcexvgSZaG4JUvYASodC9Fl4DSbMWlYVXbE81TeFs3yazZRx76">
+            <input type="hidden" name="csrfmiddlewaretoken" value="yXamCEVFu7r5SjuU2v2xsPuzpxSsLZv9u7opgypdbpSBx2xts6qbQFeuXW8ZCaXm">
             <input type="search" name="q" class="input-search" placeholder="Keywords" required>
         </form>
     </div>
@@ -41,8 +41,8 @@
     <div class="banner-con clearfix">
         <div class="banner-info">
             <p>The total amount of money lost by blockchain hackers is about</p>
-            <p>$ 37,778,150,246.24</p>
-            <p>Total hack events 2100</p>
+            <p>$ 37,818,249,051.71</p>
+            <p>Total hack events 2120</p>
         </div>
         <div class="banner-img">
             <img src="/static/archives/images/banner.gif">
@@ -78,30 +78,271 @@
             </dl>
         </div>
     <div class="case-content-num">
-        <p><em class="num">2100</em> hack event(s)</p>
+        <p><em class="num">2120</em> hack event(s)</p>
     </div>
     <div class="case-content">
         <ul>
             
                 <li>
-                    <span class="time">2023-10-25</span>
-                    <h3><em>Hacked target: </em>LastPass</h3>
-                    <p><em>Description of the event: </em>On October 25, 2023 alone another ~$4.4M was drained from 25+ victims as a result of the LastPass hack.</p>
+                    <span class="time">2023-11-07</span>
+                    <h3><em>Hacked target: </em>MEV Bot</h3>
+                    <p><em>Description of the event: </em>The MEV Bot (0x05f016765c6c601fd05a10dba1abe21a04f924a5) was exploited and lost about 1k ETH! The core reason is that the 0xf6ebebbb function used to trigger arbitrage in the contract lacks authentication. The attacker calls this function to exchange the tokens in the contract into the pool on curve, and then uses funds of the flash loan to reverse exchange and obtain profit.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 4,400,000
+                            $ 2,152,392
                         
-                    </span><span><em>Attack method: </em>Information Leakage</span></p>
+                    </span><span><em>Attack method: </em>Flash Loan Attack</span></p>
 
                     
-                    <p class="link-reference"><a href="https://twitter.com/zachxbt/status/1717901088521687330" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1722081647028478029" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-10-24</span>
-                    <h3><em>Hacked target: </em>Safereum (SAFEREUM)</h3>
-                    <p><em>Description of the event: </em>Safereum has conducted an exit scam for ~$1.3m. Contract Address: 0xb504035a11E672e12a099F32B1672b9C4a78b22f.</p>
+                    <span class="time">2023-11-07</span>
+                    <h3><em>Hacked target: </em>TheStandard.io</h3>
+                    <p><em>Description of the event: </em>On November 7, TheStandard.io was exploited for ~$290k. The key vulnerability here was the low liquidity in the PAXG pool, which the attacker exploited to manipulate the market. On November 9, 243k $EUROs has been returned to the protocol from the attacker which will be burned in due process.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 290,000
+                        
+                    </span><span><em>Attack method: </em>Liquidity Exploit</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/thestandard_io/status/1721823727925829842" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-06</span>
+                    <h3><em>Hacked target: </em>TrustPad</h3>
+                    <p><em>Description of the event: </em>Multi-chain launchpad platform TrustPad tweeted that one of the staking contracts was attacked. According to SlowMist&#39;s analysis, the lock time was manipulated due to obtaining an incorrect LockStartTime.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 155,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1721788176191332518" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-05</span>
+                    <h3><em>Hacked target: </em>Fake Ledger Live Web3</h3>
+                    <p><em>Description of the event: </em>A fake Ledger Live app on the official Microsoft App Store which was resulted in 16.8+ BTC ($588K) stolen.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 588,000
+                        
+                    </span><span><em>Attack method: </em>Fake Application</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/zachxbt/status/1720961400313373127" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-03</span>
+                    <h3><em>Hacked target: </em>Tellor</h3>
+                    <p><em>Description of the event: </em>Tellor&#39;s Twitter account was compromised, and the hacker posted a phishing link related to the $TRB airdrop.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Account Compromise</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1720326926466957344" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-01</span>
+                    <h3><em>Hacked target: </em>Frax Finance</h3>
+                    <p><em>Description of the event: </em>According to @fraxfinance, Frax Finance&#39;s DNS has been attacked. Please don’t use http://frax[.]finance and http://frax[.]com domains until further notice.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>DNS Hijacking Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/fraxfinance/status/1719497560543658073" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-01</span>
+                    <h3><em>Hacked target: </em>Fake Memecoin (MEME)</h3>
+                    <p><em>Description of the event: </em>Fake Memecoin (MEME) on BSC is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 117,930
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://bscscan.com/address/0xfcb1559536792523e802cd7e816a09f23d634778" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-01</span>
+                    <h3><em>Hacked target: </em>Fake Celestia (TIA)</h3>
+                    <p><em>Description of the event: </em>Fake Celestia (TIA) on ETH is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 99.5% price decline.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 208,394
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://etherscan.io/address/0xcd68acc0e6c94c0226b0d760d19951143ee7aa44" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-01</span>
+                    <h3><em>Hacked target: </em>Onyx Protocol</h3>
+                    <p><em>Description of the event: </em>DeFi lending protocol Onyx Protocol has been exploited and has currently lost ~$2.1 million.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 2,100,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1719667931926413679" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-11-01</span>
+                    <h3><em>Hacked target: </em>Monero</h3>
+                    <p><em>Description of the event: </em>Monero discloses that its community crowdfunding wallet was drained of 2,675.73 XMR (the entire balance). The hot wallet, used for payments to contributors, is untouched; its balance is ~244 XMR.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 460,000
+                        
+                    </span><span><em>Attack method: </em>Unknown</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://web3isgoinggreat.com/?id=monero-community-wallet-hack" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-31</span>
+                    <h3><em>Hacked target: </em>Unibot</h3>
+                    <p><em>Description of the event: </em>According to SlowMist security alert, Unibot has been exploited, and due to the lack of necessary parameter checks, the exploiter can transfer tokens for which users have approved the Unibot contract. Please revoke approval of 0x126c9FbaB3A2FCA24eDfd17322E71a5e36E91865.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 560,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1719242913769803788" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-31</span>
+                    <h3><em>Hacked target: </em>Dracula (DRAC)</h3>
+                    <p><em>Description of the event: </em>Dracula (DRAC) on BSC is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 38,349
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://bscscan.com/address/0x20d4e91e7c25f294e781464970a322b9782f7aa7" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-30</span>
+                    <h3><em>Hacked target: </em>Fake Memecoin (MEME)</h3>
+                    <p><em>Description of the event: </em>Fake Memecoin (MEME) on ETH is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 78,947
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://etherscan.io/address/0x3417d4fa067806f8f70c2a692548048962b7ac45" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-30</span>
+                    <h3><em>Hacked target: </em>Fake MEMEPAD (MEMEPAD)</h3>
+                    <p><em>Description of the event: </em>Fake MEMEPAD (MEMEPAD) on ETH is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 80,134
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://etherscan.io/address/0x51348a7c3969e670b1763d4b1c17441804ea001d" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-30</span>
+                    <h3><em>Hacked target: </em>Fake TITANX (TITANX)</h3>
+                    <p><em>Description of the event: </em>Fake TITANX (TITANX) on ETH is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 82,385
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://etherscan.io/address/0xaf3302f7a83cb4e66b8f9450b00e7644e605878d" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-28</span>
+                    <h3><em>Hacked target: </em>Astrid</h3>
+                    <p><em>Description of the event: </em>The Ethereum liquidity restaking pool Astrid was attacked due to a vulnerability in the withdrawal function, resulting in a loss of approximately $228,000. The parameters of the `withdraw()` function, specifically the token address and token amount, were exploitable. On October 29, the hackers returned 80% of the stolen funds (102 ETH).</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 228,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/AstridFinance/status/1718254655288066501" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-27</span>
+                    <h3><em>Hacked target: </em>STIMMY</h3>
+                    <p><em>Description of the event: </em>STIMMY on Ethereum pulled liquidity to the tune of 43.8 ETH (~$78.8K) and deleted its social platforms.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 78,800
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://etherscan.io/token/0x5bc749a299c5de62325e1a676d53527149f7aa30" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-10-26</span>
+                    <h3><em>Hacked target: </em>Fake Linea token</h3>
+                    <p><em>Description of the event: </em>A fake Linea token is suspected of a rug pull for ~$1.3m. ~$743k has been deposited into Tornado Cash.
+Contract Address: 0x00000000fEB6A772307C6aA88AB9D57b209aCb18.</p>
                     <p><span><em>Amount of loss: </em>
                         
                             $ 1,300,000
@@ -109,278 +350,37 @@
                     </span><span><em>Attack method: </em>Rug Pull</span></p>
 
                     
-                    <p class="link-reference"><a href="https://etherscan.io/address/0xb504035a11e672e12a099f32b1672b9c4a78b22f" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://etherscan.io/address/0x00000000feb6a772307c6aa88ab9d57b209acb18" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-10-23</span>
-                    <h3><em>Hacked target: </em>Julia (JULIA)</h3>
-                    <p><em>Description of the event: </em>Julia (JULIA) on ETH is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
+                    <span class="time">2023-10-25</span>
+                    <h3><em>Hacked target: </em>Maestro Router</h3>
+                    <p><em>Description of the event: </em>Maestro Router was compromised and approximately $ 510,000 was stolen.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 73,000
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://etherscan.io/address/0x02d9198f3f730328c0c0b35776b54e615864c42a#tokentxns" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-20</span>
-                    <h3><em>Hacked target: </em>Fake Celestia (TIA)</h3>
-                    <p><em>Description of the event: </em>Fake Celestia (TIA) on BNB Chain is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 162,837
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/address/0xab9cc7f4af96b3f92946b2b5a5d4474a8d40375d" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-20</span>
-                    <h3><em>Hacked target: </em>SOMESING (SSX)</h3>
-                    <p><em>Description of the event: </em>Token SOMESING (SSX) on BNB Chain is suspected of a rug pull, with the deployer removing substantial liquidity, causing a 100% price decline.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 169,000
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/address/0xd4e8839f98787eb02fcc7c659497e13b95bf0c4c" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-20</span>
-                    <h3><em>Hacked target: </em>Coins.ph</h3>
-                    <p><em>Description of the event: </em>Philippine exchange Coins.ph lost 12 million $XRP ($6 million) in a hack.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 6,000,000
-                        
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.theblock.co/post/258701/philippines-based-exchange-coins-ph-appears-to-have-lost-12-2-million-xrp-in-possible-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-19</span>
-                    <h3><em>Hacked target: </em>MicDao</h3>
-                    <p><em>Description of the event: </em>MicDao suffered from a  flash loan attack. The attacker gained $12,263. Contract address: 0xf6876f6AB2637774804b85aECC17b434a2B57168.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 12,263
-                        
-                    </span><span><em>Attack method: </em>Flash Loan Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/address/0xf6876f6AB2637774804b85aECC17b434a2B57168" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-19</span>
-                    <h3><em>Hacked target: </em>The Honest Venture</h3>
-                    <p><em>Description of the event: </em>A project named The Honest Venture is a confirmed investment scam with losses of approximately ~$58k.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 58,000
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/address/0x693dBad5af3AFf43A1fa8d8154fAa527e1765DA4" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-19</span>
-                    <h3><em>Hacked target: </em>Synthetify</h3>
-                    <p><em>Description of the event: </em>On October 19, Synthetify Protocol experienced a security incident. The smart contract and the entire platform are currently frozen.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 230,000
-                        
-                    </span><span><em>Attack method: </em>Governance Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/synthetify/status/1714933001027477909?s=20" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-18</span>
-                    <h3><em>Hacked target: </em>HopeLend</h3>
-                    <p><em>Description of the event: </em>On October 18, 2023, , the HopeLend protocol fell victim to a hacker attack. The attack resulted in a loss of approximately 528 ETH, out of which 263.91 ETH were bribed by the frontrunner to a Validator (managed by Lido). The exploit frontrunner eventually profited by 264.08 ETH. On October 20, Hope.money tweeted that a frontrunner from Armor Team voluntarily returned the acquired assets.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 818,747
+                            $ 510,000
                         
                     </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
 
                     
-                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1714655324395704423" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://twitter.com/MaestroBots/status/1716969767804747820" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-10-17</span>
-                    <h3><em>Hacked target: </em>Everscale</h3>
-                    <p><em>Description of the event: </em>Blockchain network Everscale said that a large number of EVER tokens have been stolen and they are working closely with exchanges where EVER is listed in order to stop any further outflow of tokens. To halt the actions of those responsible, they have temporarily disconnected Octus Bridge.</p>
+                    <span class="time">2023-10-25</span>
+                    <h3><em>Hacked target: </em>Mina Protocol</h3>
+                    <p><em>Description of the event: </em>Mina Protocol on BNB Chain has dropped 100%. 0x0920…a44A has swapped 1,000,000,000,000,000 $MINA for ~474.26 $BNB (worth ~$106.7K).</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            -
-                        
-                    </span><span><em>Attack method: </em>Unknown</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/Everscale_net/status/1714227498702323912" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-17</span>
-                    <h3><em>Hacked target: </em>Fantom Foundation</h3>
-                    <p><em>Description of the event: </em>On October 17, Fantom Foundation Telegram Community Administrator Jane stated that some of Fantom Foundation&#39;s hot wallet assets were drained due to a zero-day vulnerability on Google Chrome. According to SlowMist&#39;s analysis of on-chain transmission methods and previous emergency response experience, this should be a case of private key theft, which may be the result of the Foundation or its employees being attacked by phishing, social engineering, and running malicious Trojan files, leading to the theft of some wallet private keys.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 657,000
-                        
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/IM_23pds/status/1714430289206977005" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-16</span>
-                    <h3><em>Hacked target: </em>Ivy</h3>
-                    <p><em>Description of the event: </em>Project Ivy on BSC Suspected of Exit Scam. Contract Address: 0xf99f2Aec50adFde23cc67aB6240168B0a59f1D30 which dropped &gt;94%. EOA 0x5c30 removed $1.58m liquidity which caused the drop.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 1,580,000
+                            $ 106,730
                         
                     </span><span><em>Attack method: </em>Rug Pull</span></p>
 
                     
-                    <p class="link-reference"><a href="https://bscscan.com/address/0xf99f2aec50adfde23cc67ab6240168b0a59f1d30" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-13</span>
-                    <h3><em>Hacked target: </em>Beluga Protocol</h3>
-                    <p><em>Description of the event: </em>The Beluga Protocol on Arbitrum fell victim to a flashloan attack. The attacker made a profit of approximately $175,000 by manipulating the USDT-USDC.e balance, allowing for the withdrawal of extra tokens.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 175,000
-                        
-                    </span><span><em>Attack method: </em>Flash Loan Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/CryptoGiants_/status/1712709341709476015" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-12</span>
-                    <h3><em>Hacked target: </em>Platypus</h3>
-                    <p><em>Description of the event: </em>On October 12th, the stablecoin trading project Platypus Finance appeared to have been hit by a suspected hacker attack, with total losses of around $2.2 million. Platypus Finance tweeted, &quot;Due to suspicious activities in our protocol, we have taken the proactive measure of temporarily suspending all pools. Further updates will be communicated to the community in a timely manner.&quot;
-On October 13, Platypus Finance tweeted that it had recovered around 50k sAVAX and 7k AVAX from one of the exploiters successfully. On October 17, Platypus Finance announced that 90% of the stolen funds have been returned and that the net loss has been reduced to approximately 18,000 AVAX.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 2,200,000
-                        
-                    </span><span><em>Attack method: </em>Unknown</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/Platypusdefi/status/1712365385100689584" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-12</span>
-                    <h3><em>Hacked target: </em>BH Token (BlackHole token)</h3>
-                    <p><em>Description of the event: </em>BH Token (BlackHole token) suffered an attack. The exploiter (0xFDb) gained 1.2 M USDT. Funds are being swapped for BNB and deposited into Tornado Cash. Contract Address: 0xCC61CC9F2632314c9d452acA79104DDf680952b5. Exploiter Address: 0xFDbfcEEa1de360364084a6F37C9cdb7AaeA63464.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 1,200,000
-                        
-                    </span><span><em>Attack method: </em>Price Manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/address/0xCC61CC9F2632314c9d452acA79104DDf680952b5" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-12</span>
-                    <h3><em>Hacked target: </em>Wall Street Meme</h3>
-                    <p><em>Description of the event: </em>Attacker posted a phishing link in the announcements channel of Wall Street Meme&#39;s Discord server.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Account Compromise</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/wallstmemes/status/1712389771522175250" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-12</span>
-                    <h3><em>Hacked target: </em>CRYPTO_STREET (CST)</h3>
-                    <p><em>Description of the event: </em>The CST deployer sold tokens, resulting in a roughly 99% drop in the token price. Contract address: 0x0a92285241b0ea93Eff4195Db4530AF1a4bcfE0c. Deployer address: 0xabE6BC5Ca4Ae76251F0cB647F9817E3566EC3D0b.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/address/0x0a92285241b0ea93eff4195db4530af1a4bcfe0c" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-12</span>
-                    <h3><em>Hacked target: </em>Loozr</h3>
-                    <p><em>Description of the event: </em>There is a fake collab land verification in the Loozr Discord. The verification will take you to a phishing site that connects to a wallet drainer</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Account Compromise</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/officialloozr/status/1712076664916652381" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-10-12</span>
-                    <h3><em>Hacked target: </em>LastPass</h3>
-                    <p><em>Description of the event: </em>LastPass, a password management platform, is suspected to have suffered a data breach. On October 12, Twitter user flippen.eth tweeted that he had lost more than 20 ETH from his hot wallet overnight after storing his mnemonic on LastPass, an online password management platform, stating, &quot;This problem seems to be widespread, so if you&#39;ve ever used LastPass, it&#39;s time to update your password and abandon your wallet and the mnemonics stored there.”</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            20 ETH
-                        
-                    </span><span><em>Attack method: </em>Information Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/flippen6485/status/1712158624985002176" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://bscscan.com/address/0xdc2ce29256a7f44c3a291f8c08d575593455bc39" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
@@ -389,9 +389,9 @@ On October 13, Platypus Finance tweeted that it had recovered around 50k sAVAX a
     <ul class="pagination">
         <li ><a href=" /?c=&page=1 "> First </a></li>
         <li ><a href=" /?c=&page=41 "> « </a></li>
-        <li class="disabled"><a href="javascript:;">Page 42 of 105</a></li>
+        <li class="disabled"><a href="javascript:;">Page 42 of 106</a></li>
         <li ><a href=" /?c=&page=43 "> »</a></li>
-        <li ><a href=" /?c=&page=105 "> Last </a></li>
+        <li ><a href=" /?c=&page=106 "> Last </a></li>
     </ul>
 </div>
 

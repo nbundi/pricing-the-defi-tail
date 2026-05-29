@@ -31,7 +31,7 @@
     <div class="search-box">
         <i class="icon-search"></i>
         <form method="post" action="/search/">
-            <input type="hidden" name="csrfmiddlewaretoken" value="ZzpyFWYzLNZSsgLkEUui0La54GOxRIjg5UJuUOhFllUcR9OZ10fx0xMfZahvoEcO">
+            <input type="hidden" name="csrfmiddlewaretoken" value="j3VC8qvc63Q8jIqEI7kJRxuagX9k9c0LZUyAT9rgUF8FtU7UAgmjisgEsJXBv2Gx">
             <input type="search" name="q" class="input-search" placeholder="Keywords" required>
         </form>
     </div>
@@ -41,8 +41,8 @@
     <div class="banner-con clearfix">
         <div class="banner-info">
             <p>The total amount of money lost by blockchain hackers is about</p>
-            <p>$ 37,778,150,246.24</p>
-            <p>Total hack events 2100</p>
+            <p>$ 37,818,249,051.71</p>
+            <p>Total hack events 2120</p>
         </div>
         <div class="banner-img">
             <img src="/static/archives/images/banner.gif">
@@ -78,13 +78,298 @@
             </dl>
         </div>
     <div class="case-content-num">
-        <p><em class="num">2100</em> hack event(s)</p>
+        <p><em class="num">2120</em> hack event(s)</p>
     </div>
     <div class="case-content">
         <ul>
             
                 <li>
+                    <span class="time">2026-05-29</span>
+                    <h3><em>Hacked target: </em>MoneyMon</h3>
+                    <p><em>Description of the event: </em>The LegendaryMoneyMonNft contract’s cliamRewred function had a signature verification flaw. The verify() only checked if recoverSigner(...) == admin, without properly validating cases where ecrecover returns address(0). The attacker set admin to zero address, then used an invalid signature (r=0, s=0, v=27) to bypass checks, arbitrarily claim rewards, drain all tokens from the contract, and swap them for USDT via PancakeSwap.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 85,519.47
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/SlowMist_Team/status/2060205558687486441" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-28</span>
+                    <h3><em>Hacked target: </em>Joe Agent</h3>
+                    <p><em>Description of the event: </em>The Joe Agent ($JOE) project smart contract had a single-function reentrancy vulnerability. The attacker exploited the logic in _removeLiquidityViaContract where BNB was sent via low-level call before updating lpInfo[user].lpAmount, performing ~25 reentrancy loops to steal 62.5 BNB and ~1.196M JOE.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 45,000
+                        
+                    </span><span><em>Attack method: </em>Reentrancy Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/SlowMist_Team/status/2059887450663551352" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-28</span>
+                    <h3><em>Hacked target: </em>DxSale</h3>
+                    <p><em>Description of the event: </em>Legacy liquidity locker contracts of DxSale (a veteran DeFi launchpad on BNB Chain) were exploited, draining approximately $7.3 million from over 1,400 old LPs locked since 2021. The attacker used owner privileges via a custom drainer to set near-zero fees, backdate unlock times to 1970, and withdraw funds; on-chain links suggest possible team connections, with the platform remaining silent.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 7,300,000
+                        
+                    </span><span><em>Attack method: </em>Ownership Override Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/eyeonchains/status/2060083479631843408" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-28</span>
+                    <h3><em>Hacked target: </em>ONTR</h3>
+                    <p><em>Description of the event: </em>The ONTR token project was drained due to a flawed onlyOwner check in the contract (accepts owner == address(0)). This allowed re-owning a renounced token. The attacker used hidden balance-grant logic to fake massive ONTR balances (no totalSupply/mint logs), dumped into the ONTR/WETH LP, and swapped out WETH for profit.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 98,200
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/TenArmorAlert/status/2060190914547449936" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-27</span>
+                    <h3><em>Hacked target: </em>Stake DAO</h3>
+                    <p><em>Description of the event: </em>The DeFi protocol Stake DAO was exploited on the Arbitrum network due to a compromised deployer private key. The attacker used the privileged access to alter the setPeer() configuration for the LayerZero v2 bridge, redirecting trust to a contract they controlled. They then forged a cross-chain message, triggering the unlimited minting of approximately 5.4 trillion vsdCRV tokens. Subsequently, the attacker swapped about 16.83 million vsdCRV for ~43.78 ETH, profiting an estimated $91,170, and bridged the funds to Ethereum mainnet.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 91,170
+                        
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/PeckShieldAlert/status/2059578749352640679" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-27</span>
+                    <h3><em>Hacked target: </em>Superfortune</h3>
+                    <p><em>Description of the event: </em>On May 27, 2026, Superfortune ($GUA) experienced a security incident. The team intended to transfer additionally unlocked tokens to the airdrop claim contract address. However, during the multisig transaction execution, the recipient address was altered, resulting in approximately 14.98 million GUA (worth about $15.18 million at the time) being sent to a suspected hacker-controlled address. The attacker subsequently dumped all the tokens on-chain for roughly 2,784 ETH (approximately $5.66 million at the time) and distributed the funds across multiple wallets. The incident caused GUA&#39;s price to plummet by 70-76%. Official preliminary investigation points to address tampering in a multisignature transaction. Although initially described as a &quot;suspected address poisoning attack,&quot; the possibility is considered low due to no prior interaction between the hacker address and any Superfortune-related addresses. The team is continuing its investigation and will provide further updates.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 15180000
+                        
+                    </span><span><em>Attack method: </em>Multisig Address Tampering</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/SUPERFORTUNE888/status/2059818459421372485" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-26</span>
+                    <h3><em>Hacked target: </em>SKP</h3>
+                    <p><em>Description of the event: </em>On BSC, the SKP token suffered a token-side LP balance drain + sync attack. The attacker profited approximately $212.85k in a single transaction (162,854.21 USDT + 75.88 BNB). The root cause was a flaw in SKP token logic that allowed extra SKP tokens to be transferred out from the Pancake V2 SKP/USDT LP after a large buy, followed by calling sync() to write incorrect reserves, pushing the SKP reserve close to zero. The attacker used flash loans to amplify the attack.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 212,850
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/TenArmorAlert/status/2059454844201562191" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-25</span>
+                    <h3><em>Hacked target: </em>WUSD.fi / GLOVE</h3>
+                    <p><em>Description of the event: </em>WUSD.fi / GLOVE on Ethereum suffered an incentive abuse exploit. The attacker exploited the lack of Sybil resistance in the WUSD._englove reward path. By using EIP-7702 helper contracts and a Morpho USDT flash loan to repeatedly wrap/unwrap at least 100 WUSD (with fresh addresses holding &lt;2 GLOVE), they harvested nearly 2 GLOVE per cycle, dumped the GLOVE into Uniswap V3 pools, and drained ~$200K in USDC/USDT from the liquidity pools.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 200,000
+                        
+                    </span><span><em>Attack method: </em>Sybil Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/exvulsec/status/2058803971947385330" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-25</span>
+                    <h3><em>Hacked target: </em>Third-party Gnosis Safe Module (SquidRouterModule)</h3>
+                    <p><em>Description of the event: </em>A third-party Gnosis Safe module named SquidRouterModule was exploited, draining approximately $3-3.2 million from 86 Gnosis Safe wallets on Ethereum and Base within about 2 hours. The module has no affiliation with the official Squid Router protocol—confusion arose solely due to the contract name on Basescan. Victims had previously added this faulty third-party module as a trusted Safe Module, granting it permission to spend any tokens without signatures. The attacker exploited weak authentication (accepting a publicly visible constant string as &quot;message security&quot; proof) to execute arbitrary calldata, forcing fake Uniswap V3 swaps (real tokens for worthless &#39;u&#39; token in attacker-controlled pools) and draining funds, which were consolidated into ~3.07M DAI. Squid confirmed its core router and user funds/integrations remain fully secure.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 3,200,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/squidrouter/status/2058890710611276238" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-24</span>
+                    <h3><em>Hacked target: </em>StablR</h3>
+                    <p><em>Description of the event: </em>According to on-chain investigator ZachXBT and security firm Blockaid, two contracts linked to European stablecoin issuer StablR (EURR and USDR on Ethereum) were suspected of being exploited. The attacker’s funds appear to have come via CCTP on Noble. ~$2.8M+ extracted so far, causing both stablecoins to depeg significantly.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 2,800,000
+                        
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/blockaid_/status/2058372418557595890" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-23</span>
+                    <h3><em>Hacked target: </em>Mure</h3>
+                    <p><em>Description of the event: </em>Mure’s MureDistribution proxy contract on Ethereum was exploited due to an access control vulnerability in signature validation. The attacker supplied a malicious contract as the “signer source,” causing SignatureChecker to return true and bypass verification. This allowed draining 4.85M QUEST tokens (pre-approved to the proxy) via transferFrom, which were then swapped for ~5.45 ETH (~$11,700) on Uniswap. No user funds or main payment infrastructure were affected; it was a targeted logic flaw in one distribution contract.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 11,700
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/clarahacks/status/2058341669603307880" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-22</span>
+                    <h3><em>Hacked target: </em>Polymarket</h3>
+                    <p><em>Description of the event: </em>Polymarket suffered an internal private key compromise incident. A six-year-old operational wallet private key (used for the rewards payout system and market initializer) was compromised, resulting in the extraction of approximately $573,200 (in USDC and POL) from addresses on the Polygon chain. Polymarket officials quickly clarified that this was not due to any smart contract or UMA CTF Adapter vulnerability; user funds, market resolutions, and the platform’s core functions remain fully secure. The team immediately rotated the private key, revoked permissions, and collaborated to freeze approximately $164,000 in funds, resulting in a net loss of about $409,200. The incident was first publicly flagged by on-chain investigator ZachXBT, and the platform continues to operate normally.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 573,200
+                        
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/devjoshstevens/status/2057768173915484505" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-22</span>
+                    <h3><em>Hacked target: </em>Fractal Protocol</h3>
+                    <p><em>Description of the event: </em>Fractal Protocol’s USDF vault on Arbitrum was exploited via a smart contract logic flaw. The attacker used an Aave V3 USDC.e flash loan, looped through Balancer V2 batchSwap callbacks, and recursively called the vault’s deposit (0xb6b55f25) and withdraw functions. This exploited the fixed daily-accrued tokenPrice (~1.27 USDC/USDF) and share-rounding accounting issues without proper invariant checks across re-entrant flows, allowing the extraction of approximately 13,700 USDC.e. The vault’s liquid USDC buffer dropped from around 14,778 USDC to near zero. Pre-hack TVL was approximately 97,270 USD.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 13,700
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/DefimonAlerts/status/2058619391776878967" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-20</span>
+                    <h3><em>Hacked target: </em>Butter Bridge</h3>
+                    <p><em>Description of the event: </em>The Butter Bridge V3.1 (part of MAP Protocol and Butter Network) was exploited. An attacker used a vulnerability in the OmniServiceProxy contract’s retry message verification logic, specifically an abi.encodePacked hash collision with dynamic-bytes fields. This allowed forging a cross-chain retry message that bypassed authentication, resulting in the minting of approximately 1 quadrillion (10^15) MAPO tokens (about 4.8 million times the legitimate ~208 million circulating supply). The attacker dumped ~1 billion fake MAPO into the Uniswap V4 ETH/MAPO pool, extracting roughly $180,000 in liquidity (≈52.21 ETH). The teams immediately paused the bridge and related swaps. User funds in pending swaps are safe, and a patch/audit/redeployment is in progress. The remaining ~999 trillion fake tokens stay in the attacker’s wallet, posing ongoing dilution risk.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 180,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://ourcryptotalk.com/news/butter-bridge-exploit-mints-1-quadrillion-mapo-tokens" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-20</span>
+                    <h3><em>Hacked target: </em>RetoSwap</h3>
+                    <p><em>Description of the event: </em>RetoSwap (a Tor-based P2P multisig DEX powered by the Haveno trade protocol for trading Monero) was actively exploited. Attackers sent fake, out-of-order ACK messages impersonating the arbitrator during ongoing trades. This tricked the client into updating the arbitrator’s node address to the attacker’s controlled address, allowing them to create a compromised multisig wallet before the victim deposited funds. The exploit mainly affected crypto-to-crypto trades. RetoSwap immediately banned the attacker’s onion address, forced a client version update to halt all trading, and is working on a patch and potential recovery for affected users. Approximately 7,000 XMR were stolen.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 2,700,000
+                        
+                    </span><span><em>Attack method: </em>Protocol Logic Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/retoswap/status/2056984875383632226?s=46&amp;t=DLwbX9Nw4QECiyZQ0av-fg" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-20</span>
+                    <h3><em>Hacked target: </em>Veil Cash</h3>
+                    <p><em>Description of the event: </em>Veil Cash&#39;s legacy fixed-denomination privacy pools on Base were exploited due to a misconfigured Groth16 verifier (delta2 == gamma2), allowing the attacker to forge zkSNARK proofs and drain ~2.9 ETH. With whitehat intervention and the exploiter voluntarily returning funds, 100% of the affected funds were recovered. Live pools were unaffected.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 5,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/Veildotcash/status/2025293773891404225" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
                     <span class="time">2026-05-19</span>
+                    <h3><em>Hacked target: </em>Bankr</h3>
+                    <p><em>Description of the event: </em>The AI-powered crypto trading agent platform Bankr on the Base network suffered a social engineering attack. The attacker exploited prompt injection techniques targeting the automated agent trust layer between Grok and Bankrbot — including malicious inputs such as Morse code — to trick the system into executing unauthorized transaction signatures, ultimately gaining access to 14 user wallets and transferring funds. Bankr has suspended the affected functionality, launched an investigation, and pledged to fully reimburse all losses from its treasury.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 440,000
+                        
+                    </span><span><em>Attack method: </em>Social Engineering</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/bankrbot/status/2056824330999533747" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-19</span>
+                    <h3><em>Hacked target: </em>HermesVault</h3>
+                    <p><em>Description of the event: </em>HermesVault, an Algorand-based privacy protocol using zero-knowledge proofs for private transactions, was exploited. The attacker exploited a flaw in the key reset defense logic within the withdrawal verification script. This allowed bypassing the zero-knowledge (zk) verification process and unauthorized withdrawal of funds. The protocol permanently shut down operations following the incident. Lead engineer Giulio Pizzini confirmed that the core zk circuit remained secure, but the auxiliary withdrawal script had a vulnerability. The team patched the issue, refunded a large portion of the funds, and initiated a full refund process for affected users.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 29,466
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/giuliopizzini/status/2056858969403183292?referrer=grok-com" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-18</span>
+                    <h3><em>Hacked target: </em>Verus-Ethereum Bridge</h3>
+                    <p><em>Description of the event: </em>Blockaid detected an ongoing exploit on the Verus-Ethereum Bridge. The attacker drained approximately $11.58 million in assets (including ~1,625 ETH, ~103.6 tBTC, and ~147k USDC). The funds were swapped and consolidated into a drainer wallet (e.g., 0x65Cb8b128Bf6e690761044CCECA422bb239C25F9). This is a cross-chain bridge incident affecting the bridge infrastructure, not the core Verus blockchain. The project had recently issued an urgent update, but the exploit still occurred. Funds remain in the attacker&#39;s control as of the latest reports. On May 22, PeckShield&#39;s monitoring revealed that the exploiter of the Verus cross-chain bridge has returned 4,052.4 ETH (valued at around $8.5 million) to the team&#39;s designated address. This recovery accounts for 75% of the total plundered funds, while the remaining 25% (approximately 1,350 ETH) is being retained in the hacker&#39;s wallet as a bug bounty.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 11,580,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/MetaEraHK/status/2056192367716380711" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-05-18</span>
                     <h3><em>Hacked target: </em>Echo Protocol</h3>
                     <p><em>Description of the event: </em>Echo Protocol’s eBTC on Monad was compromised due to an admin private key leak. The attacker granted themselves minting rights, minted 1,000 unbacked eBTC (~$76.7M nominal value), deposited 45 eBTC (~$3.45M) as collateral into Curvance to borrow ~11.29 WBTC (~$867K), bridged it to Ethereum, swapped for ETH, and sent ~384 ETH (~$821K) to Tornado Cash. The remaining 955 eBTC stays under attacker control, posing ongoing depegging risk.</p>
                     <p><span><em>Amount of loss: </em>
@@ -98,299 +383,14 @@
                     
                 </li>
             
-                <li>
-                    <span class="time">2026-05-18</span>
-                    <h3><em>Hacked target: </em>Verus-Ethereum Bridge</h3>
-                    <p><em>Description of the event: </em>Blockaid detected an ongoing exploit on the Verus-Ethereum Bridge. The attacker drained approximately $11.58 million in assets (including ~1,625 ETH, ~103.6 tBTC, and ~147k USDC). The funds were swapped and consolidated into a drainer wallet (e.g., 0x65Cb8b128Bf6e690761044CCECA422bb239C25F9). This is a cross-chain bridge incident affecting the bridge infrastructure, not the core Verus blockchain. The project had recently issued an urgent update, but the exploit still occurred. Funds remain in the attacker&#39;s control as of the latest reports.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 11,580,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/MetaEraHK/status/2056192367716380711" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-15</span>
-                    <h3><em>Hacked target: </em>THORChain</h3>
-                    <p><em>Description of the event: </em>One of THORChain’s Asgard vaults was compromised, with the attacker draining funds simultaneously across multiple supported chains (at least nine), resulting in losses of approximately $10-11 million+ (including ~36.75 BTC worth ~$3M and ~$7M+ in EVM tokens). The protocol halted trading and signing after automatic detection of abnormal behavior. User funds and LP positions were safe; only protocol-owned funds were affected. The attack is linked to vault churn address poisoning or a vulnerability in the GG20 TSS (threshold signature scheme) implementation, allowing key material leakage and private key reconstruction over time. THORChain confirmed the incident, is investigating with security partners, and launched a recovery portal for claims (no user compensation program for protocol losses).</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 10,700,000
-                        
-                    </span><span><em>Attack method: </em>GG20 TSS Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/THORChain/status/2055300162331742233" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-15</span>
-                    <h3><em>Hacked target: </em>Adshares Bridge</h3>
-                    <p><em>Description of the event: </em>Adshares Bridge was exploited on Ethereum around May 15, 2026. The attacker used the bridge-minter EOA to sign three wrapTo() calls with non-existent native-chain transaction IDs on the Adshares canonical chain. This allowed minting large amounts of fake wrapped ADS (wADS: 99,999.93 ×2 + 999,999.94). The fake tokens were then dumped via Uniswap V4 UniversalRouter, draining roughly $628K in ETH and USDC from liquidity pools. Security researchers flagged it quickly, and the project posted an on-chain whitehat message offering a 10% bounty for return of 90% of funds.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 628,000
-                        
-                    </span><span><em>Attack method: </em>Bridge Verification Bypass</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://cryptoadventure.com/adshares-bridge-exploit-drains-about-628k-after-fake-wads-mint/" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-13</span>
-                    <h3><em>Hacked target: </em>TAC Cross-Chain Layer (TON Side)</h3>
-                    <p><em>Description of the event: </em>Following a security incident, TAC identified an exploit on the TON side of its cross-chain layer carried out by an external attacker. The incident resulted in a loss of approximately $2.8M across USDT, BLUM, and tsTON. The TAC token, TON, and all ERC-20 tokens bridged from Ethereum are NOT affected. The bridge remains paused while forensic analysis and remediation are ongoing. A post-mortem will be published soon. The team is working with law enforcement and security partners to trace funds and plans to make users whole via a structured sale of Foundation TAC token reserves.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 2,800,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/TacBuild/status/2054620834879381870?s=20" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-13</span>
-                    <h3><em>Hacked target: </em>Transit Finance</h3>
-                    <p><em>Description of the event: </em>Decentralized cross-chain aggregation protocol Transit Finance suffered an exploit on its deprecated (2022-era) TRON smart contract, resulting in approximately $1.88 million in DAI being drained. The stolen funds were transferred to an Ethereum address. The team confirmed it was isolated to legacy code, stated that current contracts are secure, completed remediation on May 12, and promised full user compensation. They sent an on-chain message to the attacker offering a bug bounty for return within 48 hours, or they would pursue legal action.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 1,880,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/BSCNews/status/2054613633460777265" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-13</span>
-                    <h3><em>Hacked target: </em>ShapeShift FOX Colony</h3>
-                    <p><em>Description of the event: </em>ShapeShift’s FOX Colony (a community governance and participation program for FOX token holders) on Arbitrum was exploited via a smart contract vulnerability in its Colony Network contracts. The attacker drained approximately $132.7K in USDC and FOX tokens in a single sophisticated transaction by exploiting a meta-transaction self-call flaw combined with DSAuth authorization logic. The core exchange platform was unaffected; this impacted the DAO/community treasury.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 132,700
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/blockaid_/status/2054593377438421492?s=46&amp;t=DLwbX9Nw4QECiyZQ0av-fg" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-12</span>
-                    <h3><em>Hacked target: </em>Aurellion Labs</h3>
-                    <p><em>Description of the event: </em>Aurellion Labs&#39; Diamond Proxy contract (EIP-2535) was exploited due to an unprotected initialize(address) function in the SafeOwnable Facet. Although an owner was set, the OpenZeppelin-style _initialized storage slot remained 0, allowing re-initialization. The attacker called initialize() to take ownership, used diamondCut to add a malicious facet with pullERC20/sweep functions, and drained USDC from wallets that had previously approved the diamond proxy. The project paused operations, committed to reimbursing users, and advised revoking old approvals.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 455,003
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/SlowMist_Team/status/2054163700035289446" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-12</span>
-                    <h3><em>Hacked target: </em>SQ Protocol</h3>
-                    <p><em>Description of the event: </em>On May 12, 2026, at approximately 10:11 UTC, the SQ Protocol on BNB Chain was exploited for $346,137. The attacker abused a hardcoded owner backdoor in the verified Staking contract (0x404404a845fff0201f3a4d419b4839fc419c99f7). Using a type-0x4 transaction with authorizationList, they took ownership, minted fake staking claims, redeemed ~296.5K USDT, swept SQi tokens, and dumped them in the SQi/USDT pool for additional profit. Total realized loss: approximately $346.1K.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 346,100
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Defi_Nerd_sec/status/2054425936746148148" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-11</span>
-                    <h3><em>Hacked target: </em>Huma Finance</h3>
-                    <p><em>Description of the event: </em>A logic flaw in Huma Finance’s deprecated V1 BaseCreditPool contracts on Polygon was exploited, draining approximately 101,400 USDC and USDC.e from accumulated protocol fees and pool owner fees. No user funds were at risk, PST token unaffected. The team had already been sunsetting V1 pools and immediately paused all V1 contracts. Huma’s V2 on Solana is a complete rewrite and remains secure.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 101,400
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/humafinance/status/2053858499378258198" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-11</span>
-                    <h3><em>Hacked target: </em>Ink Finance</h3>
-                    <p><em>Description of the event: </em>Ink Finance’s Workspace Treasury Proxy contract on Polygon was exploited due to a whitelist validation logic flaw. The attacker deployed a malicious contract matching a whitelisted claimer address, passed authentication checks via the claim() function, and drained approximately $140,000 USDT (amplified with a ~$25K Balancer V2 flash loan).</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 140,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.cryptotimes.io/2026/05/11/ink-finance-exploited-on-polygon-140k-usdt-drained-in-flash-loan-attack/" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-11</span>
-                    <h3><em>Hacked target: </em>Roaring Kitty X Account</h3>
-                    <p><em>Description of the event: </em>Keith Gill’s (Roaring Kitty) verified X account was apparently hacked on May 11, 2026. Attackers posted the contract address of a newly launched Solana meme coin $RKC (Red Kitten Crew) on Pump.fun, along with related images. This briefly pumped the token’s market cap to around $11-12 million. The posts were deleted within an hour, causing a 90%+ crash. The developer used 10 wallets to acquire ~39.52% of the supply (with ~$1,950 investment) and dumped for over $611K profit. Over 80 wallets lost approximately $2.86 million in total. Keith Gill has not issued any statement regarding the incident.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 2,860,000
-                        
-                    </span><span><em>Attack method: </em>Account Hacked</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://ourcryptotalk.com/news/roaring-kitty-x-account-hacked-to-scam-rkc-token" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-10</span>
-                    <h3><em>Hacked target: </em>Renegade</h3>
-                    <p><em>Description of the event: </em>Renegade’s legacy V1 deployment on Arbitrum was exploited. The attacker took advantage of an unprotected initializer in the Dark Pool proxy contract (combined with a faulty migration from April 2025 that left the version counter out of sync), injected malicious logic, and used delegatecall to drain approximately $209,000 worth of 27 different ERC-20 tokens from the proxy contract’s storage. The exploiter, acting as a whitehat, negotiated on-chain with the team. Renegade offered a 90/10 split (return 90%, keep 10% as a whitehat bounty, no legal action). The whitehat returned ~$190,000 within 45 minutes. The team confirmed the issue was isolated to the V1 Arbitrum deployment (which has been paused), all other deployments are safe, and all affected users will be made whole.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 209,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/renegade_fi/status/2053531772634427599?s=46" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-07</span>
-                    <h3><em>Hacked target: </em>TrustedVolumes</h3>
-                    <p><em>Description of the event: </em>TrustedVolumes, a key liquidity provider and resolver (market maker) for 1inch Fusion and other DeFi protocols, was exploited via a vulnerability in its custom RFQ swap proxy contract, resulting in approximately $6.7 million stolen. The project confirmed the incident on X, published the three Ethereum addresses holding the stolen funds (approx. $3M, $3M, and $700K), and stated openness to constructive communication for a bug bounty and mutually acceptable resolution. 1inch confirmed its protocol, infrastructure, and user funds are unaffected.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 6,700,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/trustedvolumes/status/2052235435292910005" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-05</span>
-                    <h3><em>Hacked target: </em>Ekubo Protocol</h3>
-                    <p><em>Description of the event: </em>According to Blockaid, Ekubo Protocol’s custom extension contract on Ethereum was attacked in the early hours, resulting in a loss of approximately $1.4 million. Ekubo users themselves were not directly affected. Only users who had previously approved the V2 contract as a token spender were exposed to risk. The root cause lies in the IPayer.pay callback function within the Ekubo extension contract. Specifically, the payer, token, and amount parameters in the token.transferFrom call were directly sourced from the lock payload and could be fully controlled by the attacker. The contract failed to verify whether the payer was the initiator of the lock or an authorized payment source. As a result, the attacker was able to exploit prior ERC-20 approvals granted by users to the contract. By routing through the Core locking mechanism into the extension contract, the attacker could designate any previously approved user as the payer while setting themselves as the recipient, thereby draining user funds.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 1,400,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/blockaid_/status/2051757787714118125" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-04</span>
-                    <h3><em>Hacked target: </em>SmartCredit</h3>
-                    <p><em>Description of the event: </em>SmartCredit’s Leveraged Lido module was exploited. The attacker drained funds from this leveraged staking feature. The team has paused the Leveraged Lido functionality, and the protocol’s Loss Provision Fund will fully cover the gap for affected stakers.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 72,000
-                        
-                    </span><span><em>Attack method: </em>Flash Loan Exploit</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/smartcredit_io/status/2051361795789496337" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-05-01</span>
-                    <h3><em>Hacked target: </em>Bisq</h3>
-                    <p><em>Description of the event: </em>A vulnerability in Bisq v1 trade protocol allowed attackers (possibly using modified clients) to bypass verification and drain Bitcoin from open offers. Primarily affected altcoin trades. User wallets holding BTC were not directly impacted. The team activated emergency measures to disable trading and is preparing a DAO vote for full reimbursement.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 858,000
-                        
-                    </span><span><em>Attack method: </em>Business Logic Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/bisq_network/status/2050917431699460231" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-04-30</span>
-                    <h3><em>Hacked target: </em>Wasabi Protocol</h3>
-                    <p><em>Description of the event: </em>On April 30, 2026 (UTC), Wasabi Protocol experienced a security incident. Attackers exploited an analytics surface (Spring Boot Actuator heap dump) on the project’s AWS infrastructure, which leaked credentials and ultimately allowed them to obtain the private keys controlling the EVM smart contracts. The attackers then launched a withdrawal attack, draining $4.8 million in user funds from the listed EVM vaults and an additional $900,000 from Wasabi’s treasury. The breach was limited to EVM deployments on Ethereum Mainnet, Base, Blast, and Berachain. The Solana deployment and Prop AMM were completely unaffected. The team contained the attack within the first 48 hours, rotated keys, locked down contracts, reopened withdrawals for unaffected vaults on May 2, and engaged external security firm zeroShadow for on-chain tracing, recovery efforts, and law enforcement coordination.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 5,700,000
-                        
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/wasabi_protocol/status/2052856772717682724" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-04-29</span>
-                    <h3><em>Hacked target: </em>Syndicate Labs</h3>
-                    <p><em>Description of the event: </em>Syndicate Labs’ Commons cross-chain bridge was compromised due to a private key leak. The attacker used the leaked upgrade key to maliciously upgrade the bridge contracts, draining approximately 18.5 million SYND tokens (worth ~$330,000) and ~$50,000 in user assets, for a total loss of $380,000. The incident was limited to specific chains, and the project pledged full compensation to affected users.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 380,000
-                        
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://crypto.news/syndicate-labs-suffers-380k-synd-bridge-exploit-pledges-full-user-compensation/" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-04-29</span>
-                    <h3><em>Hacked target: </em>Sweat Foundation</h3>
-                    <p><em>Description of the event: </em>Sweat Foundation was exploited. An attacker drained approximately 13.71 billion SWEAT tokens (about 65% of total supply) from multiple foundation-controlled accounts within roughly 30 seconds, resulting in a loss of about $3.5 million. The attacker exploited a vulnerability in the SWEAT token contract using a custom drainer contract, then attempted to liquidate and bridge the funds via Ref Finance and Wormhole. The team quickly paused the contract, coordinated freezes with MEXC, and restored all external user balances.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 3,500,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/SweatEconomy/status/2049588862352060474" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
         </ul>
     </div>
     <ul class="pagination">
         <li  class="disabled" ><a href=" javascript:; "> First </a></li>
         <li  class="disabled" ><a href=" javascript:; "> « </a></li>
-        <li class="disabled"><a href="javascript:;">Page 1 of 105</a></li>
+        <li class="disabled"><a href="javascript:;">Page 1 of 106</a></li>
         <li ><a href=" /?c=&page=2 "> »</a></li>
-        <li ><a href=" /?c=&page=105 "> Last </a></li>
+        <li ><a href=" /?c=&page=106 "> Last </a></li>
     </ul>
 </div>
 

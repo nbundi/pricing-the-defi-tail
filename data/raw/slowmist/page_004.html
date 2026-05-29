@@ -31,7 +31,7 @@
     <div class="search-box">
         <i class="icon-search"></i>
         <form method="post" action="/search/">
-            <input type="hidden" name="csrfmiddlewaretoken" value="RPBMfOJ8E1gOYIQYKvJn9dwWSCxKNz55f6KqM93NXitN6hK4t9O8ifMcJQgrDCRv">
+            <input type="hidden" name="csrfmiddlewaretoken" value="3tlko5iTZJqgW87SDiXpFxK3z3mGcbn3gsaT8MZD9KiBv6vdprqYHZ7cC73yfgni">
             <input type="search" name="q" class="input-search" placeholder="Keywords" required>
         </form>
     </div>
@@ -41,8 +41,8 @@
     <div class="banner-con clearfix">
         <div class="banner-info">
             <p>The total amount of money lost by blockchain hackers is about</p>
-            <p>$ 37,778,150,246.24</p>
-            <p>Total hack events 2100</p>
+            <p>$ 37,818,249,051.71</p>
+            <p>Total hack events 2120</p>
         </div>
         <div class="banner-img">
             <img src="/static/archives/images/banner.gif">
@@ -78,10 +78,295 @@
             </dl>
         </div>
     <div class="case-content-num">
-        <p><em class="num">2100</em> hack event(s)</p>
+        <p><em class="num">2120</em> hack event(s)</p>
     </div>
     <div class="case-content">
         <ul>
+            
+                <li>
+                    <span class="time">2026-04-14</span>
+                    <h3><em>Hacked target: </em>MONA</h3>
+                    <p><em>Description of the event: </em>On April 14, 2026, attackers exploited the BurnAddress mechanism in the MONA token on BSC via a Deferred LP Burn / reserve manipulation attack. The attacker first farmed 10,000 MONA through 25 fresh accounts, sold 9,900 MONA to create a deferred burn credit, bought out most of the pool&#39;s MONA inventory, then triggered BurnAddress.burn() with a zero-value transferFrom to burn MONA directly from the LP and call sync(). This left the MONA/USDT pair with near-zero MONA but almost full USDT reserves. Finally, selling the remaining ~100 MONA drained a large amount of USDT. Flash loans from Moolah and borrowing from Venus were used for funding and fully repaid in the same transaction. The root cause was non-atomic handling in _handleSell() and burnsellMona(): USDT payout happened immediately while MONA burn was deferred and could be triggered later, breaking the AMM invariant.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 60,950
+                        
+                    </span><span><em>Attack method: </em>Deferred LP Burn Exploit</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.darknavy.org/web3/exploits/burnaddress-mona-deferred-lp-burn/" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-13</span>
+                    <h3><em>Hacked target: </em>Hyperbridge</h3>
+                    <p><em>Description of the event: </em>Based on monitoring by CertiK Alert, the Hyperbridge gateway contract fell victim to an exploit. The attacker utilized forged messages to manipulate administrative permissions of the Polkadot token contract on the Ethereum network. By unauthorized minting and liquidating 1 billion tokens, the attacker realized a profit of roughly $237,000. On April 16, it was reported that according to an official announcement from Hyperbridge, its token gateway was attacked on April 13. The estimated losses have been revised from approximately $237,000 to about $2.5 million, mainly affecting incentive liquidity pools on Ethereum, Base, BNB Chain, and Arbitrum.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 2,500,000
+                        
+                    </span><span><em>Attack method: </em>Forged Cross-Chain State Proof</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/CertiKAlert/status/2043557571609731268" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-13</span>
+                    <h3><em>Hacked target: </em>Dango</h3>
+                    <p><em>Description of the event: </em>The DeFi project Dango released an update three hours after disclosing a security incident last night, stating that the white-hat hacker has fully returned the stolen funds and received a bug bounty. User funds were not affected. The founder of Dango said that fixes will be deployed, additional security measures will be implemented, and preparations are underway to restart the blockchain. According to the earlier announcement, the attacker exploited a logic flaw in the insurance fund to steal USDC collateral. The vulnerability arose because the insurance fund allowed anyone to make donations but failed to verify that the donation amount was positive. Thanks to rate limits on the cross-chain bridge, the attacker was only able to bridge $410,000 worth of USDC to Ethereum, while the remaining $1.49 million stayed on Dango and was successfully recovered. The vulnerability has now been fixed and does not affect other trading system functions such as order matching, PnL settlement, or liquidation.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 1,900,000
+                        
+                    </span><span><em>Attack method: </em>Insurance Fund Donation Logic Bug</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/dango/status/2043710283244331409" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-12</span>
+                    <h3><em>Hacked target: </em>SubQuery Network</h3>
+                    <p><em>Description of the event: </em>On April 12, 2026, attackers exploited a vulnerability in SubQuery Network’s Settings contract on the Base network (the setContractAddress() function missing the onlyOwner access control modifier). By repeatedly calling this function, the attacker set their address as StakingManager and RewardsDistributor, enabling drainage of pooled SQT from the Staking contract, impacting 272 individual staker/delegator wallets, RewardsBooster, and a small protocol Treasury. Approximately 382,433,441 SQT were drained (worth about $134,000 USD at the time). The team quickly responded by deploying a fix, pausing withdrawals, and committing to full compensation for all affected users. No user private keys were compromised. The root cause was a missing access control from a prior code refactor.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 134,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://subquery.network/blog/subquery-network-security-incident-report" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-11</span>
+                    <h3><em>Hacked target: </em>Zerion</h3>
+                    <p><em>Description of the event: </em>An employee device at Zerion was compromised through an AI-driven social engineering attack, allegedly linked to a DPRK-associated advanced persistent threat (APT) group. The attacker successfully obtained the employee’s logged-in sessions, account credentials, and private keys to company hot wallets used for internal testing and operations, and subsequently transferred approximately $100,000 from multiple internal hot wallets. No user funds were affected in this incident, and Zerion’s products, mobile applications, and backend infrastructure were not compromised. The attack was limited to an employee device and internal company hot wallet systems. Following the incident, the team proactively took down the web application and carried out full credential rotation, device security reviews, and infrastructure hardening measures to prevent further risk exposure.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 100,000
+                        
+                    </span><span><em>Attack method: </em>AI-enabled Social Engineering Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/zerion/status/2044167535231414727?s=46&amp;t=DLwbX9Nw4QECiyZQ0av-fg" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-09</span>
+                    <h3><em>Hacked target: </em>Aethir</h3>
+                    <p><em>Description of the event: </em>Aethir&#39;s cross-chain bridge contracts (primarily AethirOFTAdapter and Ethereum-related bridging contracts) were targeted in an exploit. The attacker attempted to drain funds by exploiting access control or ownership transfer vulnerabilities (e.g., transferOwnership issues), involving chains like BNB Chain. The Aethir team quickly detected the anomaly, promptly disconnected the compromised contracts, and collaborated with major exchanges (Binance, Upbit, Bithumb, etc.) to blacklist attacker wallets, effectively containing further damage. The main ATH token supply on Ethereum remained intact, and other bridges like ETH-ARB on Squid were unaffected. Initial estimates put potential losses around $400,000, but user impact was limited to under $90,000. The project promised a full compensation plan.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 90,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://crypto.news/aethir-contains-bridge-hack-while-losses-stay-below-90k/" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-07</span>
+                    <h3><em>Hacked target: </em>Squid Multicall</h3>
+                    <p><em>Description of the event: </em>A user mistakenly approved the SquidMulticall contract (instead of the intended Squid Router contract) with unlimited token allowances. An attacker then called the permissionless run() function on SquidMulticall with crafted calldata to execute transferFrom() from the victim’s approved tokens across multiple chains (ETH, BSC, Arbitrum, Avalanche, etc.). This drained approximately $517K.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 517,000
+                        
+                    </span><span><em>Attack method: </em>Approval Exploit</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://blocksec.com/blog/weekly-web3-security-incident-roundup-apr-6-apr-12-2026" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-05</span>
+                    <h3><em>Hacked target: </em>Denaria</h3>
+                    <p><em>Description of the event: </em>Decentralized perpetual futures trading platform Denaria announced on X that it suffered a smart contract attack yesterday, resulting in a loss of approximately $165,000. The team is currently working with Linea and auditing partners to investigate the incident and will release a full post-mortem report as soon as possible.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $165,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/DenariaFinance/status/2041056361186771054" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-04</span>
+                    <h3><em>Hacked target: </em>HypurrFi</h3>
+                    <p><em>Description of the event: </em>DeFi lending protocol HypurrFi tweeted that the hypurr.fi domain has been hijacked. The team has migrated its infrastructure to hypurrfi .com. The protocol itself, user funds, and team infrastructure remain unaffected.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            0
+                        
+                    </span><span><em>Attack method: </em>Domain Hijacking</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/HypurrFi/status/2040186175483416995" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-04</span>
+                    <h3><em>Hacked target: </em>BSC TMM/USDT</h3>
+                    <p><em>Description of the event: </em>According to ExVul monitoring, a TMM/USDT reserve manipulation attack occurred on the BSC (BNB Chain), resulting in a loss of approximately 1.665 million USDT. The attacker utilized flash loans from Lista DAO Moolah, Venus, Aave V3, PancakeSwap Vault, and Uniswap PoolManager to manipulate the TMM/USDT trading pair. By burning TMM to a dead address, the attacker reduced the pair&#39;s reserve to just 1 TMM, subsequently swapping 850 million TMM for approximately 272 million USDT. After repaying all flash loans, the attacker transferred a net profit of roughly 1.665 million USDT to associated addresses.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 1,665,000
+                        
+                    </span><span><em>Attack method: </em>Flash Loan Reserve Manipulation</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/exvulsec/status/2040649377803546859" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-03</span>
+                    <h3><em>Hacked target: </em>Adobe</h3>
+                    <p><em>Description of the event: </em>GoPlus has issued a security alert regarding a suspected cyberattack on Adobe, involving the potential leak of approximately 13 million users&#39; data. Affected users may face heightened risks, including phishing emails or calls impersonating Adobe customer support, precision social engineering scams leveraging leaked ticket information, and credential stuffing attacks.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Supply Chain Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/IntCyberDigest/status/2039774692085526854" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-03</span>
+                    <h3><em>Hacked target: </em>Silo V2</h3>
+                    <p><em>Description of the event: </em>The attacker exploited a Misconfigured Oracle Exploit in combination with protocol logic issues to launch an attack against the Silo V2 contracts on Arbitrum. The incident involved price manipulation or configuration flaws in the oracle mechanism, which ultimately enabled unauthorized fund extraction. This was a relatively small-scale incident affecting Silo Finance V2, with limited impact on core user funds. Similar to other cases, the affected contracts were likely peripheral or experimental components rather than the core protocol. Following the attack, the stolen funds were obfuscated through mixers and/or cross-chain bridges. Although Silo Finance has undergone audits, newly introduced features or misconfigurations can still introduce potential risks.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 392,000
+                        
+                    </span><span><em>Attack method: </em>Oracle Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://smartcontractshacking.com/hacks/silo-v2-hack-2026" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-03</span>
+                    <h3><em>Hacked target: </em>EIP-7702 Victim</h3>
+                    <p><em>Description of the event: </em>A user EOA on BNB Chain (with EIP-7702 delegation) that had set delegated code via an EIP-7702 Type-4 transaction was drained for ~$17.2K. The delegated code included a pancakeV3SwapCallback() function without proper access control. The attacker directly called this callback with crafted calldata, forcing the victim account to transfer its tokens to an attacker-controlled address. The victim had enabled the delegation to support swap-related logic.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 17,200
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://blocksec.com/blog/weekly-web3-security-incident-roundup-mar-30-apr-5-2026" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-02</span>
+                    <h3><em>Hacked target: </em>Trust Wallet</h3>
+                    <p><em>Description of the event: </em>According to ZachXBT, the Trust Wallet Discord vanity URL (discord[.]gg/trustwallet) has been hijacked and currently directs users to a phishing server. Users are advised to avoid using links from official channels—including the official website, Telegram, and blogs—to join the Discord at this time.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            0
+                        
+                    </span><span><em>Attack method: </em>Infrastructure Hijacking</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://t.me/investigations/309" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-02</span>
+                    <h3><em>Hacked target: </em>Galaxy Digital</h3>
+                    <p><em>Description of the event: </em>A spokesperson for Galaxy Digital disclosed that the company recently contained a cybersecurity incident. Unauthorized access was strictly limited to an isolated development and testing environment; production systems, trading platforms, and customer accounts remained unaffected. The company quickly detected and contained the intrusion. The affected area was a standalone R&amp;D environment unrelated to core infrastructure, resulting in a loss of less than $10,000 in corporate testing funds. Following a review, it was confirmed that no customer funds or account information were accessed or at risk, and all platforms and services remain fully operational. Galaxy stated they will continue to review the incident and provide updates as appropriate.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 10,000
+                        
+                    </span><span><em>Attack method: </em>Unknown</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.coindesk.com/tech/2026/04/01/galaxy-digital-suffers-hack-but-no-client-funds-or-information-were-compromised" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-02</span>
+                    <h3><em>Hacked target: </em>SAS Token</h3>
+                    <p><em>Description of the event: </em>The SAS Token on BNB Chain was exploited via a flawed custom transfer logic (Deferred Burn Exploit). The token’s custom transfer logic had a flaw: sending SAS to the LP pool only incremented a global sellBurn counter, while any subsequent ordinary transfer could burn SAS directly from the pool and call sync() to rewrite reserves, bypassing the AMM’s swap logic. The attacker accumulated sellBurn credit through sells, triggered an unrelated ordinary transfer to burn SAS from the pool down to ~1 wei, and then reverse-swapped to extract profit.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 12,000
+                        
+                    </span><span><em>Attack method: </em>Price Manipulation</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://blocksec.com/blog/weekly-web3-security-incident-roundup-mar-30-apr-5-2026" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-01</span>
+                    <h3><em>Hacked target: </em>Drift Protocol</h3>
+                    <p><em>Description of the event: </em>According to The Block, the Solana-based decentralized exchange Drift Protocol has been hit by a major exploit, with losses totaling at least $200 million. Some estimates suggest the figure is closer to $270 million, making it the second-largest DeFi security breach in the Solana ecosystem, trailing only the Wormhole bridge hack. The attack targeted multiple Drift vaults, including JLP Delta Neutral, SOL Super Staking, and BTC Super Staking. On-chain data reveals that the attacker swapped the stolen assets for USDC via Jupiter, then bridged them to Ethereum to purchase ETH. As of 17:45 UTC, the attacker held approximately 19,913 ETH (worth roughly $42 million). Drift stated they are currently investigating the &quot;abnormal activity&quot; and have advised users to suspend all deposits. Subsequently, according to PeckShield&#39;s statistics, Drift Protocol suffered losses exceeding $285 million in the attack.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 285,000,000
+                        
+                    </span><span><em>Attack method: </em>Social Engineering + Governance Exploit</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/OnchainLens/status/2039507495044194391" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-04-01</span>
+                    <h3><em>Hacked target: </em>LML/USDT staking protocol</h3>
+                    <p><em>Description of the event: </em>According to BlockSec monitoring, an unknown contract on the BSC (BNB Smart Chain)—suspected to be the LML/USDT staking protocol—has been exploited for approximately $950,000. Analysis indicates the vulnerability stems from a pricing design flaw: claimable rewards are calculated based on TWAP (Time-Weighted Average Price) or snapshot prices, allowing the attacker to sell reward tokens at manipulated spot prices. The attacker first pushed up the price of LML by executing trades through a path that included a zero-address recipient. Subsequently, they invoked the claim function via an address where tokens had been previously deposited, directly capturing the rewards during the exploit.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 950,000
+                        
+                    </span><span><em>Attack method: </em>Smart Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/Phalcon_xyz/status/2039211832947408928" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2026-03-31</span>
+                    <h3><em>Hacked target: </em>Steakhouse Financial</h3>
+                    <p><em>Description of the event: </em>Steakhouse Financial disclosed yesterday that it was targeted by a phone-based social engineering attack against its provider, OVH Cloud. The attacker modified the DNS A records of the main website and app subdomains to point to a malicious IP address and attempted to initiate a 5-day domain transfer. These changes have now been reverted, and the DNS records have been cleared. The team is currently  working with OVH Cloud to fully resolve the issue. All vaults and smart contracts were not affected, and depositor funds remain safe. No other service accounts were compromised.Users are advised not to interact with the official website or emails until the issue is fully resolved. A detailed post-incident report will be released as soon as possible. Earlier today, Steakhouse Financial further stated that during the period when the website’s DNS records were cleared, vaults remained accessible directly via Morpho, with all functions — including deposits and withdrawals — operating normally. A confirmation will be provided once the frontend is fully restored.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Social Engineering</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/SteakhouseFi/status/2038714374592852085" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
             
                 <li>
                     <span class="time">2026-03-31</span>
@@ -98,302 +383,14 @@
                     
                 </li>
             
-                <li>
-                    <span class="time">2026-03-31</span>
-                    <h3><em>Hacked target: </em>axios@1.14.1</h3>
-                    <p><em>Description of the event: </em>Socket has detected an active supply chain attack targeting version 1.14.1 of the core npm package, axios. The attacker injected malicious code into axios by introducing a malicious dependency that first appeared today. Developers using axios are advised to pin their versions immediately and review their project lockfiles.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            0
-                        
-                    </span><span><em>Attack method: </em>Supply Chain Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Cointelegraph/status/2038843819760734636" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-27</span>
-                    <h3><em>Hacked target: </em>unknown contract (Stake) on BSC</h3>
-                    <p><em>Description of the event: </em>According to monitoring by BlockSec Phalcon, a suspicious transaction targeting an unknown contract (Stake) on the BSC chain has been detected, resulting in a loss of approximately $133,000. The attacker exploited a spot price dependency vulnerability within the Stake contract. By manipulating the price of TUR in the TUR-NOBEL pool and subsequently staking TUR, the attacker triggered reward calculations based on the artificially inflated price. They then claimed the amplified rewards through a referral account and ultimately profited by swapping the stolen TUR for USDT.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 133,000
-                        
-                    </span><span><em>Attack method: </em>Oracle Manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Phalcon_xyz/status/2037245722454876304" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-26</span>
-                    <h3><em>Hacked target: </em>Moonwell</h3>
-                    <p><em>Description of the event: </em>According to The Block, DeFi lending protocol Moonwell is facing a governance attack on its Moonriver deployment, where an unknown attacker spent approximately $1,800 to acquire 40 million MFAM tokens and managed to buy, propose, and pass a initial vote within just 11 minutes. The attacker is seeking to transfer administrative control of seven lending markets, the comptroller, and the oracle to a malicious contract, which would enable the extraction of roughly $1.08 million in user funds. Although the proposal reached a quorum early on, &quot;No&quot; votes have since taken the lead, and while the voting is set to continue until March 27, the final outcome remains dependent on the remaining votes and community coordination.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            0
-                        
-                    </span><span><em>Attack method: </em>Governance Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.theblock.co/post/395272/moonwell-governance-attack" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-25</span>
-                    <h3><em>Hacked target: </em>LiteLLM</h3>
-                    <p><em>Description of the event: </em>SlowMist&#39;s CISO 23pds warned on X: &quot;A major supply chain attack has hit LiteLLM (97M monthly downloads) via PyPI. Simply executing pip install litellm allows attackers to steal sensitive data: SSH keys, cloud logins (AWS/GCP/Azure), K8s configs, Git credentials, API keys, shell history, crypto wallets, and DB passwords.&quot;</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>PyPI Supply Chain Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/im23pds/status/2036599387267428713" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-23</span>
-                    <h3><em>Hacked target: </em>PancakeSwap BCE-USDT</h3>
-                    <p><em>Description of the event: </em>According to BlockSec Phalcon&#39;s monitoring, the BCE-USDT pool on PancakeSwap (BSC chain) was exploited a few hours ago, resulting in a loss of approximately $679,000. The root cause lies in a vulnerability within the BCE token&#39;s burn mechanism. The attacker deployed two malicious contracts to bypass buy/sell restrictions and trigger the token burn, ultimately extracting about $679,000 from the pool by manipulating its reserves.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 679,000
-                        
-                    </span><span><em>Attack method: </em>AMM Reserve Manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/phalcon_xyz/status/2035998829296984572?s=46" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-23</span>
-                    <h3><em>Hacked target: </em>Bitcoin Depot</h3>
-                    <p><em>Description of the event: </em>According to Decrypt, Bitcoin ATM operator Bitcoin Depot disclosed in a filing with the U.S. Securities and Exchange Commission that it experienced a security breach on March 23. Approximately 50.9 BTC, valued at around $3.665 million, was stolen by attackers. The hackers infiltrated the company’s IT systems and obtained credentials for its digital asset settlement accounts, enabling unauthorized fund transfers. Bitcoin Depot stated that it has activated its incident response procedures, engaged external cybersecurity experts to investigate the attack vector and secure remaining assets, and notified law enforcement authorities. The company also noted that its customer platform and user data were not affected by the breach.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 3,665,000
-                        
-                    </span><span><em>Attack method: </em>Credential Compromise</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://decrypt.co/363734/bitcoin-depot-atm-operator-3-6-million-btc-stolen-security-breach" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-22</span>
-                    <h3><em>Hacked target: </em>Resolv Labs</h3>
-                    <p><em>Description of the event: </em>PeckShield alerted on X that Resolv Labs’ stablecoin, $USR, has seen multiple suspicious large-scale minting events. A total of $80 billion worth of USR has been minted so far.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 25,000,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/PeckShieldAlert/status/2035565047133401563" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-19</span>
-                    <h3><em>Hacked target: </em>Neutrl</h3>
-                    <p><em>Description of the event: </em>The DeFi protocol Neutrl announced on platform X that its frontend appears to have been compromised and that the team is conducting an urgent investigation. Out of an abundance of caution, the official advisory recommends that users refrain from interacting with the website until further updates are released. Additionally, Neutrl urged users to immediately revoke Permit2 approvals for relevant addresses via Revoke.cash. Users were also reminded to check and revoke approvals granted to other suspicious addresses to mitigate potential asset risks.Subsequently, Neutrl&#39;s preliminary investigation revealed that the DNS provider hosting the application&#39;s domain was subjected to a social engineering attack, resulting in the redirection of the domain by the attackers.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>DNS Hijacking</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Neutrl/status/2034445580840370211" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-18</span>
-                    <h3><em>Hacked target: </em>dTRINITY</h3>
-                    <p><em>Description of the event: </em>dTRINITY disclosed on X that yesterday, the dLEND deployment on Ethereum suffered its first deposit inflation attack. This incident drained the dUSD liquidity in the lending pool, resulting in approximately $257,000 in bad debt.The protocol has been temporarily paused, and the team is actively working on remediation measures. They have committed to covering 100% of the losses using internal funds. Repayment of the bad debt will begin within 24 hours of the announcement, after which dLEND is expected to resume operations.Deployments of dTRINITY on Fraxtal and Katana were not affected, and user funds remain safe. Each deployment maintains isolated reserves, collateral, and lending pools across different chains.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 257,000
-                        
-                    </span><span><em>Attack method: </em>Deposit Inflation Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="Deposit Inflation Attack" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-15</span>
-                    <h3><em>Hacked target: </em>Venus Protocol</h3>
-                    <p><em>Description of the event: </em>An attacker exploited a vulnerability in the Venus Protocol, utilizing flash loans to acquire a substantial amount of assets. In this attack, the attacker’s address (0x1a35...6231) successfully obtained 20 BTC, 1.5 million CAKE, and 200 BNB, with a total value exceeding $3.7 million. To execute the operation, the attacker used a large quantity of THE tokens as collateral to borrow CAKE, BTCB, and BNB, triggering continuous liquidations of THE tokens.
-According to the latest investigation by Allez Labs, the risk management team for Venus Protocol, the attack originated from manipulation of the supply cap in the BNB Chain core pool. Starting in June 2025, the attacker gradually accumulated THE tokens, increasing their holdings over nine months to 84% of the supply cap (approximately 14.5 million THE). Subsequently, the attacker bypassed the normal deposit process by directly transferring tokens to the protocol contracts, completely circumventing the supply cap and ultimately establishing a position of 53.2 million THE—3.67 times the designated limit.
-Exploiting the low on-chain liquidity of THE tokens, the attacker manipulated the TWAP oracle, driving THE’s price from $0.27 to $0.53, thereby borrowing significant amounts of other assets. At its peak, the attacker used 53.2 million THE as collateral to borrow 6.67 million CAKE, 2,801 BNB, 1,970 WBNB, 1.58 million USDC, and 20 BTCB.
-To prevent further losses, Venus Protocol has suspended borrowing and withdrawal functionalities for markets involving THE assets, as well as other markets with highly concentrated liquidity, such as BCH, LTC, UNI, AAVE, FIL, and TWT. However, other Venus markets remain unaffected and continue to operate normally. Venus stated it will continue collaborating with security partners to conduct a thorough investigation of the incident and provide timely updates.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 2,150,000
-                        
-                    </span><span><em>Attack method: </em>Business Logic Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/VenusProtocol/status/2033241018704044377" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-12</span>
-                    <h3><em>Hacked target: </em>DBXen</h3>
-                    <p><em>Description of the event: </em>According to monitoring by BlockSec Phalcon, the DBXen contract was attacked this morning, with estimated losses of approximately $150,000.The root cause lies in a sender identity inconsistency within the ERC-2771 meta-transaction mechanism.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 150,000
-                        
-                    </span><span><em>Attack method: </em>Logic Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Phalcon_xyz/status/2031955394025996688" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-12</span>
-                    <h3><em>Hacked target: </em>AM/USDT pool</h3>
-                    <p><em>Description of the event: </em>The AM/USDT pool on the BSC chain was exploited several hours ago, with estimated losses of approximately $131,000. The root cause lies in a vulnerability within the burn mechanism, which was exploited to manipulate the AM reserves in the pool and artificially inflate the token price. The attacker first manipulated the toBurnAmount and then triggered the burn logic after the AM balance in the pool had been adjusted. This drove the AM reserves down to an unnaturally low level, allowing the attacker to sell AM back to the pool at an inflated price to realize a profit.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 131,000
-                        
-                    </span><span><em>Attack method: </em>Leveraging flash loans for reserve manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Phalcon_xyz/status/2031957703451688970" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-11</span>
-                    <h3><em>Hacked target: </em>BONKfun</h3>
-                    <p><em>Description of the event: </em>BONKfun announced on X that its official website fell victim to a malicious social engineering attack on March 11. The attacker hijacked the BONKfun domain via the Domain Name Service (DNS) provider and transferred it to an external registrar. The team confirmed that the incident was not caused by a breach of BONK or BONKfun’s internal systems, codebases, or team accounts. Following the incident, the team took immediate action: shutting down the website, coordinating with wallet service providers to flag the domain as malicious, and containing the impact on users. The attack resulted in approximately $30,000 in customer losses; the team will compensate affected users at 110% to cover potential opportunity costs. Control over the BONKfun domain and registration was fully restored around 5 PM ET on March 18. Major wallet provider functionalities were restored by the evening of March 19, and the website is now securely back online. As some antivirus software still flags the main domain as a risk, the team is actively addressing the issue. For users unable to access the official site due to antivirus blocks, a backup domain with identical functionality is now live and available for use.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 30,000
-                        
-                    </span><span><em>Attack method: </em>Social Engineering Attack➕Domain Hijacking➕Phishing</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/SolportTom/status/2031930573342519702" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-10</span>
-                    <h3><em>Hacked target: </em>Gondi</h3>
-                    <p><em>Description of the event: </em>The NFT platform Gondi recently suffered a smart contract vulnerability attack, resulting in the theft of approximately 78 NFTs, with losses of about $230,000. According to an official announcement from Gondi, the attack is related to the new Sell &amp; Repay contract deployed on February 20. Its Purchase Bundler function contained a logical flaw and failed to properly verify whether the caller was the legitimate owner or borrower of the NFT. The stolen NFTs include 44 Art Blocks, 10 Doodles, and 2 Beeple artworks, among others.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 230,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.theblock.co/post/392909/nft-platform-gondi-moves-users-whole-230000-contract-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-10</span>
-                    <h3><em>Hacked target: </em>MT-WBNB LP</h3>
-                    <p><em>Description of the event: </em>According to BlockSec Phalcon&#39;s monitoring, a suspicious transaction targeting the MT-WBNB liquidity pool on BSC was detected several hours ago, resulting in an estimated loss of approximately $242,000. The root cause lies in a flaw within the buyer restriction mechanism: under deflationary mode, normal buy orders were reverted; however, the router and pair addresses were whitelisted. The attacker bypassed these restrictions by swapping and removing liquidity through the router to acquire MT tokens from the pair. Subsequently, the attacker sold MT to accumulate a pendingBurnAmount and invoked the distributeFees() function to directly burn MT from the trading pair, artificially inflating the price. This allowed the attacker to swap MT back for WBNB to realize a profit. Furthermore, a referral rule that allowed the transfer of the first 0.2 MT to bypass buyer restrictions enabled the attacker to initiate the exploit.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 242,000
-                        
-                    </span><span><em>Attack method: </em>Burn Mechanism Manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/phalcon_xyz/status/2031226066572837313?s=46" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-06</span>
-                    <h3><em>Hacked target: </em>Solv Protocol</h3>
-                    <p><em>Description of the event: </em>The Bitcoin staking protocol Solv Protocol stated on X that its BRO Vault experienced a limited exploit. Fewer than 10 users were affected, with a loss of 38.0474 SolvBTC (approximately $2.7 million). Other vaults and user funds were not impacted, and mitigation measures have already been implemented to prevent similar incidents. The team has committed to fully covering the losses of the affected users. They also told the attacker that a 10% white-hat bounty will be offered if the funds are returned promptly. The attacker can contact the team via direct message or by sending an on-chain message to a designated address.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 2,700,000
-                        
-                    </span><span><em>Attack method: </em>Reentrancy Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/SolvProtocol/status/2029612210490933697" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-02</span>
-                    <h3><em>Hacked target: </em>Inverse Finance</h3>
-                    <p><em>Description of the event: </em>According to BlockSec Phalcon’s monitoring, its system detected a suspicious transaction targeting an Inverse Finance contract on Ethereum several hours ago, resulting in a loss of approximately $240,000. The incident appears to involve DOLA price manipulation, which forced multiple users to liquidate their positions.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 240,000
-                        
-                    </span><span><em>Attack method: </em>Price Manipulation Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/phalcon_xyz/status/2028337639737491748?s=46" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-03-01</span>
-                    <h3><em>Hacked target: </em>Bitrefill</h3>
-                    <p><em>Description of the event: </em>Bitcoin payment service provider Bitrefill disclosed on X that it suffered a cyberattack on March 1, 2026, resulting in a customer data breach. The attack originated from a compromised employee laptop, which allowed the attacker to access parts of the company’s databases and cryptocurrency wallets.The investigation indicates that the attack methods closely resemble those previously used by the North Korean DPRK Lazarus Group / Bluenoroff hacking organization in targeting crypto companies.Approximately 18,500 purchase records were affected, involving limited customer information such as email addresses, crypto payment addresses, and IP metadata. Among these, around 1,000 records contained customer names stored in encrypted form, which may also have been accessed.Bitrefill stated that customers do not need to take specific action but are advised to remain vigilant for any suspicious communications.The company added that the affected systems have been shut down and isolated, and it is working with security experts, on-chain analysts, and law enforcement agencies. Operations have now largely returned to normal.Bitrefill emphasized that it remains financially strong and profitable, capable of absorbing the losses from this incident, and will continue strengthening its cybersecurity measures, including internal access controls, monitoring, and incident response mechanisms.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Endpoint Compromise via Social Engineering</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.theblock.co/post/393974/crypto-ecommerce-bitrefill-discloses-cyberattack-north-koreas-lazarus-potential-suspect" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2026-02-27</span>
-                    <h3><em>Hacked target: </em>Stake Nova</h3>
-                    <p><em>Description of the event: </em>Stake Nova suffered a loss of approximately $137,014, representing about 95% of user deposits. The root cause was an unchecked validation issue in the RedeemNovaSol() function, which led to a flash-loan exploit that drained the liquidity pool. The vulnerability has now been fixed, the dApp has been taken offline, and the website is currently under maintenance. The team is offering a 10% on-chain bounty to the attacker; otherwise, they stated they will continue to pursue accountability.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 137,014
-                        
-                    </span><span><em>Attack method: </em>Business Logic Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/chrisdior777/status/2027080169983295538?s=46&amp;t=DLwbX9Nw4QECiyZQ0av-fg" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
         </ul>
     </div>
     <ul class="pagination">
         <li ><a href=" /?c=&page=1 "> First </a></li>
         <li ><a href=" /?c=&page=3 "> « </a></li>
-        <li class="disabled"><a href="javascript:;">Page 4 of 105</a></li>
+        <li class="disabled"><a href="javascript:;">Page 4 of 106</a></li>
         <li ><a href=" /?c=&page=5 "> »</a></li>
-        <li ><a href=" /?c=&page=105 "> Last </a></li>
+        <li ><a href=" /?c=&page=106 "> Last </a></li>
     </ul>
 </div>
 

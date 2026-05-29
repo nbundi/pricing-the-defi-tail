@@ -31,7 +31,7 @@
     <div class="search-box">
         <i class="icon-search"></i>
         <form method="post" action="/search/">
-            <input type="hidden" name="csrfmiddlewaretoken" value="5DpTwH8HgJpaBHLCX7vmcx6HeFeQNZmaYIEGXQMHxyfhAiCPOOPk1sO4SqhbTQzJ">
+            <input type="hidden" name="csrfmiddlewaretoken" value="M5uO3QFgDo4uwQDJbmEddqvwJpMpVlspz5mcdrHML7MGZwEuStwHNkLfQuqGsxON">
             <input type="search" name="q" class="input-search" placeholder="Keywords" required>
         </form>
     </div>
@@ -41,8 +41,8 @@
     <div class="banner-con clearfix">
         <div class="banner-info">
             <p>The total amount of money lost by blockchain hackers is about</p>
-            <p>$ 37,778,150,246.24</p>
-            <p>Total hack events 2100</p>
+            <p>$ 37,818,249,051.71</p>
+            <p>Total hack events 2120</p>
         </div>
         <div class="banner-img">
             <img src="/static/archives/images/banner.gif">
@@ -78,318 +78,309 @@
             </dl>
         </div>
     <div class="case-content-num">
-        <p><em class="num">2100</em> hack event(s)</p>
+        <p><em class="num">2120</em> hack event(s)</p>
     </div>
     <div class="case-content">
         <ul>
             
                 <li>
-                    <span class="time">2025-09-23</span>
-                    <h3><em>Hacked target: </em>Corepound</h3>
-                    <p><em>Description of the event: </em>The DeFi project Corepound, built on the Core DAO blockchain, has carried out a rug pull, making off with approximately $400,000.</p>
+                    <span class="time">2025-11-03</span>
+                    <h3><em>Hacked target: </em>Balancer V2</h3>
+                    <p><em>Description of the event: </em>The DeFi protocol Balancer V2 suffered a vulnerability exploit that affected its Composable Stable Pools. The root cause of the incident was an incorrect rounding direction in the Stable Pool’s “exact-out” swap path. This flaw was amplified under conditions of precision errors introduced by rate providers and extremely low liquidity, allowing the attacker to manipulate the invariant and distort the BPT price calculation. As a result, the attacker was able to withdraw large amounts of assets from the pool at a cost far below their real value.The attack caused a total loss of $121.1 million across Ethereum, Arbitrum, Base, Optimism, and Polygon. As of November 19, coordinated mitigation efforts enabled several security measures to be deployed promptly after the issue was discovered, resulting in approximately $45.7 million in user funds being protected or recovered.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 400,000
+                            $ 121,100,000
                         
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+                    </span><span><em>Attack method: </em>Business Logic Flaw</span></p>
 
                     
-                    <p class="link-reference"><a href="https://x.com/CommunityofCore/status/1970916743628587292" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://x.com/balancer/status/1990856260988670132" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2025-09-22</span>
-                    <h3><em>Hacked target: </em>UXLINK</h3>
-                    <p><em>Description of the event: </em>AI-driven Web3 social platform UXLINK suffered an attack affecting platform-related assets, resulting in losses exceeding USD 11 million. Investigation showed that the attacker had prepared for months prior to the incident, impersonating a business partner and leveraging deepfake video conferencing as part of a social engineering scheme. Through these methods, the attacker gained access to the personal devices of several SAFE key holders and obtained sensitive information such as passwords and private keys. After gaining control over the legacy arb-UXLINK smart contract, the attacker executed unauthorized token minting and subsequently transferred and sold the assets. UXLINK CEO Rolland Saf stated that several million dollars have been recovered through immediate collaboration with exchanges, and all recovered funds have been allocated to buybacks in support of the community. In addition, significant security enhancements have been made to signing devices, internal processes, and infrastructure to prevent similar incidents from occurring in the future.</p>
+                    <span class="time">2025-11-03</span>
+                    <h3><em>Hacked target: </em>Berachain</h3>
+                    <p><em>Description of the event: </em>Berachain announced that approximately USD 12.8 million in funds lost due to the BEX/Balancer v2 vulnerability have been fully returned to the Berachain Foundation’s deployer address, and the blockchain has now resumed normal operations.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 11,000,000
-                        
-                    </span><span><em>Attack method: </em>Social Engineering</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/UXLINKofficial/status/1998228868365529555" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-09-14</span>
-                    <h3><em>Hacked target: </em>Yala</h3>
-                    <p><em>Description of the event: </em>On September 14, the stablecoin protocol Yala disclosed that a recent security incident occurred when a hacker abused a temporary deployment key during the setup of an authorized cross-chain bridge. The attacker deployed an unauthorized bridge and extracted 7.64 million USDC (approximately 1,636 ETH). On October 29, the suspect involved in the case was arrested by law enforcement in Bangkok, Thailand, and most of the affected funds have been successfully recovered.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 7,640,000
-                        
-                    </span><span><em>Attack method: </em>Security Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://blog.yala.org/yala-post-mortem-september-14/" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-09-12</span>
-                    <h3><em>Hacked target: </em>Kame Aggregator</h3>
-                    <p><em>Description of the event: </em>Kame Aggregator suffered an exploit due to a design flaw in the swap() function, which allowed arbitrary executor calls. This vulnerability enabled attackers to transfer tokens authorized to the AggregationRouter by users, particularly those with unlimited or oversized approvals. The total value of affected assets was approximately $1.32 million, of which around $946,000 was recovered by the Kame team from the primary exploiter, and about $22,000 was recovered by white-hat hackers.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 1,320,000
+                            $ 12,800,000
                         
                     </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
 
                     
-                    <p class="link-reference"><a href="https://kameagg.substack.com/p/post-mortem-kame-aggregator-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://x.com/berachain/status/1985742874361651206" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2025-09-12</span>
-                    <h3><em>Hacked target: </em>Shibarium Bridge</h3>
-                    <p><em>Description of the event: </em>The Shibarium bridge, connecting the Layer 2 network of the same name to Ethereum, was targeted in a flash loan attack, resulting in a loss of approximately $2.4 million. The attacker used a flash loan to purchase 4.6 million BONE tokens and obtained validator signing keys, gaining control of the majority of validator power, and ultimately signed a malicious state to drain assets from the bridge.</p>
+                    <span class="time">2025-10-31</span>
+                    <h3><em>Hacked target: </em>Garden Finance</h3>
+                    <p><em>Description of the event: </em>According to CertiK Alert, the Garden attacker has transferred 501 BNB and 1,910 ETH (worth approximately $6.65 million) to Tornado Cash.The address starting with 0x98BC still holds around $910,000 in assets.It is reported that Garden Finance suffered an attack on October 31, resulting in a loss of about $10.8 million, after its solver was compromised.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 2,400,000
-                        
-                    </span><span><em>Attack method: </em>Flash Loan Attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.theblock.co/post/370536/shibarium-bridge-suffers-sophisticated-flash-loan-attack-with-2-4-million-drained" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-09-08</span>
-                    <h3><em>Hacked target: </em>Nemo Protocol</h3>
-                    <p><em>Description of the event: </em>Nemo Protocol, a DeFi protocol on Sui, was attacked, resulting in a loss of approximately $2.4 million.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 2,400,000
+                            $ 10,800,000
                         
                     </span><span><em>Attack method: </em>Unknown</span></p>
 
                     
-                    <p class="link-reference"><a href="https://suiscan.xyz/mainnet/account/0x01229b3cc8469779d42d59cfc18141e4b13566b581787bf16eb5d61058c1c724/activity" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://x.com/jzgulati/status/1984127214959624421" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2025-09-08</span>
-                    <h3><em>Hacked target: </em>SwissBorg</h3>
-                    <p><em>Description of the event: </em>Swiss crypto platform SwissBorg suffered a security incident in which approximately 192,600 SOL (~$41.5M) was stolen on Solana. According to SwissBorg’s official statement, the incident was caused by a compromised partner API, impacting its SOL Earn program.</p>
+                    <span class="time">2025-10-28</span>
+                    <h3><em>Hacked target: </em>402Bridge</h3>
+                    <p><em>Description of the event: </em>402Bridge posted on X to alert users that a token theft incident had occurred. The technical team is investigating the entire process and advised all users to immediately revoke existing authorizations and transfer their assets out of their wallets. According to available information, the x402 cross-chain protocol 402Bridge was likely compromised after the contract ownership was transferred by the original creator to address 0x2b8F.... More than 200 users lost their remaining USDC due to excessive token approval amounts, with the attacker’s address (starting with 0x2b8F9) stealing a total of 17,693 USDC. The stolen funds were then swapped for ETH and bridged to Arbitrum through multiple cross-chain transactions. 402Bridge later confirmed that, due to a private key leak, several of the team’s test wallets and the main wallet were also compromised.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 41,500,000
+                            $ 17,693
                         
-                    </span><span><em>Attack method: </em>Third-party Vulnerability</span></p>
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
 
                     
-                    <p class="link-reference"><a href="https://x.com/swissborg/status/1965123506477359471" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://x.com/402bridge/status/1982859472629559796" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2025-09-08</span>
-                    <h3><em>Hacked target: </em>Aqua</h3>
-                    <p><em>Description of the event: </em>On-chain investigator ZachXBT reported that the Solana project Aqua has likely executed a rug pull involving approximately 21,770 SOL (~$4.65M). A few hours ago, the funds were split into four parts, moved through multiple intermediary addresses, and then sent to various instant exchanges.</p>
+                    <span class="time">2025-10-28</span>
+                    <h3><em>Hacked target: </em>GMGN</h3>
+                    <p><em>Description of the event: </em>GMGN co-founder Haze posted on X (Twitter):&quot;We have noticed a deliberate external phishing attack targeting GMGN. The attacker induced users to click by forging a third-party token website, triggering unauthorized transactions not initiated by the users themselves.Currently, this issue has been completely resolved, affected accounts have been restored to safety, and similar phishing attacks have been fully blocked.This incident affected approximately 107 users.For losses caused by unauthorized control of accounts, we will provide 100% full compensation and distribute it to GMGN accounts within today.&quot;</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 4,650,000
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.odaily.news/zh-CN/newsflash/447163" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-09-02</span>
-                    <h3><em>Hacked target: </em>Bunni</h3>
-                    <p><em>Description of the event: </em>Bunni, a DEX built on Uniswap v4, was exploited on Ethereum and UniChain, with total losses of approximately $8.4 million.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 8,400,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://blog.bunni.xyz/posts/exploit-post-mortem/" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-27</span>
-                    <h3><em>Hacked target: </em>BetterBank</h3>
-                    <p><em>Description of the event: </em>The PulseChain-based defi project BetterBank was exploited by an attacker who took advantage of a vulnerability that allowed them to mint arbitrary tokens, some of which they then swapped for ETH. The attacker later returned around $2.7 million of the stolen assets, having cashed out around $1.4 million.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 5,000,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.web3isgoinggreat.com/?id=betterbank-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-24</span>
-                    <h3><em>Hacked target: </em>Equilibria Finance</h3>
-                    <p><em>Description of the event: </em>According to an announcement from Equilibria Finance, a vulnerability was discovered in the ePENDLE auto-compounder contract on Ethereum, resulting in a loss of approximately 13.36 ETH.
-
-The issue stemmed from the stk-ePENDLE contract on Ethereum mainnet not being configured as non-transferable. The attacker used flash loans via Balancer to acquire ePENDLE, staked it into stk-ePENDLE, and then repeatedly transferred stk-ePENDLE across multiple addresses. Each transfer triggered a reward claim, enabling the attacker to drain the unclaimed rewards from the contract.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 62,500
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/Equilibriafi/status/1959296722930483668" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-23</span>
-                    <h3><em>Hacked target: </em>ABCCApp</h3>
-                    <p><em>Description of the event: </em>ABCCApp on BSC was reportedly attacked, resulting in a loss of approximately $10.1K.
-
-The root cause was that the contract’s addFixedDay() function lacked access control, and fixedDay was used in calculating claimable USDT.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 10,100
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/tx/0xee4eae6f70a6894c09fda645fb24ab841e9847a788b1b2e8cb9cc50c1866fb12" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-20</span>
-                    <h3><em>Hacked target: </em>Puffer Finance</h3>
-                    <p><em>Description of the event: </em>According to SlowMist Threat Intelligence, puffer[.]fi and @puffer_finance have been compromised.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Account Compromise</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/SlowMist_Team/status/1957993905133072617" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-16</span>
-                    <h3><em>Hacked target: </em>D3X AI</h3>
-                    <p><em>Description of the event: </em>D3X AI (@D3X_AI) was attacked on BSC, resulting in a loss of approximately $158.9K.
-
-The root cause was that the exchange() function of contract 0xb8ad relied on the spot price of the d3xat token from a UniswapV2 pair, which the attacker exploited through a price manipulation attack.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 158,900
-                        
-                    </span><span><em>Attack method: </em>Price Manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://bscscan.com/tx/0x26bcefc152d8cd49f4bb13a9f8a6846be887d7075bc81fa07aa8c0019bd6591f" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-15</span>
-                    <h3><em>Hacked target: </em>Level</h3>
-                    <p><em>Description of the event: </em>The official X account of the stablecoin protocol Level was reportedly compromised, and a fraudulent airdrop link was posted.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Account Compromise</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/levelusd/status/1956389199407698099" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-14</span>
-                    <h3><em>Hacked target: </em>BtcTurk</h3>
-                    <p><em>Description of the event: </em>The Turkish cryptocurrency exchange BtcTurk has reportedly suffered another hack. BtcTurk acknowledged “unusual activity” in its hot wallets and has suspended deposits and withdrawals. However, the exchange did not disclose further details regarding the scale of the attack.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 54,000,000
-                        
-                    </span><span><em>Attack method: </em>Unknown</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/BtcTurkKripto/status/1955973500583170252" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-12</span>
-                    <h3><em>Hacked target: </em>ODIN.FUN</h3>
-                    <p><em>Description of the event: </em>The Bitcoin-based memecoin launchpad ODIN.FUN suffered an exploit, losing approximately 58.2 BTC (around $7 million). The attacker allegedly manipulated the prices of several tokens and then withdrew bitcoin based on the inflated values. On August 17, ODIN.FUN co-founder Bob Bodily stated: “Made great progress on funds today (as many of you already saw). 30+ BTC back into Odin. More funds in progress too.”</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 7,000,000
-                        
-                    </span><span><em>Attack method: </em>Price Manipulation</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/BobBodily/status/1955477887701881007" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-08-04</span>
-                    <h3><em>Hacked target: </em>Credix</h3>
-                    <p><em>Description of the event: </em>The decentralized lending protocol Credix suffered an exploit, losing approximately $4.5 million. The attacker gained control of an admin wallet, minted tokens, and drained liquidity pools.
-
-After the incident, Credix claimed it had reached a settlement with the attacker, who agreed to return the funds on the condition that “a certain amount would be fully paid by the Credix treasury.” However, Credix did not disclose how much was actually paid.
-
-Shortly after this announcement, Credix deleted its social media accounts and the team disappeared, sparking speculation that the so-called “hack” may in fact have been a rug pull orchestrated by insiders. To date, the promised reimbursements have not been fulfilled.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 4,500,000
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.web3isgoinggreat.com/?id=credix-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-07-28</span>
-                    <h3><em>Hacked target: </em>SuperRare</h3>
-                    <p><em>Description of the event: </em>According to monitoring by SlowMist&#39;s MistEye security system, the NFT platform SuperRare was exploited. The root cause of the vulnerability was an incorrect permission check in the updateMerkleRoot function, which allowed anyone to modify the Merkle Root and claim tokens.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 730,000
-                        
-                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://x.com/SlowMist_Team/status/1949770231733530682" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2025-07-24</span>
-                    <h3><em>Hacked target: </em>WOO X</h3>
-                    <p><em>Description of the event: </em>Crypto trading platform WOO X suffered an attack resulting in a loss of approximately $14 million. According to the official disclosure, the incident stemmed from a targeted phishing attack that compromised a team member’s device, allowing the attacker to gain access to the development environment.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 14,000,000
+                            $10,300
                         
                     </span><span><em>Attack method: </em>Phishing Attack</span></p>
 
                     
-                    <p class="link-reference"><a href="https://x.com/_WOO_X/status/1948573397178339577" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://x.com/haze0x/status/1983042747406651440" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-25</span>
+                    <h3><em>Hacked target: </em>GMGN</h3>
+                    <p><em>Description of the event: </em>On October 27, GMGN Co-founder Haze posted on X, stating that the team has completed compensation payments to users affected by the MEV attack. He noted that 48 hours earlier, GMGN had suffered an MEV attack involving 729 affected transactions. The team has since finished calculating the losses and distributed compensation to the affected users’ wallets yesterday.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Sandwich Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/haze0x/status/1982635884341272897" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-23</span>
+                    <h3><em>Hacked target: </em>Noble</h3>
+                    <p><em>Description of the event: </em>According to monitoring by Scam Sniffer, the official X account of Noble was compromised, and the attacker used it to post phishing tweets.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Account Compromise</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/realScamSniffer/status/1981138805337051345" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-21</span>
+                    <h3><em>Hacked target: </em>DoodiPals</h3>
+                    <p><em>Description of the event: </em>The Solana-based mini entertainment project DoodiPals suffered a private key leak. The attacker sold tokens from dozens of wallets and exchanged them for SOL, making a total profit of about 917 SOL (approximately $171,000 USD).</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 171,000
+                        
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/evilcos/status/1980443998461608427" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-20</span>
+                    <h3><em>Hacked target: </em>Sharwa.Finance</h3>
+                    <p><em>Description of the event: </em>According to a BlockSec Phalcon alert, Sharwa.Finance disclosed that it had suffered an attack and subsequently suspended operations. However, several hours later, multiple suspicious transactions occurred again, suggesting that the attacker might have exploited the same underlying vulnerability through slightly different attack paths.In general, the attacker first created a margin account, then used the provided collateral to borrow additional assets through leveraged lending, and finally launched a sandwich attack targeting the swap operations involving the borrowed assets.
+The root cause appears to lie in the lack of a bankruptcy check in the swap() function of the MarginTrading contract. This function is responsible for swapping borrowed assets from one token (e.g., WBTC) to another (e.g., USDC). It verifies solvency only once — based on the account state at the start of the swap — before executing the asset exchange, leaving room for manipulation during the process.Attacker 1 (address starting with 0xd356) conducted multiple attacks, earning approximately USD 61,000, while Attacker 2 (address starting with 0xaa24) executed a single attack, gaining around USD 85,000.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 146,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/phalcon_xyz/status/1980219745480946087?s=46" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-19</span>
+                    <h3><em>Hacked target: </em>Astra Nova</h3>
+                    <p><em>Description of the event: </em>Astra Nova announced on X that its third-party managed account was compromised, allowing the attacker to take control and liquidate assets. The team stated that they are taking necessary measures and will involve law enforcement once evidence collection is complete. They also emphasized that the smart contracts and infrastructure remain secure. According to monitoring by @ai_9684xtpa, the attacker associated with Astra Nova dumped tokens and gained at least $9.09 million in profit. Among them, the addresses beginning with 0x9E6 and 0x643 profited more than $6.18 million. Except for address 0x643, which used Zerion to sell, most of the sales were executed through 1inch.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 9,090,000
+                        
+                    </span><span><em>Attack method: </em>Unknown</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/Astra__Nova/status/1979828018295316582" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-15</span>
+                    <h3><em>Hacked target: </em>Typus Finance</h3>
+                    <p><em>Description of the event: </em>According to Typus Finance’s post-incident analysis report, on October 15, 2025, an attacker exploited a critical vulnerability in the project’s oracle module to drain funds from the TLP contract. The stolen assets include 588,357.9 SUI, 1,604,034.7 USDC, 0.6 xBTC, and 32.227 suiETH, with an estimated total value of approximately USD 3.44 million.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 3,440,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://medium.com/@TypusFinance/typus-finance-tlp-oracle-exploit-post-mortem-report-response-plan-ce2d0800808b" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-09</span>
+                    <h3><em>Hacked target: </em>Watt Protocol</h3>
+                    <p><em>Description of the event: </em>According to monitoring by Scam Sniffer, the official X account of Watt Protocol was compromised, and the attacker used it to post phishing tweets.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Account Compromise</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/realScamSniffer/status/1976284421448925574" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-04</span>
+                    <h3><em>Hacked target: </em>MIN Spell</h3>
+                    <p><em>Description of the event: </em>MIN Spell posted on X that the team discovered a security vulnerability affecting some deprecated V4 Cauldrons on the Ethereum mainnet. During the attack, the attacker minted 1.79 million MIM. Shortly afterward, the DAO Treasury identified and fixed the vulnerability, confirmed that no other Cauldrons or user funds were affected, and repurchased all impacted MIM from the market, fully offsetting the impact of the attack.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 1,790,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/MIM_Spell/status/1975130787486831018" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-10-01</span>
+                    <h3><em>Hacked target: </em>BNB Chain</h3>
+                    <p><em>Description of the event: </em>On October 1, BNB Chain officially announced that its English Twitter account had been compromised and was under emergency recovery, warning users not to click on any links.Subsequent investigation revealed that the incident involved a total of 10 phishing links, resulting in losses of approximately $8,000, with a single user losing as much as $6,500.The attacker deployed a phishing contract address, injected $17,800, and exchanged it for $22,000 worth of tokens. Following the incident, the team implemented additional security measures to prevent similar occurrences and further strengthened account protection.As of October 31, all user compensations related to this phishing incident have been completed, and transaction details are available on Etherscan. The root cause of the incident has been confirmed as phishing links, which have since been removed and brought under control.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 8,000
+                        
+                    </span><span><em>Attack method: </em>Phishing Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/BNBCHAIN/status/1984143649584902620" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-09-28</span>
+                    <h3><em>Hacked target: </em>dTRINITY</h3>
+                    <p><em>Description of the event: </em>The DeFi protocol dTRINITY suffered an exploit targeting its swap adapter contracts, resulting in the loss of approximately $56,000 belonging to core team members.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 56,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/dTRINITY_DeFi/status/1972564217904644557" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-09-27</span>
+                    <h3><em>Hacked target: </em>Hyperdrive</h3>
+                    <p><em>Description of the event: </em>The DeFi protocol Hyperdrive, built on the Hyperliquid chain, was exploited. The attacker repeatedly abused an arbitrary call vulnerability in the router, resulting in a loss of approximately $782,000.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 782,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/hyperdrivedefi/status/1972095669403111519" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-09-26</span>
+                    <h3><em>Hacked target: </em>HyperVault</h3>
+                    <p><em>Description of the event: </em>The DeFi protocol HyperVault, built on the Hyperliquid chain, has executed a rug pull, making off with approximately $3.61 million.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 3,610,000
+                        
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.odaily.news/zh-CN/newsflash/450084" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-09-24</span>
+                    <h3><em>Hacked target: </em>GriffinAI</h3>
+                    <p><em>Description of the event: </em>The attackers exploited a misconfigured LayerZero bridge along with a compromised private key for the GAIN BSC contract. By setting a malicious peer contract on Ethereum, they bypassed validation checks and minted 5 billion counterfeit GAIN tokens on BSC. The attackers then sold approximately 150 million of these counterfeit tokens (about 2.8% of the total fake supply) on PancakeSwap, cashing out around USD 3 million.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 3,000,000
+                        
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/OliFeldmeier/status/1972367705023103244" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-09-24</span>
+                    <h3><em>Hacked target: </em>SBI Crypto</h3>
+                    <p><em>Description of the event: </em>According to on-chain investigator ZachXBT, Japan’s financial giant SBI Group may have experienced a security breach involving its cryptocurrency mining subsidiary, SBI Crypto. Wallet addresses associated with the company reportedly saw approximately USD 21 million in suspicious outflows on September 24. The stolen funds included multiple cryptocurrencies such as Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Dogecoin (DOGE), and Bitcoin Cash (BCH). The attacker transferred the funds through five instant exchange platforms before ultimately depositing them into the Tornado Cash mixing protocol.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 21,000,000
+                        
+                    </span><span><em>Attack method: </em>Unknown</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.coindesk.com/business/2025/10/01/sbi-crypto-reportedly-hit-by-usd21m-hack-with-suspected-dprk-links" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2025-09-23</span>
+                    <h3><em>Hacked target: </em>Seedify</h3>
+                    <p><em>Description of the event: </em>Meta Alchemist, founder of the Web3 incubator and launchpad platform Seedify, announced on X that one of its SFUND bridges was recently hacked. According to Seedify’s official account, a DPRK-affiliated group known for multiple Web3 exploits gained access to a developer’s private key. Using this access, the attackers were able to mint a large number of SFUND tokens through a bridge contract that had previously passed audit.As a result, the OFT contract was compromised, allowing the attackers to alter its settings and mint unauthorized tokens on Avalanche.Subsequently, the hacker transferred the minted tokens across multiple chains, including BNB, where they sold most of the SFUND tokens. In response, Binance founder Changpeng Zhao stated that he had communicated with several security experts in the industry, who successfully tracked and froze approximately $200,000 of the stolen funds on the HTX exchange.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 1,700,000
+                        
+                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://x.com/SeedifyFund/status/1970537553515417918" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
@@ -398,9 +389,9 @@ Shortly after this announcement, Credix deleted its social media accounts and th
     <ul class="pagination">
         <li ><a href=" /?c=&page=1 "> First </a></li>
         <li ><a href=" /?c=&page=8 "> « </a></li>
-        <li class="disabled"><a href="javascript:;">Page 9 of 105</a></li>
+        <li class="disabled"><a href="javascript:;">Page 9 of 106</a></li>
         <li ><a href=" /?c=&page=10 "> »</a></li>
-        <li ><a href=" /?c=&page=105 "> Last </a></li>
+        <li ><a href=" /?c=&page=106 "> Last </a></li>
     </ul>
 </div>
 

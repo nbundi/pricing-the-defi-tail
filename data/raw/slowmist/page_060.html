@@ -31,7 +31,7 @@
     <div class="search-box">
         <i class="icon-search"></i>
         <form method="post" action="/search/">
-            <input type="hidden" name="csrfmiddlewaretoken" value="QN7pZ8gC4ZWHEXizXCXFtfoJ3oFs2WRB5NZ7JNDa3otSbU6hdfPK2EOw7rl9hSfI">
+            <input type="hidden" name="csrfmiddlewaretoken" value="2iSqi0ry96OBMI8qvhypoHnKQRci04IGo402s5kt2RCxzm7PJ8Be12qNFkQnHvCI">
             <input type="search" name="q" class="input-search" placeholder="Keywords" required>
         </form>
     </div>
@@ -41,8 +41,8 @@
     <div class="banner-con clearfix">
         <div class="banner-info">
             <p>The total amount of money lost by blockchain hackers is about</p>
-            <p>$ 37,778,150,246.24</p>
-            <p>Total hack events 2100</p>
+            <p>$ 37,818,249,051.71</p>
+            <p>Total hack events 2120</p>
         </div>
         <div class="banner-img">
             <img src="/static/archives/images/banner.gif">
@@ -78,306 +78,308 @@
             </dl>
         </div>
     <div class="case-content-num">
-        <p><em class="num">2100</em> hack event(s)</p>
+        <p><em class="num">2120</em> hack event(s)</p>
     </div>
     <div class="case-content">
         <ul>
             
                 <li>
-                    <span class="time">2023-01-12</span>
-                    <h3><em>Hacked target: </em>RoeFinance</h3>
-                    <p><em>Description of the event: </em>RoeFinance was attacked. The victim pool (0x574f) has just been emptied, with a total loss of about $80000. This is a typical price manipulation attack.</p>
+                    <span class="time">2023-02-11</span>
+                    <h3><em>Hacked target: </em>fcdep(EPMAX)</h3>
+                    <p><em>Description of the event: </em>The project fcdep (EPMAX) on BSC was attacked by flash loan, and the loss was about 350,000 US dollars.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 80,000
+                            $ 350,000
+                        
+                    </span><span><em>Attack method: </em>Flash Loan Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/HypernativeLabs/status/1624115631401336845" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-02-10</span>
+                    <h3><em>Hacked target: </em>dForce</h3>
+                    <p><em>Description of the event: </em>The DeFi aggregation platform dForce was attacked in Arbitrum and Optimism, and the attackers made a profit of about 3.65 million US dollars. According to the analysis of SlowMist, the root cause of this attack is that the attacker used the process of first transferring Native tokens and then burning LP when removing liquidity in wstETH/ETH Pool, triggering the callback of receiving Native tokens to re-enter to manipulate the virtual price and Liquidate other users for profit. On February 13, dForce tweeted that the attackers had returned all stolen funds to the project multi-signature addresses on Arbitrum and Optimism, and all affected users would be compensated.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 3,650,000
                         
                     </span><span><em>Attack method: </em>Price Manipulation</span></p>
 
                     
-                    <p class="link-reference"><a href="https://twitter.com/BlockSecTeam/status/1613267000913960976" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://twitter.com/dForcenet/status/1623904209161830401" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-11</span>
-                    <h3><em>Hacked target: </em>Google Chrome</h3>
-                    <p><em>Description of the event: </em>A vulnerability known as CVE-2022-3656 affects more than 2.5 billion users of Google Chrome and Chromium-engine-based browsers. This vulnerability allows the theft of sensitive files such as encrypted wallets and cloud provider files. The vulnerability was discovered by examining how the browser interacts with the file system. Specifically, the browser did not properly check whether a symlink pointed to an inaccessible location, allowing sensitive files to be stolen. This problem is often referred to as symbolic link following. Attackers may use encrypted phishing sites to strategically gain access to users&#39; sensitive files.</p>
+                    <span class="time">2023-02-10</span>
+                    <h3><em>Hacked target: </em>SushiSwap</h3>
+                    <p><em>Description of the event: </em>SushiSwap&#39;s BentoBoxv1 contract was attacked, and the hacker made a profit of about $26,000. According to analysis, the attack is due to the Kashi Medium Risk ChainLink price update later than the mortgage/loan. In the two attack transactions, the attacker flashloaned 574,275 and 785,560 xSUSHI respectively. After mortgage and loan, the price of kmxSUSHI/USDT in LINK Oracle dropped by 16.9%. By exploiting this price gap, the attacker can call the liquidate() function to liquidate and obtain 15,429 and 11,333 USDT.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            -
+                            $ 26,000
                         
-                    </span><span><em>Attack method: </em>Browser Vulnerability</span></p>
+                    </span><span><em>Attack method: </em>Price Manipulation</span></p>
 
                     
-                    <p class="link-reference"><a href="https://www.imperva.com/blog/google-chrome-symstealer-vulnerability/" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/dw2h404u.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-10</span>
-                    <h3><em>Hacked target: </em>Sui Name Service</h3>
-                    <p><em>Description of the event: </em>On January 10, Sui Name Service, an eco-domain name service provider, posted a message on social media that its Discord server was attacked by a former employee today, and the attacker posed as an administrator. At present, the Sui Name Service is restoring role labels for users.</p>
+                    <span class="time">2023-02-09</span>
+                    <h3><em>Hacked target: </em>Umami Finance</h3>
+                    <p><em>Description of the event: </em>Umami Finance, a DeFi protocol on Arbitrum, offers yield products to institutional clients. On January 31, they announced they were suspending yields, saying they were concerned about regulatory tactics. Soon after, the project CEO started dumping tokens on the market, cashing out 44,000 UMAMI tokens. These were ostensibly priced at $800,000, and although the sell-off sent UMAMI prices crashing by more than 60%, the CEO still netted around $380,000 in USDC.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            -
+                            $ 380,000
                         
-                    </span><span><em>Attack method: </em>Discord was hacked</span></p>
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
 
                     
-                    <p class="link-reference"><a href="https://www.dcnews.vip/a/206433.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://protos.com/defi-protocol-umami-finance-sours-as-ceo-goes-rogue-and-core-team-quits/" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-10</span>
-                    <h3><em>Hacked target: </em>BRA</h3>
-                    <p><em>Description of the event: </em>The price of BRA token on BNB Chain is zero. According to the analysis, the token will be taxed during the transaction, and the tax collected will be directly sent to the transaction pair, and the tax will be added twice. Under this mechanism, after many such transactions, the number of tokens in the transaction pair continues to increase. At the same time, any user can call the skim function to retrieve the extra tokens in the transaction pair, which results in the actual number of tokens exceeding its issuance limit. This BRA token attack has caused 820 WBNB losses. The address of the attacker (0xE2Ba15be8C6Fb0d7C1F7bEA9106eb8232248FB8B).</p>
+                    <span class="time">2023-02-08</span>
+                    <h3><em>Hacked target: </em>Nostr</h3>
+                    <p><em>Description of the event: </em>A fake token project named &quot;Nostr&quot; on the Ethereum chain has run away, and its funds have been transferred to a new EOA address 0xeeB8EB5CC144eDddDB204c3ABA499de6b6081696. In the end, the fraudsters made a profit of 232.1 ETH, worth about $370,000. The token contract is 0xA2be922174605BAd450775C76CEb632369480336.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            820 WBNB
+                            232.1 ETH
                         
-                    </span><span><em>Attack method: </em>Taxation Mechanism Flaw</span></p>
+                    </span><span><em>Attack method: </em>Rug Pull</span></p>
 
                     
-                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/ql0656re.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/4ozpop6z.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-10</span>
-                    <h3><em>Hacked target: </em>Chimpers</h3>
-                    <p><em>Description of the event: </em>The official Twitter account of Chimpers, the NFT project, was hacked and embezzled, and multiple links to fake websites were published to lure users to forge NFT through the links.</p>
+                    <span class="time">2023-02-07</span>
+                    <h3><em>Hacked target: </em>LianGoPay</h3>
+                    <p><em>Description of the event: </em>The LianGoPay project announced on February 7 that its assets in the LGTPool pledge contract on the BNB Chain were stolen, 6,148,859 LGT reward coins were stolen, and the loss was about 1.6 million US dollars. According to analysis, the reason for the theft was that the owner administrator of LGTPool created a fake LP token pledge pool (Pool No. 3), and then the thief put a large amount of LP tokens into the pool for pledge, and obtained 6.14 million pieces LGT reward token.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            -
+                            $ 1,600,000
                         
-                    </span><span><em>Attack method: </em>Discord was hacked</span></p>
+                    </span><span><em>Attack method: </em>Leveraging fake LP staking pools</span></p>
 
                     
-                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/t3twhooc.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/tycwc1sv.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-08</span>
-                    <h3><em>Hacked target: </em>Twity</h3>
-                    <p><em>Description of the event: </em>The Web3 Twitter marketing platform Twity tweeted that there was a security vulnerability in its system, the Telegram account of the technician was leaked, and the chat record contained project information and wallet private key, resulting in the disclosure of administrator account information. The team is currently holding an emergency meeting to study solutions. All user assets and NFT information will be snapped. The specific solution will be published separately after it is formulated.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Telegram was hacked</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/ql3phayl.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2023-01-07</span>
-                    <h3><em>Hacked target: </em>Mycelium</h3>
-                    <p><em>Description of the event: </em>Mycelium, a perpetual agreement, tweeted that due to the oracle feeding problem of the ETH-USD trading pair, MLP suffered a loss of 4~6% from robot arbitrage (the current pool size is about $6.6 million, and the estimated loss is about $300,000), but the team has fixed the loophole and resumed trading. The reason for this is that due to the fact that Binance began blocking US IPs in late December, one of Mycelium&#39;s three oracle data vendors went offline, and the other vendor also seemed to have gone wrong overnight, resulting in prices relying only on Coinbase and Bitfinex. Coinciding with about 4 pm yesterday, Bitfinex&#39;s ETH-USD feed price fluctuated significantly, and the spread was extremely large, perhaps the arbitrage robot detected the spread and began to arbitrage at a higher than usual amount, resulting in a loss of MLP.</p>
+                    <span class="time">2023-02-04</span>
+                    <h3><em>Hacked target: </em>SperaxUSD</h3>
+                    <p><em>Description of the event: </em>SperaxUSD, the Arbitrum ecological stablecoin protocol, tweeted that an attacker increased the token balance of his address to 9.7 billion without providing the corresponding collateral, and before the Sperax team and Arbitrum ecosystem partners jointly stopped, Approximately $300,000 was liquidated.</p>
                     <p><span><em>Amount of loss: </em>
                         
                             $ 300,000
                         
-                    </span><span><em>Attack method: </em>Oracle Attack</span></p>
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
 
                     
-                    <p class="link-reference"><a href="http://yjzljc.com/kuaixun/12696198.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://twitter.com/SperaxUSD/status/1622003045776195587" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-07</span>
-                    <h3><em>Hacked target: </em>CyberKongz</h3>
-                    <p><em>Description of the event: </em>The official Twitter account of CyberKongz in the NFT project was attacked by hackers, who replaced the homepage links, etc. with phishing links and released false Mint information. At present, the account has been renamed and is under freezing protection.</p>
+                    <span class="time">2023-02-03</span>
+                    <h3><em>Hacked target: </em>Orion Protocol</h3>
+                    <p><em>Description of the event: </em>Orion Protocol, an exchange aggregation platform, suffered a reentrancy attack and lost about $3 million in assets. The attackers have transferred some of the cryptocurrency to Tornado Cash. Orion Protocol CEO Alexey Koloskov tweeted that no users suffered any losses in the incident and all users’ funds are safe, including staking, Orion Pool, bridges, and liquidity providers. Assets at risk are held in in-house brokerage accounts run by the Orion team. This problem is not caused by a flaw in the core protocol code, but may be caused by a bug in a mix of third-party libraries in its experimental and smart contracts used by private brokers.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 50,000
+                            $ 3,000,000
+                        
+                    </span><span><em>Attack method: </em>Reentrancy Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.coindesk.com/business/2023/02/02/orion-protocol-loses-3m-of-crypto-in-trading-pool-exploit/" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-02-02</span>
+                    <h3><em>Hacked target: </em>BonqDAO &amp; AllianceBlock</h3>
+                    <p><em>Description of the event: </em>Non-custodial lending platform BonqDAO and crypto infrastructure platform AllianceBlock were hacked due to a bug in BonqDAO&#39;s smart contracts, resulting in losses of approximately $120 million. Among them, hackers removed approximately 114 million WALBT ($11 million), AllianceBlock’s wrapped native token, and 98 million BEUR tokens ($108 million) from a BonqDAO vault. According to the analysis of SlowMist, the root cause of the attack is that the attacker uses the oracle machine to quote the required collateral, which is much lower than the profit obtained by the attack, thereby manipulating the market and liquidating other users by maliciously submitting wrong prices. In addition, AllianceBlock stated that the incident has nothing to do with the BonqDAO vault, no smart contracts were breached, and both teams are working on eliminating liquidity to mitigate hackers converting stolen tokens into other assets.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 120,000,000
+                        
+                    </span><span><em>Attack method: </em>Price Manipulation</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.theblock.co/post/207799/bonqdao-exploited-for-88-million-allianceblock-tokens-stolen-during-the-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-01-30</span>
+                    <h3><em>Hacked target: </em>BEVO</h3>
+                    <p><em>Description of the event: </em>The BEVO NFT Art Token (BEVO) on BSC was exploited with a total loss of approximately $45,000. The root cause is that BEVO is a deflationary token, and the attacker calls the function deliver(), the value of _rTotal will decrease, which will further affect the return value of getRate() used to calculate the balance. After the attacker manipulates the token balance, he calls the function skim to transfer the increased PancakePair balance to his own account. Finally, the attacker calls the function deliver() again and exchanges the increased BEVO back to WBNB.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 45,000
+                        
+                    </span><span><em>Attack method: </em>Reward Mechanism Flaw</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/BlockSecTeam/status/1620030206571593731" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-01-28</span>
+                    <h3><em>Hacked target: </em>Azuki</h3>
+                    <p><em>Description of the event: </em>According to official news, the NFT project Azuki confirmed that its Twitter account was hacked, and the team has regained control of the account. Hackers posted two tweets on Azuki&#39;s Twitter account, prompting users to claim the virtual land, one of which was pinned to the top. Azuki officials remind users to be alert to this scam and not to click on any links.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            618 ETH
                         
                     </span><span><em>Attack method: </em>Account Compromise</span></p>
 
                     
-                    <p class="link-reference"><a href="https://twitter.com/0xGBM/status/1612162753250328576" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://twitter.com/AzukiOfficial/status/1619114813766139906" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-06</span>
-                    <h3><em>Hacked target: </em>Mutant Ape Planet</h3>
-                    <p><em>Description of the event: </em>Aurelien Michel, developer of MAYC&#39;s Mutant Ape Planet NFT series, has pleaded guilty after being arrested on charges of defrauding $2.9 million. Aurelien Michel and the other defendants marketed the Mutant Ape Planet NFT to potential buyers with promises including “rewards, sweepstakes, exclusive access to other crypto assets, and community-controlled wallets to fund the marketing of the NFT collection.” The project developer also implicitly promises that NFT holders can obtain &quot;metaverse land&quot;. However, none of Michel&#39;s promises were kept. When all the NFTs were sold, Michel and the other defendants allegedly transferred the proceeds of $2.9 million to other wallets, including wallets under Michel’s control.</p>
+                    <span class="time">2023-01-26</span>
+                    <h3><em>Hacked target: </em>Kevin Rose</h3>
+                    <p><em>Description of the event: </em>Kevin Rose, the founder of the NFT project Moonbirds, tweeted that his personal wallet was hacked and 25 Chromie Squiggles and other NFTs were lost, with an estimated loss of more than $1 million. Arran Schlosberg, vice president of engineering at Proof Collective, said their NFTs are safe after Kevin Rose was hacked and lost $1 million. Schlosberg said the phishing attack tricked Rose into signing a malicious signature, and the hackers then transferred his valuable NFT.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 2,900,000
+                            $ 1,000,000
                         
-                    </span><span><em>Attack method: </em>Scam</span></p>
+                    </span><span><em>Attack method: </em>Phishing Attack</span></p>
 
                     
-                    <p class="link-reference"><a href="https://www.bloomberg.com/news/articles/2023-03-01/-mutant-ape-planet-nft-seller-in-plea-talks-in-fraud-case" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.theblock.co/post/205606/moonbirds-creator-kevin-rose-hacked-at-least-1-million-in-nfts-stolen" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2023-01-03</span>
-                    <h3><em>Hacked target: </em>Nikhil Gopalani</h3>
-                    <p><em>Description of the event: </em>Nikhil Gopalani, chief operating officer of Nike&#39;s encrypted fashion brand RTFKT, tweeted that he was attacked by a phisher and lost more than $173,000, including 19 CloneX NFTs, 18 RTKFT Space Pods, 11 CryptoKicks, etc. Gopalani believes the phishing attack may have been the result of accidentally providing confidential information to hackers posing as Apple representatives.</p>
+                    <span class="time">2023-01-26</span>
+                    <h3><em>Hacked target: </em>Robinhood</h3>
+                    <p><em>Description of the event: </em>The Robinhood Twitter account was hacked and used to promote a fraudulent crypto project. The hackers announced the launch of a new token called $RBH, which they say will be priced at $0.0005 on Binance Smart Chain. About 25 people purchased the fraudulent tokens for a total of just under $8,000 before the link was removed. Robinhood said in a blog post that the unauthorized content posted on Robinhood Twitter, Instagram and Facebook was removed within minutes, and the team believes the source of the incident was a third-party vendor.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 173,000
-                        
-                    </span><span><em>Attack method: </em>Phishing attack</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/Nikgopalani/status/1610120899570663425" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-31</span>
-                    <h3><em>Hacked target: </em>Luke Dashjr</h3>
-                    <p><em>Description of the event: </em>Luke Dashjr, one of the original Bitcoin Core developers, claimed on Twitter that attackers had managed to compromise multiple wallets, with more than 216 BTC (approximately $3.6 million) stolen. Dashjr initially blamed the attack on a leaked PGP key, but later said the PGP leak was just part of a broader hack in which the attacker also bypassed two-factor authentication and gained access to his wallet.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            216 BTC
-                        
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.theblock.co/post/198688/bitcoin-developer-pgp-exploit" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-31</span>
-                    <h3><em>Hacked target: </em>DictumExchange</h3>
-                    <p><em>Description of the event: </em>About a week ago, Arbitrum-based project DictumExchange announced an airdrop. It turned out to be a scam.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Rug Pull</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://twitter.com/olimpiocrypto/status/1609183982821818369" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-29</span>
-                    <h3><em>Hacked target: </em>Kevin O’Leary</h3>
-                    <p><em>Description of the event: </em>The Twitter account of celebrity investor Kevin O’Leary was hacked on Thursday and used to promote a bitcoin and ethereum giveaway scam, Bitcoin.com reported. The hacker claims that Mr. Wonderful (Kevin O’Leary) is giving away 5,000 BTC and 15,000 ETH, and the tweet also provides a link so anyone can participate. The scam giveaway posts have now been removed by Twitter a few hours after they were posted.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
+                            $ 8,000
                         
                     </span><span><em>Attack method: </em>Account Compromise</span></p>
 
                     
-                    <p class="link-reference"><a href="https://news.bitcoin.com/kevin-olearys-twitter-account-hacked-to-promote-bitcoin-ethereum-giveaway-scam/" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.theblock.co/post/205563/robinhoods-twitter-hacked-users-tricked-into-buying-fraudulent-crypto-project" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2022-12-26</span>
-                    <h3><em>Hacked target: </em>BitKeep</h3>
-                    <p><em>Description of the event: </em>Several users claimed that their funds were stolen in the official Telegarm group of BitKeep, a Web3 multi-chain wallet. BitKeep issued an announcement saying that after preliminary investigation by the team, it is suspected that some APK package downloads were hijacked by hackers, and the packages implanted by hackers were installed. At present, funds on multiple chains have been damaged, and only BNB Chain has lost more than 3 million US dollars.</p>
+                    <span class="time">2023-01-21</span>
+                    <h3><em>Hacked target: </em>Doglands</h3>
+                    <p><em>Description of the event: </em>Dogechain ecological multi-purpose GameFi and DeFi agreement Doglands may have exit scams. The contract addresses on the project chain are 0x106E6a2D5433247441c1Cdf4E3e24a0696a46d0, 0x12b17 and 0x0e815, which drain all the reserves in the LP tokens, with a value of about $204000. The funds have now been transferred to Ethereum through the cross-chain bridge and transferred to multiple addresses. Doglands has deleted the official Twitter and website.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 9,000,000
-                        
-                    </span><span><em>Attack method: </em>Unknown</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/73b6rcf2.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-25</span>
-                    <h3><em>Hacked target: </em>Rubic</h3>
-                    <p><em>Description of the event: </em>The multi-chain exchange protocol Rubic was hacked and lost more than $1.4 million. The attacker has transferred 1,100 ETH to the Tornado Cash mixing protocol. According to the analysis of the SlowMist security team, the root cause of the attack is that the Rubic protocol wrongly added USDC tokens to the Router whitelist, resulting in the theft of USDC tokens of users authorized to the RubicProxy contract.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 1,400,000
-                        
-                    </span><span><em>Attack method: </em>Data incoming error</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://foresightnews.pro/news/h5Detail/15051" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-25</span>
-                    <h3><em>Hacked target: </em>Defrost Finance</h3>
-                    <p><em>Description of the event: </em>On December 23, Defrost Finance V2, the Avalanche ecological native stablecoin project, was attacked by a flash loan, and the hackers made a profit of $173,000. On December 25th, Defrost Finance V1 went wrong again, hackers managed to steal the owner’s key, the protocol was added with fake collateral tokens, and a malicious price oracle was used to liquidate current users, with losses estimated at more than $12 million. On December 27, the hackers who carried out the attack on Defrost Finance V1 have returned the stolen funds.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 12,173,000
-                        
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://foresightnews.pro/article/detail/22019" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-25</span>
-                    <h3><em>Hacked target: </em>LastPass</h3>
-                    <p><em>Description of the event: </em>Password management platform LastPass said a hacker accessed a cloud-based storage environment using information previously obtained in an incident they disclosed in August 2022, and some source codes and technical information were stolen and used to attack another employee , to obtain credentials and keys for accessing and decrypting certain storage in cloud-based storage services.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            -
-                        
-                    </span><span><em>Attack method: </em>Information Leakage</span></p>
-
-                    
-                    <p class="link-reference"><a href="https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/" rel="nofollow" target="_blank">View Reference Sources</a></p>
-                    
-                </li>
-            
-                <li>
-                    <span class="time">2022-12-19</span>
-                    <h3><em>Hacked target: </em>mgnr</h3>
-                    <p><em>Description of the event: </em>Quantitative trading company mgnr has deleted all tweets and quit some groups, leaving only 0.097 Ethereum in its wallet address. The address with the domain name mgnr.eth transferred 43.6 million USDC to Coinbase on November 14, and at the same time transferred 8 million USDC and 0.1 Ethereum to the Genesis Trading address.</p>
-                    <p><span><em>Amount of loss: </em>
-                        
-                            $ 52,000,000
+                            $ 204,000
                         
                     </span><span><em>Attack method: </em>Rug Pull</span></p>
 
                     
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/1uvhqd0t.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
                 </li>
             
                 <li>
-                    <span class="time">2022-12-16</span>
-                    <h3><em>Hacked target: </em>Raydium</h3>
-                    <p><em>Description of the event: </em>In response to an attack, Raydium tweeted that a patch has been put in place so far to prevent further attacks. This attack has nothing to do with the escalated privileges of the program itself. The vulnerability seems to stem from a Trojan horse attack and the leakage of the private key of the liquidity pool owner account. The attacker gained access to the pool owner account and was then able to call the withdraw pnl function, which is used to collect transaction/protocol fees earned on swaps in the pool. The affected pools include SOL-USDC, SOL-USDT, RAY-USDC, RAY-USDT, RAY-SOL, stSOL-USDC, ZBC-USDC, UXP-USDC, and whETH-USDC, with a total loss of approximately $4.395 million.</p>
+                    <span class="time">2023-01-20</span>
+                    <h3><em>Hacked target: </em>FFF</h3>
+                    <p><em>Description of the event: </em>It is reported that the FFF token deployed on the BSC has an abnormal additional issue event. This event is that the administrator of the original project party purchased the additional issue through the pre-set additional issue contract, and then sold the additional issued tokens and transferred the acquired assets in part. More than US $1.03 million of FFF tokens were sold in this issue.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            $ 4,395,000
+                            $ 1,030,000
                         
-                    </span><span><em>Attack method: </em>Private Key Leakage</span></p>
+                    </span><span><em>Attack method: </em>Insider Manipulation</span></p>
 
                     
-                    <p class="link-reference"><a href="https://twitter.com/RaydiumProtocol/status/1603860540153028625" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/11pl2td6.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
                 <li>
-                    <span class="time">2022-12-14</span>
-                    <h3><em>Hacked target: </em>NimbusPlatform</h3>
-                    <p><em>Description of the event: </em>The NimbusPlatform project on the BSC chain was attacked, and the attacker made a profit of about 278 BNB. According to the analysis of SlowMist, the main reason for this attack is that the calculation of rewards only depends on the number of tokens in the pool, which leads to being manipulated by flash loans, thereby obtaining more rewards than expected.</p>
+                    <span class="time">2023-01-19</span>
+                    <h3><em>Hacked target: </em>Thoreum Finance</h3>
+                    <p><em>Description of the event: </em>Thoreum Finance was hacked. According to analysis, because the transfer function of the non-open source contract 0x79fe created by the Thoreum Finance project party is suspected to have a loophole, when the from and to addresses of the transfer function are the same, due to the use of temporary variables to store the balance, the balance will double when you transfer to yourself , the attacker repeated the operation many times, and finally made a profit of 2,000 BNB, involving an amount of about 580,000 US dollars.</p>
                     <p><span><em>Amount of loss: </em>
                         
-                            278 BNB
+                            $ 580,000
                         
                     </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
 
                     
-                    <p class="link-reference"><a href="https://twitter.com/SlowMist_Team/status/1602942551753101312" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/chr92pfw.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-01-17</span>
+                    <h3><em>Hacked target: </em>OMNI Real Estate Token</h3>
+                    <p><em>Description of the event: </em>The OMNI Real Estate Token (ORT) project on BSC was attacked. The cause of the attack is suspected to be a loophole in the contract code. The attacker’s address is: 0x9BbD94506398a1459F0Cd3B2638512627390255e, one of the attack contracts is 0x0eFfECA3dBCBcda4d5e4515829b0d42181700606, the initial gas source of the attack is FixedFloat, and the attacker made more than 236 BNB, worth about $57.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 70,705
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/t730u0t3.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-01-16</span>
+                    <h3><em>Hacked target: </em>Midas Capital</h3>
+                    <p><em>Description of the event: </em>Due to the read-only-reentrancy problem (read-only-reentrancy) when interacting with the Curve liquidity pool, the cross-chain money market solution Midas Capital was attacked and exploited in the Polygon liquidity pool of the stablecoin protocol Jarvis, and has lost $650,000.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 650,000
+                        
+                    </span><span><em>Attack method: </em>Reentrancy Attack</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/MidasCapitalxyz/status/1615407372402585601" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-01-14</span>
+                    <h3><em>Hacked target: </em>NFT God</h3>
+                    <p><em>Description of the event: </em>Encrypted KOL NFT God tweeted that due to hackers hacking into its Twitter, Substack, Gmail, Discord and wallets, it lost all its encrypted assets and NFTs, and the hackers also posted fraudulent links through the stolen accounts. The reason for being hacked was that the Ledger was set as a hot wallet instead of a cold wallet on the new device, and the mnemonic was imported and used in the wallet on the networked computer. Then yesterday, after downloading the video streaming software OBS for the game live broadcast, I clicked on Google. The sponsored links of the website downloaded malware that gave hackers access to their funds. Yu Xian, the founder of SlowMist, said that the core reason is that the computer runs a game program with a Trojan horse, and then the mnemonic of encrypted assets is connected to the Internet on this computer, so it may be stolen by hackers.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            -
+                        
+                    </span><span><em>Attack method: </em>Malicious Software</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://twitter.com/NFT_GOD/status/1614442000958324739" rel="nofollow" target="_blank">View Reference Sources</a></p>
+                    
+                </li>
+            
+                <li>
+                    <span class="time">2023-01-13</span>
+                    <h3><em>Hacked target: </em>LendHub</h3>
+                    <p><em>Description of the event: </em>According to SlowMist, LendHub, the HECO ecological cross-chain lending platform, was suspected of being attacked and lost nearly 6 million US dollars. The main hacker profit address is 0x9d01..ab03. The reason for this attack is that there are two lBSV cTokens in LendHub, one of which has been abandoned in April 2021 but has not been removed from the market, which resulted in both the old and new lBSV existing in the market. Moreover, the Comptrollers corresponding to the old and new lBSV are not the same, but both have prices in the market, which results in a split in the calculation of liabilities in the old and new markets. Attackers take advantage of this problem to redeem mortgages in the old market and carry out lending operations in the new market, maliciously extorting protocol funds in the new market. At present, the main profit address for hackers is 0x9d01..ab03, and the source of the hacker attack fee is the 100 ETH received from Tornado.Cash on January 12. SlowMist said that through the threat intelligence network, some traces of hackers have been obtained.</p>
+                    <p><span><em>Amount of loss: </em>
+                        
+                            $ 6,000,000
+                        
+                    </span><span><em>Attack method: </em>Contract Vulnerability</span></p>
+
+                    
+                    <p class="link-reference"><a href="https://www.panewslab.com/zh/sqarticledetails/obl5l5ms.html" rel="nofollow" target="_blank">View Reference Sources</a></p>
                     
                 </li>
             
@@ -386,9 +388,9 @@
     <ul class="pagination">
         <li ><a href=" /?c=&page=1 "> First </a></li>
         <li ><a href=" /?c=&page=59 "> « </a></li>
-        <li class="disabled"><a href="javascript:;">Page 60 of 105</a></li>
+        <li class="disabled"><a href="javascript:;">Page 60 of 106</a></li>
         <li ><a href=" /?c=&page=61 "> »</a></li>
-        <li ><a href=" /?c=&page=105 "> Last </a></li>
+        <li ><a href=" /?c=&page=106 "> Last </a></li>
     </ul>
 </div>
 
