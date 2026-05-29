@@ -1,0 +1,527 @@
+date,name,gross,recovered,net,classification,technique,chains,in_scope_chain,bridge_hack,target_type,is_defi_protocol,defillamaId,category,sector
+2016-06-17,The DAO,60000000.0,0.0,60000000.0,Protocol Logic,Reentrancy,Ethereum,True,False,DeFi Protocol,True,,,Other
+2017-07-18,CoinDash,7700000.0,0.0,7700000.0,Protocol Logic,Frontend Attack,Ethereum,True,False,ICO,False,,,Other
+2017-11-09,Parity Multisig,150000000.0,0.0,150000000.0,Protocol Logic,Contract not initialized,Ethereum,True,False,DeFi Protocol,True,,,Other
+2018-01-26,Coincheck,534000000.0,0.0,534000000.0,Infrastructure,Private Key Compromised (Unknown Method),NEM,False,False,CEX,False,,,Other
+2018-04-21,Gate,235000000.0,0.0,235000000.0,Infrastructure,Private Key Compromised (Unknown Method),,False,False,CEX,False,2314.0,CEX,Other
+2020-02-12,Trinity Wallet,2350000.0,0.0,2350000.0,Infrastructure,Cloudflare Key Compromised,Iota,False,False,Wallet,False,,,Other
+2020-02-15,Ooki,350000.0,0.0,350000.0,Protocol Logic,Flashloan Slippage Attack,Ethereum,True,False,DeFi Protocol,True,197.0,Lending,Lending
+2020-02-18,Ooki,650000.0,0.0,650000.0,Protocol Logic,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,197.0,Lending,Lending
+2020-04-19,dForce Lending,25000000.0,0.0,25000000.0,Protocol Logic,Reentrancy,Ethereum,True,False,DeFi Protocol,True,123.0,Lending,Lending
+2020-04-19,Lendf.me,1200000.0,0.0,1200000.0,Smart Contract Language,Reentrancy,Ethereum,True,False,DeFi Protocol,True,,,Other
+2020-09-28,Eminence,15000000.0,0.0,15000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2020-09-29,KuCoin,45000000.0,0.0,45000000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,CEX,False,2274.0,CEX,Other
+2020-10-26,Harvest Finance,25000000.0,0.0,25000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,112.0,Yield Aggregator,Yield
+2020-11-12,Akropolis,2000000.0,0.0,2000000.0,Ecosystem,Flashloan Reentrancy Attack,Ethereum,True,False,DeFi Protocol,True,,Yield,Yield
+2020-11-14,ValueDefi,7000000.0,0.0,7000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,164.0,Dexs,DEX
+2020-11-16,CheeseBank,3300000.0,0.0,3300000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2020-11-17,Origin Protocol,8000000.0,0.0,8000000.0,Ecosystem,Flashloan Reentrancy Attack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2020-11-22,Pickle,19700000.0,0.0,19700000.0,Protocol Logic,Vault Swap Exploit,Ethereum,True,False,DeFi Protocol,True,134.0,Yield Aggregator,Yield
+2020-12-02,Compounder Finance,12000000.0,0.0,12000000.0,Rugpull,Drained Contracts,Ethereum,True,False,DeFi Protocol,True,,,Other
+2020-12-18,Warp Protocol,7800000.0,0.0,7800000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,601.0,Lending,Lending
+2020-12-28,LuBian,3500000000.0,0.0,3500000000.0,Infrastructure,Private Key Compromised (Brute Force),Bitcoin,True,False,Other,False,,,Other
+2020-12-29,Cover Protocol,9400000.0,0.0,9400000.0,Protocol Logic,Incentives Function Mistake,Ethereum,True,False,DeFi Protocol,True,165.0,Insurance,Other
+2021-02-05,Yearn Finance,11000000.0,0.0,11000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,113.0,Yield Aggregator,Yield
+2021-02-09,Growth DeFi,1300000.0,0.0,1300000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,159.0,Yield,Yield
+2021-02-13,Alpha Finance,37500000.0,0.0,37500000.0,Ecosystem,Flashloan Pool Shares Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-02-27,Furucombo,14000000.0,0.0,14000000.0,Smart Contract Language,Delegatecall Exploit,Ethereum,True,False,DeFi Protocol,True,742.0,Services,Other
+2021-03-04,Meerkat Finance,32000000.0,0.0,32000000.0,Rugpull,Drained Contracts,BSC,True,False,DeFi Protocol,True,,,Other
+2021-03-05,Paid Network,27000000.0,0.0,27000000.0,Rugpull,Infinite Mint and Dump,Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-03-09,DODO AMM,2000000.0,0.0,2000000.0,Protocol Logic,Access Control Exploit,Ethereum,True,False,DeFi Protocol,True,146.0,Dexs,DEX
+2021-03-14,Roll,5700000.0,0.0,5700000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-03-15,DEUS Finance,3000000.0,0.0,3000000.0,Ecosystem,Flashloan Price Oracle Attack,Fantom,True,False,DeFi Protocol,True,1387.0,CDP,Lending
+2021-03-20,Turtle Dex,2500000.0,0.0,2500000.0,Rugpull,Drained Contracts,BSC,True,False,DeFi Protocol,True,,,Other
+2021-04-19,EasyFi,59000000.0,0.0,59000000.0,Infrastructure,Private Key Compromised (Unknown Method),Polygon,True,False,DeFi Protocol,True,,,Other
+2021-04-28,Uranium Finance,57200000.0,0.0,57200000.0,Protocol Logic,Math Mistake Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2021-05-02,Spartan,30500000.0,0.0,30500000.0,Ecosystem,Flashloan Pool Shares Exploit,BSC,True,False,DeFi Protocol,True,1246.0,Dexs,DEX
+2021-05-05,ValueDefi,10000000.0,0.0,10000000.0,Protocol Logic,Access Control Exploit,BSC,True,False,DeFi Protocol,True,164.0,Dexs,DEX
+2021-05-07,ValueDefi,11000000.0,0.0,11000000.0,Protocol Logic,Math Mistake Exploit,BSC,True,False,DeFi Protocol,True,164.0,Dexs,DEX
+2021-05-08,Rari Capital,10000000.0,0.0,10000000.0,Protocol Logic,Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,136.0,Yield Aggregator,Yield
+2021-05-12,xToken,24000000.0,0.0,24000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,206.0,Liquidity Manager,Other
+2021-05-17,BearnFi,18000000.0,0.0,18000000.0,Ecosystem,Flashloan Withdraw Logic Exploit,BSC,True,False,DeFi Protocol,True,387.0,Yield,Yield
+2021-05-19,Bunny,45000000.0,0.0,45000000.0,Ecosystem,Flashloan Price Oracle Attack,BSC,True,False,DeFi Protocol,True,254.0,Yield,Yield
+2021-05-24,AutoShark,745000.0,0.0,745000.0,Ecosystem,Flashloan Incentive Rewards Exploit,BSC,True,False,DeFi Protocol,True,1074.0,Dexs,DEX
+2021-05-26,Merlin,680000.0,0.0,680000.0,Ecosystem,Flashloan Incentive Rewards Exploit,BSC,True,False,DeFi Protocol,True,370.0,Yield,Yield
+2021-05-26,Merlin,550000.0,0.0,550000.0,Protocol Logic,Math Mistake Exploit,BSC,True,False,DeFi Protocol,True,370.0,Yield,Yield
+2021-05-28,BurgerSwap,7200000.0,0.0,7200000.0,Ecosystem,Flashloan Reentrancy Attack,BSC,True,False,DeFi Protocol,True,1295.0,Dexs,DEX
+2021-05-29,Belt Finance,6300000.0,0.0,6300000.0,Ecosystem,Flashloan Price Oracle Attack,BSC,True,False,DeFi Protocol,True,310.0,Yield,Yield
+2021-06-16,Alchemix V2,6500000.0,0.0,6500000.0,Protocol Logic,Borrow Logic Exploit,Ethereum,True,False,DeFi Protocol,True,204.0,Synthetics,Other
+2021-06-22,Eleven Finance,4500000.0,0.0,4500000.0,Ecosystem,Flashloan Burn Function Exploit,BSC,True,False,DeFi Protocol,True,583.0,,Other
+2021-06-23,StableMagnet,27000000.0,0.0,27000000.0,Rugpull,Drained Contracts and User Wallets,BSC,True,False,DeFi Protocol,True,,,Other
+2021-06-28,Safe Dollar,248000.0,0.0,248000.0,Protocol Logic,Incentive Rewards Exploit,Polygon,True,False,DeFi Protocol,True,424.0,,Other
+2021-06-29,Merlin,330000.0,0.0,330000.0,Protocol Logic,Incentive Rewards Exploit,BSC,True,False,DeFi Protocol,True,370.0,Yield,Yield
+2021-07-10,Multichain,7900000.0,0.0,7900000.0,Protocol Logic,Private Key Compromised (Bad ECDSA Implementation),"Ethereum,BSC,Fantom",True,True,CEX,False,591.0,Bridge,Bridge
+2021-07-14,ApeRocket,1260000.0,0.0,1260000.0,Ecosystem,Flashloan Incentive Rewards Exploit,BSC,True,False,DeFi Protocol,True,401.0,Yield,Yield
+2021-07-15,Thorchain DEX,5000000.0,0.0,5000000.0,Protocol Logic,Over-ride Logic Exploit,Ethereum,True,False,DeFi Protocol,True,412.0,Dexs,DEX
+2021-07-15,Bondly,5900000.0,0.0,5900000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-07-16,Bunny,2400000.0,0.0,2400000.0,Ecosystem,Flashloan Incentive Rewards Exploit,BSC,True,False,DeFi Protocol,True,254.0,Yield,Yield
+2021-07-22,Thorchain DEX,8000000.0,0.0,8000000.0,Protocol Logic,Refund Logic Exploit,Ethereum,True,False,DeFi Protocol,True,412.0,Dexs,DEX
+2021-07-30,Levyathan,1500000.0,0.0,1500000.0,Infrastructure,Private Key Compromised (Stored Publicly),BSC,True,False,DeFi Protocol,True,,,Other
+2021-08-03,Popsicle Finance,20000000.0,0.0,20000000.0,Ecosystem,Flashloan Incentive Rewards Exploit,Ethereum,True,False,DeFi Protocol,True,585.0,Liquidity Manager,Other
+2021-08-10,Poly Network,611000000.0,0.0,611000000.0,Protocol Logic,Access Control Exploit,"Ethereum,BSC,Polygon",True,True,DeFi Protocol,True,1796.0,Bridge,Bridge
+2021-08-10,Punk Protocol,8950000.0,0.0,8950000.0,Smart Contract Language,Delegatecall Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-08-12,DAO Maker Vesting,7000000.0,0.0,7000000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,DeFi Protocol,True,921.0,Services,Other
+2021-08-13,Acala Network,1600000.0,0.0,1600000.0,Protocol Logic,Incentives Function Mistake,Acala,True,False,DeFi Protocol,True,,,Other
+2021-08-17,SurgeBNB,4000000.0,0.0,4000000.0,Ecosystem,Flashloan Reentrancy Attack,BSC,True,False,DeFi Protocol,True,,,Other
+2021-08-29,xToken,4500000.0,0.0,4500000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,206.0,Liquidity Manager,Other
+2021-08-30,CREAM Lending,18800000.0,0.0,18800000.0,Ecosystem,Flashloan Reentrancy Attack,Ethereum,True,False,DeFi Protocol,True,121.0,Lending,Lending
+2021-09-03,Siren,3450000.0,0.0,3450000.0,Smart Contract Language,Reentrancy,Polygon,True,False,DeFi Protocol,True,203.0,Options,Other
+2021-09-04,DAO Maker Vesting,4000000.0,0.0,4000000.0,Protocol Logic,Access Control Exploit,Ethereum,True,False,DeFi Protocol,True,921.0,Services,Other
+2021-09-12,Zabu Finance,3200000.0,0.0,3200000.0,Protocol Logic,Flashloan Exploit,Avalanche,True,False,DeFi Protocol,True,,Yield Aggregator,Yield
+2021-09-15,NowSwap,1000000.0,0.0,1000000.0,Protocol Logic,Inconsistent Value in Code,Ethereum,True,False,DeFi Protocol,True,,Dexs,DEX
+2021-09-17,JayPegs Automart,3100000.0,0.0,3100000.0,Rugpull,Redirected Deposits,Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-09-21,Vee Finance,34000000.0,0.0,34000000.0,Ecosystem,Flashloan Price Oracle Attack,Avalanche,True,False,DeFi Protocol,True,619.0,Lending,Lending
+2021-09-29,Compound V2,147000000.0,0.0,147000000.0,Protocol Logic,Math Mistake Exploit,Ethereum,True,False,DeFi Protocol,True,114.0,Lending,Lending
+2021-10-04,pNetwork,13000000.0,0.0,13000000.0,Protocol Logic,Log Spoofing,"BSC,Bitcoin",True,True,DeFi Protocol,True,,Bridge,Bridge
+2021-10-08,Mirror,90000000.0,0.0,90000000.0,Smart Contract Language,Duplicate Call Exploit,Terra,False,False,DeFi Protocol,True,260.0,Derivatives,Derivatives
+2021-10-08,Mirror,2000000.0,0.0,2000000.0,Infrastructure,Outdated Oracle Exploit,Terra,False,False,DeFi Protocol,True,260.0,Derivatives,Derivatives
+2021-10-14,Indexed Finance,16000000.0,0.0,16000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,188.0,Indexes,Other
+2021-10-27,CREAM Lending,130000000.0,0.0,130000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,121.0,Lending,Lending
+2021-10-29,AnubisDAO,60000000.0,0.0,60000000.0,Rugpull,Drained Contracts,Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-11-03,Vesper Finance,3370000.0,0.0,3370000.0,Protocol Logic,Oracle Manipulation,Ethereum,True,False,DeFi Protocol,True,,,Other
+2021-11-03,Squid Games,3400000.0,0.0,3400000.0,Rugpull,Drained Liquidity Pool,BSC,True,False,Gaming,False,,,Other
+2021-11-05,Ooki,55000000.0,0.0,55000000.0,Infrastructure,Private Key Compromised (Phishing),"Polygon,BSC",True,False,DeFi Protocol,True,197.0,Lending,Lending
+2021-11-07,ChainSwap,4400000.0,0.0,4400000.0,Protocol Logic,Exploit Weak Authentication Check,"Ethereum,BSC",True,True,DeFi Protocol,True,,,Bridge
+2021-11-25,Snowdog,18100000.0,0.0,18100000.0,Rugpull,Drained Contracts,Avalanche,True,False,DeFi Protocol,True,859.0,Reserve Currency,Algo-Stables
+2021-11-30,MonoX,31400000.0,0.0,31400000.0,Protocol Logic,Swap Function Exploit,"Ethereum,Polygon",True,False,DeFi Protocol,True,948.0,Dexs,DEX
+2021-12-02,Badger DAO,120000000.0,0.0,120000000.0,Infrastructure,Cloudflare Key Compromised,Ethereum,True,False,DeFi Protocol,True,173.0,Yield Aggregator,Yield
+2021-12-04,Bitmart,196000000.0,0.0,196000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,BSC",True,False,CEX,False,,CEX,Other
+2021-12-08,8ightDAO,1750000.0,0.0,1750000.0,Infrastructure,Private Key Compromised (Unknown Method),Harmony,True,False,DeFi Protocol,True,889.0,Reserve Currency,Algo-Stables
+2021-12-11,AscenDEX,77000000.0,0.0,77000000.0,Infrastructure,Private Key Compromised,"Ethereum,BSC,Polygon",True,False,CEX,False,,,Other
+2021-12-13,Vulcan Forged,140000000.0,0.0,140000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Polygon",True,False,DeFi Protocol,True,,,Other
+2021-12-18,Grim Finance,30000000.0,0.0,30000000.0,Ecosystem,Flashloan Reentrancy Attack,Fantom,True,False,DeFi Protocol,True,493.0,Yield,Yield
+2021-12-21,Gamma,8200000.0,0.0,8200000.0,Protocol Logic,Access Control Exploit,Ethereum,True,False,DeFi Protocol,True,355.0,Liquidity Manager,Other
+2021-12-21,Bent Finance,1750000.0,0.0,1750000.0,Protocol Logic,User Balances Manually Updated,Ethereum,True,False,DeFi Protocol,True,,Yield,Yield
+2022-01-04,Arbix Finance,10000000.0,0.0,10000000.0,Rugpull,Drained Contracts,BSC,True,False,DeFi Protocol,True,,,Other
+2022-01-08,LCX,7940000.0,0.0,7940000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,DeFi Protocol,True,,,Other
+2022-01-18,Crypto.com,33700000.0,0.0,33700000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Bitcoin",True,False,CEX,False,,CEX,Other
+2022-01-28,Qubit,80000000.0,0.0,80000000.0,Protocol Logic,Transfer Logic Exploit,BSC,True,True,DeFi Protocol,True,516.0,Lending,Bridge
+2022-02-01,BNS,7500000.0,0.0,7500000.0,Infrastructure,Private Key Compromised (Unknown Method),,False,False,CEX,False,,,Other
+2022-02-02,Portal,326000000.0,326000000.0,0.0,Protocol Logic,Signature Exploit,Solana,True,True,DeFi Protocol,True,1541.0,Bridge,Bridge
+2022-02-06,Meter,7700000.0,0.0,7700000.0,Protocol Logic,Deposit Function Exploit,Ethereum,True,True,DeFi Protocol,True,,,Bridge
+2022-02-08,Superfluid,8700000.0,0.0,8700000.0,Protocol Logic,CTX Exploit,Polygon,True,False,DeFi Protocol,True,693.0,Payments,Other
+2022-02-10,Dego Finance,10000000.0,0.0,10000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,BSC,Cronos",True,False,DeFi Protocol,True,,Services,Other
+2022-03-03,Treasure,1400000.0,0.0,1400000.0,Protocol Logic,Buy Function Exploit,Arbitrum,True,False,DeFi Protocol,True,1350.0,Gaming,Other
+2022-03-09,Fantasm Finance,2260000.0,0.0,2260000.0,Protocol Logic,Missing Condition Check,Fantom,True,False,DeFi Protocol,True,,,Other
+2022-03-13,Paraluni Masterchef,1700000.0,0.0,1700000.0,Ecosystem,Flashloan Reentrancy Attack,BSC,True,False,DeFi Protocol,True,1520.0,Yield,Yield
+2022-03-15,Agave,5500000.0,0.0,5500000.0,Ecosystem,Flashloan Reentrancy Attack,Gnosis Chain,False,False,DeFi Protocol,True,696.0,Lending,Lending
+2022-03-15,Hundred Finance,6200000.0,0.0,6200000.0,Ecosystem,Flashloan Reentrancy Attack,Gnosis Chain,False,False,DeFi Protocol,True,607.0,Lending,Lending
+2022-03-23,Cashio,48000000.0,0.0,48000000.0,Protocol Logic,Collateral Validation Exploit,Solana,True,False,DeFi Protocol,True,793.0,CDP,Lending
+2022-03-23,Ronin Bridge,624000000.0,0.0,624000000.0,Infrastructure,Private Key Compromised (Social Engineering),Ethereum,True,True,DeFi Protocol,True,4440.0,Canonical Bridge,Bridge
+2022-03-27,Revest Finance,2010000.0,0.0,2010000.0,Smart Contract Language,Reentrancy,Ethereum,True,False,DeFi Protocol,True,830.0,NFT Lending,Other
+2022-03-31,Ola Finance,4000000.0,0.0,4000000.0,Smart Contract Language,Reentrancy,Fuse,True,False,DeFi Protocol,True,,,Other
+2022-04-02,Inverse Finance Frontier,15600000.0,0.0,15600000.0,Ecosystem,Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,338.0,CDP,Lending
+2022-04-12,Elephant Money,22200000.0,0.0,22200000.0,Ecosystem,Flashloan Price Oracle Attack,BSC,True,False,DeFi Protocol,True,1378.0,Yield,Yield
+2022-04-17,Beanstalk,181000000.0,0.0,181000000.0,Ecosystem,Flashloan Governance Attack,Ethereum,True,False,DeFi Protocol,True,631.0,Algo-Stables,Algo-Stables
+2022-04-28,DEUS Finance,13400000.0,0.0,13400000.0,Ecosystem,Flashloan Price Oracle Attack,Fantom,True,False,DeFi Protocol,True,1387.0,CDP,Lending
+2022-04-30,Saddle Finance,11000000.0,0.0,11000000.0,Ecosystem,Flashloan Swap Logic Exploit,Ethereum,True,False,DeFi Protocol,True,202.0,Dexs,DEX
+2022-05-01,Rari Capital,80000000.0,0.0,80000000.0,Ecosystem,Flashloan Reentrancy Attack,"Ethereum,Arbitrum",True,False,DeFi Protocol,True,136.0,Yield Aggregator,Yield
+2022-05-04,MM Finance Cronos,2000000.0,0.0,2000000.0,Infrastructure,DNS Spoofing,Cronos,True,False,DeFi Protocol,True,1028.0,Dexs,DEX
+2022-05-08,Fortress Loans,3000000.0,0.0,3000000.0,Protocol Logic,Governance and Oracle Exploit,BSC,True,False,DeFi Protocol,True,2177.0,Lending,Lending
+2022-05-11,Drift Trade,14500000.0,14500000.0,0.0,Protocol Logic,realized PnL withdrawal bug,Solana,True,False,DeFi Protocol,True,970.0,Derivatives,Derivatives
+2022-05-13,Blizz Finance,21800000.0,0.0,21800000.0,Infrastructure,Outdated Oracle Exploit,Avalanche,True,False,DeFi Protocol,True,807.0,Lending,Lending
+2022-06-05,Wintermute,27600000.0,0.0,27600000.0,Infrastructure,Cross Chain Multisig Deployment Exploit,Optimism,True,False,DeFi Protocol,True,,,Other
+2022-06-08,Gym Network,2100000.0,0.0,2100000.0,Protocol Logic,Deposit Function Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2022-06-16,Inverse Finance Frontier,5800000.0,0.0,5800000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,338.0,CDP,Lending
+2022-06-23,Harmony Bridge,100000000.0,0.0,100000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,BSC",True,True,DeFi Protocol,True,,,Bridge
+2022-07-02,Crema Finance,8800000.0,0.0,8800000.0,Protocol Logic,Access Control Exploit,Solana,True,False,DeFi Protocol,True,1412.0,Dexs,DEX
+2022-07-25,Audius,6000000.0,0.0,6000000.0,Protocol Logic,Malicious Governance Proposal,Ethereum,True,False,DeFi Protocol,True,,,Other
+2022-07-28,Nirvana V1,3500000.0,0.0,3500000.0,Ecosystem,Flashloan Price Oracle Attack,Solana,True,False,DeFi Protocol,True,1825.0,CDP,Lending
+2022-08-01,Nomad,190000000.0,0.0,190000000.0,Protocol Logic,Trusted Root Exploit,Ethereum,True,True,DeFi Protocol,True,1682.0,Bridge,Bridge
+2022-08-02,Slope Wallet,5300000.0,0.0,5300000.0,Infrastructure,Private Key Compromised (Stored Publicly),Solana,True,False,Wallet,False,,,Other
+2022-08-08,Dragoma,3500000.0,0.0,3500000.0,Rugpull,Drain Vaults,Polygon,True,False,DeFi Protocol,True,,,Other
+2022-08-09,Curve DEX,575000.0,575000.0,0.0,Infrastructure,DNS Spoofing,Ethereum,True,False,DeFi Protocol,True,3.0,Dexs,DEX
+2022-08-10,Blur Finance,600000.0,0.0,600000.0,Rugpull,Drained Contracts,"BSC,Polygon",True,False,DeFi Protocol,True,1891.0,Yield Aggregator,Yield
+2022-08-23,SudoRare,800000.0,0.0,800000.0,Rugpull,Drained Contracts,Ethereum,True,False,DeFi Protocol,True,,,Other
+2022-09-01,KyberSwap Classic,265000.0,0.0,265000.0,Infrastructure,Cloudflare Key Compromised,Polygon,True,False,DeFi Protocol,True,127.0,Dexs,DEX
+2022-09-18,GMX V1 Perps,565000.0,0.0,565000.0,Ecosystem,Price Oracle Attack,Arbitrum,True,False,DeFi Protocol,True,337.0,Derivatives,Derivatives
+2022-09-20,Wintermute,160000000.0,0.0,160000000.0,Infrastructure,Private Key Compromised (Brute Force),Ethereum,True,False,Other,False,,,Other
+2022-10-02,Transit Swap,21000000.0,0.0,21000000.0,Protocol Logic,Transfer Logic Exploit,"Ethereum,BSC",True,False,DeFi Protocol,True,,,Other
+2022-10-04,Sovryn,1100000.0,0.0,1100000.0,Protocol Logic,Flashloan Reentrancy Attack,RSK,False,False,DeFi Protocol,True,,,Other
+2022-10-06,Binance Bridge,570000000.0,0.0,570000000.0,Protocol Logic,Proof Verifier Bug,BSC,True,True,DeFi Protocol,True,,,Bridge
+2022-10-11,TempleDAO,2300000.0,0.0,2300000.0,Protocol Logic,Exploit Lack of Input Authentication,Ethereum,True,False,DeFi Protocol,True,875.0,Reserve Currency,Algo-Stables
+2022-10-11,Mango Markets V3,115000000.0,0.0,115000000.0,Ecosystem,Price Oracle Attack,Solana,True,False,DeFi Protocol,True,286.0,Derivatives,Derivatives
+2022-10-18,Moola Market,8400000.0,0.0,8400000.0,Ecosystem,Price Oracle Attack,Celo,True,False,DeFi Protocol,True,489.0,Lending,Lending
+2022-10-21,Bond Protocol,300000.0,0.0,300000.0,Protocol Logic,Arbitrary External Call,Ethereum,True,False,DeFi Protocol,True,2697.0,Services,Other
+2022-10-27,Team Finance,15800000.0,0.0,15800000.0,Protocol Logic,Migrate Function Mistake Exploit,Ethereum,True,False,DeFi Protocol,True,1864.0,Token Locker,Other
+2022-11-01,Deribit,28000000.0,0.0,28000000.0,Infrastructure,Private Key Compromised (Unknown Method),,False,False,CEX,False,2273.0,CEX,Other
+2022-11-02,Skyward Finance,3000000.0,0.0,3000000.0,Protocol Logic,Reentrancy,Near,True,False,DeFi Protocol,True,,,Other
+2022-11-02,Save,1260000.0,0.0,1260000.0,Ecosystem,Price Oracle Attack,Solana,True,False,DeFi Protocol,True,458.0,Lending,Lending
+2022-11-03,pNetwork,4589449.0,4589449.0,0.0,Protocol Logic,Misconfiguration,BSC,True,True,DeFi Protocol,True,547.0,Bridge,Bridge
+2022-11-06,Pando Rings,22000000.0,0.0,22000000.0,Ecosystem,Price Oracle Attack,Mixin,True,False,DeFi Protocol,True,2204.0,Lending,Lending
+2022-11-10,DFX V2,4000000.0,0.0,4000000.0,Protocol Logic,Reentrancy,Ethereum,True,False,DeFi Protocol,True,366.0,Dexs,DEX
+2022-11-12,FTX,450000000.0,0.0,450000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Solana",True,False,CEX,False,,,Other
+2022-12-02,Ankr,5000000.0,5000000.0,0.0,Protocol Logic,Access Control Exploit,BSC,True,False,DeFi Protocol,True,278.0,Liquid Staking,LiquidStaking
+2022-12-03,Ratio Finance,0.0,0.0,0.0,Infrastructure,Private Key Compromised (Unknown Method),Solana,True,False,DeFi Protocol,True,1841.0,CDP,Lending
+2022-12-10,Lodestar V0,6900000.0,0.0,6900000.0,Ecosystem,Flashloan Price Oracle Attack,Arbitrum,True,False,DeFi Protocol,True,2339.0,Lending,Lending
+2022-12-13,ElasticSwap,854000.0,520650.0,333350.0,Ecosystem,Price Oracle Attack,"Avalanche,Ethereum",True,False,DeFi Protocol,True,1919.0,Dexs,DEX
+2022-12-16,Raydium AMM,4400000.0,0.0,4400000.0,Infrastructure,Private Key Compromised (Unknown Method),Solana,True,False,DeFi Protocol,True,214.0,Dexs,DEX
+2022-12-24,Defrost,6000000.0,6000000.0,0.0,Rugpull,Oracle Manipulation,Avalanche,True,False,DeFi Protocol,True,913.0,CDP,Lending
+2022-12-25,Rubic,1410000.0,0.0,1410000.0,Protocol Logic,Router Exploit,Ethereum,True,True,DeFi Protocol,True,1282.0,DEX Aggregator,Bridge
+2022-12-26,Amun,300000.0,0.0,300000.0,Protocol Logic,Controlled Rebalance Manipulation,Ethereum,True,False,DeFi Protocol,True,400.0,Indexes,Other
+2023-01-11,Roe Finance,80000.0,0.0,80000.0,Ecosystem,Flashloan Pool Shares Exploit,"Ethereum,Polygon",True,False,DeFi Protocol,True,2357.0,Lending,Lending
+2023-01-16,LendHub,6000000.0,0.0,6000000.0,Protocol Logic,Collateral Offboarding Mistake,Heco,True,False,DeFi Protocol,True,380.0,Lending,Lending
+2023-01-17,Midas Capital,660000.0,0.0,660000.0,Ecosystem,Flashloan Reentrancy Attack,Polygon,True,False,DeFi Protocol,True,1925.0,Lending,Lending
+2023-01-21,Omm,1891000.0,0.0,1891000.0,Protocol Logic,Redeem Function Exploit,Icon,True,False,DeFi Protocol,True,546.0,Lending,Lending
+2023-02-01,BonqDAO,1700000.0,0.0,1700000.0,Protocol Logic,Price Oracle Attack,Polygon,True,False,DeFi Protocol,True,2477.0,Lending,Lending
+2023-02-02,Orion Pools,3000000.0,0.0,3000000.0,Protocol Logic,Reentrancy,BSC,True,False,DeFi Protocol,True,496.0,Dexs,DEX
+2023-02-10,dForce Lending,3650000.0,0.0,3650000.0,Protocol Logic,Reentrancy,"Arbitrum,Optimism",True,False,DeFi Protocol,True,123.0,Lending,Lending
+2023-02-16,Platypus Finance,8500000.0,222634.0,8277366.0,Ecosystem,Flashloan Reentrancy Attack,Avalanche,True,False,DeFi Protocol,True,944.0,Dexs,DEX
+2023-02-20,Hope Finance,1860000.0,0.0,1860000.0,Rugpull,Router Exploit,Arbitrum,True,False,DeFi Protocol,True,,,Other
+2023-02-20,Dexible V2,2000000.0,0.0,2000000.0,Protocol Logic,Arbitrary External Call,"Ethereum,Arbitrum",True,False,DeFi Protocol,True,2249.0,DEX Aggregator,DEX
+2023-02-27,LaunchZone,700000.0,0.0,700000.0,Protocol Logic,Access Control Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2023-02-27,MyAlgo,9200000.0,0.0,9200000.0,Infrastructure,Cloudflare Key Compromised,Algorand,True,False,Wallet,False,,,Other
+2023-03-02,ArbiSwap,100000.0,0.0,100000.0,Rugpull,Infinite Mint and Dump,Arbitrum,True,False,DeFi Protocol,True,2587.0,Dexs,DEX
+2023-03-07,Tender Finance,1600000.0,850000.0,750000.0,Ecosystem,Outdated Oracle Exploit,Arbitrum,True,False,DeFi Protocol,True,2382.0,Lending,Lending
+2023-03-08,PeopleDAO,120000.0,0.0,120000.0,Infrastructure,Social Engineering,Ethereum,True,False,DAO,False,,,Other
+2023-03-10,Hedera,515000.0,0.0,515000.0,Protocol Logic,Unknown,Hedera,True,False,DeFi Protocol,True,,Chain,Bridge
+2023-03-13,Euler V1,197000000.0,197000000.0,0.0,Protocol Logic,Flashloan Donate Function Logic Exploit,Ethereum,True,False,DeFi Protocol,True,1183.0,Lending,Lending
+2023-03-17,ParaSpace Lending V1,5000000.0,5000000.0,0.0,Protocol Logic,Borrow Logic Exploit,Ethereum,True,False,NFTfi,False,2517.0,Lending,Lending
+2023-03-18,Zircon Gamma,350000.0,0.0,350000.0,Ecosystem,Flashloan Pool Shares Exploit,"BSC,Moonriver",True,False,DeFi Protocol,True,2143.0,Dexs,DEX
+2023-03-27,Kokomo Finance,4000000.0,0.0,4000000.0,Rugpull,Drained Contracts,Optimism,True,False,DeFi Protocol,True,,Lending,Lending
+2023-03-28,Safemoon,8900000.0,0.0,8900000.0,Protocol Logic,Access Control Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2023-04-02,Allbridge Core,650000.0,0.0,650000.0,Ecosystem,Flashloan Price Oracle Attack,BSC,True,True,DeFi Protocol,True,3944.0,Bridge,Bridge
+2023-04-04,Sentiment,1000000.0,900000.0,100000.0,Ecosystem,Flashloan Reentrancy Attack,Arbitrum,True,False,DeFi Protocol,True,2285.0,Lending,Lending
+2023-04-08,GDAC,13900000.0,0.0,13900000.0,Infrastructure,Hot wallet hack,,False,False,CEX,False,,,Other
+2023-04-10,SushiSwap,3300000.0,3300000.0,0.0,Protocol Logic,Missing Input Validation,"Ethereum,Arbitrum,Optimism,BSC",True,False,DeFi Protocol,True,,Dexs,DEX
+2023-04-13,Yearn Finance,11539000.0,0.0,11539000.0,Ecosystem,Flashloan Misconfiguration Exploit,Ethereum,True,False,DeFi Protocol,True,113.0,Yield Aggregator,Yield
+2023-04-14,Bitrue,23000000.0,0.0,23000000.0,Infrastructure,Hot wallet hack,,False,False,CEX,False,,CEX,Other
+2023-04-15,Hundred Finance,7000000.0,0.0,7000000.0,Protocol Logic,Flashloan Donate Function Logic Exploit,Optimism,True,False,DeFi Protocol,True,607.0,Lending,Lending
+2023-04-25,MERLIN DEX,1820000.0,0.0,1820000.0,Rugpull,Drained Contracts,zkSync Era,False,False,DeFi Protocol,True,2849.0,Dexs,DEX
+2023-04-28,0vix,2000000.0,0.0,2000000.0,Ecosystem,Flashloan Donate Function Logic Exploit,Polygon,True,False,DeFi Protocol,True,1614.0,Lending,Lending
+2023-05-01,Level Perps,1000000.0,0.0,1000000.0,Protocol Logic,Referral Claims Logic Exploit,BSC,True,False,DeFi Protocol,True,2395.0,Derivatives,Derivatives
+2023-05-05,DEUS Finance,6500000.0,0.0,6500000.0,Protocol Logic,Burn Function Mistake,"Arbitrum,BSC,Ethereum",True,False,DeFi Protocol,True,1387.0,CDP,Lending
+2023-05-19,Swaprum,3000000.0,0.0,3000000.0,Rugpull,Drained Contracts,Arbitrum,True,False,DeFi Protocol,True,2903.0,Dexs,DEX
+2023-05-24,Local Traders,118000.0,0.0,118000.0,Protocol Logic,Access Control Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2023-05-28,Jimbos Protocol,7500000.0,0.0,7500000.0,Ecosystem,Flashloan Slippage Attack,Arbitrum,True,False,DeFi Protocol,True,,,Other
+2023-06-02,Hector Lending,653000.0,0.0,653000.0,Protocol Logic,Unknown,Fantom,True,True,DeFi Protocol,True,2761.0,Lending,Bridge
+2023-06-03,Atomic Wallet,100000000.0,0.0,100000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Tron,BSC,Bitcoin,Polkadot,Avalanche",True,False,Wallet,False,,,Other
+2023-06-10,Atlantis Loans,116000.0,0.0,116000.0,Rugpull,Access Control Exploit,BSC,True,False,DeFi Protocol,True,745.0,Lending,Lending
+2023-06-12,Sturdy V1,770000.0,0.0,770000.0,Ecosystem,Flashloan Reentrancy Attack,Ethereum,True,False,DeFi Protocol,True,1577.0,Lending,Lending
+2023-06-12,Keep3r Network,200000.0,0.0,200000.0,Infrastructure,Private Key Compromised (Vanity Address),Ethereum,True,False,DeFi Protocol,True,636.0,Derivatives,Derivatives
+2023-06-14,Tropykus RSK,150000.0,0.0,150000.0,Protocol Logic,Redeem Rounding Error Exploit,Rootstock,True,False,DeFi Protocol,True,1464.0,Lending,Lending
+2023-06-15,Hyperliquid,37000.0,0.0,37000.0,Ecosystem,CEX Price Manipulation Attack,Arbitrum,True,False,DeFi Protocol,True,2862.0,,Other
+2023-06-17,Midas Capital,600000.0,0.0,600000.0,Protocol Logic,Redeem Rounding Error Exploit,BSC,True,False,DeFi Protocol,True,1925.0,Lending,Lending
+2023-06-19,Ara Finance,131000.0,0.0,131000.0,Protocol Logic,Access Control Exploit,BSC,True,False,DeFi Protocol,True,1099.0,Reserve Currency,Algo-Stables
+2023-06-27,Themis Protocol,370000.0,0.0,370000.0,Ecosystem,Flashloan Price Oracle Attack,Arbitrum,True,False,DeFi Protocol,True,3158.0,Lending,Lending
+2023-07-02,Poly Network,5000000.0,0.0,5000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,BSC,Polygon",True,True,DeFi Protocol,True,1796.0,Bridge,Bridge
+2023-07-03,AzukiDAO,68000.0,0.0,68000.0,Protocol Logic,Replay Attack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2023-07-04,Rodeo,90000.0,0.0,90000.0,Protocol Logic,Mint Reserves Logic Exploit,Arbitrum,True,False,DeFi Protocol,True,2841.0,Yield,Yield
+2023-07-07,Multichain,126000000.0,0.0,126000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Moonriver,BSC,Fantom",True,True,DeFi Protocol,True,591.0,Bridge,Bridge
+2023-07-10,Arcadia V1,460000.0,0.0,460000.0,Ecosystem,Flashloan Reentrancy Attack,"Ethereum,Optimism",True,False,DeFi Protocol,True,3210.0,Leveraged Farming,Other
+2023-07-21,Conic Finance,3200000.0,0.0,3200000.0,Ecosystem,Flashloan Reentrancy Attack,Ethereum,True,False,DeFi Protocol,True,2616.0,Yield,Yield
+2023-07-22,Conic Finance,300000.0,0.0,300000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,2616.0,Yield,Yield
+2023-07-22,CoinsPaid,37300000.0,0.0,37300000.0,Ecosystem,Social Engineering,,False,False,Other,False,,,Other
+2023-07-24,Palmswap,900000.0,0.0,900000.0,Protocol Logic,Inflationary Accounting Manipulation,BSC,True,False,DeFi Protocol,True,3279.0,Derivatives,Derivatives
+2023-07-25,EraLend,3400000.0,0.0,3400000.0,Protocol Logic,Reentrancy,zkSync Era,False,False,DeFi Protocol,True,2746.0,Lending,Lending
+2023-07-26,AlphaPo,60000000.0,0.0,60000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Tron",True,False,CEX,False,,,Other
+2023-07-30,Kannagi,1100000.0,0.0,1100000.0,Rugpull,Drained Contracts,"zkSync Era,Ethereum",True,False,DeFi Protocol,True,,,Other
+2023-07-30,Curve DEX,61700000.0,0.0,61700000.0,Infrastructure,Vyper Compiler Bug,Ethereum,True,False,DeFi Protocol,True,3.0,Dexs,DEX
+2023-08-01,LeetSwap,620000.0,0.0,620000.0,Protocol Logic,Liquidity Pools Compromised,Base,True,False,DeFi Protocol,True,2745.0,Dexs,DEX
+2023-08-02,Uwerx,327000.0,0.0,327000.0,Ecosystem,Flashloan Pool Shares Exploit,Ethereum,True,False,Other,False,,,Other
+2023-08-02,Bald,23000000.0,0.0,23000000.0,Rugpull,Drained Liquidity Pool,Base,True,False,DeFi Protocol,True,,,Other
+2023-08-07,Cypher,1035000.0,0.0,1035000.0,,Unknown,Solana,True,False,DeFi Protocol,True,2575.0,Derivatives,Derivatives
+2023-08-08,Steadefi,1157000.0,0.0,1157000.0,Protocol Logic,Deployer Wallet Compromised,Ethereum,True,False,DeFi Protocol,True,2972.0,Leveraged Farming,Other
+2023-08-09,Earning.Farm,540000.0,0.0,540000.0,Protocol Logic,Reentrancy,Ethereum,True,False,DeFi Protocol,True,,,Other
+2023-08-13,Zunami Protocol,2100000.0,0.0,2100000.0,Ecosystem,Price Manipulation Attack,Ethereum,True,False,DeFi Protocol,True,1201.0,Yield Aggregator,Yield
+2023-08-15,RocketSwap Base,865000.0,0.0,865000.0,Infrastructure,Private Key Compromised (Brute Force),Base,True,False,DeFi Protocol,True,3314.0,Dexs,DEX
+2023-08-18,Exactly,7200000.0,0.0,7200000.0,Protocol Logic,DebtManager Exploit,Optimism,True,False,DeFi Protocol,True,2385.0,Lending,Lending
+2023-08-19,Harbor Protocol,0.0,0.0,0.0,,,Comdex,True,False,DeFi Protocol,True,2388.0,CDP,Lending
+2023-08-25,Magnate Finance,6400000.0,0.0,6400000.0,Rugpull,Drained Contracts,Base,True,False,DeFi Protocol,True,3342.0,Lending,Lending
+2023-08-27,Balancer V2,800000.0,0.0,800000.0,Protocol Logic,,Ethereum,True,False,DeFi Protocol,True,2611.0,Dexs,DEX
+2023-09-01,SharedStake,175000.0,0.0,175000.0,Protocol Logic,Ownership Override Attack,Ethereum,True,False,DeFi Protocol,True,275.0,Liquid Staking,LiquidStaking
+2023-09-04,Stake.com,41300000.0,0.0,41300000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,BSC,Polygon",True,False,Other,False,,,Other
+2023-09-06,GMBL.COMPUTER,815000.0,0.0,815000.0,Protocol Logic,Referral Claims Logic Exploit,Arbitrum,True,False,DeFi Protocol,True,,,Other
+2023-09-12,CoinEx,55000000.0,0.0,55000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,BSC,Bitcoin,Tron,Kadena,Solana,Dagger,XRP,BitcoinCash,Polygon,Stellar,Arbitrum",True,False,CEX,False,,CEX,Other
+2023-09-15,Remitano,2700000.0,0.0,2700000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Tron,BitcoinCash",True,False,CEX,False,,,Other
+2023-09-19,Balancer V2,238000.0,0.0,238000.0,Protocol Logic,Frontend Attack,Ethereum,True,False,DeFi Protocol,True,2611.0,Dexs,DEX
+2023-09-23,Mixin Network,200000000.0,0.0,200000000.0,Infrastructure,Database Attack,Mixin,True,False,Other,False,,,Other
+2023-09-25,HTX,8000000.0,0.0,8000000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,CEX,False,,CEX,Other
+2023-10-07,Arena SocialFi,2900000.0,0.0,2900000.0,Protocol Logic,Reentrancy,Avalanche,True,False,Other,False,3564.0,SoFi,Other
+2023-10-13,Platypus Finance,2200000.0,0.0,2200000.0,Protocol Logic,Reentrancy,Avalanche,True,False,DeFi Protocol,True,,Dexs,DEX
+2023-10-23,Maestro,465000.0,465000.0,0.0,Protocol Logic,Arbitrary External Call,Ethereum,True,False,DeFi Protocol,True,,Telegram Bot,Other
+2023-10-29,Astrid Finance,228000.0,0.0,228000.0,Protocol Logic,Withdraw Function Argument Manipulation,Ethereum,True,False,DeFi Protocol,True,,,Other
+2023-10-31,Unibot,640000.0,0.0,640000.0,Protocol Logic,Token approval exploit,Ethereum,True,False,DeFi Protocol,True,3106.0,Telegram Bot,Other
+2023-11-01,Onyx Protocol,2100000.0,0.0,2100000.0,Ecosystem,Flashloan Donate Function Logic Exploit,Ethereum,True,False,DeFi Protocol,True,1631.0,Lending,Lending
+2023-11-09,CoinSpot,2400000.0,0.0,2400000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,CEX,False,,,Other
+2023-11-10,Poloniex,126000000.0,0.0,126000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Tron,Ethereum,Bitcoin",True,False,CEX,False,,CEX,Other
+2023-11-10,Raft,3300000.0,0.0,3300000.0,Protocol Logic,Infinite Mint and Dump,Ethereum,True,False,DeFi Protocol,True,3068.0,CDP,Lending
+2023-11-18,Kronos Research,26000000.0,0.0,26000000.0,Infrastructure,API Key unauthorized access,Ethereum,True,False,Other,False,,,Other
+2023-11-18,dYdX V3,9000000.0,0.0,9000000.0,Protocol Logic,Price Manipulation Attack,Ethereum,True,False,DeFi Protocol,True,144.0,Derivatives,Derivatives
+2023-11-22,Heco Bridge,86600000.0,0.0,86600000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,True,DeFi Protocol,True,,,Bridge
+2023-11-22,KyberSwap Elastic,48000000.0,0.0,48000000.0,Protocol Logic,Flashloan Swap Logic Exploit,"Ethereum,Base,Polygon,Optimism,Arbitrum",True,False,DeFi Protocol,True,2615.0,Dexs,DEX
+2023-11-22,Huobi,26400000.0,0.0,26400000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,CEX,False,,,Other
+2023-11-30,Florence Finance,1450000.0,0.0,1450000.0,Infrastructure,Address Poisoning,Ethereum,True,False,DeFi Protocol,True,3197.0,RWA Lending,Lending
+2023-12-13,OKX DEX,2700000.0,0.0,2700000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,DeFi Protocol,True,,,Other
+2023-12-27,Levana Perps,1100000.0,0.0,1100000.0,Protocol Logic,Price Oracle Attack,Osmosis,True,False,DeFi Protocol,True,3474.0,Derivatives,Derivatives
+2023-12-30,Locus Finance,321000.0,0.0,321000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Arbitrum",True,False,DeFi Protocol,True,3371.0,Yield,Yield
+2023-12-31,Orbit Bridge,81700000.0,0.0,81700000.0,Protocol Logic,Signature Exploit,Ethereum,True,True,DeFi Protocol,True,1981.0,Bridge,Bridge
+2024-01-02,Radiant V2,4500000.0,0.0,4500000.0,Protocol Logic,Flashloan New Market Exploit,Arbitrum,True,False,DeFi Protocol,True,2706.0,Lending,Lending
+2024-01-04,Gamma,4500000.0,0.0,4500000.0,Protocol Logic,Price Manipulation Attack,Arbitrum,True,False,DeFi Protocol,True,355.0,Liquidity Manager,Other
+2024-01-07,MangoFarmSol,2000000.0,0.0,2000000.0,Rugpull,Frontend Attack,Solana,True,False,DeFi Protocol,True,,,Other
+2024-01-12,Wise Lending V1,464000.0,0.0,464000.0,Protocol Logic,Rounding Donation Attack,Ethereum,True,False,DeFi Protocol,True,3491.0,Lending,Lending
+2024-01-16,Bungee,3300000.0,0.0,3300000.0,Protocol Logic,Missing Input Validation,Ethereum,True,True,DeFi Protocol,True,,,Bridge
+2024-01-22,Concentric,1720000.0,0.0,1720000.0,Infrastructure,Private Key Compromised (Social Engineering),Arbitrum,True,False,DeFi Protocol,True,,,Other
+2024-01-30,Abracadabra Spell,6500000.0,0.0,6500000.0,Protocol Logic,Borrow Logic Exploit,Ethereum,True,False,DeFi Protocol,True,347.0,CDP,Lending
+2024-02-13,DuelBits,4600000.0,0.0,4600000.0,Infrastructure,Private Key Compromised,Ethereum,True,False,CEX,False,,,Other
+2024-02-18,FixedFloat,26100000.0,0.0,26100000.0,Infrastructure,Private Key Compromised,"Ethereum,Bitcoin",True,False,DeFi Protocol,True,,,Other
+2024-02-22,Tectonic,250000.0,0.0,250000.0,Protocol Logic,Flashloan New Market Exploit,Cronos,True,False,DeFi Protocol,True,1115.0,Lending,Lending
+2024-02-24,BlueBerry,1400000.0,0.0,1400000.0,Protocol Logic,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,,Yield,Yield
+2024-02-25,RiskOnBlast,1300000.0,0.0,1300000.0,Rugpull,,Blast,True,False,DeFi Protocol,True,,,Other
+2024-02-28,Seneca,6500000.0,0.0,6500000.0,Protocol Logic,Token approval exploit,"Ethereum,Arbitrum",True,False,DeFi Protocol,True,4137.0,CDP,Lending
+2024-02-29,Shido,3300000.0,0.0,3300000.0,Protocol Logic,Private Key Compromised,Ethereum,True,False,Other,False,,,Other
+2024-03-05,WOOFi Swap,8500000.0,0.0,8500000.0,Protocol Logic,Price Oracle Manipulation,Arbitrum,True,False,DeFi Protocol,True,1461.0,Dexs,DEX
+2024-03-08,Unizen,2100000.0,2100000.0,0.0,Protocol Logic,External Call Vulnerability,Ethereum,True,False,DeFi Protocol,True,1336.0,DEX Aggregator,DEX
+2024-03-20,Dolomite,1800000.0,0.0,1800000.0,Protocol Logic,Acces Control Exploit,Ethereum,True,False,DeFi Protocol,True,,Lending,Lending
+2024-03-22,Super Sushi Samurai,4800000.0,0.0,4800000.0,Protocol Logic,Infinite Mint and Dump,Blast,True,False,Gaming,False,,,Other
+2024-03-25,Curio,16000000.0,0.0,16000000.0,Protocol Logic,Voting Power Inflation,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-03-26,Munchables,62500000.0,0.0,62500000.0,Protocol Logic,Storage Slot Exploit,Blast,True,False,Gaming,False,4369.0,Farm,Yield
+2024-03-28,PrismaLST,11600000.0,0.0,11600000.0,Protocol Logic,Flashloan Trove Manipulation,Ethereum,True,False,DeFi Protocol,True,3473.0,CDP,Lending
+2024-03-29,Lava,340000.0,0.0,340000.0,Protocol Logic,Calculation Error in Liquidation Engine ,Arbitrum,True,False,DeFi Protocol,True,4241.0,Lending,Lending
+2024-03-29,Solareum,1400000.0,0.0,1400000.0,Infrastructure,Private Key Compromised (Social Engineering),Solana,True,False,DeFi Protocol,True,,,Other
+2024-04-15,Grand Base,1700000.0,0.0,1700000.0,Infrastructure,Private Key Compromised (Unknown Method),Base,True,False,DeFi Protocol,True,,,Other
+2024-04-19,Hedgey,44700000.0,0.0,44700000.0,Ecosystem,Claim Contract Flashloan Exploit,"Arbitrum,Ethereum",True,False,DeFi Protocol,True,,Payments,Other
+2024-04-23,Magpie Protocol,129000.0,0.0,129000.0,Protocol Logic,Router Exploit,"Ethereum,Polygon,BSC,Blast,Avalanche,Arbitrum,Optimism,Base,zkSync Era,Polygon zkEVM",True,False,DeFi Protocol,True,,,Other
+2024-04-24,XBridge,1800000.0,0.0,1800000.0,Infrastructure,,"Ethereum,BSC",True,True,DeFi Protocol,True,,,Bridge
+2024-04-29,Rain,14800000.0,0.0,14800000.0,Infrastructure,,"Bitcoin,Ethereum,XRP,Solana",True,False,CEX,False,,Prediction Market,Other
+2024-04-30,Pike V1,1600000.0,1600000.0,0.0,Protocol Logic,Storage Misalignment Exploit,"Ethereum,Optimism,Arbitrum",True,False,DeFi Protocol,True,4100.0,Lending,Lending
+2024-04-30,Yield Protocol,181000.0,0.0,181000.0,Protocol Logic,Balance Disparity Exploit,Arbitrum,True,False,DeFi Protocol,True,876.0,Lending,Lending
+2024-05-05,GeniusAI,1270000.0,0.0,1270000.0,Infrastructure,Private Key Compromised (Discord Hack),"Fantom,Ethereum",True,False,DeFi Protocol,True,,,Other
+2024-05-15,Sonne Finance,20000000.0,0.0,20000000.0,Ecosystem,Flashloan Donate Function Logic Exploit,Optimism,True,False,DeFi Protocol,True,2142.0,Lending,Lending
+2024-05-16,ALEX,4300000.0,0.0,4300000.0,Infrastructure,Private Key Compromised (Phishing),Stacks,True,False,DeFi Protocol,True,1466.0,Dexs,DEX
+2024-05-16,pump.fun,2000000.0,0.0,2000000.0,Infrastructure,Private Key Compromised (Unknown Method),Solana,True,False,DeFi Protocol,True,4449.0,Launchpad,Other
+2024-05-20,Gala,22000000.0,0.0,22000000.0,Protocol Logic,Infinite Mint and Dump,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-05-31,DMM Bitcoin,305000000.0,305000000.0,0.0,Infrastructure,Private Key Compromised (Unknown Method),Bitcoin,True,False,CEX,False,,,Other
+2024-06-02,Velocore V2,6800000.0,0.0,6800000.0,Protocol Logic,Fee Overflow Exploit,"Linea,zkSync Era",True,False,DeFi Protocol,True,3330.0,Dexs,DEX
+2024-06-09,Loopring,5000000.0,0.0,5000000.0,Protocol Logic,Guardian 2FA service exploit,Loopring,False,False,DeFi Protocol,True,126.0,Dexs,DEX
+2024-06-10,UwU Lend,20000000.0,0.0,20000000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,2111.0,Lending,Lending
+2024-06-11,YOLO Games,1500000.0,0.0,1500000.0,Protocol Logic,Access Control Exploit,Blast,True,False,DeFi Protocol,True,,Gaming,Other
+2024-06-13,UwU Lend,3700000.0,0.0,3700000.0,Ecosystem,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,2111.0,Lending,Lending
+2024-06-13,Holograph,6700000.0,0.0,6700000.0,Protocol Logic,Infinite Mint and Dump,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-06-20,OKX NFT Aggregator,14000.0,0.0,14000.0,Protocol Logic,Access Control Exploit,BSC,True,False,CEX,False,,,Other
+2024-06-22,BtcTurk,54000000.0,0.0,54000000.0,,Private Key Compromised (Unknown Method),,False,False,CEX,False,,,Other
+2024-07-02,Bittensor,8000000.0,0.0,8000000.0,Infrastructure,Private Key Compromised (Supply Chain Attack),,False,False,DeFi Protocol,True,4547.0,Chain,Bridge
+2024-07-12,CoinStats,2200000.0,0.0,2200000.0,Infrastructure,Private Key Compromised (Unknown Method),,False,False,Other,False,,,Other
+2024-07-12,Dough Finance,1960000.0,0.0,1960000.0,Protocol Logic,Unvalidated call data exploit,Ethereum,True,False,DeFi Protocol,True,5109.0,Lending,Lending
+2024-07-15,Minterest,1400000.0,0.0,1400000.0,Protocol Logic,Reentrancy,Mantle,True,False,DeFi Protocol,True,,Lending,Lending
+2024-07-16,LiFi Finance,9730000.0,0.0,9730000.0,Protocol Logic,Router Exploit via Infinite Approvals,"zkSync Era,Linea,Metis",True,True,DeFi Protocol,True,,,Bridge
+2024-07-18,WazirX: India,234900000.0,0.0,234900000.0,Infrastructure,Safe Multisig wallet Phishing Exploit,Ethereum,True,False,CEX,False,,,Other
+2024-07-19,Rho Markets,7600000.0,0.0,7600000.0,Protocol Logic,Price Oracle Manipulation,Scroll,True,False,DeFi Protocol,True,4808.0,Lending,Lending
+2024-07-22,ETHTrustFund,2100000.0,0.0,2100000.0,Rugpull,Transferred Treasury to Mixers,Base,True,False,DeFi Protocol,True,,,Other
+2024-07-23,DeltaPrime,1000000.0,0.0,1000000.0,Protocol Logic,,Arbitrum,True,False,DeFi Protocol,True,2479.0,Leveraged Farming,Other
+2024-07-31,Terra 2.0,5000000.0,0.0,5000000.0,Infrastructure,IBC hooks exploit,Terra2,True,False,DeFi Protocol,True,,,Other
+2024-07-31,Monoswap,1300000.0,0.0,1300000.0,Infrastructure,Private Key Compromised (Malware),Blast,True,False,DeFi Protocol,True,,,Other
+2024-08-01,Convergence,210000.0,0.0,210000.0,Protocol Logic,Missing Input Validation,Ethereum,True,False,DeFi Protocol,True,,Dexs,DEX
+2024-08-06,Ronin Bridge,12000000.0,0.0,12000000.0,Protocol Logic,MEV bot manipulation exploit,Ethereum,True,True,DeFi Protocol,True,4440.0,Canonical Bridge,Bridge
+2024-08-07,Nexera,1800000.0,0.0,1800000.0,Protocol Logic,Ownership Override Attack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-08-12,PolyNetwork,5000000.0,0.0,5000000.0,Protocol Logic,Reentrancy,PolyNetwork,False,True,DeFi Protocol,True,,Bridge,Bridge
+2024-09-03,Penpie,27000000.0,0.0,27000000.0,Protocol Logic,Reentrancy,Ethereum,True,False,DeFi Protocol,True,3083.0,Yield,Yield
+2024-09-10,Indodax,25200000.0,0.0,25200000.0,Infrastructure,Access Control Exploit,"Ethereum,Polygon,Optimism",True,False,CEX,False,,CEX,Other
+2024-09-16,WXETA,110000.0,0.0,110000.0,Protocol Logic,Access Control Exploit,"Ethereum,BSC",True,False,DeFi Protocol,True,,,Other
+2024-09-16,Rivus DAO,0.0,0.0,0.0,Rugpull,Third-party Dev Backdoor Exploit,Ethereum,True,False,DeFi Protocol,True,4574.0,Liquid Staking,LiquidStaking
+2024-09-16,DeltaPrime,5980000.0,0.0,5980000.0,Protocol Logic,Private Key Compromised (Unknown Method),Arbitrum,True,False,DeFi Protocol,True,2479.0,Leveraged Farming,Other
+2024-09-19,Banana Gun,3000000.0,3000000.0,0.0,Protocol Logic,Front-end vulnerability,Ethereum,True,False,DeFi Protocol,True,3336.0,Telegram Bot,Other
+2024-09-20,OcelotDex,4900000.0,0.0,4900000.0,Protocol Logic,Infinite Mint and Dump,Ethereum,True,False,DeFi Protocol,True,4095.0,Dexs,DEX
+2024-09-20,BingX,43300000.0,0.0,43300000.0,Infrastructure,Hot wallet hack,Ethereum,True,False,CEX,False,4859.0,CEX,Other
+2024-09-25,Truflation,5000000.0,0.0,5000000.0,Infrastructure,Private Key Compromised (Malware),,False,False,Other,False,,,Other
+2024-09-26,uniBTC,1700000.0,0.0,1700000.0,Protocol Logic,Minting Logic Exploit,Ethereum,True,False,DeFi Protocol,True,4966.0,,Other
+2024-09-26,Onyx V2,4000000.0,0.0,4000000.0,Protocol Logic,Liquidation Logic Exploit,Ethereum,True,False,DeFi Protocol,True,5180.0,Lending,Lending
+2024-10-04,Lava,130000.0,0.0,130000.0,Protocol Logic,Flashloan Exploit,Arbitrum,True,False,DeFi Protocol,True,4241.0,Lending,Lending
+2024-10-14,LeadBlock's Morpho Blue Market,250000.0,0.0,250000.0,Protocol Logic,Oracle Misconfiguration Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-10-14,Kalax,350000.0,0.0,350000.0,Rugpull,Drain Vaults,Blast,True,False,DeFi Protocol,True,4677.0,Yield Aggregator,Yield
+2024-10-16,Radiant V2,53000000.0,0.0,53000000.0,Protocol Logic,Access Control Exploit,"BSC,Arbitrum",True,False,DeFi Protocol,True,2706.0,Lending,Lending
+2024-10-17,Ambient,0.0,0.0,0.0,Ecosystem,Domain Hijack,Ethereum,True,False,DeFi Protocol,True,3104.0,Dexs,DEX
+2024-10-18,Tapioca DAO,4700000.0,0.0,4700000.0,Protocol Logic,Private Key Compromised (Social Engineering),Arbitrum,True,False,DeFi Protocol,True,,,Other
+2024-10-24,US Government Crypto Wallet,20000000.0,0.0,20000000.0,,,Ethereum,True,False,Other,False,,,Other
+2024-10-30,SUNRAY·FINANCE,2855000.0,0.0,2855000.0,Infrastructure,Private Key Compromised,Arbitrum,True,False,DeFi Protocol,True,,,Other
+2024-10-31,1inch,720000.0,0.0,720000.0,Ecosystem,Private Key Compromised (Supply Chain Attack),Avalanche,True,False,DeFi Protocol,True,189.0,DEX Aggregator,DEX
+2024-10-31,M2 Exchange,13700000.0,0.0,13700000.0,Protocol Logic,Access Control Exploit,"Ethereum,Solana,Bitcoin",True,False,CEX,False,,,Other
+2024-11-11,zkFinance,200000.0,0.0,200000.0,Protocol Logic,Oracle Misconfiguration Exploit,zkSync Era,False,False,DeFi Protocol,True,4798.0,Lending,Lending
+2024-11-11,DeltaPrime,4800000.0,0.0,4800000.0,Protocol Logic,Debt Swap Exploit,"Arbitrum,Avalanche",True,False,DeFi Protocol,True,2479.0,Leveraged Farming,Other
+2024-11-15,ThalaSwap,25500000.0,0.0,25500000.0,Protocol Logic,Drained Liquidity Pool,Aptos,True,False,DeFi Protocol,True,2795.0,Dexs,DEX
+2024-11-16,DEXX,21000000.0,0.0,21000000.0,Infrastructure,Private Key Compromised (Stored Publicly),Solana,True,False,Wallet,False,,,Other
+2024-11-16,Polter Finance,12000000.0,0.0,12000000.0,Protocol Logic,Flashloan Price Oracle Attack,Fantom,True,False,DeFi Protocol,True,4152.0,Lending,Lending
+2024-11-18,Tectonic,0.0,0.0,0.0,Protocol Logic,Price Oracle Attack,Cronos,True,False,DeFi Protocol,True,1115.0,Lending,Lending
+2024-11-28,XT Exchange,1700000.0,0.0,1700000.0,Infrastructure,,Ethereum,True,False,CEX,False,,,Other
+2024-12-01,Spectral Labs,200000.0,0.0,200000.0,Protocol Logic,Bonding Curve Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-12-01,Clipper,450000.0,0.0,450000.0,Protocol Logic,API Signature Exploit,"Optimism,Base",True,False,DeFi Protocol,True,622.0,Dexs,DEX
+2024-12-04,Vestra DAO,500000.0,0.0,500000.0,Protocol Logic,Staking Logic Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2024-12-10,Clober Liquidity Vault,500000.0,0.0,500000.0,Protocol Logic,Reentrancy,Base,True,False,DeFi Protocol,True,5315.0,Dexs,DEX
+2024-12-16,BTC24H,85700.0,0.0,85700.0,Protocol Logic,Acces Control Exploit,Polygon,True,False,DeFi Protocol,True,,,Other
+2024-12-17,GemPad,2000000.0,0.0,2000000.0,Protocol Logic,Reentrancy,"Ethereum,Base,BSC",True,False,DeFi Protocol,True,,,Other
+2024-12-29,Fegex,900000.0,0.0,900000.0,Protocol Logic,Missing Access Control,"Ethereum,BSC,Base",True,False,DeFi Protocol,True,672.0,Services,Other
+2025-01-02,MoonHacker,300000.0,0.0,300000.0,Protocol Logic,Unchecked FlashLoan Approve Exploit,Optimism,True,False,DeFi Protocol,True,,,Other
+2025-01-08,Orange Finance,840000.0,0.0,840000.0,Infrastructure,Private Key Compromised (Unknown Method),Arbitrum,True,False,DeFi Protocol,True,3422.0,Liquidity Manager,Other
+2025-01-08,Moby,1470000.0,0.0,1470000.0,Infrastructure,Private Key Compromised (Unknown Method),Arbitrum,True,False,DeFi Protocol,True,4452.0,Options,Other
+2025-01-12,Unilend V2,197600.0,0.0,197600.0,Protocol Logic,Redeem Process Exploit,Ethereum,True,False,DeFi Protocol,True,4288.0,Lending,Lending
+2025-01-23,Phemex,85000000.0,0.0,85000000.0,Infrastructure,Private Key Compromised (Unknown Method),"Ethereum,Solana,XRP,Bitcoin,BSC,Sui,Base,Tron,Arbitrum,Avalanche,Polygon,Optimism,zkSync Era",True,False,CEX,False,2369.0,CEX,Other
+2025-01-28,DogWifTools,10000000.0,0.0,10000000.0,Infrastructure,Private Key Compromised (Malware),Solana,True,False,Other,False,,,Other
+2025-02-01,Sirio Finance,2000000.0,0.0,2000000.0,Protocol Logic,Flashloan Exploit,Hedera,True,False,DeFi Protocol,True,5706.0,Lending,Lending
+2025-02-04,Ionic Protocol,4000000.0,0.0,4000000.0,Protocol Logic,Fake Collateral Exploit,Mode,True,False,DeFi Protocol,True,4070.0,Lending,Lending
+2025-02-11,four.meme,183000.0,0.0,183000.0,Protocol Logic,Liquidity Pool Exploit,BSC,True,False,DeFi Protocol,True,5174.0,Launchpad,Other
+2025-02-11,zkLend,9550000.0,0.0,9550000.0,Protocol Logic,Empty Market Exploit,Starknet,True,False,DeFi Protocol,True,3079.0,Lending,Lending
+2025-02-18,Cardex,400000.0,0.0,400000.0,Infrastructure,Private Key Compromised (Session signer),Abstract,True,False,DeFi Protocol,True,,,Other
+2025-02-21,Bybit,1400000000.0,1400000000.0,0.0,Protocol Logic,Safe Multisig wallet Phishing Exploit,Ethereum,True,False,CEX,False,2286.0,CEX,Other
+2025-02-24,Infini,49500000.0,0.0,49500000.0,Protocol Logic,Dev Privilege Oversight Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2025-03-01,Hegic(old contract),94000.0,0.0,94000.0,Protocol Logic,Unlimited repeated withdrawal exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2025-03-07,1inch,5000000.0,0.0,5000000.0,Protocol Logic,Calldata underflow and resolver hijack,Ethereum,True,False,DeFi Protocol,True,189.0,DEX Aggregator,DEX
+2025-03-14,Berally,90000.0,0.0,90000.0,Infrastructure,Private Key Compromised (Unknown Method),Berachain,True,False,DeFi Protocol,True,,,Other
+2025-03-21,Zoth ZeUSD,8850000.0,0.0,8850000.0,Infrastructure,Private Key Compromised (Unknown Method),Ethereum,True,False,DeFi Protocol,True,5615.0,CDP,Lending
+2025-03-25,Abracadabra Spell,13000000.0,0.0,13000000.0,Protocol Logic,,Arbitrum,True,False,DeFi Protocol,True,347.0,CDP,Lending
+2025-03-29,Venus Core Pool,902000.0,0.0,902000.0,Protocol Logic,Donation Attack,zkSync Era,False,False,DeFi Protocol,True,212.0,Lending,Lending
+2025-03-30,SIR,355000.0,0.0,355000.0,Protocol Logic,Transient storage collision,Ethereum,True,False,DeFi Protocol,True,5842.0,Derivatives,Derivatives
+2025-04-01,UPCX,0.0,0.0,0.0,Protocol Logic,Upgraded ProxyAdmin + withdrawByAdmin Hack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2025-04-07,Tenderize V2,10850.0,0.0,10850.0,Protocol Logic,Proxy Upgrade Skim,Ethereum,True,False,DeFi Protocol,True,4085.0,Liquid Staking,LiquidStaking
+2025-04-14,KiloEx,7500000.0,6750000.0,750000.0,Protocol Logic,Price Oracle Manipulation,"BSC,Base,Taiko",True,False,DeFi Protocol,True,3329.0,Derivatives,Derivatives
+2025-04-15,ZKsync,5000000.0,0.0,5000000.0,Infrastructure,Private Key Compromised (Unknown Method),zkSync Era,False,False,Other,False,,,Other
+2025-04-20,Bitget,100000000.0,0.0,100000000.0,Infrastructure,Market-Making Bot Exploit,,False,False,CEX,False,,CEX,Other
+2025-04-22,Bitcoin Mission,1300000.0,0.0,1300000.0,Protocol Logic,overPaper Function Exploit,Arbitrum,True,False,DeFi Protocol,True,,,Other
+2025-04-26,Loopscale,5800000.0,0.0,5800000.0,Protocol Logic,Price Oracle Manipulation,Solana,True,False,DeFi Protocol,True,,Lending,Lending
+2025-04-26,Impermax V3,300000.0,0.0,300000.0,Protocol Logic,Flashloan Exploit,Base,True,False,DeFi Protocol,True,5981.0,Lending,Lending
+2025-05-09,LND,1300000.0,0.0,1300000.0,Protocol Logic,,"Sonic,Hyperliquid L1",True,False,DeFi Protocol,True,6071.0,Lending,Lending
+2025-05-11,Mobius Token,2160000.0,0.0,2160000.0,Protocol Logic,Decimal Miscalculation Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2025-05-15,Zunami Protocol,500000.0,0.0,500000.0,Protocol Logic,withdrawStuckToken() exploit,Ethereum,True,False,DeFi Protocol,True,1201.0,Yield Aggregator,Yield
+2025-05-22,Cetus CLMM,223000000.0,0.0,223000000.0,Protocol Logic,Spoof Token Exploit,Sui,True,False,DeFi Protocol,True,2289.0,Dexs,DEX
+2025-05-26,Dexodus Finance,300000.0,300000.0,0.0,Protocol Logic,Price Manipulation Attack,Base,True,False,DeFi Protocol,True,5428.0,Derivatives,Derivatives
+2025-05-27,Usual USD0,43000.0,0.0,43000.0,Protocol Logic,Arbitration Exploit,Ethereum,True,False,DeFi Protocol,True,4882.0,RWA,RWA
+2025-05-28,Cork V1,12000000.0,0.0,12000000.0,Protocol Logic,Access control bypass via hook,Ethereum,True,False,DeFi Protocol,True,6262.0,Insurance,Other
+2025-06-06,ALEX,8373000.0,0.0,8373000.0,Protocol Logic,malicious transfer() method,Stacks,True,False,DeFi Protocol,True,1466.0,Dexs,DEX
+2025-06-06,ForceBridge,3900000.0,0.0,3900000.0,Protocol Logic,Acces Control Exploit,Nervos,False,True,DeFi Protocol,True,,,Bridge
+2025-06-18,Nobitex,82000000.0,0.0,82000000.0,Infrastructure,Hot wallet hack,"Tron,Ethereum,BSC,Avalanche,Arbitrum,Polygon,Bitcoin",True,False,CEX,False,,,Other
+2025-06-20,Hacken Token,250000.0,0.0,250000.0,Infrastructure,Private Key Compromised,,False,False,Other,False,,,Other
+2025-06-25,Silo Finance,546000.0,0.0,546000.0,Protocol Logic,fillQuote silo.borrow() Exploit,Ethereum,True,False,DeFi Protocol,True,,Lending,Lending
+2025-06-25,Resupply,9600000.0,0.0,9600000.0,Protocol Logic,Price Oracle Manipulation,Ethereum,True,False,DeFi Protocol,True,5963.0,Lending,Lending
+2025-07-08,"Peapods Finance
+
+",175000.0,0.0,175000.0,Ecosystem,Oracle manipulation in user-created Pods,Ethereum,True,False,DeFi Protocol,True,,Yield,Yield
+2025-07-09,GMX V1 Perps,42000000.0,40000000.0,2000000.0,Protocol Logic,Re-entrancy Exploit,Arbitrum,True,False,DeFi Protocol,True,337.0,Derivatives,Derivatives
+2025-07-09,Texture,2200000.0,0.0,2200000.0,,,Solana,True,False,DeFi Protocol,True,,,Other
+2025-07-10,Kinto Bridge,1550000.0,0.0,1550000.0,Protocol Logic,ERC1967Proxy Backdoor Hijack,Arbitrum,True,False,DeFi Protocol,True,4336.0,Canonical Bridge,Other
+2025-07-15,Arcadia V2,2500000.0,0.0,2500000.0,Protocol Logic,Rebalancer contract reentrancy hack,Base,True,False,DeFi Protocol,True,4455.0,Liquidity Manager,Other
+2025-07-19,CoinDCX,44200000.0,0.0,44200000.0,Infrastructure,,,False,False,CEX,False,4042.0,CEX,Other
+2025-07-24,WOO X,14000000.0,0.0,14000000.0,Ecosystem,Social Engineering,"Bitcoin,Ethereum,Arbitrum,BSC",True,False,CEX,False,2346.0,CEX,Other
+2025-07-28,SuperRare,730000.0,0.0,730000.0,Protocol Logic,updateMerkleRoot Access Control Exploit,Ethereum,True,False,DeFi Protocol,True,3144.0,NFT Marketplace,Other
+2025-08-04,CrediX,4500000.0,0.0,4500000.0,Infrastructure,Private Key Compromised,Sonic,True,False,DeFi Protocol,True,,RWA Lending,Lending
+2025-08-10,numa.,320000.0,0.0,320000.0,Protocol Logic,NumaVault Exploit,Sonic,True,False,DeFi Protocol,True,,,Other
+2025-08-12,Odin.Fun,7000000.0,0.0,7000000.0,Protocol Logic,Liquidity Manipulation Exploit,ICP,True,False,DeFi Protocol,True,,,Other
+2025-08-13,Coinbase,300000.0,0.0,300000.0,Ecosystem,MEV composability attack,Ethereum,True,False,CEX,False,,,Other
+2025-08-14,"BtcTurk
+",48000000.0,0.0,48000000.0,Infrastructure,Private Key Compromised,"Ethereum,Avalanche,Arbitrum,Base,Optimism,Mantle,Polygon",True,False,CEX,False,,,Other
+2025-08-25,Panoptic V1.1,0.0,0.0,0.0,Protocol Logic,,"Base,Unichain,Ethereum",True,False,DeFi Protocol,True,6230.0,Options,Other
+2025-08-26,BetterBank,5000000.0,0.0,5000000.0,Protocol Logic,Infinite Mint and Dump,PulseChain,True,False,DeFi Protocol,True,6611.0,Lending,Lending
+2025-08-30,Cozy V2,427000.0,0.0,427000.0,Protocol Logic,Insufficient Sender Verification Exploit,Optimism,True,False,DeFi Protocol,True,2964.0,Insurance,Other
+2025-09-01,OlaXBT,2000000.0,0.0,2000000.0,Ecosystem,Multisig wallet Social Engineering Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2025-09-02,Bunni V2,8400000.0,0.0,8400000.0,Protocol Logic,Liquidity Distribution Function Exploit,"Ethereum,Unichain",True,False,DeFi Protocol,True,5734.0,Dexs,DEX
+2025-09-08,Nemo Yield Trading,2400000.0,0.0,2400000.0,Protocol Logic,Price Oracle Manipulation,Sui,True,False,DeFi Protocol,True,6313.0,Yield,Yield
+2025-09-09,SwissBorg,41500000.0,0.0,41500000.0,Infrastructure,Third-party API compromise,Solana,True,False,CEX,False,2295.0,CEX,Other
+2025-09-10,Evoq Finance,420000.0,0.0,420000.0,Infrastructure,Advanced Persistent Threat (APT) attack,BSC,True,False,DeFi Protocol,True,5959.0,Lending,Lending
+2025-09-12,Kame Aggregator,1300000.0,0.0,1300000.0,Protocol Logic,swap() Function Flaw,Sei,True,False,DeFi Protocol,True,,DEX Aggregator,DEX
+2025-09-13,Shibarium,3000000.0,0.0,3000000.0,Protocol Logic,Validator Stake Manipulation by Flashloan,Shibarium,True,True,DeFi Protocol,True,,,Bridge
+2025-09-22,UXLINK,11300000.0,0.0,11300000.0,Protocol Logic,Delegatecall Exploit,"Ethereum,Arbitrum",True,False,DeFi Protocol,True,6040.0,SoFi,Other
+2025-09-23,Corepound,430000.0,0.0,430000.0,Rugpull,Drained Contracts,CORE,True,False,DeFi Protocol,True,5952.0,Yield,Yield
+2025-09-23,Seedify,1000000.0,0.0,1000000.0,Infrastructure,Infinite Mint and Dump,"BSC,Avalanche",True,True,DeFi Protocol,True,1511.0,Launchpad,Bridge
+2025-09-24,GriffinAI,3000000.0,0.0,3000000.0,Infrastructure,False Peer Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2025-09-24,SBI Crypto,24000000.0,0.0,24000000.0,Infrastructure,,"Bitcoin,Ethereum,Litecoin,Doge,BitcoinCash",True,False,Other,False,,,Other
+2025-09-26,HyperVault,3600000.0,0.0,3600000.0,Rugpull,Drain Vaults,Hyperliquid L1,True,False,DeFi Protocol,True,6597.0,Yield Aggregator,Yield
+2025-09-27,Hyperdrive HL,773000.0,0.0,773000.0,Protocol Logic,Router Exploit,Hyperliquid L1,True,False,DeFi Protocol,True,6298.0,Lending,Lending
+2025-10-04,Abracadabra Spell,1700000.0,0.0,1700000.0,Protocol Logic,Sequential State Manipulation Exploit,Ethereum,True,False,DeFi Protocol,True,347.0,CDP,Lending
+2025-10-09,Astera.fi,573000.0,0.0,573000.0,Protocol Logic,Oracle Price Feed Manipulation,Linea,True,False,DeFi Protocol,True,,,Other
+2025-10-15,Typus Perp,3400000.0,0.0,3400000.0,Protocol Logic,TLP Contract Exploit,Sui,True,False,DeFi Protocol,True,6014.0,Derivatives,Derivatives
+2025-10-20,Sharwa.Finance,146000.0,0.0,146000.0,Protocol Logic,Price Manipulation Attack,Arbitrum,True,False,DeFi Protocol,True,6876.0,Derivatives,Derivatives
+2025-10-27,402bridge,17000.0,0.0,17000.0,Infrastructure,Private Key Compromised (Stored Publicly),Base,True,True,DeFi Protocol,True,,,Bridge
+2025-10-30,Garden,10800000.0,0.0,10800000.0,Solver Exploit,Private Key Compromised,"Ethereum,Arbitrum,Base,Solana",True,True,DeFi Protocol,True,4086.0,Cross Chain Bridge,Bridge
+2025-11-03,Balancer V2,128000000.0,0.0,128000000.0,Protocol Logic,Composable Stable Pools Exploit,"Ethereum,Arbitrum,Base,Polygon,Sonic,Optimism",True,False,DeFi Protocol,True,2611.0,Dexs,DEX
+2025-11-04,Moonwell Lending,1000000.0,0.0,1000000.0,Protocol Logic,Oracle Price Feed Manipulation,"Base,Optimism",True,False,DeFi Protocol,True,1853.0,Lending,Lending
+2025-11-07,DIMO,40000.0,0.0,40000.0,Protocol Logic,Private Key Compromised,Ethereum,True,True,DeFi Protocol,True,,,Bridge
+2025-11-11,Impermax V3,380000.0,0.0,380000.0,Protocol Logic,Zero-Rate Hack,Base,True,False,DeFi Protocol,True,5981.0,Lending,Lending
+2025-11-20,GANA Payment,3100000.0,0.0,3100000.0,Infrastructure,Private Key Compromised,BSC,True,False,DeFi Protocol,True,,,Other
+2025-11-22,Raga Finance,18500.0,0.0,18500.0,Infrastructure,HyperEVM Delta Neutral Exploit,Hyperliquid L1,True,False,DeFi Protocol,True,,Yield Aggregator,Yield
+2025-11-23,Port3 Network,166000.0,0.0,166000.0,Protocol Logic,Infinite Mint and Dump,BSC,True,False,DeFi Protocol,True,,,Other
+2025-11-26,Upbit,36000000.0,0.0,36000000.0,Infrastructure,Private Key Compromised,Solana,True,False,CEX,False,,,Other
+2025-11-30,Yearn Ether,9000000.0,0.0,9000000.0,Protocol Logic,yETH stablepool Exploit,Ethereum,True,False,DeFi Protocol,True,3973.0,Indexes,Other
+2025-12-04,US Permissionless Dollar,1000000.0,0.0,1000000.0,Protocol Logic,"""CPIMP"" proxy front-run",Ethereum,True,False,DeFi Protocol,True,,,Other
+2025-12-11,0G Labs,516000.0,0.0,516000.0,Protocol Logic,emergencyWithdraw Function Exploit,0G,True,False,DeFi Protocol,True,,,Other
+2025-12-12,Ribbon,2700000.0,0.0,2700000.0,Protocol Logic,Private Key Compromised,Ethereum,True,False,DeFi Protocol,True,281.0,Options Vault,Other
+2025-12-14,Mars Perps,960000.0,0.0,960000.0,Protocol Logic,Thin-Market Skew Exploit,Neutron,True,False,DeFi Protocol,True,5498.0,Derivatives,Derivatives
+2025-12-16,FutureSwap,270000.0,0.0,270000.0,Protocol Logic,Flashloan Governance Attack,Ethereum,True,False,DeFi Protocol,True,228.0,Derivatives,Derivatives
+2025-12-16,Yearn Finance,300000.0,0.0,300000.0,Protocol Logic,misconfigured Fulcrum sUSD strategy,Ethereum,True,False,DeFi Protocol,True,113.0,Yield Aggregator,Yield
+2025-12-18,Rari Capital,2000000.0,0.0,2000000.0,Protocol Logic,Uninitialized Proxy Hijack,Ethereum,True,False,DeFi Protocol,True,136.0,Yield Aggregator,Yield
+2025-12-25,Trust Wallet Wallet,7000000.0,0.0,7000000.0,Infrastructure,Private Key Compromised (Supply Chain Attack),"Ethereum,Bitcoin,Solana",True,False,Wallet,False,5577.0,Wallets,Other
+2025-12-27,Flow,3900000.0,0.0,3900000.0,Protocol Logic,mint-and-dump Hack,Flow,True,False,Layer 1,False,6104.0,Chain,Bridge
+2025-12-28,MSCST,129900.0,0.0,129900.0,Protocol Logic,Atomic Sandwich Attack,BSC,True,False,DeFi Protocol,True,,,Other
+2025-12-30,Unleash Protocol,3900000.0,0.0,3900000.0,Protocol Logic,Multisig Governance Hack,Story,True,False,DeFi Protocol,True,5793.0,Lending,Lending
+2026-01-01,PRXVT,97000.0,0.0,97000.0,Protocol Logic,Sybil Attack with CREATE2 Addresses,Base,True,False,DeFi Protocol,True,,,Other
+2026-01-05,TMX TRIBE,1400000.0,0.0,1400000.0,Protocol Logic,Mint & Stake Loop Exploit,Arbitrum,True,False,DeFi Protocol,True,,,Other
+2026-01-06,Fusion by IPOR,336000.0,336000.0,0.0,Protocol Logic,EIP-7702 Delegation Exploit,Arbitrum,True,False,DeFi Protocol,True,5145.0,Yield Aggregator,Yield
+2026-01-07,Polycule,230000.0,0.0,230000.0,Protocol Logic,,Polygon,True,False,DeFi Protocol,True,7125.0,Interface,Other
+2026-01-08,Truebit,26400000.0,0.0,26400000.0,Protocol Logic,Bonding Curve Exploit,Ethereum,True,False,DeFi Protocol,True,,,Other
+2026-01-13,YO Protocol,3730000.0,0.0,3730000.0,Protocol Logic,Slippage Exploit,Ethereum,True,False,DeFi Protocol,True,,Yield Aggregator,Yield
+2026-01-17,Meteora DAMM V2,1500000.0,0.0,1500000.0,Infrastructure,Fake OTC Deal,Solana,True,False,DeFi Protocol,True,6288.0,Dexs,DEX
+2026-01-19,Makina,4200000.0,0.0,4200000.0,Protocol Logic,Flashloan Price Oracle Attack,Ethereum,True,False,DeFi Protocol,True,6964.0,Onchain Capital Allocator,Other
+2026-01-21,Saga,7000000.0,0.0,7000000.0,Protocol Logic,Infinite Mint and Dump,Saga,True,False,Chain,False,4639.0,Chain,Bridge
+2026-01-25,Matcha,13430000.0,0.0,13430000.0,Protocol Logic,Unlimited Approval Exploit,"Base,Ethereum",True,False,DeFi Protocol,True,7555.0,Trading App,Other
+2026-01-25,Aperture LM,3200000.0,0.0,3200000.0,Protocol Logic,,"Ethereum,Base,BSC",True,False,DeFi Protocol,True,1582.0,Liquidity Manager,Other
+2026-01-29,Revert Lend,50000.0,0.0,50000.0,Protocol Logic,Staked Collateral Exploit,Base,True,False,DeFi Protocol,True,6216.0,Lending,Lending
+2026-01-31,Step Finance,40000000.0,0.0,40000000.0,Infrastructure,Private Key Compromised,Solana,True,False,DeFi Protocol,True,4837.0,Portfolio Tracker,Other
+2026-02-01,CrossCurve,3000000.0,0.0,3000000.0,Protocol Logic,Spoofed Cross-Chain Messages,,False,True,DeFi Protocol,True,5146.0,Cross Chain Bridge,Bridge
+2026-02-15,Moonwell Lending,1780000.0,0.0,1780000.0,Protocol Logic,cbETH Collateral Exploit,Base,True,False,DeFi Protocol,True,1853.0,Lending,Lending
+2026-02-21,IoTeX,8000000.0,0.0,8000000.0,Infrastructure,Private Key Compromised,Ethereum,True,True,DeFi Protocol,True,5486.0,Chain,Bridge
+2026-02-21,Veil Cash,5000.0,0.0,5000.0,Protocol Logic,misconfigured Groth16 verifier,Base,True,False,DeFi Protocol,True,6117.0,Privacy,Other
+2026-02-22,Blend Pools V2,10970000.0,0.0,10970000.0,Protocol Logic,Price Oracle Manipulation,Stellar,True,False,DeFi Protocol,True,6122.0,Lending,Lending
+2026-02-23,DGLD,0.0,0.0,0.0,Protocol Logic,Infinite Mint and Dump,Base,True,False,DeFi Protocol,True,,,Other
+2026-02-26,Ploutos Money,390000.0,0.0,390000.0,Protocol Logic,Misconfigured Oracle Exploit,Ethereum,True,False,DeFi Protocol,True,6792.0,Lending,Lending
+2026-02-28,Wise Lending V2,66000.0,0.0,66000.0,Protocol Logic,Flashloan Exploit,"Arbitrum,Ethereum",True,False,DeFi Protocol,True,4494.0,Lending,Lending
+2026-03-02,FOOM Cash,2260000.0,0.0,2260000.0,Protocol Logic,Fake Proof Spam,"Ethereum,Base",True,False,DeFi Protocol,True,6908.0,Privacy,Other
+2026-03-02,Curve LlamaLend,240000.0,0.0,240000.0,Protocol Logic,Donation Attack,Ethereum,True,False,DeFi Protocol,True,4321.0,Lending,Lending
+2026-03-06,SolvBTC,2700000.0,0.0,2700000.0,Protocol Logic,Mint Reserves Logic Exploit,Ethereum,True,True,DeFi Protocol,True,4620.0,Bridge,Bridge
+2026-03-07,Molt EVM,127000.0,0.0,127000.0,Protocol Logic,onlySpawnerToken Modifier Hack,Base,True,False,Other,False,,,Other
+2026-03-09,Gondi V3,230000.0,0.0,230000.0,Protocol Logic,PurchaseBundler Exploit,Ethereum,True,False,NFTfi,False,5561.0,NFT Lending,Other
+2026-03-12,Aave V3,862000.0,862000.0,0.0,Ecosystem,CAPO Oracle Misconfiguration,Ethereum,True,False,DeFi Protocol,True,1599.0,Lending,Lending
+2026-03-12,Stake DAO,176000.0,0.0,176000.0,Protocol Logic,Oracle Message Spoofing,"Arbitrum,Base",True,False,DeFi Protocol,True,249.0,Yield,Yield
+2026-03-14,Goose Finance,8435.0,0.0,8435.0,Protocol Logic,Share Accounting Flaw,BSC,True,False,DeFi Protocol,True,205.0,Farm,Yield
+2026-03-15,Venus Core Pool,3700000.0,0.0,3700000.0,Protocol Logic,Donation Attack,BSC,True,False,DeFi Protocol,True,212.0,Lending,Lending
+2026-03-17,dTRINITY dLEND,257000.0,0.0,257000.0,Protocol Logic,Deposit Inflation Attack,Ethereum,True,False,DeFi Protocol,True,5590.0,Lending,Lending
+2026-03-18,Neutrl,0.0,0.0,0.0,Infrastructure,DNS Hijacking Attack,Ethereum,True,False,DeFi Protocol,True,,,Other
+2026-03-21,Resolv,24500000.0,0.0,24500000.0,Infrastructure,Private Key Compromised,Ethereum,True,False,DeFi Protocol,True,5655.0,Basis Trading,Other
+2026-03-22,Cyrus Finance,5000000.0,0.0,5000000.0,Protocol Logic,Flashloan Pool Shares Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2026-03-28,GoonFi,254000.0,0.0,254000.0,Protocol Logic,Mispricing arbitrage,Solana,True,False,DeFi Protocol,True,6556.0,Dexs,DEX
+2026-03-31,LML/USDT staking protocol,950000.0,0.0,950000.0,Protocol Logic,Price Manipulation Attack,BSC,True,False,DeFi Protocol,True,,,Other
+2026-04-01,Drift Trade,285000000.0,0.0,285000000.0,Infrastructure,Compromised Admin + Fake Token Price Manipulation,Solana,True,False,DeFi Protocol,True,970.0,Derivatives,Derivatives
+2026-04-04,BSC TMM/USDT,1665000.0,0.0,1665000.0,Protocol Logic,Reserve Manipulation Attack,BSC,True,False,DeFi Protocol,True,,,Other
+2026-04-09,Aethir,423000.0,0.0,423000.0,Protocol Logic,Acces Control Exploit,BSC,True,False,DeFi Protocol,True,5591.0,Developer Tools,Other
+2026-04-12,Hyperbridge,2500000.0,0.0,2500000.0,Protocol Logic,Fake State Proof,"Ethereum,Base,BSC,Arbitrum",True,True,DeFi Protocol,True,,,Bridge
+2026-04-12,SubQuery Network,60000.0,0.0,60000.0,Protocol Logic,Acces Control Exploit,Base,True,False,DeFi Protocol,True,,,Other
+2026-04-13,MONA,60950.0,0.0,60950.0,Protocol Logic,BurnAddress Accounting Exploit,BSC,True,False,Token,False,,,Other
+2026-04-13,Dango,410000.0,410000.0,0.0,Protocol Logic,Donate Negative Amounts Hack,Dango,False,False,DeFi Protocol,True,,,Other
+2026-04-14,Zerion Wallet,100000.0,0.0,100000.0,Infrastructure,Hot Wallet Compromise via Social Engineering,,False,False,Wallet,False,4049.0,Wallets,Other
+2026-04-16,Rhea Lend,18400000.0,18400000.0,0.0,Protocol Logic,Fake Collateral Exploit,Near,True,False,DeFi Protocol,True,1546.0,Lending,Lending
+2026-04-16,Grinex,15000000.0,0.0,15000000.0,Infrastructure,Hot wallet hack,"Tron,Ethereum",True,False,CEX,False,,,Other
+2026-04-18,Kelp,293000000.0,0.0,293000000.0,Infrastructure,LayerZero OFT bridge exploit,"Ethereum,Arbitrum",True,True,DeFi Protocol,True,3946.0,Liquid Restaking,Bridge
+2026-04-20,Juicebox V3,52000.0,0.0,52000.0,Protocol Logic,borrowFrom Spoof Attack,Ethereum,True,False,DeFi Protocol,True,2835.0,Launchpad,Other
+2026-04-20,Thetanuts Finance,50000.0,0.0,50000.0,Protocol Logic,First Depositor Attack,Ethereum,True,False,DeFi Protocol,True,1085.0,Yield,Yield
+2026-04-21,Volo Vault,3500000.0,0.0,3500000.0,Protocol Logic,Admin Key Compromised,Sui,True,False,DeFi Protocol,True,3711.0,Risk Curators,Other
+2026-04-22,Kipseli,80000.0,0.0,80000.0,Protocol Logic,Flawed Quoting Logic,Base,True,False,DeFi Protocol,True,,,Other
+2026-04-23,Giddy,1300000.0,0.0,1300000.0,Protocol Logic,Incomplete EIP-712 Signature Coverage,Ethereum,True,False,DeFi Protocol,True,,,Other
+2026-04-25,Purrlend,1500000.0,0.0,1500000.0,Protocol Logic,Fake Bridge Address,"MegaETH,Hyperliquid L1",True,False,DeFi Protocol,True,7473.0,Lending,Lending
+2026-04-26,Litecoin,0.0,0.0,0.0,Protocol Logic,Zero-Day Bug & DDoS Exploit,Litecoin,True,False,Chain,False,4499.0,Chain,Bridge
+2026-04-26,Scallop Lend,150000.0,0.0,150000.0,Protocol Logic,Deprecated V2 Rewards Contract,Sui,True,False,DeFi Protocol,True,1961.0,Lending,Lending
+2026-04-27,Singularity Finance,413000.0,0.0,413000.0,Protocol Logic,Oracle Misconfiguration Exploit,Base,True,False,DeFi Protocol,True,6670.0,Yield,Yield
+2026-04-27,ZetaChain,300000.0,0.0,300000.0,Protocol Logic,GatewayEVM Contracts Exploit,"Ethereum,Base,Polygon,Arbitrum,Avalanche,BSC",True,True,DeFi Protocol,True,4556.0,Chain,Bridge
+2026-04-28,JUDAO,228000.0,0.0,228000.0,Protocol Logic,Flashloan Exploit,BSC,True,False,Token,False,,,Other
+2026-04-28,Quant,138000.0,0.0,138000.0,Protocol Logic,Access Control Exploit,Ethereum,True,False,Token,False,,,Other
+2026-04-29,Sweat Foundation,3500000.0,0.0,3500000.0,Protocol Logic,Refund_first & Refund_second Logic Exploit,Near,True,False,DeFi Protocol,True,,,Other
+2026-04-29,Aftermath Perps,1140000.0,0.0,1140000.0,Protocol Logic,Fee-Accounting Logic Flaw,Sui,True,False,DeFi Protocol,True,7540.0,Derivatives,Derivatives
+2026-04-29,Syndicate,380000.0,380000.0,0.0,Protocol Logic,Commons Bridge Exploit,Base,True,True,DeFi Protocol,True,,,Bridge
+2026-04-30,Wasabi Perps,5500000.0,0.0,5500000.0,Protocol Logic,Admin Key Compromised,"Ethereum,Base,Berachain,Blast",True,False,DeFi Protocol,True,2900.0,Derivatives,Derivatives
+2026-05-01,Sharwa.Finance,32850.0,0.0,32850.0,Protocol Logic,Oracle Price Manipulation,Arbitrum,True,False,DeFi Protocol,True,6876.0,Derivatives,Derivatives
+2026-05-01,Bisq,858000.0,0.0,858000.0,Protocol Logic,Fake Bisq V1 Client Hack,Bitcoin,True,False,DeFi Protocol,True,2588.0,Dexs,DEX
+2026-05-04,SmartCredit,72000.0,0.0,72000.0,Protocol Logic,Flashloan Exploit,Ethereum,True,False,DeFi Protocol,True,1687.0,Lending,Lending
+2026-05-05,Ekubo,1400000.0,0.0,1400000.0,Protocol Logic,Improper Access Control Exploit,Ethereum,True,False,DeFi Protocol,True,3499.0,Dexs,DEX
+2026-05-07,TrustedVolumes,6700000.0,0.0,6700000.0,Protocol Logic,Forged RFQ Orders,Ethereum,True,False,Other,False,,,Other
+2026-05-10,Renegade,209000.0,209000.0,0.0,Protocol Logic,Unprotected Initializer Exploit,Arbitrum,True,False,DeFi Protocol,True,5103.0,Dexs,DEX
+2026-05-11,INK Finance,140000.0,0.0,140000.0,Protocol Logic,Whitelisted Address Impersonation,Polygon,True,False,DeFi Protocol,True,,,Other
+2026-05-12,Aurellion,456000.0,0.0,456000.0,Protocol Logic,Uninitialized Proxy Exploit,Arbitrum,True,False,RWA,False,,,Other
+2026-05-12,SQ Protocol,346000.0,0.0,346000.0,Protocol Logic,Acces Control Exploit,BSC,True,False,DeFi Protocol,True,,,Other
+2026-05-13,Transit Finance,1880000.0,0.0,1880000.0,Protocol Logic,Deprecated Smart Contract Exploit,Tron,True,False,DeFi Protocol,True,,,Other
+2026-05-15,Thorchain DEX,10000000.0,0.0,10000000.0,Protocol Logic,Vault Churn Address Poisoning,"Bitcoin,Ethereum,Base,BSC",True,True,DeFi Protocol,True,412.0,Dexs,Bridge
+2026-05-16,Adshares,628000.0,0.0,628000.0,Protocol Logic,Bridge Verification Bypass,Ethereum,True,True,Other,False,,,Bridge

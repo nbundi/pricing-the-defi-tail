@@ -1,6 +1,7 @@
-# Local API caches — rebuilt by `python3 main.py`. The protocols/ directory
-# alone is ~1.8 GB at full scope; checking it in would dominate the repo.
-data/
+# Per-protocol TVL fetch cache (~1.8 GB at full scope) — rebuilt by
+# `python3 main.py` from DefiLlama. We track data/ itself for
+# reproducibility but exclude this single large subtree.
+data/raw/defillama/protocols/
 
 # Pipeline run log (only present if you `tee` stdout to it)
 output/run.log
