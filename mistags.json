@@ -1,0 +1,1958 @@
+{
+  "source_sectors": {
+    "Lending": [
+      {
+        "date": "2020-06-23",
+        "name": "DDM",
+        "loss_usd": 40000.0,
+        "correct_sector": "NOT_DEFI",
+        "reason": "DMM (DeFi money market) DMG public-sale participants lost funds to Telegram impersonators/scammers off-chain; no protocol exploit, just social-engineering losses reimbursed by the foundation."
+      },
+      {
+        "date": "2021-02-28",
+        "name": "Armor.Fi",
+        "loss_usd": 850000.0,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Armor.Fi team members were scammed off-chain via a fake OTC deal; the loss was team tokens defrauded through social engineering, not a lending-protocol exploit."
+      },
+      {
+        "date": "2021-08-18",
+        "name": "Pinecone Finance",
+        "loss_usd": 200000.0,
+        "correct_sector": "Yield",
+        "reason": "Pinecone Finance is a BSC yield-aggregating auto-compounder; the exploit was a false-deposit bug in its staking-vault logic, not a money-market event."
+      },
+      {
+        "date": "2022-03-23",
+        "name": "Cashio",
+        "loss_usd": 48000000.0,
+        "correct_sector": "Stablecoin",
+        "reason": "Cashio issued the CASH stablecoin on Solana; the attacker bypassed collateral validation to mint unlimited CASH stablecoin, not a lending-market exploit."
+      },
+      {
+        "date": "2022-04-30",
+        "name": "Babylon Finance",
+        "loss_usd": 3400000.0,
+        "correct_sector": "Yield",
+        "reason": "Babylon Finance was an on-chain asset-management/investment-strategy DAO (Rari user), not a permissionless money market; loss was collateral damage from Rari's Fuse hack via a strategy position."
+      },
+      {
+        "date": "2022-05-28",
+        "name": "Mirror Protocol",
+        "loss_usd": 2000000.0,
+        "correct_sector": "Derivatives",
+        "reason": "Mirror Protocol is a synthetic-asset (mAsset) issuer on Terra; the long-standing vulnerability was in the synthetic-asset shorting/minting logic, which fits Derivatives (synthetic-asset issuer)."
+      },
+      {
+        "date": "2022-06-20",
+        "name": "Whale Loans",
+        "loss_usd": 12374.0,
+        "correct_sector": "DEX",
+        "reason": "Whale Loans loss was caused by a broken K-check inside the WhaleSwap Finance AMM Pair contract; the exploited contract was the AMM pool, i.e., a DEX event."
+      },
+      {
+        "date": "2022-07-08",
+        "name": "Bifrost",
+        "loss_usd": 2248328.0,
+        "correct_sector": "Bridge",
+        "reason": "The loss originated from BiFi/Bifrost's BTC deposit-bridge server: the off-chain signing key that recognized incoming BTC was stolen, letting the attacker fake BTC deposits and pull ETH; this is a cross-chain bridge failure, not a money-market exploit."
+      },
+      {
+        "date": "2022-07-28",
+        "name": "Nirvana V1",
+        "loss_usd": 3500000.0,
+        "correct_sector": "Stablecoin",
+        "reason": "Nirvana Finance was an algorithmic reserve-currency / NIRV-stablecoin protocol (OHM-style with NIRV pegged stable and ANA reserve); the flash-loan attack drained the reserve liquidity pools backing the stablecoin, not a lending market."
+      },
+      {
+        "date": "2023-03-13",
+        "name": "Balancer",
+        "loss_usd": 11900000.0,
+        "correct_sector": "DEX",
+        "reason": "Balancer disclosed the Euler contagion drained ~$11.9M from its bbeUSD boosted-pool liquidity; the loss occurred inside a Balancer AMM (DEX) LP pool, not on a lending market."
+      },
+      {
+        "date": "2023-03-14",
+        "name": "Idle Finance",
+        "loss_usd": 10990000.0,
+        "correct_sector": "Yield",
+        "reason": "Idle Finance's loss was inside its Yield Tranches and Best Yield vaults exposed to Euler eTokens; Idle is a yield-aggregation / tranching protocol."
+      },
+      {
+        "date": "2023-03-14",
+        "name": "Yearn Finance",
+        "loss_usd": 1380000.0,
+        "correct_sector": "Yield",
+        "reason": "Yearn Finance's loss was indirect exposure of yvUSDT/yvUSDC vaults (via Idle and Angle strategies) to the Euler hack; Yearn is a yield aggregator, not a lending market."
+      },
+      {
+        "date": "2023-04-11",
+        "name": "Aave Protocol",
+        "loss_usd": 1201576.0,
+        "correct_sector": "NOT_DEFI",
+        "reason": "A single Aave user's personal wallet was drained after a phishing attack revoked their aToken approvals; this is a wallet-phishing loss, not a protocol/lending exploit."
+      },
+      {
+        "date": "2023-08-08",
+        "name": "Steadefi",
+        "loss_usd": 1157000.0,
+        "correct_sector": "Yield",
+        "reason": "Steadefi self-describes as an automated leveraged-yield strategy platform; a deployer-wallet compromise let attackers seize ownership of the yield vaults, so this belongs in Yield."
+      },
+      {
+        "date": "2024-01-04",
+        "name": "Gamma Strategies",
+        "loss_usd": 6296375.0,
+        "correct_sector": "Yield",
+        "reason": "Gamma Strategies is a concentrated-liquidity asset-management/vault protocol; the exploit manipulated the Algebra AMM spot price used when depositing into its LP-vaults, i.e., a yield-vault event, not a money-market event."
+      },
+      {
+        "date": "2024-11-14",
+        "name": "vETH (VirtualToken)",
+        "loss_usd": 463500.0,
+        "correct_sector": "DEX",
+        "reason": "vETH exploit stemmed from a hidden factory function that let anyone inject vETH into Uniswap V2 pools, inflating x*y=k and extracting the AMM price difference; the loss vector was an AMM/DEX-pool manipulation, not a lending market."
+      },
+      {
+        "date": "2025-06-06",
+        "name": "AlexLab II",
+        "loss_usd": 16140000.0,
+        "correct_sector": "DEX",
+        "reason": "AlexLab is Stacks' primary AMM/DEX; attacker registered a fake-transfer token via the self-listing mechanism and drained multiple AMM vault pools by creating a liquidity pool for it, i.e., a DEX/listing exploit."
+      },
+      {
+        "date": "2025-08-26",
+        "name": "BetterBank",
+        "loss_usd": 5000000.0,
+        "correct_sector": "Yield",
+        "reason": "BetterBank's exploited component was the FAVOR-token bonus-minting system (FavorRouterWrapper) that let an attacker-created rogue LP pair trigger unlimited ESTEEM reward-token minting; despite the 'Bank' name, this is a yield-/rewards-farm mint exploit, not a money-market event."
+      },
+      {
+        "date": "2025-09-02",
+        "name": "Venus",
+        "loss_usd": 13000000.0,
+        "correct_sector": "NOT_DEFI",
+        "reason": "A single Venus user was phished via a malicious Zoom client and signed a delegate-approval transaction; the loss came from a personal-wallet phishing attack (later fully recovered), not a Venus protocol exploit."
+      },
+      {
+        "date": "2025-09-22",
+        "name": "UXLINK",
+        "loss_usd": 11300000.0,
+        "correct_sector": "NOT_DEFI",
+        "reason": "UXLINK is a decentralized-social identity project; a multisig private-key compromise let the attacker mint 1B UXLINK tokens. It is not a lending protocol at all \u2014 it is a social-app token exploit."
+      }
+    ],
+    "DEX": [
+      {
+        "date": "2020-04-08",
+        "name": "Bisq",
+        "loss_usd": 250000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Bisq is a P2P off-chain Bitcoin exchange (desktop client + fallback-address trade protocol); not an on-chain DeFi swap product"
+      },
+      {
+        "date": "2021-02-13",
+        "name": "Alpha Finance",
+        "loss_usd": 37500000,
+        "correct_sector": "Lending",
+        "reason": "exploit was of Cream's Iron Bank lending pool via Alpha's contract, not a DEX pool"
+      },
+      {
+        "date": "2021-03-14",
+        "name": "Roll",
+        "loss_usd": 5700000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Roll was a custodial social-token issuer; the hack was a hot-wallet private-key theft, not a DEX/AMM exploit"
+      },
+      {
+        "date": "2021-03-15",
+        "name": "Seascape Network",
+        "loss_usd": 500000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "loss came from an individual early investor's compromised private key holding CWS tokens; personal-wallet compromise on a gaming platform, no DEX/DeFi protocol exploit"
+      },
+      {
+        "date": "2021-05-12",
+        "name": "xToken",
+        "loss_usd": 24000000,
+        "correct_sector": "Derivatives",
+        "reason": "exploit was of Synthetix's xSNXa synthetic-asset contract (LST-style wrapper); Synthetix synths belong under Derivatives"
+      },
+      {
+        "date": "2021-06-29",
+        "name": "THORChain",
+        "loss_usd": 6300000,
+        "correct_sector": "Bridge",
+        "reason": "THORChain is a cross-chain liquidity/messaging protocol; this loss was in the EthBifrost cross-chain bridge component"
+      },
+      {
+        "date": "2021-07-11",
+        "name": "DAO ventures",
+        "loss_usd": 39443,
+        "correct_sector": "Bridge",
+        "reason": "loss was collateral damage from the ChainSwap cross-chain bridge exploit"
+      },
+      {
+        "date": "2021-07-11",
+        "name": "OptionRoom",
+        "loss_usd": 800000,
+        "correct_sector": "Bridge",
+        "reason": "loss stemmed from the ChainSwap cross-chain bridge exploit"
+      },
+      {
+        "date": "2021-07-11",
+        "name": "DoraFactory",
+        "loss_usd": 42373,
+        "correct_sector": "Bridge",
+        "reason": "DORA tokens stolen from the ChainSwap cross-chain bridge smart contract"
+      },
+      {
+        "date": "2021-08-29",
+        "name": "xToken",
+        "loss_usd": 4500000,
+        "correct_sector": "Derivatives",
+        "reason": "second Synthetix xBNTa/xSNXa synthetic-asset exploit; synths belong under Derivatives"
+      },
+      {
+        "date": "2021-10-29",
+        "name": "AnubisDAO",
+        "loss_usd": 60000000,
+        "correct_sector": "Other",
+        "reason": "Copper LBP fundraising rug of an OlympusDAO-fork treasury token; not an AMM/DEX exploit \u2014 an algorithmic-reserve/algo-stable-adjacent token launch scam"
+      },
+      {
+        "date": "2021-11-11",
+        "name": "Curve Finance",
+        "loss_usd": 30000000,
+        "correct_sector": "Stablecoin",
+        "reason": "loss was to Curve USDM LP providers caused by a governance attack on the Mochi USDM stablecoin protocol; root cause is a stablecoin issuer governance exploit"
+      },
+      {
+        "date": "2021-11-24",
+        "name": "dYdX",
+        "loss_usd": 211001,
+        "correct_sector": "Derivatives",
+        "reason": "dYdX is a perpetual-futures DEX (perps), not a spot AMM/order-book DEX in the DeFi taxonomy sense"
+      },
+      {
+        "date": "2022-05-10",
+        "name": "X2Y2",
+        "loss_usd": 165000,
+        "correct_sector": "Other",
+        "reason": "X2Y2 is an NFT marketplace; loss came from Google-Ads phishing of a fake marketplace site \u2014 NFT-adjacent, not a swap DEX"
+      },
+      {
+        "date": "2022-05-10",
+        "name": "Ownly",
+        "loss_usd": 19219,
+        "correct_sector": "Other",
+        "reason": "Ownly is an NFT staking platform, exploit was of its NFT staking contract"
+      },
+      {
+        "date": "2022-05-18",
+        "name": "QAN Platform",
+        "loss_usd": 704590,
+        "correct_sector": "Bridge",
+        "reason": "exploit was of the QANplatform bridgeWithdraw() cross-chain bridge function"
+      },
+      {
+        "date": "2022-05-26",
+        "name": "Pokemoney",
+        "loss_usd": 3500000,
+        "correct_sector": "Other",
+        "reason": "Pokemoney is an NFT/metaverse gaming project rug pull; not a DEX product"
+      },
+      {
+        "date": "2022-08-01",
+        "name": "ZBExchange",
+        "loss_usd": 4767945,
+        "correct_sector": "NOT_DEFI",
+        "reason": "ZBExchange is a centralized crypto-to-fiat/crypto exchange; loss was a hot-wallet private-key compromise \u2014 classic CEX breach"
+      },
+      {
+        "date": "2022-09-08",
+        "name": "Ragnarok Online Invasion",
+        "loss_usd": 45262,
+        "correct_sector": "Other",
+        "reason": "gaming token (Ragnarok Online Invasion); NFT/gaming-adjacent, not a DEX"
+      },
+      {
+        "date": "2022-10-18",
+        "name": "MAI Finance / mMarket (Polygon)",
+        "loss_usd": 180000,
+        "correct_sector": "Lending",
+        "reason": "mMAI.borrow() is a lending-market borrow function exploited via read-only reentrancy \u2014 the victim protocol is a lending market, not a DEX"
+      },
+      {
+        "date": "2022-10-25",
+        "name": "n00dleswap",
+        "loss_usd": 31096,
+        "correct_sector": "Other",
+        "reason": "n00dleswap is an NFT DEX; per taxonomy rules NFT-adjacent products go under Other"
+      },
+      {
+        "date": "2022-11-05",
+        "name": "Pando",
+        "loss_usd": 18577305,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Pando (aka Pando/Mixin-network project) is a custodial multi-asset network; loss was a private-key compromise of custodial wallets across ETH and BTC \u2014 not a DeFi swap protocol"
+      },
+      {
+        "date": "2022-11-08",
+        "name": "Abracadabra Money",
+        "loss_usd": 110911,
+        "correct_sector": "Lending",
+        "reason": "Abracadabra is a CDP/lending protocol (MIM-issuing borrow/lend markets); exploit was of its lending pool via MIM depeg \u2014 not a DEX exploit"
+      },
+      {
+        "date": "2023-02-12",
+        "name": "Mars Meta Space",
+        "loss_usd": 102310,
+        "correct_sector": "Other",
+        "reason": "Mars Meta Space is a gaming/metaverse project; exploit of MMT token via signature compromise, not a DEX"
+      },
+      {
+        "date": "2023-02-18",
+        "name": "Block Tower Capital",
+        "loss_usd": 1500000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "loss belongs to Block Tower Capital, a digital-asset investment firm, whose wallet was drained via a Dexible approval exploit \u2014 this is a victim-fund entry, not a DeFi protocol loss"
+      },
+      {
+        "date": "2023-03-30",
+        "name": "Patricio Worthalter",
+        "loss_usd": 3830000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "personal-wallet phishing of an individual (POAP founder); attacker used a DEX to sell but no DeFi protocol was exploited"
+      },
+      {
+        "date": "2023-07-30",
+        "name": "Alchemix",
+        "loss_usd": 35315843,
+        "correct_sector": "Yield",
+        "reason": "Alchemix is a self-repaying-loan/yield-tokenization protocol (alETH/alUSD); loss was AMO-controlled liquidity in the affected Curve pool \u2014 protocol itself is Yield, not a DEX"
+      },
+      {
+        "date": "2023-07-30",
+        "name": "JPEG'd",
+        "loss_usd": 11363266,
+        "correct_sector": "Lending",
+        "reason": "JPEG'd is an NFT lending platform; the vault contract holding PETH-ETH LP was drained via the Curve Vyper reentrancy bug \u2014 victim protocol is a lending product"
+      },
+      {
+        "date": "2023-12-13",
+        "name": "Levana Protocol",
+        "loss_usd": 1143000,
+        "correct_sector": "Derivatives",
+        "reason": "Levana is a perpetual-futures protocol on Osmosis"
+      },
+      {
+        "date": "2024-05-06",
+        "name": "Perpy Finance",
+        "loss_usd": 132000,
+        "correct_sector": "Derivatives",
+        "reason": "Perpy Finance is a perpetual-futures / social-perps-trading protocol; exploit was of a staking-module proxy fork"
+      },
+      {
+        "date": "2024-05-20",
+        "name": "Gala",
+        "loss_usd": 21775000,
+        "correct_sector": "Other",
+        "reason": "Gala Games gaming-token admin-key compromise causing unauthorized mint; gaming-adjacent, not a DEX exploit"
+      },
+      {
+        "date": "2024-06-09",
+        "name": "Loopring",
+        "loss_usd": 5000000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "exploit was of Loopring Smart Wallets' 2FA/Guardian recovery service (user smart-wallet product), not the Loopring DEX; effectively personal-wallet compromise via a custodial Guardian service"
+      },
+      {
+        "date": "2024-06-11",
+        "name": "YOLO Games",
+        "loss_usd": 1500000,
+        "correct_sector": "Other",
+        "reason": "YOLO Games is a gaming platform on Blast (LP drained via exitPool); NFT/gaming-adjacent, not a DEX"
+      },
+      {
+        "date": "2025-07-10",
+        "name": "Kinto Bridge",
+        "loss_usd": 1550000,
+        "correct_sector": "Bridge",
+        "reason": "event is explicitly named 'Kinto Bridge' and involves an ERC1967Proxy backdoor hijack on a bridge contract"
+      },
+      {
+        "date": "2025-08-28",
+        "name": "Panoptic (Uniswap V3-based Perpetual Options Protocol)",
+        "loss_usd": 2700000,
+        "correct_sector": "Derivatives",
+        "reason": "Panoptic is a perpetual-options protocol built on Uniswap V3; options belong under Derivatives"
+      },
+      {
+        "date": "2026-02-22",
+        "name": "Yieldblox",
+        "loss_usd": 10000000,
+        "correct_sector": "Lending",
+        "reason": "Yieldblox is a Stellar/Soroban money market; loss came from collateral valuation using manipulable SDEX AMM spot price \u2014 victim protocol is Lending"
+      },
+      {
+        "date": "2026-04-09",
+        "name": "Hyperliquid",
+        "loss_usd": 1500000,
+        "correct_sector": "Derivatives",
+        "reason": "Hyperliquid HLP is a perp DEX vault; the loss was HLP absorbing an ADL'd toxic perpetual-futures position"
+      },
+      {
+        "date": "2026-05-01",
+        "name": "Bisq",
+        "loss_usd": 858000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Bisq is a P2P off-chain BTC exchange; the exploit was of the Bisq v1 desktop trade protocol via fake/modified clients \u2014 not on-chain DeFi"
+      }
+    ],
+    "Yield": [
+      {
+        "date": "2021-02-27",
+        "name": "Furucombo",
+        "loss_usd": 14000000,
+        "correct_sector": "Other",
+        "reason": "Furucombo is a DeFi transaction aggregator/batching tool (uses proxy 'cubes' to compose txs); not a yield vault. Exploit stole from user approvals to the proxy."
+      },
+      {
+        "date": "2021-03-05",
+        "name": "Paid Network",
+        "loss_usd": 27000000,
+        "correct_sector": "Other",
+        "reason": "PAID Network is a token/payments/SLA platform; incident was a token-minting rugpull via ProxyAdmin compromise, hitting token holders not vault depositors."
+      },
+      {
+        "date": "2021-05-08",
+        "name": "Rari Capital",
+        "loss_usd": 11000000,
+        "correct_sector": "Lending",
+        "reason": "Rari Capital's exploit involved over-borrowing against ibETH collateral via oracle manipulation on the lending market \u2014 Rari is a permissionless money market (Fuse pools)."
+      },
+      {
+        "date": "2021-06-24",
+        "name": "SharedStake",
+        "loss_usd": 500000,
+        "correct_sector": "Derivatives",
+        "reason": "SharedStake is a liquid ETH staking protocol (LST); LST/LRT products are Derivatives per paper convention."
+      },
+      {
+        "date": "2021-07-15",
+        "name": "Bondly",
+        "loss_usd": 5900000,
+        "correct_sector": "Other",
+        "reason": "Bondly is an NFT/e-commerce platform; exploit minted 373M BONDLY via compromised owner of StakingReward and dumped tokens \u2014 hits token holders, not a yield vault."
+      },
+      {
+        "date": "2021-11-26",
+        "name": "SnowdogDAO",
+        "loss_usd": 30000000,
+        "correct_sector": "Stablecoin",
+        "reason": "SnowdogDAO was an OlympusDAO/OHM-fork reserve-currency protocol; per paper convention such algorithmic reserve currencies belong in Stablecoin."
+      },
+      {
+        "date": "2022-02-08",
+        "name": "Superfluid",
+        "loss_usd": 10850000,
+        "correct_sector": "Other",
+        "reason": "Superfluid is a real-time token streaming protocol, not a yield vault; exploit spoofed distribution indexes to mint wrapped tokens."
+      },
+      {
+        "date": "2022-02-14",
+        "name": "Titano",
+        "loss_usd": 1949111,
+        "correct_sector": "Stablecoin",
+        "reason": "Titano is an OHM-style auto-staking rebase reserve token on BSC; classify with reserve/algorithmic reserve tokens under Stablecoin."
+      },
+      {
+        "date": "2022-02-14",
+        "name": "BuildFinance",
+        "loss_usd": 470000,
+        "correct_sector": "Other",
+        "reason": "BuildFinance was compromised via a hostile DAO governance takeover of the BUILD token contract; not a yield vault \u2014 hits governance-token holders."
+      },
+      {
+        "date": "2022-04-12",
+        "name": "Elephant Money",
+        "loss_usd": 22200000,
+        "correct_sector": "Stablecoin",
+        "reason": "Elephant Money's TRUNK is a stable/reserve-backed rebase token (mint/redeem against ELEPHANT via AMM oracle); algorithmic reserve currency \u2192 Stablecoin."
+      },
+      {
+        "date": "2022-05-01",
+        "name": "Rari Capital",
+        "loss_usd": 80000000,
+        "correct_sector": "Lending",
+        "reason": "Rari's Fuse pools are permissionless lending markets (Compound fork); reentrancy in borrow() drained lending pools \u2014 clearly Lending."
+      },
+      {
+        "date": "2022-05-19",
+        "name": "Kronos Dao",
+        "loss_usd": 6000000,
+        "correct_sector": "Stablecoin",
+        "reason": "Kronos DAO is described as 'the first decentralized reserve currency protocol' on Klaytn (Olympus fork) \u2014 algorithmic reserve currency \u2192 Stablecoin."
+      },
+      {
+        "date": "2022-06-02",
+        "name": "AniMoon",
+        "loss_usd": 6300000,
+        "correct_sector": "Other",
+        "reason": "AniMoon is a P2E NFT project (Pokemon-themed 10k NFT collection); team rug pull \u2014 gaming/NFT-adjacent, not a yield vault."
+      },
+      {
+        "date": "2022-06-24",
+        "name": "Ribbon Finance",
+        "loss_usd": 351064,
+        "correct_sector": "Derivatives",
+        "reason": "Ribbon runs DeFi Options Vaults (covered-call/put-selling options strategies) \u2014 options products \u2192 Derivatives per paper convention."
+      },
+      {
+        "date": "2022-07-19",
+        "name": "Freedom Protocol | Raccoon Network",
+        "loss_usd": 20800000,
+        "correct_sector": "Other",
+        "reason": "Raccoon Network is a metaverse open-world project; joint rug with Freedom Protocol drained BUSD \u2014 gaming/metaverse, not yield."
+      },
+      {
+        "date": "2022-07-25",
+        "name": "SuperStep",
+        "loss_usd": 255682,
+        "correct_sector": "Other",
+        "reason": "SuperStep is a Jog-to-Earn fitness dApp with a staking backdoor; gaming/move-to-earn \u2014 not a yield vault."
+      },
+      {
+        "date": "2022-08-08",
+        "name": "Dragoma",
+        "loss_usd": 3500000,
+        "correct_sector": "Other",
+        "reason": "Dragoma is a P2E GameFi/SocialFi dragon-breeding game rugpulled by its team \u2014 gaming, not yield."
+      },
+      {
+        "date": "2022-08-16",
+        "name": "Stader.Near",
+        "loss_usd": 165000,
+        "correct_sector": "Derivatives",
+        "reason": "Stader Labs' NearX is a liquid staking token for NEAR; LST products \u2192 Derivatives per paper convention."
+      },
+      {
+        "date": "2022-09-20",
+        "name": "Boy X Highspeed",
+        "loss_usd": 2500000,
+        "correct_sector": "Other",
+        "reason": "Boy X Highspeed is a gaming/token project whose staking pool was drained via privileged inCaseTokensGetStuck; primary business is gaming, not a yield vault."
+      },
+      {
+        "date": "2022-10-21",
+        "name": "OlympusDAO (Bond Teller)",
+        "loss_usd": 292000,
+        "correct_sector": "Stablecoin",
+        "reason": "OlympusDAO is the canonical decentralized reserve-currency protocol (OHM); algorithmic reserve currency \u2192 Stablecoin per paper convention."
+      },
+      {
+        "date": "2022-11-15",
+        "name": "Sheep Farm",
+        "loss_usd": 91320,
+        "correct_sector": "Other",
+        "reason": "Sheep Farm is a GameFi dApp on BSC (gem-collection game); exploit registered dummy players \u2014 gaming, not yield."
+      },
+      {
+        "date": "2023-01-26",
+        "name": "MutantNFTs",
+        "loss_usd": 25000,
+        "correct_sector": "Other",
+        "reason": "The Lab from Mutants is an NFT-staking rewards platform ('stake keys' from users); NFT-adjacent, not a yield vault."
+      },
+      {
+        "date": "2023-03-15",
+        "name": "Poolz Finance",
+        "loss_usd": 471720,
+        "correct_sector": "Other",
+        "reason": "Poolz Finance is an IDO launchpad on BSC/Polygon; LockedDeal vault (a token-vesting/launchpad primitive) was exploited \u2014 launchpad \u2192 Other."
+      },
+      {
+        "date": "2023-05-31",
+        "name": "unshETH",
+        "loss_usd": 375000,
+        "correct_sector": "Derivatives",
+        "reason": "unshETH is a liquid staking / LST aggregator on Ethereum/Arbitrum; LST/LRT products \u2192 Derivatives per paper convention."
+      },
+      {
+        "date": "2023-09-02",
+        "name": "DAppSocial",
+        "loss_usd": 16000,
+        "correct_sector": "Other",
+        "reason": "DAppSocial is a social-token staking product (reentrancy in reward withdrawal); social/creator-token DeFi rather than a yield vault."
+      },
+      {
+        "date": "2024-04-19",
+        "name": "Hedgey",
+        "loss_usd": 44700000,
+        "correct_sector": "Other",
+        "reason": "Hedgey is a token-vesting/lock/airdrop-campaign platform (token distribution infrastructure); exploit was cancelCampaign returning locked funds \u2014 not a yield-earning vault."
+      },
+      {
+        "date": "2024-05-16",
+        "name": "pump.fun",
+        "loss_usd": 2000000,
+        "correct_sector": "Other",
+        "reason": "pump.fun is a Solana memecoin launchpad; former-team-member flashloan drained bonding-curve reserves \u2014 launchpad \u2192 Other."
+      },
+      {
+        "date": "2024-05-22",
+        "name": "TonUP",
+        "loss_usd": 107600,
+        "correct_sector": "Other",
+        "reason": "TonUP is a TON ecosystem launchpad; its recently-launched staking contract mis-set parameters allowed users to over-claim UP tokens \u2014 launchpad \u2192 Other."
+      },
+      {
+        "date": "2024-06-19",
+        "name": "Pendle",
+        "loss_usd": 1400000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "This is a phishing scam targeting an individual Pendle user (approval theft), not a Pendle-protocol loss; per paper convention, individual off-chain phishing \u2192 NOT_DEFI."
+      },
+      {
+        "date": "2024-09-22",
+        "name": "Bankroll",
+        "loss_usd": 230000,
+        "correct_sector": "Other",
+        "reason": "Bankroll Network's exploited contract is a token-sale 'buyFor' contract (bonding-curve token distribution / rewards pyramid), not a yield vault; hits token buyers."
+      },
+      {
+        "date": "2025-03-05",
+        "name": "Pond.fun",
+        "loss_usd": 145000,
+        "correct_sector": "Other",
+        "reason": "Pond.fun is a Linea-based memecoin launchpad; lead engineer drained liquidity \u2014 launchpad \u2192 Other."
+      },
+      {
+        "date": "2025-04-01",
+        "name": "Zapper",
+        "loss_usd": 7900000,
+        "correct_sector": "Other",
+        "reason": "Zapper is a DeFi portfolio/asset-management dashboard; loss came from .fi-domain hijack and malicious frontend, not a yield vault. Non-yield DeFi tool \u2192 Other."
+      },
+      {
+        "date": "2025-04-11",
+        "name": "Jake Gallen",
+        "loss_usd": 100000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "This is a CEO's personal wallet compromised via a Zoom remote-access malware ('GOOPDATE'); off-chain personal-device compromise \u2192 NOT_DEFI."
+      },
+      {
+        "date": "2025-04-18",
+        "name": "NUMA.",
+        "loss_usd": 518000,
+        "correct_sector": "Derivatives",
+        "reason": "NumaMoney is described as an 'LST-backed synthetics protocol' on Arbitrum; LST/LRT-backed synthetics \u2192 Derivatives per paper convention."
+      },
+      {
+        "date": "2025-06-19",
+        "name": "Bankroll",
+        "loss_usd": 65000,
+        "correct_sector": "Other",
+        "reason": "Same Bankroll Network protocol \u2014 bonding-curve token-sale contract (sell() underflow), not a yield vault; hits token buyers."
+      },
+      {
+        "date": "2025-07-23",
+        "name": "Trusta AI",
+        "loss_usd": 615000,
+        "correct_sector": "Other",
+        "reason": "Loss was a token-approval scam right after Trusta AI's Binance Alpha launch (unverified third-party contract draining approvals via fake LPs); AI token launch scam \u2192 Other."
+      },
+      {
+        "date": "2025-08-10",
+        "name": "numa.",
+        "loss_usd": 320000,
+        "correct_sector": "Derivatives",
+        "reason": "Same NUMA LST-backed synthetics protocol (Sonic deployment); LST-backed synthetics \u2192 Derivatives."
+      },
+      {
+        "date": "2025-08-12",
+        "name": "Odin.Fun",
+        "loss_usd": 7000000,
+        "correct_sector": "Other",
+        "reason": "Odin.fun is a Bitcoin-based memecoin launchpad and AMM/trading platform; liquidity manipulation on its market-making tool \u2014 memecoin launchpad \u2192 Other."
+      },
+      {
+        "date": "2025-12-12",
+        "name": "Ribbon",
+        "loss_usd": 2700000,
+        "correct_sector": "Derivatives",
+        "reason": "Ribbon/Aevo is a DeFi options protocol (DoV) whose oracle-proxy upgrade lacked access control; options products \u2192 Derivatives per paper convention."
+      },
+      {
+        "date": "2025-12-12",
+        "name": "Zerobase",
+        "loss_usd": 181500,
+        "correct_sector": "Other",
+        "reason": "ZEROBASE is a zero-knowledge proof / ZK-computing network, not a yield vault; loss was a frontend phishing compromise draining USDT approvals \u2014 infra/ZK product \u2192 Other."
+      },
+      {
+        "date": "2025-12-18",
+        "name": "Rari Capital",
+        "loss_usd": 2000000,
+        "correct_sector": "Lending",
+        "reason": "Rari Capital is a permissionless money market (Fuse pools); Compromised Private Key drain on Rari contracts \u2014 Lending."
+      },
+      {
+        "date": "2026-01-31",
+        "name": "Step Finance",
+        "loss_usd": 35000000,
+        "correct_sector": "Other",
+        "reason": "Step Finance is a Solana DeFi portfolio tracker/dashboard; treasury breach via compromised stake authorization on treasury wallets \u2014 portfolio-tracker product \u2192 Other."
+      },
+      {
+        "date": "2026-03-05",
+        "name": "BitcoinReserveOffering",
+        "loss_usd": 2700000,
+        "correct_sector": "Other",
+        "reason": "Bitcoin Reserve Offering is a token-offering/IDO-style product; the exploit is a business-logic flaw in the offering contract \u2014 hits token buyers, not vault depositors."
+      },
+      {
+        "date": "2026-04-20",
+        "name": "Thetanuts Finance",
+        "loss_usd": 50000,
+        "correct_sector": "Derivatives",
+        "reason": "Thetanuts is a DeFi Options Vault (DOV) platform selling structured options products; options \u2192 Derivatives per paper convention."
+      },
+      {
+        "date": "2026-05-28",
+        "name": "DxSale",
+        "loss_usd": 7300000,
+        "correct_sector": "Other",
+        "reason": "DxSale is a veteran BSC IDO launchpad / liquidity-locker; legacy liquidity-locker contracts were drained via owner privileges \u2014 launchpad/locker \u2192 Other."
+      }
+    ],
+    "Stablecoin": [
+      {
+        "date": "2020-04-24",
+        "name": "Hegic",
+        "loss_usd": 38151,
+        "correct_sector": "Derivatives",
+        "reason": "Hegic is an on-chain options protocol; bug in options.length locked put/call option liquidity"
+      },
+      {
+        "date": "2020-06-25",
+        "name": "Web3 DeFi",
+        "loss_usd": 100000,
+        "correct_sector": "Other",
+        "reason": "Phishing dapps impersonating MakerDAO SAI->DAI migration tool; end-user phishing, not a stablecoin protocol failure"
+      },
+      {
+        "date": "2020-08-13",
+        "name": "Yam DAO",
+        "loss_usd": 750000,
+        "correct_sector": "Other",
+        "reason": "YAM is an elastic-supply rebase governance token, not a stablecoin; rebase bug in totalSupply calc"
+      },
+      {
+        "date": "2020-09-09",
+        "name": "EMD",
+        "loss_usd": 2468838,
+        "correct_sector": "Other",
+        "reason": "EmeraldMine (EOS) yield-farming/DeFi launchpad rugpull; not a stablecoin peg or collateral event"
+      },
+      {
+        "date": "2020-09-13",
+        "name": "bZx",
+        "loss_usd": 8100000,
+        "correct_sector": "Lending",
+        "reason": "bZx is a margin-lending / iToken money market; iToken duplication bug"
+      },
+      {
+        "date": "2020-09-28",
+        "name": "Eminence",
+        "loss_usd": 15028250,
+        "correct_sector": "Other",
+        "reason": "Eminence was an unreleased anime-themed bonding-curve token game by AC; not a stablecoin"
+      },
+      {
+        "date": "2020-11-04",
+        "name": "PercentFinance",
+        "loss_usd": 1000000,
+        "correct_sector": "Lending",
+        "reason": "Percent Finance is a Compound-fork lending market; USDC/ETH/WBTC markets frozen"
+      },
+      {
+        "date": "2020-11-23",
+        "name": "Deriswap",
+        "loss_usd": 2170264,
+        "correct_sector": "Other",
+        "reason": "Fake DWAP token imitating Andre Cronje's unreleased Deriswap; classic memecoin/impostor rugpull"
+      },
+      {
+        "date": "2020-11-26",
+        "name": "MiniVault.Finance",
+        "loss_usd": 17372,
+        "correct_sector": "Yield",
+        "reason": "MiniCORE 'vault' yield-farming rugpull via proxy admin key; not a stablecoin"
+      },
+      {
+        "date": "2020-12-14",
+        "name": "YFDash",
+        "loss_usd": 61000,
+        "correct_sector": "Other",
+        "reason": "YFDash was a YfDFI impostor token sale rugpull; not a stablecoin"
+      },
+      {
+        "date": "2020-12-17",
+        "name": "Deriswap",
+        "loss_usd": 3262,
+        "correct_sector": "Other",
+        "reason": "Second fake Deriswap impostor-token rugpull; not a stablecoin"
+      },
+      {
+        "date": "2020-12-21",
+        "name": "EXMO",
+        "loss_usd": 11100000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "EXMO is a centralized cryptocurrency exchange; hot-wallet breach"
+      },
+      {
+        "date": "2021-02-27",
+        "name": "Yeld.finance",
+        "loss_usd": 160000,
+        "correct_sector": "Yield",
+        "reason": "Yeld is a yield aggregator (Yearn-fork DAI pool); flash-loan attack on the yield vault"
+      },
+      {
+        "date": "2021-04-12",
+        "name": "Elephant Money",
+        "loss_usd": 22200000,
+        "correct_sector": "Other",
+        "reason": "Elephant Money is a BSC reflection/rebase memecoin (ELEPHANT/TRUNK); not a stablecoin"
+      },
+      {
+        "date": "2021-05-23",
+        "name": "DEFI100",
+        "loss_usd": 32000000,
+        "correct_sector": "Other",
+        "reason": "DEFI100 was a BSC index/reflection token pyramid-scheme rugpull; not a stablecoin"
+      },
+      {
+        "date": "2021-06-23",
+        "name": "StableMagnet",
+        "loss_usd": 27000000,
+        "correct_sector": "DEX",
+        "reason": "StableMagnet was a Curve-style stableswap AMM on BSC; rugpulled via unverified SwapUtil library. It is a DEX, not a stablecoin issuer"
+      },
+      {
+        "date": "2021-07-09",
+        "name": "Circle",
+        "loss_usd": 2000000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Circle corporate email/business fraud (SEC filing); off-chain corporate loss, not a stablecoin protocol/peg event"
+      },
+      {
+        "date": "2021-07-19",
+        "name": "Array Finance",
+        "loss_usd": 516391,
+        "correct_sector": "Yield",
+        "reason": "Array Finance is a tokenized-fund / index vault; flash-loan attack on buy() function"
+      },
+      {
+        "date": "2021-08-03",
+        "name": "Popsicle Finance",
+        "loss_usd": 20000000,
+        "correct_sector": "Yield",
+        "reason": "Popsicle Finance is a concentrated-liquidity yield-optimizer (PLP shares); collectFees() bug"
+      },
+      {
+        "date": "2021-08-12",
+        "name": "DAO Maker Vesting",
+        "loss_usd": 6971105,
+        "correct_sector": "Other",
+        "reason": "DAO Maker is a token launchpad / crowdfunding platform; vesting contract exploit"
+      },
+      {
+        "date": "2021-08-16",
+        "name": "XSURGE Token",
+        "loss_usd": 5200000,
+        "correct_sector": "Other",
+        "reason": "XSURGE is a BSC rebase/reflection memecoin (SURGE); sell() reentrancy exploit"
+      },
+      {
+        "date": "2021-08-27",
+        "name": "Wault Finance",
+        "loss_usd": 803000,
+        "correct_sector": "Yield",
+        "reason": "Wault Finance is a BSC/Polygon yield-farming / DEX aggregator (WEX staking); redeem() slippage attack"
+      },
+      {
+        "date": "2021-11-01",
+        "name": "SQUID",
+        "loss_usd": 12000000,
+        "correct_sector": "Other",
+        "reason": "SQUID (Squid Game) is a BSC memecoin rugpull"
+      },
+      {
+        "date": "2021-11-25",
+        "name": "Snowdog",
+        "loss_usd": 18100000,
+        "correct_sector": "Other",
+        "reason": "SDOG is a rebase memecoin on Avalanche (OlympusDAO fork), not a stablecoin"
+      },
+      {
+        "date": "2021-11-25",
+        "name": "ElectronDAO",
+        "loss_usd": 728653,
+        "correct_sector": "Other",
+        "reason": "OHM-fork DAO fundraising rugpull on Polygon; not a stablecoin"
+      },
+      {
+        "date": "2021-12-08",
+        "name": "8ightDAO",
+        "loss_usd": 1750000,
+        "correct_sector": "Other",
+        "reason": "OHM-fork DAO on Harmony; private key compromise of treasury"
+      },
+      {
+        "date": "2021-12-31",
+        "name": "Vesper Finance",
+        "loss_usd": 1000000,
+        "correct_sector": "Lending",
+        "reason": "Vesper Lend Rari Pool #23 (Fuse lending pool) exploited via VUSD/USDC oracle manipulation; lending protocol event"
+      },
+      {
+        "date": "2022-01-08",
+        "name": "LCX",
+        "loss_usd": 7940000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "LCX is a centralized exchange; hot-wallet private-key compromise"
+      },
+      {
+        "date": "2022-01-23",
+        "name": "Rich Dwarves Tribe",
+        "loss_usd": 3000000,
+        "correct_sector": "Other",
+        "reason": "NFT project rugpull; not a stablecoin"
+      },
+      {
+        "date": "2022-01-30",
+        "name": "DataDAO Finance",
+        "loss_usd": 781637,
+        "correct_sector": "Other",
+        "reason": "DataDAO PART token approval backdoor rugpull; not a stablecoin protocol"
+      },
+      {
+        "date": "2022-03-20",
+        "name": "Li.finance",
+        "loss_usd": 592500,
+        "correct_sector": "Bridge",
+        "reason": "LI.FI is a cross-chain bridge/DEX aggregator; swapAndStartBridgeTokensViaCBridge() vulnerability"
+      },
+      {
+        "date": "2022-03-31",
+        "name": "Ola Finance",
+        "loss_usd": 4335000,
+        "correct_sector": "Lending",
+        "reason": "Ola Finance is a Compound-fork lending market on Fuse chain; ERC677 reentrancy on lending pools"
+      },
+      {
+        "date": "2022-04-12",
+        "name": "ElephantMoney",
+        "loss_usd": 11200000,
+        "correct_sector": "Other",
+        "reason": "Elephant Money (BSC reflection/rebase memecoin) flashloan oracle manipulation; not a stablecoin"
+      },
+      {
+        "date": "2022-04-21",
+        "name": "YEED",
+        "loss_usd": 1043069,
+        "correct_sector": "Other",
+        "reason": "YEED is a BSC reflection/deflationary memecoin; not a stablecoin"
+      },
+      {
+        "date": "2022-07-13",
+        "name": "Space Godzilla",
+        "loss_usd": 25576,
+        "correct_sector": "Other",
+        "reason": "Space Godzilla is a BSC deflationary memecoin; flashloan attack on swapAndLiquifyStepv1()"
+      },
+      {
+        "date": "2022-09-05",
+        "name": "DaoSwap",
+        "loss_usd": 580000,
+        "correct_sector": "DEX",
+        "reason": "DaoSwap is an AMM DEX on BSC; reward-mechanism flaw during swap"
+      },
+      {
+        "date": "2022-09-08",
+        "name": "New Free DAO",
+        "loss_usd": 1250372,
+        "correct_sector": "Other",
+        "reason": "New Free DAO / NFD is a BSC governance-token DAO pyramid; flash-loan attack; not a stablecoin"
+      },
+      {
+        "date": "2022-09-11",
+        "name": "Dogechain",
+        "loss_usd": 600000,
+        "correct_sector": "Bridge",
+        "reason": "Dogechain wDoge bridge exploit; minted 9.7M wDoge and bridged out"
+      },
+      {
+        "date": "2022-10-01",
+        "name": "ULME Token",
+        "loss_usd": 250000,
+        "correct_sector": "Other",
+        "reason": "ULME is a BSC 'miner' pyramid/reflection token; buyMiner() allowance drain"
+      },
+      {
+        "date": "2022-10-04",
+        "name": "Sovryn",
+        "loss_usd": 1100000,
+        "correct_sector": "Lending",
+        "reason": "Sovryn RBTC/USDT lending pools on RSK exploited by price manipulation; lending protocol event"
+      },
+      {
+        "date": "2022-10-11",
+        "name": "TempleDAO",
+        "loss_usd": 2300000,
+        "correct_sector": "Other",
+        "reason": "TempleDAO is an OHM-fork yield/DAO (STAX staking); TEMPLE is not a stablecoin. Staking migration access-control bug"
+      },
+      {
+        "date": "2022-10-12",
+        "name": "Mango",
+        "loss_usd": 100000000,
+        "correct_sector": "Derivatives",
+        "reason": "Mango Markets is a Solana perpetuals DEX; MNGO-PERP oracle manipulation"
+      },
+      {
+        "date": "2022-10-12",
+        "name": "Tulip Protocol",
+        "loss_usd": 2500000,
+        "correct_sector": "Yield",
+        "reason": "Tulip Protocol is a Solana yield aggregator / leveraged yield farming platform; USDC/RAY strategy vault loss via Mango exposure"
+      },
+      {
+        "date": "2022-11-18",
+        "name": "Polynomial Protocol",
+        "loss_usd": 7000,
+        "correct_sector": "Derivatives",
+        "reason": "Polynomial is a structured-options / derivatives vault on Optimism; PolynomialZap approval-drain bug"
+      },
+      {
+        "date": "2023-01-27",
+        "name": "Azuki",
+        "loss_usd": 750000,
+        "correct_sector": "Other",
+        "reason": "Azuki NFT Twitter compromise + wallet phishing drain; NFT project"
+      },
+      {
+        "date": "2023-02-09",
+        "name": "Umami Finance",
+        "loss_usd": 380000,
+        "correct_sector": "Yield",
+        "reason": "Umami Finance is an Arbitrum yield-vault platform; CEO token dump (soft rug)"
+      },
+      {
+        "date": "2023-02-20",
+        "name": "Hope Finance",
+        "loss_usd": 1860000,
+        "correct_sector": "Other",
+        "reason": "Hope Finance was a rugpull of an ETH-pegged algorithmic-token project; HOPE is pegged to ETH, not a USD-stablecoin protocol - and this was a treasury-router rug"
+      },
+      {
+        "date": "2023-02-24",
+        "name": "EFVault",
+        "loss_usd": 5100000,
+        "correct_sector": "Yield",
+        "reason": "Shata Capital EFVault is a USDC yield vault; storage-collision upgrade bug"
+      },
+      {
+        "date": "2023-03-13",
+        "name": "SwissBorg",
+        "loss_usd": 4500000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "SwissBorg is a centralized/licensed crypto asset-management app; ETH/USDT lost in Earn strategy exposure to Euler"
+      },
+      {
+        "date": "2023-03-24",
+        "name": "ERC20 Permit",
+        "loss_usd": 8804793,
+        "correct_sector": "Other",
+        "reason": "EOA wallet phishing exploiting EIP-2612 Permit; user-level phishing not a stablecoin protocol event"
+      },
+      {
+        "date": "2023-03-29",
+        "name": "UNMS",
+        "loss_usd": 100000,
+        "correct_sector": "Other",
+        "reason": "UNMS BSC token flash-loan exploit; not a stablecoin"
+      },
+      {
+        "date": "2023-04-11",
+        "name": "MetaPoint (POT Token)",
+        "loss_usd": 820000,
+        "correct_sector": "Other",
+        "reason": "MetaPoint is a BSC metaverse project (POT/USDT LP); not a stablecoin"
+      },
+      {
+        "date": "2023-05-22",
+        "name": "Fintoch",
+        "loss_usd": 31633158,
+        "correct_sector": "Other",
+        "reason": "Fintoch was a Ponzi/investment-scheme rugpull on BSC (FTH token)"
+      },
+      {
+        "date": "2023-06-15",
+        "name": "DEPUSDT_LEVUSDC",
+        "loss_usd": 105400,
+        "correct_sector": "DEX",
+        "reason": "DEP/USDT and LEV/USDC LP pools stolen via access-control bug; DEX/LP pool event not a stablecoin"
+      },
+      {
+        "date": "2023-06-19",
+        "name": "Ara Finance",
+        "loss_usd": 125000,
+        "correct_sector": "Other",
+        "reason": "Ara Finance BSC flash-loan attack on ARA token; not a stablecoin protocol"
+      },
+      {
+        "date": "2023-06-20",
+        "name": "MIMSpell",
+        "loss_usd": 17000,
+        "correct_sector": "Other",
+        "reason": "'MIMSpell' arbitrary external-call vulnerability - a small BSC token exploit unrelated to Abracadabra MIM stablecoin"
+      },
+      {
+        "date": "2023-06-21",
+        "name": "Baby Doge Coin",
+        "loss_usd": 100000,
+        "correct_sector": "Other",
+        "reason": "Baby Doge Coin is a BSC memecoin; flash-loan attack, not a stablecoin"
+      },
+      {
+        "date": "2023-07-04",
+        "name": "BaoCommunity",
+        "loss_usd": 46000,
+        "correct_sector": "Yield",
+        "reason": "Bao Community synthetic-asset / yield vault donation-inflation ERC4626 attack; small event, not a stablecoin peg"
+      },
+      {
+        "date": "2023-07-26",
+        "name": "IEGT",
+        "loss_usd": 1140000,
+        "correct_sector": "Other",
+        "reason": "IEGT is a BSC scam token with hidden mint via inline assembly; rugpull memecoin, not a stablecoin"
+      },
+      {
+        "date": "2023-08-02",
+        "name": "DeriTrade",
+        "loss_usd": 13411,
+        "correct_sector": "Other",
+        "reason": "Fake DeriTrade trading platform on BSC; deployer rug via DUSD LP drain (a fake in-house 'stablecoin' scam token)"
+      },
+      {
+        "date": "2023-08-12",
+        "name": "Safe",
+        "loss_usd": 283829,
+        "correct_sector": "Other",
+        "reason": "Safe (Gnosis Safe) user wallet approval exploit; user-level loss, not a stablecoin protocol"
+      },
+      {
+        "date": "2023-09-05",
+        "name": "FloorDAO",
+        "loss_usd": 65000,
+        "correct_sector": "Other",
+        "reason": "FloorDAO is an NFT-liquidity / OHM-fork DAO; distribute/rebase bug. Not a stablecoin"
+      },
+      {
+        "date": "2023-09-05",
+        "name": "Connext",
+        "loss_usd": 39000,
+        "correct_sector": "Bridge",
+        "reason": "Connext is a cross-chain bridge/interop protocol; NEXT airdrop-claim exploit"
+      },
+      {
+        "date": "2023-09-07",
+        "name": "Fortress",
+        "loss_usd": 15000000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Fortress Trust is a centralized crypto trust/custody company; third-party cloud compromise"
+      },
+      {
+        "date": "2023-09-21",
+        "name": "Linear Finance",
+        "loss_usd": 211726,
+        "correct_sector": "Derivatives",
+        "reason": "Linear Finance is a cross-chain synthetic-asset (delta-one) protocol; attacker minted unlimited LAAVE synthetic. Synthetic-asset derivatives platform"
+      },
+      {
+        "date": "2023-09-27",
+        "name": "XSD Token",
+        "loss_usd": 12000,
+        "correct_sector": "Other",
+        "reason": "XSD is a small BSC token; flash-loan attack, not a stablecoin peg or collateral event"
+      },
+      {
+        "date": "2023-09-29",
+        "name": "DKP",
+        "loss_usd": 204000,
+        "correct_sector": "Other",
+        "reason": "DKP token liquidity-removal rugpull on BSC; not a stablecoin"
+      },
+      {
+        "date": "2023-10-05",
+        "name": "DePay",
+        "loss_usd": 827,
+        "correct_sector": "DEX",
+        "reason": "DePay is a payments/router (DEX-aggregator style); router flashloan security bug"
+      },
+      {
+        "date": "2023-10-11",
+        "name": "BH Token",
+        "loss_usd": 1270000,
+        "correct_sector": "Other",
+        "reason": "Black Hole (BH) is a BSC reflection/rebase memecoin; LP-ratio price manipulation via Upgrade() calls"
+      },
+      {
+        "date": "2023-10-13",
+        "name": "BelugaDex",
+        "loss_usd": 175000,
+        "correct_sector": "DEX",
+        "reason": "Beluga Protocol on Arbitrum is a DEX; flashloan manipulation of USDT-USDC.e balance"
+      },
+      {
+        "date": "2023-10-17",
+        "name": "Nightmare on FTM Street",
+        "loss_usd": 7500000,
+        "correct_sector": "Other",
+        "reason": "Rekt.news entry \u2014 Fantom Halloween 2023 series of small-cap protocol exploits (Onyx, ExactlyFinance, HopeLend etc.), not a single stablecoin event; retagging as Other/aggregate"
+      },
+      {
+        "date": "2023-12-06",
+        "name": "ElephantStatus",
+        "loss_usd": 164604,
+        "correct_sector": "Other",
+        "reason": "Elephant Money BSC reflection memecoin flashloan attack; not a stablecoin"
+      },
+      {
+        "date": "2023-12-16",
+        "name": "GoodDollars",
+        "loss_usd": 627919,
+        "correct_sector": "Other",
+        "reason": "GoodDollar (G$) is a UBI social-token project; flash-loan attack on G$ minting. G$ is a UBI token not a peg-tracking stablecoin protocol"
+      },
+      {
+        "date": "2023-12-21",
+        "name": "Wallet Drain",
+        "loss_usd": 2430419,
+        "correct_sector": "Other",
+        "reason": "End-user wallet phishing; not a stablecoin protocol event"
+      },
+      {
+        "date": "2024-01-06",
+        "name": "Aragon DAO",
+        "loss_usd": 800000,
+        "correct_sector": "Other",
+        "reason": "Aragon DAO fake-token address-spoofing scam; treasury operational error not a stablecoin"
+      },
+      {
+        "date": "2024-01-16",
+        "name": "Hector Network",
+        "loss_usd": 2700000,
+        "correct_sector": "Other",
+        "reason": "Hector Network is an OHM-fork on Fantom (HEC); payout distribution contract exploit"
+      },
+      {
+        "date": "2024-01-17",
+        "name": "BasketDAO (BMIZapper)",
+        "loss_usd": 107000,
+        "correct_sector": "Yield",
+        "reason": "BasketDAO is a tokenized-index/basket product; BMIZapper input-validation drain of user approvals"
+      },
+      {
+        "date": "2024-02-08",
+        "name": "Starlay Finance",
+        "loss_usd": 2100000,
+        "correct_sector": "Lending",
+        "reason": "Starlay is a lending protocol on Acala EVM; USDC lending-pool liquidity-index bug"
+      },
+      {
+        "date": "2024-02-25",
+        "name": "RiskOnBlast",
+        "loss_usd": 1300000,
+        "correct_sector": "Other",
+        "reason": "RiskOnBlast was a gambling/trading platform launchpad on Blast; rugpull. Not a stablecoin"
+      },
+      {
+        "date": "2024-03-25",
+        "name": "ZongZi",
+        "loss_usd": 229000,
+        "correct_sector": "Other",
+        "reason": "ZongZiFa is a BSC memecoin; flashloan math exploit"
+      },
+      {
+        "date": "2024-04-01",
+        "name": "Sumer Money",
+        "loss_usd": 310000,
+        "correct_sector": "Lending",
+        "reason": "Sumer Money is a Compound-fork money market on Base; repayBorrowBehalf reentrancy on cbETH/USDC reserves"
+      },
+      {
+        "date": "2024-04-01",
+        "name": "Yield Protocol",
+        "loss_usd": 181000,
+        "correct_sector": "Yield",
+        "reason": "Yield Protocol vault mint/burnDivested logic flaw; USDC vault drain (Yearn-style vault, not a stablecoin issuer)"
+      },
+      {
+        "date": "2024-04-24",
+        "name": "FENGSHOU Token",
+        "loss_usd": 191000,
+        "correct_sector": "Other",
+        "reason": "FENGSHOU (NGFS) is a BSC token; delegateCallReserves access-control bug"
+      },
+      {
+        "date": "2024-06-01",
+        "name": "YYS",
+        "loss_usd": 28500,
+        "correct_sector": "Other",
+        "reason": "YYS BSC token updateAllowance/sell exploit; small reflection-style memecoin"
+      },
+      {
+        "date": "2024-07-11",
+        "name": "Smart Bank Token",
+        "loss_usd": 56000,
+        "correct_sector": "Other",
+        "reason": "Smart Bank Token on BSC flashloan exploit; scam BSC token, not a stablecoin"
+      },
+      {
+        "date": "2024-08-28",
+        "name": "YodlRouter",
+        "loss_usd": 47809,
+        "correct_sector": "DEX",
+        "reason": "Yodl is a payments/router (DEX-router); transferFee(from) validation bug drained user USDC approvals"
+      },
+      {
+        "date": "2024-09-16",
+        "name": "DeltaPrime",
+        "loss_usd": 5980000,
+        "correct_sector": "Lending",
+        "reason": "DeltaPrime is a leveraged lending / borrow protocol on Arbitrum; pool drain of USDC via private-key compromise"
+      },
+      {
+        "date": "2024-10-18",
+        "name": "Tapioca DAO",
+        "loss_usd": 4700000,
+        "correct_sector": "Lending",
+        "reason": "Tapioca DAO is an omnichain money market (USDO stablecoin + isolated lending markets); social-engineering key compromise of TAP vesting - the exploit hit USDO minting but the protocol's primary function is lending. Borderline stablecoin/lending; lending is more accurate as the loss was via minting infinite USDO and draining lending pools"
+      },
+      {
+        "date": "2024-10-25",
+        "name": "Aark Digital",
+        "loss_usd": 1900000,
+        "correct_sector": "Derivatives",
+        "reason": "Aark Digital is a perpetuals/derivatives DEX; GM token burn conversion script error"
+      },
+      {
+        "date": "2024-11-18",
+        "name": "$2M Coin Poker",
+        "loss_usd": 2000000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "CoinPoker is a centralized crypto poker platform; hot-wallet compromise"
+      },
+      {
+        "date": "2024-11-25",
+        "name": "DCT Token",
+        "loss_usd": 428000,
+        "correct_sector": "Other",
+        "reason": "DCT is an unknown BSC token with 'forced investment' transfer mechanism; reflection-style memecoin exploit"
+      },
+      {
+        "date": "2024-12-03",
+        "name": "BYC Token (RunWay / RunWayERC20)",
+        "loss_usd": 100000,
+        "correct_sector": "Other",
+        "reason": "BYC (RunWay) BSC deflationary/burn-mechanism token; not a stablecoin"
+      },
+      {
+        "date": "2024-12-07",
+        "name": "MAAT",
+        "loss_usd": 240000,
+        "correct_sector": "Yield",
+        "reason": "MAAT is an omnichain meta-yield aggregator; alpha-version breach"
+      },
+      {
+        "date": "2025-01-02",
+        "name": "MoonHacker",
+        "loss_usd": 320000,
+        "correct_sector": "Yield",
+        "reason": "MoonHacker vault contracts on Optimism (USDC vault); flash-loan approval exploit of vault executeOperation"
+      },
+      {
+        "date": "2025-01-08",
+        "name": "Moby",
+        "loss_usd": 1985000,
+        "correct_sector": "Derivatives",
+        "reason": "Moby is an options-trading protocol on Arbitrum (sOLP/mOLP liquidity pools like GMX); private-key compromise of upgrade key"
+      },
+      {
+        "date": "2025-02-07",
+        "name": "BankX",
+        "loss_usd": 43000,
+        "correct_sector": "Other",
+        "reason": "BankX small BSC/ETH/OP token exploit per SlowMist; not a recognized stablecoin protocol"
+      },
+      {
+        "date": "2025-06-02",
+        "name": "Tailverse",
+        "loss_usd": 88000,
+        "correct_sector": "Other",
+        "reason": "Tail Metaverse NFT-staking exploit; NFT-based reward manipulation, not a stablecoin"
+      },
+      {
+        "date": "2025-06-02",
+        "name": "Nervos Network",
+        "loss_usd": 3700000,
+        "correct_sector": "Bridge",
+        "reason": "Nervos ForceBridge exploit; cross-chain bridge drained USDT/USDC/ETH/DAI/WBTC"
+      },
+      {
+        "date": "2025-08-23",
+        "name": "ABCCApp",
+        "loss_usd": 10100,
+        "correct_sector": "Other",
+        "reason": "ABCCApp BSC scam token with addFixedDay() access-control bug; small BSC token"
+      },
+      {
+        "date": "2025-10-03",
+        "name": "EIP-7702 Delegation Contract Exploit",
+        "loss_usd": 336000,
+        "correct_sector": "Other",
+        "reason": "EOA-level EIP-7702 delegation vulnerability drained user USDT; user-level infrastructure bug not a stablecoin protocol"
+      },
+      {
+        "date": "2025-12-02",
+        "name": "Goldfinch Finance (RWA Lending Protocol)",
+        "loss_usd": 330000,
+        "correct_sector": "Lending",
+        "reason": "Goldfinch is an RWA lending protocol; collectInterestRepayment(from) validation bug on user with unlimited approval"
+      },
+      {
+        "date": "2025-12-10",
+        "name": "MUBARA",
+        "loss_usd": 55000,
+        "correct_sector": "Other",
+        "reason": "MUBARA memecoin pump-and-dump via compromised Binance co-CEO WeChat account"
+      },
+      {
+        "date": "2025-12-11",
+        "name": "0G Labs",
+        "loss_usd": 518000,
+        "correct_sector": "Other",
+        "reason": "0G Foundation reward-contract emergencyWithdraw exploit (alliance rewards); L1 foundation not a stablecoin"
+      },
+      {
+        "date": "2026-01-05",
+        "name": "TMX TRIBE",
+        "loss_usd": 1400000,
+        "correct_sector": "DEX",
+        "reason": "TMX is a decentralized exchange on Arbitrum; mint-and-stake loop exploit of TMX/USDG LP"
+      },
+      {
+        "date": "2026-02-25",
+        "name": "Holdstation",
+        "loss_usd": 462000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Holdstation supply-chain attack via trojanized wallet update; front-end/mobile app compromise, not a stablecoin protocol"
+      },
+      {
+        "date": "2026-03-12",
+        "name": "AM/USDT pool",
+        "loss_usd": 131000,
+        "correct_sector": "Other",
+        "reason": "AM BSC token burn-mechanism exploit for LP reserve manipulation; deflationary token, not a stablecoin"
+      },
+      {
+        "date": "2026-03-31",
+        "name": "LML/USDT staking protocol",
+        "loss_usd": 950000,
+        "correct_sector": "Other",
+        "reason": "LML staking protocol on BSC; TWAP/reward pricing design flaw. LML is not a stablecoin"
+      },
+      {
+        "date": "2026-04-13",
+        "name": "Dango",
+        "loss_usd": 410005,
+        "correct_sector": "Derivatives",
+        "reason": "Dango is a perpetuals protocol; insurance-fund donation-amount validation bug (funds returned by white-hat)"
+      },
+      {
+        "date": "2026-04-21",
+        "name": "Volo Vault",
+        "loss_usd": 3500000,
+        "correct_sector": "Yield",
+        "reason": "Volo Protocol on Sui is a yield-vault protocol (WBTC/XAUm/USDC vaults); vault vulnerability drain"
+      },
+      {
+        "date": "2026-04-22",
+        "name": "Kipseli",
+        "loss_usd": 76175,
+        "correct_sector": "DEX",
+        "reason": "Kipseli Router on Base is a DEX router; improper validation / decimal mismatch between quoter and transfer token"
+      },
+      {
+        "date": "2026-05-11",
+        "name": "INK Finance",
+        "loss_usd": 140000,
+        "correct_sector": "Other",
+        "reason": "Ink Finance Workspace Treasury Proxy on Polygon (DAO tooling / payroll); addUsers whitelist bypass. Not a stablecoin protocol"
+      },
+      {
+        "date": "2026-05-11",
+        "name": "Huma Finance",
+        "loss_usd": 101400,
+        "correct_sector": "Lending",
+        "reason": "Huma Finance is a receivables/credit lending protocol; V1 BaseCreditPool fee-pool logic flaw"
+      },
+      {
+        "date": "2026-05-12",
+        "name": "SQ Protocol",
+        "loss_usd": 346050,
+        "correct_sector": "Other",
+        "reason": "SQ Protocol on BSC \u2014 SQi staking token with hardcoded owner backdoor; SQi/USDT scam token, not a stablecoin"
+      },
+      {
+        "date": "2026-05-13",
+        "name": "ShapeShift FOX Colony",
+        "loss_usd": 132700,
+        "correct_sector": "Other",
+        "reason": "ShapeShift FOX Colony (DAO governance / Colony Network contracts); DAO treasury exploit not a stablecoin"
+      },
+      {
+        "date": "2026-05-13",
+        "name": "TAC Cross-Chain Layer (TON Side)",
+        "loss_usd": 2800000,
+        "correct_sector": "Bridge",
+        "reason": "TAC cross-chain layer exploit on the TON side; bridge event"
+      },
+      {
+        "date": "2026-05-17",
+        "name": "SEA (Arbitrum)",
+        "loss_usd": 153000,
+        "correct_sector": "Other",
+        "reason": "SEA token same-tx AMM spot-quote redemption/burn exploit; small-cap Arbitrum token, not a stablecoin protocol"
+      },
+      {
+        "date": "2026-05-22",
+        "name": "Polymarket",
+        "loss_usd": 700000,
+        "correct_sector": "Derivatives",
+        "reason": "Polymarket is a prediction-markets platform (event derivatives); 6-year-old operational-wallet key compromise"
+      },
+      {
+        "date": "2026-05-26",
+        "name": "SKP",
+        "loss_usd": 212850,
+        "correct_sector": "Other",
+        "reason": "SKP token LP balance-drain + sync attack on Pancake V2 SKP/USDT LP; small BSC token, not a stablecoin"
+      }
+    ],
+    "Bridge": [
+      {
+        "date": "2021-03-10",
+        "name": "HSO",
+        "loss_usd": 481800,
+        "correct_sector": "Other",
+        "reason": "HECO oracle IDO exit scam / launchpad rugpull, not a bridge protocol"
+      },
+      {
+        "date": "2021-06-08",
+        "name": "GainSwap",
+        "loss_usd": 8000000,
+        "correct_sector": "DEX",
+        "reason": "HECO swap ('Swap') project rugpull; DEX-style project, not a bridge"
+      },
+      {
+        "date": "2021-07-11",
+        "name": "Umbrella Network",
+        "loss_usd": 505060,
+        "correct_sector": "Other",
+        "reason": "Umbrella Network is an oracle project; UMB tokens were stolen via Chainswap bridge but the victim protocol is not a bridge (Chainswap itself is already logged separately as Bridge)"
+      },
+      {
+        "date": "2022-05-07",
+        "name": "Bistroo",
+        "loss_usd": 47000,
+        "correct_sector": "Other",
+        "reason": "Bistroo is an e-commerce/marketplace token project; a staking contract was exploited and funds bridged out \u2014 not a bridge protocol"
+      },
+      {
+        "date": "2022-08-01",
+        "name": "ZB",
+        "loss_usd": 4300000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "ZB is a centralized crypto exchange hot-wallet breach, not a bridge"
+      },
+      {
+        "date": "2022-10-11",
+        "name": "Rabby Wallet",
+        "loss_usd": 192250,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Rabby is a self-custody wallet; users' approvals were drained via a phishing/malicious contract, not a bridge protocol exploit"
+      },
+      {
+        "date": "2022-11-23",
+        "name": "Numbers Protocol",
+        "loss_usd": 13836,
+        "correct_sector": "Other",
+        "reason": "Numbers Protocol is a data/NFT provenance project; its NUM token had a Multichain incompatibility drained ~$14K \u2014 victim protocol is not a bridge"
+      },
+      {
+        "date": "2023-04-19",
+        "name": "Tales of Elleria",
+        "loss_usd": 280000,
+        "correct_sector": "Other",
+        "reason": "Blockchain gaming project (Arbitrum); ELM game token infinite-minted, then bridged out \u2014 victim is a game, not a bridge"
+      },
+      {
+        "date": "2023-05-09",
+        "name": "HAKUNA",
+        "loss_usd": 31683,
+        "correct_sector": "Other",
+        "reason": "Memecoin rugpull; scammer just used Orbiter bridge to source funds \u2014 victim project is a memecoin, not a bridge"
+      },
+      {
+        "date": "2023-05-09",
+        "name": "HIS",
+        "loss_usd": 24568,
+        "correct_sector": "Other",
+        "reason": "Memecoin rugpull; Orbiter bridge only used to source funds \u2014 victim project is a memecoin, not a bridge"
+      },
+      {
+        "date": "2023-05-09",
+        "name": "FREDDIE",
+        "loss_usd": 52344,
+        "correct_sector": "Other",
+        "reason": "Memecoin rugpull; Orbiter bridge only used to source funds \u2014 victim project is a memecoin, not a bridge"
+      },
+      {
+        "date": "2023-06-02",
+        "name": "Hector Lending",
+        "loss_usd": 653000,
+        "correct_sector": "Lending",
+        "reason": "Hector Lending is a money market on Fantom; not a bridge"
+      },
+      {
+        "date": "2023-08-21",
+        "name": "Fake \"LayerZero\" Token",
+        "loss_usd": 1000000,
+        "correct_sector": "Other",
+        "reason": "Rugpull of a fake token impersonating LayerZero on BSC; not a real bridge protocol"
+      },
+      {
+        "date": "2023-12-04",
+        "name": "Stargate Snapshot",
+        "loss_usd": 43000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Phishing link inside a Snapshot governance vote tricked users into staking STG to a scam contract; wallet-level phishing, not a bridge exploit"
+      },
+      {
+        "date": "2023-12-17",
+        "name": "SyncSpace",
+        "loss_usd": 272652,
+        "correct_sector": "Other",
+        "reason": "Aurory is a Solana blockchain-gaming project; the SyncSpace marketplace/bridge was exploited to inflate AURY balances \u2014 victim is a game protocol"
+      },
+      {
+        "date": "2024-02-22",
+        "name": "Jeffrey Zirlin",
+        "loss_usd": 9700000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Personal-wallet private-key compromise of Axie co-founder; funds happened to be bridged out. Not a protocol-level bridge loss"
+      },
+      {
+        "date": "2024-02-23",
+        "name": "Jihoz",
+        "loss_usd": 10000000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Personal-wallet compromise of Axie co-founder (duplicate/second entry of same incident class); wallet-level, not a bridge protocol"
+      },
+      {
+        "date": "2024-03-05",
+        "name": "OrdiZK",
+        "loss_usd": 1400000,
+        "correct_sector": "Other",
+        "reason": "Exit scam/rugpull that advertised itself as a privacy bridge; no functioning bridge, this is a scam project"
+      },
+      {
+        "date": "2024-04-01",
+        "name": "SQUID",
+        "loss_usd": 87000,
+        "correct_sector": "Other",
+        "reason": "SQUID Game meme token on BSC \u2014 memecoin/rug-adjacent token exploit, not a bridge"
+      },
+      {
+        "date": "2024-04-20",
+        "name": "ZKasino",
+        "loss_usd": 33000000,
+        "correct_sector": "Other",
+        "reason": "Decentralized betting/gambling platform exit scam; funds re-routed to Lido \u2014 not a bridge protocol"
+      },
+      {
+        "date": "2024-05-06",
+        "name": "GNUS",
+        "loss_usd": 1270000,
+        "correct_sector": "Other",
+        "reason": "GNUS.ai is a Fantom ecosystem token project; attacker minted fake GNUS then used Axelar to bridge \u2014 victim is not a bridge protocol"
+      },
+      {
+        "date": "2024-05-26",
+        "name": "Normie (NORMIE memecoin)",
+        "loss_usd": 685843,
+        "correct_sector": "Other",
+        "reason": "NORMIE is a Base-chain memecoin; token contract logic flaw abused via flashloan \u2014 victim is a memecoin, not a bridge"
+      },
+      {
+        "date": "2024-06-13",
+        "name": "Holograph",
+        "loss_usd": 10550000,
+        "correct_sector": "Other",
+        "reason": "Holograph is an omnichain NFT protocol; infinite-mint of HLG governance token via compromised dev key \u2014 NFT sector"
+      },
+      {
+        "date": "2024-07-02",
+        "name": "Bittensor",
+        "loss_usd": 8000000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Bittensor L1 wallet-level supply-chain attack on user wallets (leaked keys via PyPI package); no bridge protocol involved"
+      },
+      {
+        "date": "2024-07-31",
+        "name": "Terra",
+        "loss_usd": 5890000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Exploit of Terra L1 IBC-hooks module; this is an L1 blockchain vulnerability, not a DeFi bridge protocol"
+      },
+      {
+        "date": "2024-12-29",
+        "name": "FEG (Feed Every Gorilla)",
+        "loss_usd": 1000000,
+        "correct_sector": "Other",
+        "reason": "FEG is a memecoin/token project; Wormhole integration composability flaw let attackers drain FEG \u2014 victim project is a memecoin"
+      },
+      {
+        "date": "2025-01-01",
+        "name": "NoOnes",
+        "loss_usd": 7900000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "NoOnes is a centralized P2P crypto trading platform (Paxful successor); centralized platform breach, not a bridge"
+      },
+      {
+        "date": "2025-02-18",
+        "name": "Cardex",
+        "loss_usd": 400000,
+        "correct_sector": "Other",
+        "reason": "Cardex is a game/social app on Abstract; session-signer key leaked in frontend \u2014 gaming app, not a bridge"
+      },
+      {
+        "date": "2025-02-28",
+        "name": "Wemix",
+        "loss_usd": 6220000,
+        "correct_sector": "Other",
+        "reason": "Wemix is a gaming/NFT platform (Wemade); the Nile NFT platform auth key was stolen to attack the Play Bridge Vault \u2014 victim ecosystem is gaming/NFT"
+      },
+      {
+        "date": "2025-05-08",
+        "name": "BitoPro",
+        "loss_usd": 11500000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "BitoPro is a Taiwanese centralized crypto exchange; hot-wallet breach, not a bridge"
+      },
+      {
+        "date": "2025-09-23",
+        "name": "Seedify",
+        "loss_usd": 1450000,
+        "correct_sector": "Other",
+        "reason": "Seedify (SFUND) is a launchpad; cross-chain minter key compromise inflated SFUND \u2014 victim project is a launchpad"
+      },
+      {
+        "date": "2025-09-24",
+        "name": "GriffinAI",
+        "loss_usd": 3000000,
+        "correct_sector": "Other",
+        "reason": "GriffinAI is an AI/token project; misconfigured LayerZero peer plus key compromise minted GAIN tokens \u2014 victim project is not a bridge"
+      },
+      {
+        "date": "2025-11-07",
+        "name": "DIMO",
+        "loss_usd": 40000,
+        "correct_sector": "Other",
+        "reason": "DIMO Network is a DePIN (connected-vehicle data) project; developer key compromise on a DIMO-specific Wormhole bridge for its own token \u2014 victim is a DePIN project"
+      },
+      {
+        "date": "2025-11-20",
+        "name": "DMT \u7a7a\u6295(@dexmaxai)",
+        "loss_usd": 130000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Phishing airdrop that tricked users into signing malicious approvals; wallet-level phishing tied to a scam project, not a bridge exploit"
+      },
+      {
+        "date": "2025-11-23",
+        "name": "Port3 Network",
+        "loss_usd": 498000,
+        "correct_sector": "Other",
+        "reason": "Port3 is a decentralized AI data network; BridgeIn contract flaw let attacker infinite-mint PORT3 \u2014 victim project is not a bridge"
+      },
+      {
+        "date": "2026-03-06",
+        "name": "SolvBTC",
+        "loss_usd": 2715000,
+        "correct_sector": "Yield",
+        "reason": "Solv Protocol BRO (BitcoinReserveOffering) vault double-mint flaw; SolvBTC is a BTC-yield vault product, not a bridge"
+      },
+      {
+        "date": "2026-04-09",
+        "name": "Aethir",
+        "loss_usd": 90000,
+        "correct_sector": "Other",
+        "reason": "Aethir is a DePIN GPU/compute network; the AethirOFTAdapter for their ATH token was exploited \u2014 victim is a DePIN project (Other)"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "Kelp",
+        "loss_usd": 291500000,
+        "correct_sector": "Derivatives",
+        "reason": "Kelp DAO issues rsETH, a liquid restaking token (LRT); LayerZero message forging minted unbacked rsETH. Per sector defs, LST/LRT is Derivatives"
+      },
+      {
+        "date": "2026-04-29",
+        "name": "Sweat Foundation",
+        "loss_usd": 3500000,
+        "correct_sector": "Other",
+        "reason": "Sweat is a move-to-earn fitness app token on Near; SWEAT token contract exploited, then Wormhole used to bridge \u2014 victim project is not a bridge"
+      },
+      {
+        "date": "2026-05-15",
+        "name": "Thorchain DEX",
+        "loss_usd": 10000000,
+        "correct_sector": "DEX",
+        "reason": "Row is explicitly labeled 'Thorchain DEX' \u2014 cross-chain swap protocol / AMM; per sector defs, cross-chain swap aggregators go to DEX"
+      },
+      {
+        "date": "2026-05-25",
+        "name": "Third-party SquidRouterModule",
+        "loss_usd": 3200000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Malicious third-party Safe module impersonating Squid Router; users' Gnosis Safes were drained via a fake module \u2014 wallet-level attack unaffiliated with a real bridge protocol"
+      }
+    ],
+    "Derivatives": [
+      {
+        "date": "2023-05-09",
+        "name": "GNS",
+        "loss_usd": 62180.81,
+        "correct_sector": "Other",
+        "reason": "Description explicitly identifies this as 'GeniusMeme ($GNS)', a memecoin rug on BNB Chain, not the Gains Network perpetuals DEX; per rules confusable-name memecoins are Other."
+      },
+      {
+        "date": "2023-05-20",
+        "name": "Swap-LP",
+        "loss_usd": 1100000.0,
+        "correct_sector": "DEX",
+        "reason": "Swap-LP is a Uniswap-V2-style spot AMM factory/pair contract on BNB Chain (WDZD token pair); no perps, options, or synthetic asset issuance, so it belongs to spot DEX rather than Derivatives."
+      },
+      {
+        "date": "2023-06-12",
+        "name": "Keep3r Network",
+        "loss_usd": 200000.0,
+        "correct_sector": "Other",
+        "reason": "Keep3r Network is a decentralized keeper/off-chain job coordination infrastructure protocol, not a derivatives venue; per rules keeper infra maps to Other."
+      },
+      {
+        "date": "2024-03-11",
+        "name": "BLASTOFF",
+        "loss_usd": 600000.0,
+        "correct_sector": "Other",
+        "reason": "Description states BLASTOFF is a 'LaunchPad and yield aggregator' on the Blast ecosystem; per rules launchpads map to Other (yield-aggregator side would alternatively be Yield, but launchpad is the primary product)."
+      },
+      {
+        "date": "2024-04-15",
+        "name": "Grand Base",
+        "loss_usd": 1850000.0,
+        "correct_sector": "Other",
+        "reason": "Grand Base was an RWA tokenization project on Base chain (deployer-wallet compromise led to unauthorized $GB mint); it is neither a perp/option DEX, synthetic-asset issuer, nor LST/LRT, so per rules RWA maps to Other."
+      },
+      {
+        "date": "2025-01-27",
+        "name": "ODOS Limit Order Router",
+        "loss_usd": 50000.0,
+        "correct_sector": "DEX",
+        "reason": "ODOS is a spot DEX aggregator/router; the exploited component is its limit-order router, which is a spot-trading routing product, not a perpetual/option venue or synthetic issuer."
+      },
+      {
+        "date": "2025-08-30",
+        "name": "Cozy V2",
+        "loss_usd": 427303.0,
+        "correct_sector": "Other",
+        "reason": "Description explicitly describes Cozy Finance as 'a DeFi hack protection protocol on Optimism' (i.e., decentralized insurance/cover); per rules insurance products map to Other rather than Derivatives."
+      },
+      {
+        "date": "2026-05-28",
+        "name": "Joe Agent",
+        "loss_usd": 45000.0,
+        "correct_sector": "Other",
+        "reason": "Joe Agent ($JOE) is an AI-agent memecoin project on BNB Chain whose liquidity contract had a reentrancy bug; it is not a perp/option DEX, synthetic issuer, or LST, so per rules memecoin-adjacent DeFi belongs to Other."
+      }
+    ],
+    "Other": [
+      {
+        "date": "2020-07-15",
+        "name": "Twitter",
+        "loss_usd": 120000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Twitter internal-tools compromise used to promote a bitcoin giveaway scam; off-chain social platform breach, not a DeFi protocol"
+      },
+      {
+        "date": "2021-07-15",
+        "name": "T-Mobile",
+        "loss_usd": 55000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "SIM-swap attack against a T-Mobile customer; off-chain telco/individual wallet incident, not a DeFi protocol"
+      },
+      {
+        "date": "2021-11-01",
+        "name": "Chivo",
+        "loss_usd": 22650,
+        "correct_sector": "NOT_DEFI",
+        "reason": "El Salvador government-issued custodial wallet; not a DeFi protocol per rules"
+      },
+      {
+        "date": "2022-07-01",
+        "name": "Fantom",
+        "loss_usd": 62500,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Validator wallet drained via a go-opera node-setup bug in Fantom L1 client; base-layer infrastructure/individual node key issue, not a DeFi protocol"
+      },
+      {
+        "date": "2023-11-01",
+        "name": "Monero",
+        "loss_usd": 460000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Monero community crowdfunding wallet drained; off-chain community treasury of a non-DeFi L1, per rules"
+      },
+      {
+        "date": "2024-01-24",
+        "name": "Saga DAO",
+        "loss_usd": 62880.5,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Founder's multisig wallet key theft (1-of-12 misconfig / insider); off-chain key compromise per rules"
+      },
+      {
+        "date": "2026-04-02",
+        "name": "Galaxy Digital",
+        "loss_usd": 10000,
+        "correct_sector": "NOT_DEFI",
+        "reason": "Corporate cybersecurity incident in an isolated R&D/testing environment at a crypto financial-services firm; off-chain corporate cyber, not a DeFi protocol"
+      }
+    ]
+  },
+  "note": "Sector mistag reassignments from 7-agent hand-classification. Each entry maps (source_sector, date, name) to the correct sector. Values 'NOT_DEFI' mark events dropped from the DeFi scope. OHM-forks originally reassigned to 'Other' by agents are routed to 'Stablecoin' per DefiLlama's Reserve-Currency convention (Scenario B). Memecoin/launchpad/gaming/NFT/CEX reassignments to 'Other' are routed to 'NOT_DEFI' since the paper's scope is DeFi."
+}

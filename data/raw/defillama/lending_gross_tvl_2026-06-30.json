@@ -1,0 +1,352 @@
+[
+ {
+  "name": "Aave V3",
+  "slug": "aave-v3",
+  "net_usd": 11849360423.0,
+  "borrowed_usd": 9786166727.0,
+  "gross_usd": 21635527150.0
+ },
+ {
+  "name": "Morpho Blue",
+  "slug": "morpho-blue",
+  "net_usd": 6625008831.0,
+  "borrowed_usd": 3655242440.0,
+  "gross_usd": 10280251271.0
+ },
+ {
+  "name": "Sky Lending",
+  "slug": "sky-lending",
+  "net_usd": 5221781405.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 5221781405.0
+ },
+ {
+  "name": "SparkLend",
+  "slug": "sparklend",
+  "net_usd": 3414571429.0,
+  "borrowed_usd": 1707994109.0,
+  "gross_usd": 5122565538.0
+ },
+ {
+  "name": "Maple",
+  "slug": "maple",
+  "net_usd": 2445026544.0,
+  "borrowed_usd": 2092460519.0,
+  "gross_usd": 4537487063.0
+ },
+ {
+  "name": "JustLend V1",
+  "slug": "justlend-v1",
+  "net_usd": 2921162444.0,
+  "borrowed_usd": 126435856.0,
+  "gross_usd": 3047598300.0
+ },
+ {
+  "name": "Kamino Lend",
+  "slug": "kamino-lend",
+  "net_usd": 1059395856.0,
+  "borrowed_usd": 949816002.0,
+  "gross_usd": 2009211858.0
+ },
+ {
+  "name": "Jupiter Lend",
+  "slug": "jupiter-lend",
+  "net_usd": 868893344.0,
+  "borrowed_usd": 835602369.0,
+  "gross_usd": 1704495713.0
+ },
+ {
+  "name": "Compound V3",
+  "slug": "compound-v3",
+  "net_usd": 1043049239.0,
+  "borrowed_usd": 551553421.0,
+  "gross_usd": 1594602660.0
+ },
+ {
+  "name": "Venus Core Pool",
+  "slug": "venus-core-pool",
+  "net_usd": 979194577.0,
+  "borrowed_usd": 366597263.0,
+  "gross_usd": 1345791840.0
+ },
+ {
+  "name": "Fluid Lending",
+  "slug": "fluid-lending",
+  "net_usd": 604123901.0,
+  "borrowed_usd": 703554091.0,
+  "gross_usd": 1307677992.0
+ },
+ {
+  "name": "USDD",
+  "slug": "usdd",
+  "net_usd": 1299943300.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 1299943300.0
+ },
+ {
+  "name": "Euler V2",
+  "slug": "euler-v2",
+  "net_usd": 270136031.0,
+  "borrowed_usd": 572113101.0,
+  "gross_usd": 842249132.0
+ },
+ {
+  "name": "Lista Lending",
+  "slug": "lista-lending",
+  "net_usd": 609392474.0,
+  "borrowed_usd": 115870048.0,
+  "gross_usd": 725262522.0
+ },
+ {
+  "name": "HyperLend Pooled",
+  "slug": "hyperlend-pooled",
+  "net_usd": 413053993.0,
+  "borrowed_usd": 241539032.0,
+  "gross_usd": 654593025.0
+ },
+ {
+  "name": "Dolomite",
+  "slug": "dolomite",
+  "net_usd": 199094090.0,
+  "borrowed_usd": 276789005.0,
+  "gross_usd": 475883095.0
+ },
+ {
+  "name": "Aave Horizon RWA",
+  "slug": "aave-horizon-rwa",
+  "net_usd": 286411254.0,
+  "borrowed_usd": 152151612.0,
+  "gross_usd": 438562866.0
+ },
+ {
+  "name": "USD AI",
+  "slug": "usd-ai",
+  "net_usd": 196289977.0,
+  "borrowed_usd": 115455993.0,
+  "gross_usd": 311745970.0
+ },
+ {
+  "name": "Cooler Loans",
+  "slug": "cooler-loans",
+  "net_usd": 182672352.0,
+  "borrowed_usd": 128492990.0,
+  "gross_usd": 311165342.0
+ },
+ {
+  "name": "Lista CDP",
+  "slug": "lista-cdp",
+  "net_usd": 295915419.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 295915419.0
+ },
+ {
+  "name": "cap",
+  "slug": "cap",
+  "net_usd": 221253192.0,
+  "borrowed_usd": 44651083.0,
+  "gross_usd": 265904275.0
+ },
+ {
+  "name": "Aave V4",
+  "slug": "aave-v4",
+  "net_usd": 140511178.0,
+  "borrowed_usd": 75691423.0,
+  "gross_usd": 216202601.0
+ },
+ {
+  "name": "Save",
+  "slug": "save",
+  "net_usd": 67387759.0,
+  "borrowed_usd": 144140296.0,
+  "gross_usd": 211528055.0
+ },
+ {
+  "name": "Tectonic",
+  "slug": "tectonic",
+  "net_usd": 117480007.0,
+  "borrowed_usd": 81474419.0,
+  "gross_usd": 198954426.0
+ },
+ {
+  "name": "Pareto Credit",
+  "slug": "pareto-credit",
+  "net_usd": 198756166.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 198756166.0
+ },
+ {
+  "name": "NAVI Lending",
+  "slug": "navi-lending",
+  "net_usd": 121414522.0,
+  "borrowed_usd": 72447956.0,
+  "gross_usd": 193862478.0
+ },
+ {
+  "name": "Blend Pools V2",
+  "slug": "blend-pools-v2",
+  "net_usd": 137564372.0,
+  "borrowed_usd": 48574323.0,
+  "gross_usd": 186138695.0
+ },
+ {
+  "name": "Suilend",
+  "slug": "suilend",
+  "net_usd": 104978425.0,
+  "borrowed_usd": 50972487.0,
+  "gross_usd": 155950912.0
+ },
+ {
+  "name": "EtherFi Borrowing Market",
+  "slug": "etherfi-borrowing-market",
+  "net_usd": 131634831.0,
+  "borrowed_usd": 20606966.0,
+  "gross_usd": 152241797.0
+ },
+ {
+  "name": "Loopscale",
+  "slug": "loopscale",
+  "net_usd": 79178356.0,
+  "borrowed_usd": 47826470.0,
+  "gross_usd": 127004826.0
+ },
+ {
+  "name": "Tydro",
+  "slug": "tydro",
+  "net_usd": 60316124.0,
+  "borrowed_usd": 60627071.0,
+  "gross_usd": 120943195.0
+ },
+ {
+  "name": "Aave V2",
+  "slug": "aave-v2",
+  "net_usd": 103237502.0,
+  "borrowed_usd": 16970158.0,
+  "gross_usd": 120207660.0
+ },
+ {
+  "name": "Liquity V1",
+  "slug": "liquity-v1",
+  "net_usd": 118656520.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 118656520.0
+ },
+ {
+  "name": "Benqi Lending",
+  "slug": "benqi-lending",
+  "net_usd": 85417460.0,
+  "borrowed_usd": 32339318.0,
+  "gross_usd": 117756778.0
+ },
+ {
+  "name": "Rhea Lend",
+  "slug": "rhea-lend",
+  "net_usd": 78975924.0,
+  "borrowed_usd": 29264553.0,
+  "gross_usd": 108240477.0
+ },
+ {
+  "name": "AlphaFi Lending",
+  "slug": "alphafi-lending",
+  "net_usd": 53431709.0,
+  "borrowed_usd": 53191300.0,
+  "gross_usd": 106623009.0
+ },
+ {
+  "name": "Curve LlamaLend",
+  "slug": "curve-llamalend",
+  "net_usd": 61899754.0,
+  "borrowed_usd": 41038186.0,
+  "gross_usd": 102937940.0
+ },
+ {
+  "name": "Compound V2",
+  "slug": "compound-v2",
+  "net_usd": 84508290.0,
+  "borrowed_usd": 12273501.0,
+  "gross_usd": 96781791.0
+ },
+ {
+  "name": "Curvance",
+  "slug": "curvance",
+  "net_usd": 66607552.0,
+  "borrowed_usd": 27991674.0,
+  "gross_usd": 94599226.0
+ },
+ {
+  "name": "Flux Finance",
+  "slug": "flux-finance",
+  "net_usd": 44203288.0,
+  "borrowed_usd": 34199153.0,
+  "gross_usd": 78402441.0
+ },
+ {
+  "name": "Moonwell Lending",
+  "slug": "moonwell-lending",
+  "net_usd": 48150878.0,
+  "borrowed_usd": 29779422.0,
+  "gross_usd": 77930300.0
+ },
+ {
+  "name": "Avalon USDa",
+  "slug": "avalon-usda",
+  "net_usd": 76852202.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 76852202.0
+ },
+ {
+  "name": "Liquity V2",
+  "slug": "liquity-v2",
+  "net_usd": 67641041.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 67641041.0
+ },
+ {
+  "name": "Frankencoin",
+  "slug": "frankencoin",
+  "net_usd": 67538651.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 67538651.0
+ },
+ {
+  "name": "Zest V2",
+  "slug": "zest-v2",
+  "net_usd": 59568112.0,
+  "borrowed_usd": 6368835.0,
+  "gross_usd": 65936947.0
+ },
+ {
+  "name": "crvUSD",
+  "slug": "crvusd",
+  "net_usd": 52581990.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 52581990.0
+ },
+ {
+  "name": "Figure Markets Democratized Prime",
+  "slug": "figure-markets-democratized-prime",
+  "net_usd": 47175530.0,
+  "borrowed_usd": 4167526.0,
+  "gross_usd": 51343056.0
+ },
+ {
+  "name": "Reservoir Protocol",
+  "slug": "reservoir-protocol",
+  "net_usd": 46585140.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 46585140.0
+ },
+ {
+  "name": "Echo Lending",
+  "slug": "echo-lending",
+  "net_usd": 44042689.0,
+  "borrowed_usd": 201000.0,
+  "gross_usd": 44243689.0
+ },
+ {
+  "name": "Felix CDP",
+  "slug": "felix-cdp",
+  "net_usd": 37840744.0,
+  "borrowed_usd": 0.0,
+  "gross_usd": 37840744.0
+ }
+]

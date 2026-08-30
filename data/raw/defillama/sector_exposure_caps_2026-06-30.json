@@ -1,0 +1,21 @@
+{
+ "caps_usd": {
+  "Derivatives": 14358730839.0,
+  "Lending": 11849360423.0,
+  "Bridge": 7326767409.0,
+  "Stablecoin": 184647757585.5062,
+  "DEX": 1647167441.0,
+  "Yield": 1555573445.0,
+  "Other": 5000000000.0
+ },
+ "largest_protocol": {
+  "Derivatives": "Lido",
+  "Lending": "Aave V3",
+  "Bridge": "LayerZero V2",
+  "Stablecoin": "Tether",
+  "DEX": "PancakeSwap AMM",
+  "Yield": "Spark Savings"
+ },
+ "note": "version-level largest single protocol per sector; ALL NET (idle) basis; June 2026",
+ "stablecoin_supply_usd_trailing365_mean": 300892278314.33307
+}
