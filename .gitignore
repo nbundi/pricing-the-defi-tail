@@ -43,22 +43,23 @@ venv/
 # Claude Code harness state
 .claude/
 
-# LaTeX build artifacts
+# LaTeX build artifacts (arxiv/paper.bbl is part of the submitted
+# arXiv source bundle, so it stays tracked)
 *.aux
 *.log
 *.out
 *.toc
 *.bbl
+!arxiv/paper.bbl
 *.blg
 *.fls
 *.fdb_latexmk
 *.synctex.gz
 
-# Root-level Markdown notes (keep README + REVIEWERS; .md inside
-# subfolders stays tracked)
+# Root-level Markdown notes (keep README; .md inside subfolders
+# stays tracked)
 /*.md
 !/README.md
-!/REVIEWERS.md
 
 # Citation-audit / pre-submission review logs (local-only)
 /reviews/

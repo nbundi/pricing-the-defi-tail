@@ -1,0 +1,159 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{Aramonte2021}
+Aramonte, S., Huang, W., Schrimpf, A.: {DeFi} risks and the decentralisation
+  illusion. BIS Quarterly Review pp. 21--36 (Dec 2021)
+
+\bibitem{Arora2026}
+Arora, S., Li, Y., Feng, Y., Xu, J.: A risk scoring framework for critical
+  infrastructure of decentralized finance ({DeFi}). Blockchain: Research and
+  Applications  (2026). \doi{10.1016/j.bcra.2026.100496}, article 100496
+
+\bibitem{Auer2024}
+Auer, R., Haslhofer, B., Kitzler, S., Saggese, P., Victor, F.: The technology
+  of decentralized finance ({DeFi}). Digital Finance  \textbf{6}(1),  55--95
+  (2024)
+
+\bibitem{BCBS2006}
+{Basel Committee on Banking Supervision}: International convergence of capital
+  measurement and capital standards: A revised framework, comprehensive version
+  (annex 9: Detailed loss event type classification). Tech. rep., Bank for
+  International Settlements (2006)
+
+\bibitem{BCBS2017}
+{Basel Committee on Banking Supervision}: {Basel III}: Finalising post-crisis
+  reforms. Tech. rep., Bank for International Settlements (2017)
+
+\bibitem{BlockSec2026}
+{BlockSec}: Weekly {Web3} security incident roundups.
+  \url{https://blocksec.com/blog} (2026), 15 weekly posts ingested, accessed
+  2026-05-18
+
+\bibitem{BockerKluppelberg2005}
+B\"ocker, K., Kl\"uppelberg, C.: Operational {VaR}: a closed-form
+  approximation. Risk  \textbf{18}(12),  90--93 (2005)
+
+\bibitem{BuhlmannGisler2005}
+B\"uhlmann, H., Gisler, A.: A Course in Credibility Theory and Its
+  Applications. Universitext, Springer, Berlin (2005)
+
+\bibitem{Chernobai2008}
+Chernobai, A.S., Rachev, S.T., Fabozzi, F.J.: Operational Risk: A Guide to
+  {Basel II} Capital Requirements, Models, and Analysis. Wiley (2007)
+
+\bibitem{Cope2009}
+Cope, E.W., Mignola, G., Antonini, G., Ugoccioni, R.: Challenges and pitfalls
+  in measuring operational risk from loss data. Journal of Operational Risk
+  \textbf{4}(4),  3--27 (2009)
+
+\bibitem{Cornelli2025}
+Cornelli, G., Gambacorta, L., Garratt, R., Reghezza, A.: Why {DeFi} lending?
+  evidence from {Aave V2}. Journal of Financial Intermediation  \textbf{63}
+  (2025). \doi{10.1016/j.jfi.2025.101166}, article 101166
+
+\bibitem{DeFiRektDb2026}
+{de.fi (formerly DeFiYield)}: rekt-database. REST API
+  \url{https://api.de.fi/v1/rekt/list}; UI \url{https://de.fi/rekt-database}
+  (2026), retrieved 2026-05-29
+
+\bibitem{Defillama}
+{DefiLlama}: Public hack ledger and protocol catalog.
+  \url{https://api.llama.fi/hacks} (2026), accessed 2026-05-16
+
+\bibitem{DuMouchel1983}
+DuMouchel, W.H.: Estimating the stable index $\alpha$ in order to measure tail
+  thickness: A critique. Annals of Statistics  \textbf{11}(4),  1019--1031
+  (1983)
+
+\bibitem{Egan2017}
+Egan, M., Horta\c{c}su, A., Matvos, G.: Deposit competition and financial
+  fragility: Evidence from the {U.S.} banking sector. American Economic Review
+  \textbf{107}(1),  169--216 (2017)
+
+\bibitem{Eling2019}
+Eling, M., Wirfs, J.: What are the actual costs of cyber risk events? European
+  Journal of Operational Research  \textbf{272}(3),  1109--1119 (2019)
+
+\bibitem{EmbrechtsKM1997}
+Embrechts, P., Kl\"uppelberg, C., Mikosch, T.: Modelling Extremal Events for
+  Insurance and Finance. Springer (1997)
+
+\bibitem{Flannery1998}
+Flannery, M.J.: Using market information in prudential bank supervision: A
+  review of the {U.S.} empirical evidence. Journal of Money, Credit and Banking
+   \textbf{30}(3),  273--305 (1998)
+
+\bibitem{Fontnouvelle2006}
+de~Fontnouvelle, P., Rosengren, E., Jordan, J.: Implications of alternative
+  operational risk modeling techniques. In: Carey, M., Stulz, R.M. (eds.) The
+  Risks of Financial Institutions, pp. 475--505. University of Chicago Press
+  (2007)
+
+\bibitem{Heimbach2022}
+Heimbach, L., Schertenleib, E., Wattenhofer, R.: Risks and returns of {Uniswap
+  V3} liquidity providers. In: Proceedings of the 4th ACM Conference on
+  Advances in Financial Technologies (AFT). pp. 89--101 (2022)
+
+\bibitem{Kismp2026}
+{Kismp123 et al.}: {DeFi-Security-Incident}: A comprehensive reference of
+  real-world {DeFi} security incidents with root-cause analysis, attack flow,
+  and {PoC} code. GitHub repository,
+  \url{https://github.com/kismp123/DeFi-Security-Incident} (2026), 2020--2026,
+  accessed 2026-05-18
+
+\bibitem{Moscadelli2004}
+Moscadelli, M.: The modelling of operational risk: Experience with the analysis
+  of the data collected by the {Basel} committee. Temi di Discussione (Working
+  Paper)~517, Banca d'Italia (2004)
+
+\bibitem{Perez2021}
+Perez, D., Livshits, B.: Smart contract vulnerabilities: Vulnerable does not
+  imply exploited. In: USENIX Security Symposium (2021)
+
+\bibitem{Qin2021}
+Qin, K., Zhou, L., Livshits, B., Gervais, A.: Attacking the {DeFi} ecosystem
+  with flash loans for fun and profit. In: Financial Cryptography and Data
+  Security (FC) (2021)
+
+\bibitem{Rekt2026}
+{Rekt News}: Rekt leaderboard. \url{https://rekt.news/leaderboard} (2026),
+  2020--2026, accessed 2026-05-18
+
+\bibitem{SlowMistHacked2026}
+{SlowMist Team}: {SlowMist} hacked. Blockchain-event tracker,
+  \url{https://hacked.slowmist.io} (2026), retrieved 2026-05-29
+
+\bibitem{DeFiHackLabs2026}
+{SunWeb3Sec et al.}: {DeFiHackLabs}: Reproduce {DeFi} hacked incidents using
+  {Foundry}. GitHub repository,
+  \url{https://github.com/SunWeb3Sec/DeFiHackLabs} (2026), 2021--2026, accessed
+  2026-05-18
+
+\bibitem{Vuong1989}
+Vuong, Q.H.: Likelihood ratio tests for model selection and non-nested
+  hypotheses. Econometrica  \textbf{57}(2),  307--333 (1989)
+
+\bibitem{Weingartner2023}
+Weing\"artner, T., Fasser, F., Reis S\'a~da Costa, P., Farkas, W.: Deciphering
+  {DeFi}: A comprehensive analysis and visualization of risks in decentralized
+  finance. Journal of Risk and Financial Management  \textbf{16}(10), ~454
+  (2023). \doi{10.3390/jrfm16100454}
+
+\bibitem{Werner2022}
+Werner, S.M., Perez, D., Gudgeon, L., Klages-Mundt, A., Harz, D., Knottenbelt,
+  W.J.: {SoK}: Decentralized finance ({DeFi}). In: Proceedings of the 4th ACM
+  Conference on Advances in Financial Technologies (AFT) (2022)
+
+\bibitem{Wheatley2016}
+Wheatley, S., Maillart, T., Sornette, D.: The extreme risk of personal data
+  breaches and the erosion of privacy. European Physical Journal B
+  \textbf{89}(1), ~7 (2016)
+
+\bibitem{Zhou2023}
+Zhou, L., et~al.: {SoK}: Decentralized finance ({DeFi}) attacks. In: IEEE
+  Symposium on Security and Privacy (S\&P) (2023)
+
+\end{thebibliography}

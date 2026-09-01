@@ -1,7 +1,7 @@
 # Pricing the DeFi Tail
 
-Working paper / conference submission: *Pricing the DeFi Tail: Do
-Protocols or Depositors Price Operational Risk?*
+*Pricing the DeFi Tail: Do Protocols or Depositors Price Operational
+Risk?* — accepted at CBT 2026, preprint submitted to arXiv.
 
 DeFi protocols market products that look economically similar to bank
 deposits — "earn" accounts, lending supply, vaults, stablecoin LP
@@ -15,18 +15,32 @@ the four largest buffered Lending venues cover ~5% of their modeled
 VaR₉₉.₉, and the venue-level supply-yield premium averages +54 bps
 against a 64-bps sector pure premium and a per-protocol tail requirement
 34–81% of TVL. The full argument, results, and policy discussion are in
-[`paper.pdf`](paper.pdf).
+[`arxiv/paper.pdf`](arxiv/paper.pdf).
 
-## Target venue
+## Venue
 
-CBT 2026 — 10th International Workshop on Cryptocurrencies and Blockchain
-Technology, co-located with ESORICS 2026, Rome, 2026-09-17.
-Camera-ready deadline: 2026-08-24. LNCS format, 16-page limit including
-references. Submitted via EasyChair through the ESORICS 2026 portal.
+Accepted at CBT 2026 — 10th International Workshop on Cryptocurrencies
+and Blockchain Technology, co-located with ESORICS 2026, Rome,
+2026-09-17. To be published by Springer Nature in the ESORICS 2026
+International Workshops proceedings (LNCS format). Preprint submitted
+to arXiv (q-fin.RM, cross-list cs.CR).
+
+## Paper sources
+
+The LaTeX sources live in two places, one per artifact:
+
+- [`arxiv/`](arxiv/) — the arXiv preprint bundle exactly as submitted
+  (`paper.tex` with the venue footnote, `paper.bbl`, `references.bib`,
+  `llncs.cls`, `splncs04.bst`, `figures/`), plus the compiled
+  `paper.pdf` and the uploaded `pricing_defi_tail_arxiv.zip`.
+- [`camera-ready/`](camera-ready/) — the Springer camera-ready as
+  submitted via EasyChair: `pricing_defi_tail.pdf` and the source
+  bundle `pricing_defi_tail_src.zip`.
 
 ## Build the PDF
 
 ```sh
+cd arxiv
 pdflatex paper && bibtex paper && pdflatex paper && pdflatex paper
 ```
 
@@ -80,4 +94,4 @@ plateau-stability threshold and parametric bootstrap; per-sector NB
 frequency; compound NB–GPD LDA capped at largest single-protocol
 exposure; parametric-bootstrap IQR on VaR₉₉.₉ (Table 6) methodologically
 consistent with the parametric ξ̂ CI (Table 4). Full details in
-[`paper.pdf`](paper.pdf) §3–§5.
+[`arxiv/paper.pdf`](arxiv/paper.pdf) §3–§5.
