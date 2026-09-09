@@ -1,0 +1,511 @@
+% =====================================================================
+%  zhaw-theme.sty  --  Beamer theme for ZHAW School of Engineering
+%
+%  A consolidated style, built from the official ZHAW beamer template
+%  (zhawbeamer: color/inner/outer themes + logos). It reproduces the genuine
+%  ZHAW look -- full-blue title page, blue frame-title bar with the ZHAW logo,
+%  white section pages, three-cell footer, official blue RGB(1,100,167) -- and
+%  adds teaching extensions (rwexample / pitfall / takeaway / exercise
+%  blocks, \hl, \weblink).
+%
+%  Brand policy (ZHAW CD, in force since 1 January 2025): the plain zhaw mark
+%  sits top left and the sender -- the school -- top right, as separate
+%  elements; the two are no longer locked up together. Both appear on the title
+%  page only, as in the official template. Logos: zhaw_logo_white.png and
+%  zhaw_logo_blue.png, resolved by bare filename via \graphicspath / TEXINPUTS.
+% =====================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{zhaw-theme}[2026/08/31 v3.1 ZHAW SoE Beamer theme]
+\mode<presentation>
+
+\RequirePackage{calc}
+\RequirePackage{tikz}
+\usetikzlibrary{backgrounds}
+\RequirePackage{graphicx}
+\RequirePackage[scaled=0.95]{helvet}
+\renewcommand\familydefault{\sfdefault}
+\RequirePackage{booktabs}
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{etoolbox}
+
+% Tighten list spacing a little to fit dense content under the ZHAW bar.
+\AtBeginEnvironment{itemize}{\setlength\itemsep{2pt plus 1pt minus 1pt}}
+\AtBeginEnvironment{enumerate}{\setlength\itemsep{2pt plus 1pt minus 1pt}}
+
+% ---------------------------------------------------------------------
+%  INTERNAL DIMENSIONS (from the official template)
+% ---------------------------------------------------------------------
+\gdef\@lrmargin{8mm}
+\gdef\@ftitleheight{14mm}   % headline band at the top of every slide
+\gdef\@ftitlemargin{2mm}
+\gdef\@footermargin{2mm}
+\setbeamersize{text margin left=\@lrmargin,text margin right=\@lrmargin}
+
+% ---------------------------------------------------------------------
+%  LOGOS  (bare filenames; found via graphicspath + TEXINPUTS)
+% ---------------------------------------------------------------------
+\graphicspath{{./}{../}{zhawbeamer/}{../zhawbeamer/}}
+\newcommand{\zhawlogowhite}{zhaw_logo_white}
+\newcommand{\zhawlogoblue}{zhaw_logo_blue}
+\gdef\@logosize{14mm}       % square mark, top left of the title page
+
+% The sender: one-line sender guidance, so the school alone is the sender.
+\providecommand{\zhawschool}{School of Engineering}
+
+% ---------------------------------------------------------------------
+%  COLOURS
+%  Taken from the official ZHAW School of Engineering PowerPoint template
+%  (corporate design in force since 1 January 2025); the names are the ones
+%  the template's own colour picker uses.
+% ---------------------------------------------------------------------
+\definecolor{zhawBlue}{HTML}{0064A6}       % 'ZHAW'  -- frame title bar
+\definecolor{zhawblue}{HTML}{0064A6}       % lowercase alias for content macros
+\definecolor{zhawnight}{HTML}{05366C}      % 'Night' -- title and section pages
+\definecolor{zhawsky}{HTML}{9ADCF6}        % 'Sky'   -- rules and accents
+\definecolor{zhawcloud}{HTML}{DCE4F3}      % pale blue -- standard block bodies
+% CD accent colours, one per callout. The CD asks for at most two colours plus
+% one accent per document; a teaching deck needs one per kind of callout, so
+% they are used as quiet tints rather than saturated fills.
+\definecolor{zhawteal}{HTML}{00919B}
+\definecolor{zhawgreen}{HTML}{00795D}
+\definecolor{zhawred}{HTML}{E62154}
+\definecolor{zhaworange}{HTML}{FFA70E}
+% Previous colour names, kept so existing decks keep compiling.
+\colorlet{zhawlight}{zhawcloud}
+\colorlet{zhawaccent}{zhawteal}
+\colorlet{pitfallred}{zhawred}
+\colorlet{takegreen}{zhawgreen}
+\colorlet{exyellow}{zhaworange}
+\definecolor{zhawgray}{RGB}{154,154,156}   % pre-2025 ZHAW gray, no longer in the CD
+
+% ---------------------------------------------------------------------
+%  BEAMER COLOURS  (from the official color theme)
+% ---------------------------------------------------------------------
+% Title and section pages use 'Night'; the CD never fills a whole slide with
+% 'ZHAW' blue. Body text is black on light and white on dark, per the CD.
+\setbeamercolor{title page}{fg=white, bg=zhawnight}
+\setbeamercolor{section page}{fg=white, bg=zhawnight}
+\setbeamercolor{frametitle}{fg=black}   % no bg: the canvas shows through
+\setbeamercolor{headline}{fg=black, bg=white}
+\setbeamercolor{lfooter}{fg=black}
+\setbeamercolor{mfooter}{fg=black}
+\setbeamercolor{rfooter}{fg=black}
+\setbeamercolor{structure}{fg=zhawBlue}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{itemize item}{fg=zhawBlue}
+\setbeamercolor{itemize subitem}{fg=zhawnight}
+\setbeamercolor{itemize subsubitem}{fg=zhawnight}
+\setbeamercolor{enumerate item}{fg=zhawBlue}
+\setbeamercolor{enumerate subitem}{fg=zhawnight}
+\setbeamercolor{caption name}{fg=zhawBlue}
+\setbeamercolor{block title}{bg=zhawBlue, fg=white}
+\setbeamercolor{block body}{bg=zhawcloud, fg=black}
+
+% ---------------------------------------------------------------------
+%  FONTS
+% ---------------------------------------------------------------------
+\setbeamerfont{title}{series=\mdseries,size=\LARGE}
+\setbeamerfont{subtitle}{series=\mdseries,size=\large}
+\setbeamerfont{section}{series=\mdseries,size=\Large}
+% The template's headline is regular weight and about 1.4x the body size. It
+% uses ~18pt at this slide size; \Large keeps more room for dense content.
+\setbeamerfont{frametitle}{series=\mdseries,size=\Large}
+\setbeamerfont{sender}{series=\bfseries,size=\small}
+\setbeamerfont{contact name}{series=\mdseries,size=\large}
+\setbeamerfont{keyfigure}{series=\mdseries,size=\LARGE}
+\setbeamerfont{keyfigure caption}{series=\mdseries,size=\scriptsize}
+\setbeamerfont{orginfo}{series=\mdseries,size=\small}
+\setbeamerfont{author}{size=\normalsize}
+\setbeamerfont{date}{size=\small}
+\setbeamerfont{footline}{size=\scriptsize}
+
+% ---------------------------------------------------------------------
+%  INNER THEME  (itemize + TOC, from the official inner theme)
+% ---------------------------------------------------------------------
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{section in toc}{%
+  \textcolor{zhawBlue}{\normalsize\textbullet}\hskip1.5ex\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{}
+\setbeamertemplate{subsubsection in toc}{}
+\setbeamertemplate{caption}[numbered]
+% Rounded block corners -- softer than the stock square boxes, and beamer's own
+% template, so overlays and our width keys keep working.
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\hypersetup{colorlinks=true,linkcolor=zhawBlue,urlcolor=zhawBlue,citecolor=zhawBlue}
+
+% ---------------------------------------------------------------------
+%  FOOTER API   \lfooter{...} \mfooter{...}   (from the official template)
+% ---------------------------------------------------------------------
+\providecommand{\zhawinstitute}{ZHAW School of Engineering}
+\gdef\@lfooter{}
+\gdef\@mfooter{}
+\providecommand{\lfooter}[1]{\gdef\@lfooter{#1}}
+\providecommand{\mfooter}[1]{\gdef\@mfooter{#1}}
+
+% ---------------------------------------------------------------------
+%  IMAGES
+%  \zhawcoverimage{<width>}{<height>}{<file>} scales an image so that it
+%  *covers* the given box instead of fitting inside it; the caller clips the
+%  excess. That is what keeps full-bleed images from leaving a strip of
+%  background showing when their aspect ratio differs from the slide's.
+% ---------------------------------------------------------------------
+\newsavebox{\zhaw@imgbox}
+\newlength{\zhaw@coverwd}
+\newlength{\zhaw@coverht}
+\newcommand{\zhawcoverimage}[3]{%
+  \setlength{\zhaw@coverwd}{#1}\setlength{\zhaw@coverht}{#2}%
+  \sbox\zhaw@imgbox{\includegraphics{#3}}%
+  \pgfmathparse{(\the\wd\zhaw@imgbox/\the\ht\zhaw@imgbox)>%
+                (\the\zhaw@coverwd/\the\zhaw@coverht)?1:0}%
+  \ifdim\pgfmathresult pt>0.5pt
+    \includegraphics[height=\zhaw@coverht]{#3}%   image is the wider one
+  \else
+    \includegraphics[width=\zhaw@coverwd]{#3}%
+  \fi}
+
+% Title page background, as in the official template. Swap in a photo of your
+% own with \renewcommand{\zhawtitleimage}{myphoto}.
+\newcommand{\zhawtitleimage}{zhaw_title_bg}
+\gdef\@titleimageheight{0.5\paperheight}   % where image meets the 'Night' area
+
+% Strips the hyperlink from \insertsection so it takes the surrounding colour.
+\newcommand{\zhaw@plainlink}[2]{#2}
+
+% ---------------------------------------------------------------------
+%  OUTER THEME  (title page, section page, frametitle, footline)
+%  Adapted from the official outer theme; logos by bare filename.
+% ---------------------------------------------------------------------
+\setbeamertemplate{title page}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[zhawnight] (current page.south west) rectangle (current page.north east);
+    % Image across the top; the colour area below it carries the text.
+    \begin{scope}
+      \clip ([yshift=-\@titleimageheight]current page.north west) rectangle
+            (current page.north east);
+      \node[anchor=north,inner sep=0] at (current page.north)
+        {\zhawcoverimage{\paperwidth}{\@titleimageheight}{\zhawtitleimage}};
+    \end{scope}
+    % Mark top left, sender top right -- separated, per the 2025 brand policy.
+    \node[anchor=north west,inner sep=0]
+      at ([shift={(\@lrmargin,-\@lrmargin)}]current page.north west)
+      {\includegraphics[width=\@logosize,height=\@logosize]{\zhawlogowhite}};
+    \node[anchor=north east,inner sep=0]
+      at ([shift={(-\@lrmargin,-\@lrmargin)}]current page.north east)
+      {\usebeamerfont{sender}\color{white}\zhawschool};
+    % The title rides the seam in a 'Sky' connector box, the one place the
+    % corporate design allows coloured lettering.
+    \node[name=zhaw@titlebox,anchor=west,fill=zhawsky,text=zhawnight,
+          inner xsep=5mm,inner ysep=4mm,text width=0.55\paperwidth,align=left]
+      at ([shift={(0.17\paperwidth,-\@titleimageheight)}]current page.north west)
+      {\usebeamerfont{title}\inserttitle};
+    \node[anchor=north west,text=white,align=left,inner sep=0]
+      at ([yshift=-5mm]zhaw@titlebox.south west)
+      {\usebeamerfont{subtitle}\insertsubtitle};
+    \node[anchor=south west,text=white,align=left,inner sep=0]
+      at ([shift={(0.17\paperwidth,0.09\paperheight)}]current page.south west)
+      {\usebeamerfont{author}\insertauthor\\[1mm]\usebeamerfont{date}\insertdate};
+  \end{tikzpicture}%
+}
+
+% Chapter divider: 'Night', white lettering, headline where frame titles sit.
+\setbeamertemplate{section page}{%
+  \nointerlineskip
+  % The box bleeds to the paper edges, so the headline is indented by hand to
+  % line up with the frame titles on content slides.
+  \begin{beamercolorbox}[wd=\paperwidth,ht=\paperheight,dp=0pt]{section page}
+    \vbox to \dimexpr\paperheight-\@lrmargin\relax{%
+      % \insertsection is a hyperlink, so it would otherwise be typeset in
+      % hyperref's link colour instead of the section page's own foreground.
+      \vbox to \@ftitleheight{\vfill
+        \hbox{\hspace*{\@lrmargin}%
+          {\usebeamerfont{frametitle}\usebeamercolor[fg]{section page}%
+           \let\hyperlink\zhaw@plainlink\insertsection}}\vfill}%
+      \vfill
+    }
+  \end{beamercolorbox}%
+}
+
+\AtBeginSection[]{%
+  \begin{frame}[plain,noframenumbering]\sectionpage\end{frame}}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  % The frame title is typeset inside the text area, so it needs no margins of
+  % its own -- that is what keeps the headline flush with the body text.
+  \begin{beamercolorbox}[wd=\textwidth,ht=\@ftitleheight,dp=0pt]{frametitle}
+    \vbox to \@ftitleheight{\vfill\usebeamerfont{frametitle}\insertframetitle\par\vfill}
+  \end{beamercolorbox}%
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode
+  % The left cell carries the corporate-design line 'ZHAW School of Engineering
+  % | Organisational unit | Document name', so it gets most of the width.
+  \begin{beamercolorbox}[wd=.58\paperwidth,ht=2.25ex,dp=\@footermargin,left,leftskip=\@lrmargin]{lfooter}%
+    \usebeamerfont{footline}\@lfooter
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.27\paperwidth,ht=2.25ex,dp=\@footermargin,center]{mfooter}%
+    \usebeamerfont{footline}\@mfooter
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=\@footermargin,right,rightskip=\@lrmargin]{rfooter}%
+    \usebeamerfont{footline}\insertframenumber
+  \end{beamercolorbox}%
+}
+
+% ---------------------------------------------------------------------
+%  BLOCK WIDTH AND PLACEMENT
+%  Blocks fill the text width unless told otherwise. \begin{blockbox}[keys]
+%  narrows and places anything inside it -- our callouts, beamer's own block /
+%  alertblock / exampleblock, a figure -- and the four callouts below take the
+%  same keys in a second optional argument.
+%
+%    width=<dim>  half  third  twothirds  quarter  threequarters
+%    left (default)  center  right
+%
+%  Widths are relative to the current \linewidth, so the keys behave the same
+%  inside a column as they do on a full slide.
+% ---------------------------------------------------------------------
+\newlength{\zhaw@blockwd}
+\newlength{\zhaw@blockoff}
+\newcommand*{\zhaw@blockfrac}{0}   % 0 = flush left, 0.5 = centred, 1 = flush right
+\newif\ifzhaw@blockwrap
+
+\pgfkeys{/zhawblock/.cd,
+  width/.code         ={\setlength{\zhaw@blockwd}{#1}},
+  half/.code          ={\setlength{\zhaw@blockwd}{0.5\linewidth}},
+  third/.code         ={\setlength{\zhaw@blockwd}{0.3333\linewidth}},
+  twothirds/.code     ={\setlength{\zhaw@blockwd}{0.6667\linewidth}},
+  quarter/.code       ={\setlength{\zhaw@blockwd}{0.25\linewidth}},
+  threequarters/.code ={\setlength{\zhaw@blockwd}{0.75\linewidth}},
+  left/.code          ={\renewcommand*{\zhaw@blockfrac}{0}},
+  center/.code        ={\renewcommand*{\zhaw@blockfrac}{0.5}},
+  centre/.code        ={\renewcommand*{\zhaw@blockfrac}{0.5}},
+  right/.code         ={\renewcommand*{\zhaw@blockfrac}{1}}}
+
+% Everything here is set inside the environment's own group, so nesting and
+% repeated use on one frame cannot leak.
+\newcommand{\zhaw@blocksetup}[1]{%
+  \setlength{\zhaw@blockwd}{\linewidth}%
+  \renewcommand*{\zhaw@blockfrac}{0}%
+  \pgfkeys{/zhawblock/.cd,#1}%
+  \setlength{\zhaw@blockoff}{\linewidth-\zhaw@blockwd}%
+  \setlength{\zhaw@blockoff}{\zhaw@blockfrac\zhaw@blockoff}}
+% A minipage rather than a saved box, so \pause and overlay specifications keep
+% working inside a narrowed block.
+\newcommand{\zhaw@blockopen}{%
+  \par\noindent\hspace*{\zhaw@blockoff}\begin{minipage}{\zhaw@blockwd}}
+\newcommand{\zhaw@blockclose}{\end{minipage}\par}
+% Callouts wrap only when they were given keys, so an unadorned block still
+% typesets exactly as before.
+\newcommand{\zhaw@blockmaybeopen}[1]{%
+  \notblank{#1}{\zhaw@blockwraptrue\zhaw@blocksetup{#1}\zhaw@blockopen}{\zhaw@blockwrapfalse}}
+\newcommand{\zhaw@blockmaybeclose}{\ifzhaw@blockwrap\zhaw@blockclose\fi}
+
+\NewDocumentEnvironment{blockbox}{O{}}
+  {\zhaw@blocksetup{#1}\zhaw@blockopen}{\zhaw@blockclose}
+
+% ---------------------------------------------------------------------
+%  SLIDE TEMPLATES
+%  The layouts the official PowerPoint template provides, as one command or
+%  environment each. Each makes a whole frame, so call them between frames.
+%  Environments here are not \verb-safe: put verbatim material in a normal
+%  [fragile] frame instead.
+% ---------------------------------------------------------------------
+% Coloured canvases. Beamer paints the canvas behind the whole frame, so the
+% footer and the frame title have to change colour with it.
+\newcommand{\zhaw@nightcanvas}{%
+  \setbeamercolor{background canvas}{bg=zhawnight}%
+  \setbeamercolor{normal text}{fg=white}%
+  \setbeamercolor{frametitle}{fg=white}%
+  \setbeamercolor{lfooter}{fg=white}\setbeamercolor{mfooter}{fg=white}%
+  \setbeamercolor{rfooter}{fg=white}\usebeamercolor[fg]{normal text}}
+\newcommand{\zhaw@skycanvas}{%
+  \setbeamercolor{background canvas}{bg=zhawsky}%
+  \setbeamercolor{normal text}{fg=black}\usebeamercolor[fg]{normal text}}
+
+% --- full-page figure -------------------------------------------------
+% \fullimageslide[<headline>]{<file>} -- image to every edge, white lettering.
+\newcommand{\fullimageslide}[2][]{%
+  {\setbeamertemplate{background}{%
+     \begin{tikzpicture}
+       \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+       \clip (0,0) rectangle (\paperwidth,\paperheight);
+       \node[anchor=center,inner sep=0] at (0.5\paperwidth,0.5\paperheight)
+         {\zhawcoverimage{\paperwidth}{\paperheight}{#2}};
+     \end{tikzpicture}}%
+   \setbeamercolor{frametitle}{fg=white}%
+   \setbeamercolor{lfooter}{fg=white}\setbeamercolor{mfooter}{fg=white}%
+   \setbeamercolor{rfooter}{fg=white}%
+   \begin{frame}\notblank{#1}{\frametitle{#1}}{}\end{frame}}}
+
+% --- large figure on a normal slide -----------------------------------
+% \figureslide[<caption>]{<headline>}{<file>}
+\newcommand{\figureslide}[3][]{%
+  \begin{frame}{#2}%
+    \centering
+    \includegraphics[width=\textwidth,height=0.74\textheight,keepaspectratio]{#3}%
+    \notblank{#1}{\par\vskip 1.5mm{\usebeamerfont{footline}#1}}{}%
+  \end{frame}}
+
+% --- half text, half figure -------------------------------------------
+% \halfimageslide{<headline>}{<file>}{<text>} -- the image bleeds off the right
+% half of the slide, the text keeps the left half. (Beamer collects a frame
+% body by scanning for a literal \end{frame}, so these layouts take their
+% content as an argument rather than as an environment.)
+\newcommand{\halfimageslide}[3]{%
+  \begin{frame}{#1}%
+    \begin{tikzpicture}[remember picture,overlay]
+      \begin{scope}
+        \clip ([xshift=0.5\paperwidth]current page.south west) rectangle
+              (current page.north east);
+        \node[anchor=center,inner sep=0] at ([xshift=0.25\paperwidth]current page.center)
+          {\zhawcoverimage{0.5\paperwidth}{\paperheight}{#2}};
+      \end{scope}
+    \end{tikzpicture}%
+    \begin{minipage}[t]{0.44\textwidth}#3\end{minipage}%
+  \end{frame}}
+
+% --- portraits --------------------------------------------------------
+% Images of people appear as circles. \portrait[<file>]{<name>}{<role>} sets
+% one; with no file it draws the template's grey placeholder.
+\newlength{\zhawportraitsize}\setlength{\zhawportraitsize}{26mm}
+% Draws the circle inside an existing picture: #1 diameter, #2 file (may be
+% empty), #3 node name for the caller to anchor against.
+\newcommand{\zhaw@drawportrait}[3]{%
+  \node[circle,fill=zhawcloud,minimum size=#1,inner sep=0] (#3) at (0,0) {};
+  \begin{scope}
+    \clip (0,0) circle (0.5#1);
+    \notblank{#2}{%
+      \node[anchor=center,inner sep=0] at (0,0) {\zhawcoverimage{#1}{#1}{#2}};}{%
+      % head and shoulders, as in the template's placeholder
+      \draw[white,line width=0.045#1] (0,0.13#1) circle (0.155#1);
+      \draw[white,line width=0.045#1,rounded corners=0.20#1]
+        (-0.27#1,-0.62#1) rectangle (0.27#1,-0.06#1);}%
+  \end{scope}}
+\newcommand{\zhawportraitcircle}[2]{% #1 diameter, #2 file (may be empty)
+  \begin{tikzpicture}\zhaw@drawportrait{#1}{#2}{pic}\end{tikzpicture}}
+\newcommand{\portrait}[3][]{%
+  \begin{tikzpicture}[baseline=(pic.center)]
+    \zhaw@drawportrait{\zhawportraitsize}{#1}{pic}%
+    \node[anchor=west,align=left,inner sep=0] at ([xshift=4mm]pic.east)
+      {#2\\[0.5mm]#3};
+  \end{tikzpicture}}
+
+% --- advice and contact -----------------------------------------------
+% \contactslide[<file>]{<headline>}{<name>}{<role>}{<contact text>}
+\newlength{\zhawcontactsize}\setlength{\zhawcontactsize}{42mm}
+\NewDocumentCommand{\contactslide}{O{} m m m m}{%
+  \begin{frame}{#2}%
+    \vskip 4mm
+    \noindent
+    \begin{minipage}[c]{0.36\textwidth}\zhawportraitcircle{\zhawcontactsize}{#1}\end{minipage}%
+    \begin{minipage}[c]{0.60\textwidth}%
+      {\usebeamerfont{contact name}#3\par}\vskip 1mm #4\par\vskip 5mm #5%
+    \end{minipage}%
+  \end{frame}}
+
+% --- key figures ------------------------------------------------------
+% \begin{keyfigures} \keyfigure[sky|zhaw|night]{<value>}{<caption>} ...
+\newlength{\zhawbubblesize}\setlength{\zhawbubblesize}{38mm}
+\newlength{\zhaw@bubbleraise}
+\newcounter{zhaw@bubble}
+\newcommand{\zhaw@bubblecolours}[1]{%
+  \ifstrequal{#1}{night}{\def\zhaw@bfill{zhawnight}\def\zhaw@btext{white}}{%
+    \ifstrequal{#1}{zhaw}{\def\zhaw@bfill{zhawBlue}\def\zhaw@btext{white}}{%
+      \def\zhaw@bfill{zhawsky}\def\zhaw@btext{black}}}}
+\newcommand{\keyfigure}[3][sky]{%
+  \zhaw@bubblecolours{#1}%
+  \stepcounter{zhaw@bubble}%
+  % stagger the bubbles the way the template does
+  \ifcase\numexpr\value{zhaw@bubble}-1\relax
+    \setlength{\zhaw@bubbleraise}{0mm}\or
+    \setlength{\zhaw@bubbleraise}{-9mm}\or
+    \setlength{\zhaw@bubbleraise}{6mm}\else
+    \setlength{\zhaw@bubbleraise}{0mm}\fi
+  \raisebox{\zhaw@bubbleraise}{%
+    \begin{tikzpicture}
+      \node[circle,fill=\zhaw@bfill,minimum size=\zhawbubblesize,inner sep=0] (b) at (0,0) {};
+      \node[anchor=north west,text=\zhaw@btext,align=flush left,inner sep=0,
+            text width=0.66\zhawbubblesize]
+        at ([shift={(-0.30\zhawbubblesize,0.24\zhawbubblesize)}]b.center)
+        {{\usebeamerfont{keyfigure}#2}\\[1mm]{\usebeamerfont{keyfigure caption}#3}};
+    \end{tikzpicture}}\hfill\ignorespaces}
+\NewDocumentEnvironment{keyfigures}{}
+  {\setcounter{zhaw@bubble}{0}\par\vskip 4mm
+   \parfillskip=0pt\noindent\hfill\ignorespaces}
+  {\null\par}
+
+% --- closing slides ---------------------------------------------------
+% \thanksslide[<text>] -- 'Sky' with black lettering.
+\newcommand{\thanksslide}[1][Thank you.]{%
+  {\zhaw@skycanvas\begin{frame}\frametitle{#1}\end{frame}}}
+% \questionsslide[<text>] -- 'Night' with white lettering.
+\newcommand{\questionsslide}[1][Questions and discussion.]{%
+  {\zhaw@nightcanvas\begin{frame}\frametitle{#1}\end{frame}}}
+% \closingslide -- last slide of a deck: organisational details only.
+\providecommand{\zhawuniversity}{Zurich University of\\Applied Sciences}
+\providecommand{\zhawunit}{Organisational unit}
+\providecommand{\zhawpresenter}{Name}
+\providecommand{\zhawposition}{Position}
+\providecommand{\zhawaddress}{Technikumstrasse 9 \textbar\ PO Box\\8401 Winterthur, Switzerland}
+\providecommand{\zhawphone}{+41 00 000 00 00}
+\providecommand{\zhawemail}{e-mail@zhaw.ch}
+\providecommand{\zhawweb}{www.zhaw.ch/engineering}
+\newcommand{\closingslide}{%
+  {\zhaw@nightcanvas
+   \begin{frame}
+     \usebeamerfont{orginfo}%
+     \zhawuniversity\par\vskip 2.5mm
+     \textbf{\zhawinstitute}\\\zhawunit\par\vskip 2.5mm
+     \zhawpresenter\\\zhawposition\\\zhawaddress\\
+     Tel.\ \zhawphone\\\zhawemail\\\zhawweb\par
+     \vfill
+   \end{frame}}}
+
+% ---------------------------------------------------------------------
+%  OUR TEACHING EXTENSIONS
+% ---------------------------------------------------------------------
+% Each callout takes [<title>] and [<layout keys>], both optional:
+%   \begin{pitfall}[Pitfall][right,half] ... \end{pitfall}
+% Muted palette: a pale tinted title bar with the colour carried by the title
+% text instead of a saturated fill, over an even lighter body. The four blocks
+% stay distinguishable but sit quietly next to the ZHAW blue.
+% Real-world example (teal)
+\NewDocumentEnvironment{rwexample}{O{Real-world example} O{}}{%
+  \zhaw@blockmaybeopen{#2}%
+  \setbeamercolor{block title}{fg=zhawteal!75!black,bg=zhawteal!14}%
+  \setbeamercolor{block body}{bg=zhawteal!6}%
+  \begin{block}{#1}}{\end{block}\zhaw@blockmaybeclose}
+% Pitfall / warning (red)
+\NewDocumentEnvironment{pitfall}{O{Pitfall} O{}}{%
+  \zhaw@blockmaybeopen{#2}%
+  \setbeamercolor{block title}{fg=zhawred!70!black,bg=zhawred!10}%
+  \setbeamercolor{block body}{bg=zhawred!4}%
+  \begin{block}{#1}}{\end{block}\zhaw@blockmaybeclose}
+% Key takeaway (green)
+\NewDocumentEnvironment{takeaway}{O{Key takeaway} O{}}{%
+  \zhaw@blockmaybeopen{#2}%
+  \setbeamercolor{block title}{fg=zhawgreen!85!black,bg=zhawgreen!14}%
+  \setbeamercolor{block body}{bg=zhawgreen!6}%
+  \begin{block}{#1}}{\end{block}\zhaw@blockmaybeclose}
+% In-class exercise (amber)
+\NewDocumentEnvironment{exercise}{O{In-class exercise} O{}}{%
+  \zhaw@blockmaybeopen{#2}%
+  \setbeamercolor{block title}{fg=zhaworange!60!black,bg=zhaworange!20}%
+  \setbeamercolor{block body}{bg=zhaworange!9}%
+  \begin{block}{#1}}{\end{block}\zhaw@blockmaybeclose}
+
+% Inline helpers
+\newcommand{\weblink}[2]{\href{#1}{#2}\,{\color{zhawaccent}\raisebox{.2ex}{\tiny$\nearrow$}}}
+\newcommand{\hl}[1]{{\color{zhawBlue}\bfseries #1}}
+\newcommand{\blockmarker}[1]{\hfill{\footnotesize\color{zhawgray}#1}}
+% Convenience TOC frame (or use \tableofcontents directly inside a frame)
+\newcommand{\tocframe}[1][Table of Contents]{\begin{frame}{#1}\tableofcontents\end{frame}}
+
+\mode<all>
+\endinput

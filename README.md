@@ -37,6 +37,15 @@ The LaTeX sources live in two places, one per artifact:
   submitted via EasyChair: `pricing_defi_tail.pdf` and the source
   bundle `pricing_defi_tail_src.zip`.
 
+## Talk
+
+[`slides/`](slides/) holds the CBT 2026 conference talk
+([`slides.pdf`](slides/slides.pdf), built from `slides.tex` with the
+[ZHAW beamer template](https://github.com/nbundi/zhaw-beamer-template)):
+21 slides for the 20-minute slot, plus three backup slides. See
+[`slides/README.md`](slides/README.md) for the timing plan and the
+figure script.
+
 ## Build the PDF
 
 ```sh
