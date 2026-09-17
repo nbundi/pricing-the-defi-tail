@@ -9,12 +9,12 @@
 %  Built for 20 minutes of speaking + ~4 minutes of questions.
 %
 %  Timing plan (target minutes, cumulative):
-%    Motivation & question .............. 3   (slides 2-4)
-%    Data ............................... 4   (slides 5-7)
-%    Method ............................. 3   (slides 8-9)
-%    The tail ........................... 5   (slides 10-13)
-%    Who bears it ....................... 4   (slides 14-16)
-%    Policy & close ..................... 1   (slides 17-18)
+%    Motivation & question .............. 3   (slides 1-4)
+%    Data ............................... 4   (slides 5-8)
+%    Method ............................. 3   (slides 9-10)
+%    The tail ........................... 5   (slides 11-14)
+%    Who bears the tail ................. 4   (slides 15-17)
+%    Policy & close ..................... 1   (slides 18-19)
 %
 %  Compile:  make            (or: pdflatex slides.tex twice)
 % =====================================================================
@@ -23,11 +23,15 @@
 \input{presentation-info}
 
 \usepackage{booktabs}
+\usepackage{array}
 
 \newcommand{\VaR}{\operatorname{VaR}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\NB}{\mathrm{NB}}
 \newcommand{\bps}{\,bps}
+% Short source tags. Each one resolves to an entry in the paper's
+% references.bib -- no source appears here that is not cited there.
+\newcommand{\src}[1]{[#1]}
 
 \mfooter{CBT 2026 \textbar\ Rome}
 % Title page: the full paper title rides the seam in the 'Sky' connector box,
@@ -51,19 +55,19 @@ Price Operational Risk?}
 % Opening slide: four headline screenshots, captured from the publishers' own
 % pages (see figures/headlines/). Every one of the four is a row of
 % ../data/events_consolidated.csv.
-\begin{frame}{The losses are real, and they are recent}
+\begin{frame}{Recent losses in DeFi}
   \vskip -3mm
   \begin{center}
   \setlength{\tabcolsep}{2.5mm}\renewcommand{\arraystretch}{1.0}
   \begin{tabular}{@{}cc@{}}
     \includegraphics[width=0.435\linewidth]{figures/headlines/kelp} &
     \includegraphics[width=0.435\linewidth]{figures/headlines/drift} \\[0.4mm]
-    {\scriptsize\hl{USD 292\,m}, Bridge --- a forged cross-chain message} &
-    {\scriptsize\hl{USD 290\,m}, Derivatives --- admin approvals abused} \\[1.2mm]
+    {\scriptsize USD 292\,m, Bridge --- a forged cross-chain message} &
+    {\scriptsize USD 290\,m, Derivatives --- admin approvals abused} \\[1.2mm]
     \includegraphics[width=0.435\linewidth]{figures/headlines/balancer} &
     \includegraphics[width=0.435\linewidth]{figures/headlines/stream} \\[0.4mm]
-    {\scriptsize\hl{USD 128\,m}, DEX --- a rounding error, after audits} &
-    {\scriptsize\hl{USD 93\,m}, Yield --- no exploit at all} \\
+    {\scriptsize USD 128\,m, DEX --- a rounding error, after audits} &
+    {\scriptsize USD 93\,m, Yield --- no exploit at all} \\
   \end{tabular}
   \end{center}
 \end{frame}
@@ -73,17 +77,18 @@ Price Operational Risk?}
   smart-contract custody replaces the custodian, settlement is atomic,
   counterparty credit risk collapses into overcollateralization.
   \begin{itemize}
-    \item \hl{Operational risk remains} --- losses from failed processes,
+    \item Operational risk remains --- losses from failed processes,
           people, systems and external events --- and in some cases
           concentrates: contract code, admin keys, oracles, economic design.
-    \item Unlike a bank, DeFi is \hl{infrastructure}: no regulatory capital
+    \item Unlike a bank, DeFi is infrastructure: no regulatory capital
           requirement, no deposit insurance, no resolution authority. Nothing
           stands between a loss and the depositor's claim unless a protocol
           chooses to put it there.
-    \item Yet DeFi markets \hl{earn products} --- lending supply, yield vaults,
-          stablecoin positions, crypto neobanks, etc.
+    \item Yet DeFi markets earn products --- lending supply, yield vaults,
+          stablecoin positions, crypto neobanks, etc. --- with minimal risk
+          disclosures.
   \end{itemize}
-  \begin{takeaway}[The decisive difference]
+  \begin{takeaway}
     Not whether the risk exists --- it does, and it is measurable --- but
     \emph{who bears it} and \emph{whether anyone priced it}.
   \end{takeaway}
@@ -93,20 +98,21 @@ Price Operational Risk?}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \textbf{The protocol can hold a buffer.}\\[2pt]
-      Aave's Umbrella safety module, the Sky surplus buffer, Compound's
-      reserve factor --- governance-owned reserves with the function Basel
-      calls capital, sized by vote rather than by any loss model.
+      Aave's Umbrella
+      module, the Sky surplus buffer and Compound's reserve factor are the
+      DeFi's analogue to Basel capital reserves --- just voluntary and sized 
+      by vote, not by any loss model. \src{BCBS 2006, 2017}
     \end{column}
     \begin{column}{0.48\textwidth}
       \textbf{Or the depositor demands a premium.}\\[2pt]
       A supply yield above the risk-free rate compensates the depositor for
       bearing the tail --- the market-discipline mechanism by which uninsured
       bank creditors price institutional risk.
+      \src{Flannery 1998; Egan et al.\ 2017}
     \end{column}
   \end{columns}
-  \vskip 4mm
-  The two are \hl{substitutes} for the same risk, chosen by different
-  participants.
+  \vskip 6mm
+
   \begin{block}{Research question}
     Is either response sized to the operational-risk tail it is meant to
     cover? Answering it needs a common benchmark --- so I first have to
@@ -116,20 +122,22 @@ Price Operational Risk?}
 
 \begin{frame}{Contributions}
   \begin{enumerate}
-    \item A \hl{consolidated event dataset}: seven public feeds, deduplicated,
-          filtered to depositor-facing DeFi losses, tagged by sector and Basel
-          Level-1 event type --- $n=1{,}075$, USD~$9.45$~B, 2020--2026.
-    \item A \hl{per-sector Basel LDA}, fitted as a bank supervisor would, and
+    \item \hl{A consolidated event dataset} --- seven public feeds,
+          deduplicated, filtered to depositor-facing DeFi losses, tagged by
+          sector and Basel Level-1 event type.
+    \item \hl{A per-sector Basel LDA}, fitted as a bank supervisor would, and
           benchmarked against banking operational risk.
-    \item Both margins tested against that one benchmark: \hl{protocol capital
-          buffers} and \hl{depositor risk premia}.
-    \item Evidence that the two \hl{substitute} --- in the right direction, at
-          the wrong order of magnitude --- and the policy that follows.
+    \item \hl{Both margins tested} against that one benchmark: protocol
+          capital buffers and depositor risk premia.
+    \item \hl{Policy discussion} --- the standardized loss, yield and
+          buffer disclosure a depositor needs in order to price the tail
+          at all.
   \end{enumerate}
   \begin{takeaway}[Headline]
-    The four buffered top-10 Lending venues cover $\sim 5\%$ of their modeled
-    $\VaR_{99.9}$; unbuffered venues pay $+54$~bps against a tail worth
-    $34$--$81\%$ of TVL.
+    Tails comparable to banking operational risk in four sectors and to cyber
+    losses in three. Buffered venues cover $\sim 5\%$ of their modeled
+    $\VaR_{99.9}$ on average; unbuffered venues pay a higher yield than
+    buffered ones, but it covers only $\sim 1\%$ of their $\VaR_{99.9}$.
   \end{takeaway}
 \end{frame}
 
@@ -140,7 +148,10 @@ Price Operational Risk?}
 \begin{frame}{Seven feeds, one deduplicated dataset}
   \begin{columns}[T]
     \begin{column}{0.53\textwidth}
-      \footnotesize
+      % Nudged down and right, a size up: the table is the slide's centrepiece.
+      \vskip 4mm
+      \hspace*{6mm}%
+      \small
       \begin{tabular}{l r r}
         \toprule
         Source & Raw & In dataset \\
@@ -164,9 +175,9 @@ Price Operational Risk?}
         \item Two-pass dedup: name within $\pm14$~d, then date $\pm7$~d and
               loss within $\pm10\%$.
         \item Out-of-scope removed (CEX, memecoins, NFTs, phishing): 153 events.
-        \item A \hl{depositor-facing filter} drops 89 events (USD~$0.84$~B)
+        \item A depositor-facing filter drops 89 events (USD~$0.84$~B)
               whose loss the earn user does not bear.
-        \item Working sample \hl{$n = 1{,}075$}, USD~$9.45$~B;
+        \item Working sample $n = 1{,}075$, USD~$9.45$~B;
               $50\%$ cross-source confirmed.
       \end{itemize}
     \end{column}
@@ -178,25 +189,46 @@ Price Operational Risk?}
 \end{frame}
 
 \begin{frame}{Tagged to the banking taxonomy}
-  Every event carries a DeFi sub-sector and a \hl{Basel Level-1 event type}
-  --- textual evidence first, feed classification as fallback.
+  Every event carries a DeFi sub-sector and a Basel Level-1 event type.
+  Classified by textual evidence, with DefiLlama classification as fallback.
+  \vskip 2mm
+  \begin{columns}[T]
+    \begin{column}{0.76\textwidth}
+      \footnotesize\setlength{\tabcolsep}{3pt}
+      \begin{tabular}{l >{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}p{6.0cm}}
+        \toprule
+        Code & Basel Level-1 & DeFi operational reading \\
+        \midrule
+        IF   & Internal Fraud & Rugpull, owner-drain, insider exit-scam, upgradeable-contract abuse. \\
+        EF   & External Fraud & Contract bugs (reentrancy, access control), key compromise, DNS hijack. \\
+        CPBP & Clients, Products, Business Practices & Economic-design attacks: flashloan governance, oracle and price manipulation. \\
+        BDSF & Business Disruption, System Failures & Chain-level: MEV, sequencer outage, consensus issue, chain halt. \\
+        EDPM & Execution, Delivery, Process Mgmt & Team-side configuration and deployment errors. \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.22\textwidth}
+      \footnotesize\setlength{\tabcolsep}{3pt}
+      \begin{tabular}{l}
+        \toprule
+        Sector \\
+        \midrule
+        Bridge      \\
+        Lending     \\
+        DEX         \\
+        Yield       \\
+        Stablecoin  \\
+        Derivatives \\
+        Other       \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+  \end{columns}
   \vskip 2mm
   \footnotesize
-  \begin{tabular}{l p{2.9cm} p{7.2cm}}
-    \toprule
-    Code & Basel Level-1 & DeFi operational reading \\
-    \midrule
-    IF   & Internal Fraud & Rugpull, owner-drain, insider exit-scam, upgradeable-contract abuse. \\
-    EF   & External Fraud & Contract bugs (reentrancy, access control), key compromise, DNS hijack. \\
-    CPBP & Clients, Products, Business Practices & Economic-design attacks: flashloan governance, oracle and price manipulation. \\
-    BDSF & Business Disruption, System Failures & Chain-level: MEV, sequencer outage, consensus issue, chain halt. \\
-    EDPM & Execution, Delivery, Process Mgmt & Team-side configuration and deployment errors. \\
-    \bottomrule
-  \end{tabular}
+  Employment Practices and Workplace Safety (EPWS) and Damage to Physical
+  Assets (DPA) have no on-chain analogue and are omitted. \src{BCBS 2006}
   \normalsize
-  \vskip 2mm
-  EPWS and DPA have no on-chain analogue and are omitted. Seven sectors:
-  Bridge, Lending, DEX, Yield, Stablecoin, Derivatives, Other.
 \end{frame}
 
 \begin{frame}{Sector and event type are orthogonal}
@@ -223,21 +255,19 @@ Price Operational Risk?}
     \begin{column}{0.41\textwidth}
       \small
       \begin{itemize}
-        \item Bridge and DEX are near-pure \hl{EF} --- code failing over pooled
+        \item Aggregate mean loss USD~$8.79$~m, median USD~$0.50$~m,
+              max USD~$624$~m (Ronin).
+        \item Bridge and DEX are near-pure EF --- code failing over pooled
               collateral. Bridge$\times$EF alone is $33\%$ of all losses.
-        \item Lending and Stablecoin are \hl{CPBP}-heavy --- economic design,
+        \item Lending and Stablecoin are CPBP-heavy --- economic design,
               not code.
-        \item Derivatives is the only sector with material \hl{BDSF}.
       \end{itemize}
-      \vskip 2mm
-      Aggregate mean loss USD~$8.79$~m, median USD~$0.50$~m,
-      max USD~$624$~m (Ronin).
     \end{column}
   \end{columns}
   \begin{pitfall}[Consequence for the model]
     Sector totals span two orders of magnitude and the loss mechanism differs
     by sector, so a single pooled fit would be meaningless. Everything is
-    fitted \hl{per sector}.
+    fitted per sector.
   \end{pitfall}
 \end{frame}
 
@@ -264,10 +294,10 @@ Price Operational Risk?}
       \[
         g_{\xi,\beta}(y) = \tfrac{1}{\beta}\bigl(1+\xi\tfrac{y}{\beta}\bigr)^{-(1/\xi+1)}
       \]
-      Threshold $q^*$ by \hl{plateau stability} ($\hat\xi$ stable to
-      $\tau=0.30$), subject to $n_u \ge 20$ and $n_u/n \ge 10\%$. The severity
-      $F_X$ is then piecewise: the \hl{empirical body} below $u^*$, the
-      \hl{GPD tail} above it.
+      The threshold $u$ sits at the quantile $q^*$ where $\hat\xi$ plateaus,
+      subject to $n_u \ge 20$ and $n_u/n \ge 10\%$.
+      The severity $F_X$ is then piecewise: the empirical body below $u$, the
+      GPD tail above it.
       \vskip 3mm
       \textbf{Frequency} --- monthly negative binomial
       $N_s \sim \NB(\mu_s,\alpha_s)$; annual counts as twelve iid monthly
@@ -283,9 +313,9 @@ Price Operational Risk?}
       $2\times 10^{5}$ simulated years per sector, each event capped at the
       largest single-protocol exposure.
       \vskip 2mm
-      $\E[S]$ is the actuarial \hl{pure premium};
-      $\VaR_{99.9}$ is the \hl{capital buffer} the Basel AMA would compute.
-      Both expressed as a share of trailing-365d \hl{TVL} --- the on-chain
+      $\E[S]$ is the actuarial pure premium;
+      $\VaR_{99.9}$ is the capital buffer the Basel AMA would compute.
+      Both expressed as a share of trailing-365d TVL --- the on-chain
       analogue of assets on books.
     \end{column}
   \end{columns}
@@ -297,7 +327,7 @@ Price Operational Risk?}
   allocated by an exposure indicator.
   \begin{itemize}
     \item Fit once per sector; treat its protocols as sharing that loss
-          process \hl{per unit of TVL} (credibility-theory shrinkage).
+          process per unit of TVL (credibility-theory shrinkage).
     \item A sector event strikes protocol $p$ with probability
           $\text{TVL}_p/\text{TVL}_s$, so
           $\lambda_p = (\text{TVL}_p/\text{TVL}_s)\,\lambda_s$, same severity,
@@ -305,13 +335,15 @@ Price Operational Risk?}
     \item The tail does \emph{not} thin linearly: with the single-loss
           approximation
           $\VaR_{99.9}(S_p)\approx F_X^{-1}(1-0.001/\lambda_p)$ scaling as
-          $\text{TVL}_p^{\hat\xi}$, $\hat\xi<1$, the \hl{VaR-to-TVL ratio
-          rises as a venue shrinks}.
+          $\text{TVL}_p^{\hat\xi}$, $\hat\xi<1$, the VaR-to-TVL ratio
+          rises as a venue shrinks.
   \end{itemize}
-  \begin{pitfall}[So do not scale the sector ratio]
-    Simulating $\VaR_{99.9}$ per venue rather than scaling the sector figure
-    is what keeps the smaller venues from being understated.
-  \end{pitfall}
+  \begin{takeaway}
+    Each venue inherits its sector's loss process in proportion to its TVL,
+    which is what makes a per-protocol figure possible without a per-protocol
+    history. And because the tail does not thin linearly, that figure has to
+    be simulated venue by venue rather than scaled from the sector ratio.
+  \end{takeaway}
 \end{frame}
 
 % =====================================================================
@@ -319,91 +351,80 @@ Price Operational Risk?}
 % =====================================================================
 
 \begin{frame}{Severity: four sectors like a bank, three like cyber}
-  \footnotesize
-  \begin{center}
-  \begin{tabular}{lrrrlrrr}
-    \toprule
-    Sector & $n$ & $q^*$ & $n_u$ & $\hat\xi$ \,[95\% CI] & $\hat\beta$ (USD m) & $V$ & $p$ \\
-    \midrule
-    Bridge      &  61 & 0.65 & 20 & $+1.87$ \,[$+0.58$, $+3.18$] & 17.6 & $-1.37$ & 0.17 \\
-    Lending     & 207 & 0.90 & 21 & $+0.75$ \,[$-0.28$, $+1.50$] & 24.8 & $-1.32$ & 0.19 \\
-    Stablecoin  &  52 & 0.60 & 21 & $+0.65$ \,[$-0.39$, $+1.33$] & 13.2 & $-0.03$ & 0.97 \\
-    Derivatives &  71 & 0.65 & 25 & $+1.45$ \,[$+0.42$, $+2.38$] &  3.7 & $-1.04$ & 0.30 \\
-    Yield       & 222 & 0.90 & 23 & $+0.61$ \,[$-0.22$, $+1.24$] & 11.5 & $-0.74$ & 0.46 \\
-    DEX         & 341 & 0.85 & 51 & $+0.72$ \,[$+0.18$, $+1.15$] &  7.1 & $-0.02$ & 0.98 \\
-    Other       & 121 & 0.80 & 24 & $+1.58$ \,[$+0.54$, $+2.63$] &  0.2 & $+0.57$ & 0.57 \\
-    \bottomrule
-  \end{tabular}
-  \end{center}
-  \normalsize
-  \vskip 1mm
   \begin{columns}[T]
-    \begin{column}{0.49\textwidth}
-      \small
-      Lending, Stablecoin, Yield, DEX cluster in
-      $\hat\xi \in [0.61, 0.75]$ --- \hl{no heavier} than the Moscadelli
-      banking band $[0.85, 1.39]$, and all finite-mean.
-    \end{column}
-    \begin{column}{0.49\textwidth}
-      \small
-      Bridge, Derivatives, Other reach $\hat\xi \approx 1.5$--$1.9$ ---
-      \hl{cyber-loss level}, point estimates past the infinite-mean boundary.
-      A Vuong test cannot separate GPD from lognormal in any sector
-      ($|V| \le 1.37$), so I keep the GPD.
-    \end{column}
-  \end{columns}
-\end{frame}
-
-% Slide-sized redraw of the paper's Fig. 2 (make_slide_figures.py): wide, and
-% without the x-axis label -- the decade ticks are USD and the caption says so.
-\begin{frame}{The fitted tails}
-  \vskip -1mm
-  \centering
-  \includegraphics[width=\linewidth]{figures/ccdf_slide}\\[1.5mm]
-  {\scriptsize Log-log CCDF, loss in USD along the horizontal axis, fitted
-  POT-GPD dashed. Where $\hat\xi>1$ the fit turns up faster than the data at
-  the top --- what the exposure cap addresses.\par}
-\end{frame}
-
-\begin{frame}{Frequency: events cluster, so Poisson understates}
-  \begin{columns}[T]
-    \begin{column}{0.55\textwidth}
-      \footnotesize\setlength{\tabcolsep}{3pt}
-      \begin{tabular}{l r r r r r r}
+    \begin{column}{0.56\textwidth}
+      \small\setlength{\tabcolsep}{3pt}
+      \begin{tabular}{lrrrlr}
         \toprule
-        Sector & $n$ & $\hat\mu_s$ & $\hat\lambda_s$ & $\hat\alpha_s$ & LR & $p$ \\
+        Sector & $n$ & $q^*$ & $n_u$ & $\hat\xi$ \,[95\% CI] & $\hat\beta$ \\
         \midrule
-        Bridge      &  61 & 0.80 &  9.7 & 0.72 &  6.2 & 0.013 \\
-        Lending     & 207 & 2.72 & 32.9 & 0.26 & 10.2 & 0.0014 \\
-        Stablecoin  &  52 & 0.68 &  8.3 & 0.14 &  0.3 & 0.590 \\
-        Derivatives &  71 & 0.93 & 11.3 & 0.41 &  3.7 & 0.054 \\
-        Yield       & 222 & 2.92 & 35.3 & 0.60 & 42.3 & $7.7\!\times\!10^{-11}$ \\
-        DEX         & 341 & 4.49 & 54.2 & 0.31 & 38.5 & $5.4\!\times\!10^{-10}$ \\
-        Other       & 121 & 1.59 & 19.2 & 0.89 & 30.4 & $3.6\!\times\!10^{-8}$ \\
+        Bridge      &  61 & 0.65 & 20 & $+1.87$ \,[$+0.58$, $+3.18$] & 17.6 \\
+        Lending     & 207 & 0.90 & 21 & $+0.75$ \,[$-0.28$, $+1.50$] & 24.8 \\
+        Stablecoin  &  52 & 0.60 & 21 & $+0.65$ \,[$-0.39$, $+1.33$] & 13.2 \\
+        Derivatives &  71 & 0.65 & 25 & $+1.45$ \,[$+0.42$, $+2.38$] &  3.7 \\
+        Yield       & 222 & 0.90 & 23 & $+0.61$ \,[$-0.22$, $+1.24$] & 11.5 \\
+        DEX         & 341 & 0.85 & 51 & $+0.72$ \,[$+0.18$, $+1.15$] &  7.1 \\
+        Other       & 121 & 0.80 & 24 & $+1.58$ \,[$+0.54$, $+2.63$] &  0.2 \\
         \bottomrule
       \end{tabular}
     \end{column}
     \begin{column}{0.41\textwidth}
       \small
       \begin{itemize}
-        \item Monthly counts are strongly over-dispersed: cross-sector
-              dispersion index \hl{$D = 3.27$}.
-        \item A likelihood-ratio test rejects Poisson at $p \le 0.02$ in
-              \hl{five of seven} sectors.
-        \item Annual event rates run from $8.3$/yr (Stablecoin) to
-              $54.2$/yr (DEX).
+        \item Lending, Stablecoin, Yield, DEX cluster in
+              $\hat\xi \in [0.61, 0.75]$ --- no heavier than the Moscadelli
+              banking band $[0.85, 1.39]$, and all finite-mean.
+              \src{Moscadelli 2004}
+        \item Bridge, Derivatives, Other reach $\hat\xi \approx 1.5$--$1.9$ ---
+              cyber-loss level, past the infinite-mean boundary.
+              \src{Eling \& Wirfs 2019}
+        \item $\hat\xi$ sets how heavy the tail is; $\hat\beta$ is the GPD
+              scale in USD~m. A Vuong test cannot separate GPD from lognormal
+              in any sector, so I keep the GPD. \src{Vuong 1989}
       \end{itemize}
-      \vskip 2mm
-      Under Poisson the annual aggregate --- and its $\VaR_{99.9}$ --- would
-      be understated.
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Frequency: up to five events a month}
+  \begin{columns}[T]
+    \begin{column}{0.51\textwidth}
+      \small\setlength{\tabcolsep}{4pt}
+      \begin{tabular}{l r r r r r}
+        \toprule
+        Sector & $n$ & $\hat\mu_s$ & $\hat\lambda_s$ & $\hat\alpha_s$ & $p$ \\
+        \midrule
+        Bridge      &  61 & 0.80 &  9.7 & 0.72 & 0.013 \\
+        Lending     & 207 & 2.72 & 32.9 & 0.26 & 0.0014 \\
+        Stablecoin  &  52 & 0.68 &  8.3 & 0.14 & 0.590 \\
+        Derivatives &  71 & 0.93 & 11.3 & 0.41 & 0.054 \\
+        Yield       & 222 & 2.92 & 35.3 & 0.60 & $7.7\!\times\!10^{-11}$ \\
+        DEX         & 341 & 4.49 & 54.2 & 0.31 & $5.4\!\times\!10^{-10}$ \\
+        Other       & 121 & 1.59 & 19.2 & 0.89 & $3.6\!\times\!10^{-8}$ \\
+        \bottomrule
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \small
+      \begin{itemize}
+        \item Annual rates $\hat\lambda_s$ span sixfold: $8.3$/yr
+              (Stablecoin) to $54.2$/yr (DEX), with Lending at $32.9$/yr.
+        \item Dispersion $\hat\alpha_s$ is positive everywhere, $0.14$
+              (Stablecoin) to $0.89$ (Other): events cluster rather than
+              arrive independently. Cross-sector index $D = 3.27$.
+        \item A likelihood-ratio test rejects Poisson at $p \le 0.02$ in five
+              of seven sectors --- under it the annual aggregate, and its
+              $\VaR_{99.9}$, would be understated.
+      \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}{The capital the tail implies}
+  \vskip -3mm
   \begin{columns}[T]
     \begin{column}{0.55\textwidth}
-      \footnotesize\setlength{\tabcolsep}{3pt}
+      \small\setlength{\tabcolsep}{3pt}
       $\VaR_{99.9}$, \% of trailing-365d TVL
       \begin{tabular}{l r r r r l}
         \toprule
@@ -411,26 +432,24 @@ Price Operational Risk?}
         \midrule
         Bridge      &  61 & 49.1 & 32.5 & 67{,}326 & [25.5,\,40.8] \\
         Lending     & 207 & 66.8 & 18.0 & 22.3 & [3.2,\,18.9] \\
-        Stablecoin  &  52 & 26.5$^\dagger$ & 16.1 & 16.1 & [3.1,\,30.1] \\
+        Stablecoin  &  52 & 26.5 & 16.1 & 16.1 & [3.1,\,30.1] \\
         Derivatives &  71 & 65.9 & 22.8 & 638.0 & [21.8,\,27.1] \\
         Yield       & 222 & 11.4 & 15.3 & 29.5 & [5.5,\,17.3] \\
         DEX         & 341 & 14.5 & 14.1 & 46.2 & [10.5,\,15.9] \\
-        Other       & 121 & 18.2$^\ddagger$ & 27.5 & 285.9 & [4.8,\,27.7] \\
+        Other       & 121 & 18.2 & 27.5 & 285.9 & [4.8,\,27.7] \\
         \bottomrule
       \end{tabular}
-      \vskip 1mm
-      $^\dagger$circulating supply \quad $^\ddagger$residual TVL \quad
-      $\VaR^{U}$: exposure cap removed
     \end{column}
     \begin{column}{0.41\textwidth}
       \small
       \begin{itemize}
-        \item Core sectors need \hl{$14$--$18\%$ of TVL} --- far above the
-              operational-risk capital banks hold.
+        \item Core sectors need $14$--$18\%$ of TVL --- against about
+              $0.6\%$ of assets for a bank, so $25$--$30\times$ as much.
+              \src{de Fontnouvelle et al.\ 2007}
         \item Bridge, Derivatives, Other look larger ($23$--$32\%$) but only
-              because each event is \hl{capped at exposure}.
-        \item Uncapped, $\hat\xi>1$ has no stable quantile: Bridge diverges to
-              \hl{$673\times$ TVL}.
+              because each event is capped at exposure.
+        \item Uncapped ($\VaR^{U}_{99.9}$), $\hat\xi>1$ has no stable
+              quantile: Bridge diverges to $673\times$ TVL.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -447,13 +466,15 @@ Price Operational Risk?}
       \textbf{Sensitivity to the largest events.}
       Dropping the single largest event moves $\hat\xi$ by $0.16$--$0.5$,
       most sharply in Lending ($0.75 \to 0.35$). Under any drop-top rule up to
-      $0.5\%$, every sector keeps its \hl{below / above infinite-mean}
+      $0.5\%$, every sector keeps its below / above infinite-mean
       character.
       \vskip 3mm
       \textbf{Sensitivity to the cap.}
       The cap binds: removing it lifts Lending $18 \to 22\%$, DEX
       $14 \to 46\%$, Yield $15 \to 30\%$. Only Stablecoin is
-      cap-insensitive.
+      cap-insensitive. The $\hat\xi>1$ sectors are stable only under the cap
+      --- uncapped, Bridge diverges to $673\times$ TVL and Derivatives to
+      $638\%$.
     \end{column}
     \begin{column}{0.48\textwidth}
       \textbf{Sensitivity to the confidence level.}
@@ -461,21 +482,24 @@ Price Operational Risk?}
       of TVL, and buffered-venue coverage rises from $5\%$ to $18\%$ and
       $31\%$.
       \vskip 3mm
-      \begin{takeaway}[Conclusions survive]
-        Even at $99\%$, the buffers cover about a third of a requirement that
-        is still an order of magnitude above bank operational-risk capital.
+      \begin{takeaway}[What survives, and what does not]
+        The $\VaR_{99.9}$ \emph{level} is genuinely sensitive --- most of all
+        to the cap. What does not move is the conclusion: every sector keeps
+        its tail character, and removing the cap only raises the requirement,
+        so both margins stay an order of magnitude short under all three
+        tests.
       \end{takeaway}
     \end{column}
   \end{columns}
 \end{frame}
 
 % =====================================================================
-\section{Who bears it}
+\section{Who bears the tail}
 % =====================================================================
 
 \begin{frame}{The protocol's response: capital buffers}
   Top-10 Lending venues by gross supplied TVL (DefiLlama, June~2026):
-  \hl{four disclose an operational-risk reserve, six do not}.
+  four disclose an operational-risk reserve, six do not.
   \vskip 2mm
   \begin{center}
     \small
@@ -483,27 +507,26 @@ Price Operational Risk?}
       \toprule
       Protocol & TVL (B) & Buffer (B) & $\E[S]$ (B) & $\VaR_{99.9}$ (B) \\
       \midrule
-      Aave V3         & 11.85 & 0.36 & 0.08 ($475\%$) & 4.00 ($9\%$) \\
-      SparkLend       &  3.41 & 0.08 & 0.02 ($390\%$) & 1.58 ($5\%$) \\
-      Compound V3     &  1.04 & 0.04 & 0.01 ($700\%$) & 0.64 ($6\%$) \\
-      Venus Core Pool &  0.98 & 0.01 & 0.01 ($187\%$) & 0.61 ($2\%$) \\
+      Aave V3         & 11.85 & 0.363 & 0.076 ($475\%$) & 4.00 ($9\%$) \\
+      SparkLend       &  3.41 & 0.083 & 0.021 ($390\%$) & 1.58 ($5\%$) \\
+      Compound V3     &  1.04 & 0.043 & 0.006 ($700\%$) & 0.64 ($6\%$) \\
+      Venus Core Pool &  0.98 & 0.011 & 0.005 ($187\%$) & 0.61 ($2\%$) \\
       \bottomrule
     \end{tabular}
   \end{center}
   \vskip 2mm
   Parentheses give the buffer's coverage of each. Average coverage of the
-  modeled capital buffer: \hl{$\sim 5\%$}, a $95\%$ shortfall, from $2\%$
+  modeled capital buffer: $\sim 5\%$, a $95\%$ shortfall, from $2\%$
   (Venus) to $9\%$ (Aave~V3).
-  \begin{takeaway}[The inadequacy is specific to the tail]
-    All four buffers cover the pure premium at least once over
-    ($187\%$--$700\%$). They are sized to an average year, not to a
-    $1$-in-$1{,}000$ one.
+  \begin{takeaway}
+    All four buffers cover the pure premium --- but fall well short of the
+    tail. They are sized to an average year, not to the $1$-in-$1{,}000$ year
+    banking regulation asks a bank to hold capital against.
+    \src{BCBS 2006, 2017}
   \end{takeaway}
 \end{frame}
 
 \begin{frame}{The depositor's response: the yield premium}
-  Risk premium $=$ trailing-30d TVL-weighted stablecoin supply APY minus the
-  $3.70\%$ 3-month T-bill.
   \vskip 1mm
   \begin{center}
     \footnotesize
@@ -528,24 +551,23 @@ Price Operational Risk?}
     \end{tabular}
   \end{center}
   \small
-  Unbuffered venues average \hl{$+54$~bps}: roughly their $55$-bps pure premium,
-  but $1$--$4\%$ of the tail-risk premium --- and the buffers of the previous
-  slide cover $\E[S]$ several times over while covering $5\%$ of
-  $\VaR_{99.9}$. \hl{Protocol and depositor alike size their response to the
-  loss of an average year, not to the extreme one.}
+  Risk premium $=$ trailing-30d TVL-weighted supply APY minus the $3.70\%$
+  T-bill. Unbuffered venues average $+54$~bps --- about their $55$-bps pure
+  premium, but only $1$--$4\%$ of the tail. Protocol and depositor alike size
+  to an average year, not the extreme one.
 \end{frame}
 
 \begin{frame}{Both margins together}
   Because buffer and premium substitute, an efficient market would trade one for
-  the other --- buffered venues paying less. \hl{The data run in that direction.}
+  the other --- buffered venues paying less. The data run in that direction.
   \begin{itemize}
     \item Median premium: $-86$~bps with a buffer against $+39$~bps without ---
-          a \hl{$125$-bps gap}. One-sided Mann--Whitney \hl{$p=0.01$}, and
+          a $125$-bps gap. One-sided Mann--Whitney $p=0.01$, and
           $p=0.03$ extending to all Lending venues with net TVL
           $\ge$ USD~$100$~m ($n=19$).
     \item Below that size the signal attenuates: posted yields are dominated by
-          airdrops and incentives. The long-tail depositor is \hl{chasing
-          incentives, not pricing risk}.
+          airdrops and incentives. The long-tail depositor is chasing
+          incentives, not pricing risk.
   \end{itemize}
   \begin{pitfall}[Right direction, wrong magnitude]
     The whole premium cross-section spans $418$~bps, while the tail asks for
@@ -558,122 +580,83 @@ Price Operational Risk?}
 \section{What follows}
 % =====================================================================
 
-\begin{frame}{Who bears the shortfall, and what to do}
+\begin{frame}{Policy}
+  \vskip -2mm
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \textbf{The shortfall is not evenly borne.}
-      A professional participant can assess the tail, negotiate bilateral
-      terms through governance, and size or exit the position. A \hl{retail
-      depositor sees only the posted rate} and, lacking standardized
-      disclosure, bears the unpriced tail disproportionately.
-      \vskip 3mm
-      Market discipline presumes the depositor \emph{can} price the risk. For
-      the retail depositor that presumption fails twice over: the information
-      is not disclosed, and pricing a heavy tail takes skills they do not have.
-    \end{column}
-    \begin{column}{0.48\textwidth}
-      \textbf{So: disclosure, not capital mandates.}
-      There is no clear path to imposing bank-style capital requirements on
-      autonomous protocols. Three measures instead:
-      \begin{enumerate}
-        \item \hl{Standardized loss-and-yield disclosure} --- a Pillar~3
-              analogue, per sector, alongside the posted yield.
-        \item \hl{Buffer-and-tail disclosure} --- the buffer, the share of
-              $\VaR_{99.9}$ it covers, the residual the depositor bears.
-        \item \hl{Periodic recalibration} --- the tail is non-stationary.
-      \end{enumerate}
-      The duty can attach to whoever fronts access: front-ends, wallets,
-      aggregators, custodial ``earn'' products.
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}{Limitations and what I would fix next}
-  \begin{columns}[T]
-    \begin{column}{0.48\textwidth}
       \small
       \begin{itemize}
-        \item \textbf{Incomplete data.} Publicly reported losses only; missing
-              small and privately resolved incidents bias the body down,
-              leave the tail intact.
-        \item \textbf{Homogeneity.} One severity per sector, allocated by TVL
-              share. A size covariate or a hierarchical model would refine it.
-        \item \textbf{Recovery.} Figures are gross of funds returned, so the
-              capital estimates are conservative.
+        \item A professional participant can assess the tail, negotiate
+              bilateral terms through governance, and size or exit the
+              position.
+        \item A retail depositor sees only the posted rate and bears the
+              unpriced tail disproportionately.
+              \src{Cornelli et al.\ 2025}
+        \item Market discipline presumes the depositor \emph{can} price the
+              risk. For retail that presumption fails twice: the information
+              is not disclosed, and pricing a heavy tail takes skills they do
+              not have. \src{Flannery 1998}
       \end{itemize}
     \end{column}
     \begin{column}{0.48\textwidth}
+      \textbf{Disclosure levels the playing field.}
       \small
       \begin{itemize}
-        \item \textbf{Confounding.} Buffered venues are also the largest and
-              oldest --- a descriptive association, not an identified buffer
-              effect.
-        \item \textbf{Premium identification.} The yield spread is
-              reduced-form; it also reflects utilization and rate governance.
-              A controlled panel regression is the natural extension.
-        \item \textbf{Stationarity.} 2020--2026 fitted as one regime, though
-              frequency has fallen and severity has concentrated.
+        \item Capital mandates have no clear path onto autonomous protocols
+              --- and supervisors themselves retired the internal-model
+              approach. \src{BCBS 2017}
+        \item Standardized loss-and-yield disclosure --- a Pillar~3 analogue,
+              per sector, alongside the posted yield.
+        \item Buffer-and-tail disclosure --- the buffer, the share of
+              $\VaR_{99.9}$ it covers, the residual the depositor bears.
+        \item The duty attaches to whoever fronts access: front-ends, wallets,
+              aggregators, custodial products.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}{Conclusion}
-  \begin{itemize}
-    \item DeFi earn products carry a measurable operational-risk tail:
-          USD~$9.45$~B over $1{,}075$ events, with four core sectors no
-          heavier-tailed than banking and three past the infinite-mean
-          boundary.
-    \item Calibrated as a supervisor would, the Lending tail asks for
-          \hl{$\sim 18\%$ of TVL} in capital.
-    \item Against that benchmark, the four disclosed buffers cover
-          \hl{$5\%$}, and unbuffered venues pay \hl{$+54$~bps} --- short of
-          the tail by more than an order of magnitude.
-    \item The two margins move together in the right direction, so the market
-          does discriminate; it just does not price.
-  \end{itemize}
+  \vskip -3mm
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \textbf{What I find.}
+      \small
+      \begin{itemize}
+        \item A measurable tail: USD~$9.45$~B over $1{,}075$ events; four core
+              sectors no heavier-tailed than banking, three past the
+              infinite-mean boundary.
+        \item Calibrated as a supervisor would, the Lending tail asks for
+              $\sim 18\%$ of TVL.
+        \item Against it, buffers cover $5\%$ and unbuffered venues pay
+              $+54$~bps --- short by an order of magnitude.
+        \item The two margins move together, so the market discriminates; it
+              just does not price.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \textbf{Limitations.}
+      \small
+      \begin{itemize}
+        \item \textbf{Data.} Publicly reported losses only, and gross of
+              recovery --- so the estimates are conservative.
+        \item \textbf{Homogeneity.} One severity per sector, allocated by TVL
+              share.
+        \item \textbf{Identification.} Buffered venues are also the largest
+              and oldest, and the yield spread is reduced-form --- an
+              association, not an identified effect.
+        \item \textbf{Stationarity.} 2020--2026 fitted as one regime.
+      \end{itemize}
+    \end{column}
+  \end{columns}
   \begin{takeaway}[The recommendation]
-    Not capital mandates on autonomous protocols, but \hl{disclosure} ---
-    standardized loss, yield and buffer-coverage information, owed by the
-    protocol or by whoever fronts access to it.
+    Not capital mandates, but disclosure: standardized loss, yield and
+    buffer-coverage information, owed by whoever fronts access.
   \end{takeaway}
-  \vskip 2mm
-  \small
-  Paper, data and code: \weblink{https://github.com/nbundi/pricing-the-defi-tail}{github.com/nbundi/pricing-the-defi-tail}
 \end{frame}
 
 \questionsslide
 \closingslide
-
-% =====================================================================
-%  Backup slides
-% =====================================================================
-\appendix
-
-\begin{frame}[noframenumbering]{Backup: threshold stability}
-  \begin{center}
-    \includegraphics[width=0.62\linewidth]{figures/r5_xi_threshold_stability}
-  \end{center}
-  \small
-  $\hat\xi$ against the threshold quantile. $q^*$ is the highest $q$ at which
-  $\hat\xi(q)$ is stable to within $\tau=0.30$, subject to $n_u \ge 20$ and
-  $n_u/n \ge 10\%$.
-\end{frame}
-
-\begin{frame}[noframenumbering]{Backup: event frequency over time}
-  \begin{center}
-    \includegraphics[width=0.62\linewidth]{figures/r6_monthly_counts}
-  \end{center}
-  \small
-  Monthly event counts. Frequency has fallen from the early rugpull wave while
-  severity has moved toward larger, concentrated targets --- the
-  non-stationarity the stationary fit averages over.
-\end{frame}
-
-\begin{frame}[noframenumbering]{Backup: rolling intensity by sector}
-  \begin{center}
-    \includegraphics[width=0.66\linewidth]{figures/r0c_rolling_intensity_sector}
-  \end{center}
-\end{frame}
 
 \end{document}

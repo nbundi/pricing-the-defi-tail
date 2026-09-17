@@ -23,6 +23,7 @@ all: $(DECKS)
 
 $(DECKS):
 	@echo "== building $@ =="
+	@rm -f $@.pdf
 ifdef LATEXMK
 	@$(LATEXMK) $(LFLAGS) $@.tex
 else
@@ -30,6 +31,20 @@ else
 	@$(PDFLATEX) $(PFLAGS) $@.tex >/dev/null
 	@echo "   -> $@.pdf"
 endif
+	@if [ "$$(grep -c '%%EOF' $@.pdf)" -ne 1 ]; then \
+	  echo "   !! $@.pdf has a stale trailer (concurrent write) -- rebuilding"; \
+	  rm -f $@.pdf; \
+	  $(PDFLATEX) $(PFLAGS) $@.tex >/dev/null; \
+	  $(PDFLATEX) $(PFLAGS) $@.tex >/dev/null; \
+	fi
+	@n=$$(grep -c '%%EOF' $@.pdf); \
+	if [ "$$n" -ne 1 ]; then \
+	  echo "ERROR: $@.pdf still has $$n %%EOF markers (expected 1)."; \
+	  echo "       Another process is writing it -- close any editor"; \
+	  echo "       build-on-save or PDF viewer, then rerun 'make'."; \
+	  exit 1; \
+	fi
+	@echo "   -> $@.pdf ok ($$(grep -c '%%EOF' $@.pdf) trailer)"
 
 clean:
 	@rm -f *.aux *.log *.nav *.snm *.toc *.out *.vrb *.fls *.fdb_latexmk *.synctex.gz

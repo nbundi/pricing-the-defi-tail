@@ -244,15 +244,16 @@
 
 \setbeamertemplate{footline}{%
   \leavevmode
-  % The left cell carries the corporate-design line 'ZHAW School of Engineering
-  % | Organisational unit | Document name', so it gets most of the width.
-  \begin{beamercolorbox}[wd=.58\paperwidth,ht=2.25ex,dp=\@footermargin,left,leftskip=\@lrmargin]{lfooter}%
+  % Left and right cells are equal width so the middle cell sits on the page
+  % centre line: the left cell carries the short document name, the middle cell
+  % the venue, the right cell the frame number.
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=\@footermargin,left,leftskip=\@lrmargin]{lfooter}%
     \usebeamerfont{footline}\@lfooter
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.27\paperwidth,ht=2.25ex,dp=\@footermargin,center]{mfooter}%
+  \begin{beamercolorbox}[wd=.30\paperwidth,ht=2.25ex,dp=\@footermargin,center]{mfooter}%
     \usebeamerfont{footline}\@mfooter
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=\@footermargin,right,rightskip=\@lrmargin]{rfooter}%
+  \begin{beamercolorbox}[wd=.35\paperwidth,ht=2.25ex,dp=\@footermargin,right,rightskip=\@lrmargin]{rfooter}%
     \usebeamerfont{footline}\insertframenumber
   \end{beamercolorbox}%
 }
